@@ -116,6 +116,7 @@ country_event = {
 			set_variable = { which = custom_difficulty_MM_mod_ship_interstellar_speed_mult value = custom_difficulty_MM_mod_ship_interstellar_speed_mult_AI }
 			set_variable = { which = custom_difficulty_MM_mod_ship_piracy_suppression_mult value = custom_difficulty_MM_mod_ship_piracy_suppression_mult_AI }
 			set_variable = { which = custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult value = custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_AI }
+			set_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI }
 			set_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk value = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI }
 			set_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult value = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_AI }
 			set_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult value = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_AI }
@@ -24994,6 +24995,162 @@ country_event = {
 			}
 		}
 		 #first copy a backup of the old value, then take new value and update with randomnessfactor. If old value is different from new, update modifiers
+		set_variable = { which = custom_difficulty_tmp value = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult }
+		set_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value = event_target:global_event_country.custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult }
+		multiply_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value = custom_difficulty_randomness_factor }
+		if = {
+			limit = {
+				NOT = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value = custom_difficulty_tmp }
+				}
+			}
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-10
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-9
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-8
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-7
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-6
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-5
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-4
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-3
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-2
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-1
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_1
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_2
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_3
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_4
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_5
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_6
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_7
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_8
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_9
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_10
+			if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value = 0 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 95.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-10 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 85.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-9 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 75.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-8 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 65.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-7 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 55.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-6 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 45.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-5 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 35.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-4 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 25.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-3 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 15.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-2 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 5.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-1 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -15.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_1 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -25.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_2 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -35.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_3 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -45.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_4 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -55.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_5 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -65.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_6 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -75.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_7 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -85.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_8 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -95.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_9 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -105.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_10 days = -1 }
+			}
+		}
+		 #first copy a backup of the old value, then take new value and update with randomnessfactor. If old value is different from new, update modifiers
 		set_variable = { which = custom_difficulty_tmp value = custom_difficulty_MM_mod_ship_anomaly_fail_risk }
 		set_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk value = event_target:global_event_country.custom_difficulty_MM_mod_ship_anomaly_fail_risk }
 		multiply_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk value = custom_difficulty_randomness_factor }
@@ -29855,6 +30012,7 @@ country_event = {
 			set_variable = { which = custom_difficulty_MM_mod_ship_interstellar_speed_mult value = custom_difficulty_MM_mod_ship_interstellar_speed_mult_Player }
 			set_variable = { which = custom_difficulty_MM_mod_ship_piracy_suppression_mult value = custom_difficulty_MM_mod_ship_piracy_suppression_mult_Player }
 			set_variable = { which = custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult value = custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_Player }
+			set_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player }
 			set_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk value = custom_difficulty_MM_mod_ship_anomaly_fail_risk_Player }
 			set_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult value = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_Player }
 			set_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult value = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_Player }
@@ -54402,6 +54560,159 @@ country_event = {
 					check_variable = { which = custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult value < 205.000 }
 				}
 				add_modifier = { modifier = custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_20 days = -1 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value = event_target:global_event_country.custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult }
+				}
+			}
+			set_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value = event_target:global_event_country.custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult }
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-10
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-9
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-8
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-7
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-6
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-5
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-4
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-3
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-2
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-1
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_1
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_2
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_3
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_4
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_5
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_6
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_7
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_8
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_9
+			remove_modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_10
+			if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value = 0 }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 95.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-10 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 85.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-9 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 75.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-8 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 65.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-7 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 55.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-6 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 45.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-5 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 35.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-4 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 25.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-3 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 15.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-2 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > 5.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-1 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -15.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_1 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -25.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_2 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -35.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_3 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -45.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_4 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -55.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_5 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -65.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_6 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -75.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_7 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -85.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_8 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -95.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_9 days = -1 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult value > -105.000 }
+				}
+				add_modifier = { modifier = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_10 days = -1 }
 			}
 		}
 		if = {

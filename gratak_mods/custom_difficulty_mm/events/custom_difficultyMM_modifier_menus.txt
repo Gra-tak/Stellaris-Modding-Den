@@ -54895,6 +54895,30 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > 0 }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI_curVal_G
 				event_target:global_event_country = {
 					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value < 0 }
@@ -55382,6 +55406,30 @@ country_event = {
 				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_Player_curVal_G
 				event_target:global_event_country = {
 					check_variable = { which = custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_Player value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > 0 }
 				}
 			}
 			success_text = {
@@ -55875,6 +55923,30 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > 0 }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI_curVal_G
 				event_target:global_event_country = {
 					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value < 0 }
@@ -56362,6 +56434,30 @@ country_event = {
 				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_Player_curVal_G
 				event_target:global_event_country = {
 					check_variable = { which = custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_Player value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > 0 }
 				}
 			}
 			success_text = {
@@ -56855,6 +56951,30 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > 0 }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI_curVal_G
 				event_target:global_event_country = {
 					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value < 0 }
@@ -57342,6 +57462,30 @@ country_event = {
 				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_Player_curVal_G
 				event_target:global_event_country = {
 					check_variable = { which = custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_Player value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > 0 }
 				}
 			}
 			success_text = {
@@ -57835,6 +57979,30 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > 0 }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI_curVal_G
 				event_target:global_event_country = {
 					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value < 0 }
@@ -58325,6 +58493,30 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > 0 }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI_curVal_G
 				event_target:global_event_country = {
 					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value < 0 }
@@ -58617,6 +58809,520 @@ country_event = {
 country_event = {
 	id = custom_difficulty_mm.206
 	is_triggered_only = yes
+	title = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult
+	desc = {
+		trigger = {
+			text = custom_difficulty_current_bonusesMM
+			success_text = { text = custom_difficulty_lockedMM.name custom_difficulty_allow_changes = no }
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_speed_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_speed_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_speed_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_speed_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_speed_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_speed_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_speed_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_speed_mult_Player value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_sensor_range_add_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_sensor_range_add_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_sensor_range_add_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_sensor_range_add_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_sensor_range_add_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_sensor_range_add_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_sensor_range_add_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_sensor_range_add_Player value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_orbital_bombardment_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_orbital_bombardment_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_orbital_bombardment_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_orbital_bombardment_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_orbital_bombardment_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_orbital_bombardment_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_orbital_bombardment_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_orbital_bombardment_mult_Player value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_windup_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_windup_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_windup_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_windup_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_windup_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_windup_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_windup_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_windup_mult_Player value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_winddown_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_winddown_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_winddown_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_winddown_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_winddown_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_winddown_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_winddown_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_winddown_mult_Player value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_interstellar_speed_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_interstellar_speed_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_interstellar_speed_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_interstellar_speed_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_interstellar_speed_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_interstellar_speed_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_interstellar_speed_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_interstellar_speed_mult_Player value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_piracy_suppression_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_piracy_suppression_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_piracy_suppression_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_piracy_suppression_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_piracy_suppression_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_piracy_suppression_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_piracy_suppression_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_piracy_suppression_mult_Player value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_Player value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_fail_risk_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_fail_risk_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_Player value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_Player value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_Player value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_science_ship_survey_speed_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_science_ship_survey_speed_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_science_ship_survey_speed_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_science_ship_survey_speed_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_Player value > 0 }
+				}
+			}
+		}
+	}
+	picture = GFX_evt_synth_sabotage
+	option = {
+		name = custom_difficulty_change_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_5_AI
+		trigger = {
+			event_target:global_event_country = {
+				check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > -50.500 }
+			}
+		}
+		hidden_effect = {
+			event_target:global_event_country = {
+				change_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value = -50.0 }
+			}
+			country_event = { id = custom_difficulty_mm.206 }
+		}
+	}
+	option = {
+		name = custom_difficulty_change_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_1_AI
+		trigger = {
+			event_target:global_event_country = {
+				check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > -90.900 }
+			}
+		}
+		hidden_effect = {
+			event_target:global_event_country = {
+				change_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value = -10.0 }
+			}
+			country_event = { id = custom_difficulty_mm.206 }
+		}
+	}
+	option = {
+		name = custom_difficulty_change_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-1_AI
+		trigger = {
+			event_target:global_event_country = {
+				check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 90.900 }
+			}
+		}
+		hidden_effect = {
+			event_target:global_event_country = {
+				change_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value = 10.0 }
+			}
+			country_event = { id = custom_difficulty_mm.206 }
+		}
+	}
+	option = {
+		name = custom_difficulty_change_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-5_AI
+		trigger = {
+			event_target:global_event_country = {
+				check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 50.500 }
+			}
+		}
+		hidden_effect = {
+			event_target:global_event_country = {
+				change_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value = 50.0 }
+			}
+			country_event = { id = custom_difficulty_mm.206 }
+		}
+	}
+	option = {
+		name = custom_difficulty_change_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_5_Player
+		trigger = {
+			event_target:global_event_country = {
+				check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > -50.500 }
+			}
+		}
+		hidden_effect = {
+			event_target:global_event_country = {
+				change_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value = -50.0 }
+			}
+			country_event = { id = custom_difficulty_mm.206 }
+		}
+	}
+	option = {
+		name = custom_difficulty_change_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_1_Player
+		trigger = {
+			event_target:global_event_country = {
+				check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > -90.900 }
+			}
+		}
+		hidden_effect = {
+			event_target:global_event_country = {
+				change_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value = -10.0 }
+			}
+			country_event = { id = custom_difficulty_mm.206 }
+		}
+	}
+	option = {
+		name = custom_difficulty_change_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-1_Player
+		trigger = {
+			event_target:global_event_country = {
+				check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 90.900 }
+			}
+		}
+		hidden_effect = {
+			event_target:global_event_country = {
+				change_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value = 10.0 }
+			}
+			country_event = { id = custom_difficulty_mm.206 }
+		}
+	}
+	option = {
+		name = custom_difficulty_change_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-5_Player
+		trigger = {
+			event_target:global_event_country = {
+				check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 50.500 }
+			}
+		}
+		hidden_effect = {
+			event_target:global_event_country = {
+				change_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value = 50.0 }
+			}
+			country_event = { id = custom_difficulty_mm.206 }
+		}
+	}
+	option = {
+		name = custom_difficulty_change_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_5_Both
+		trigger = {
+			event_target:global_event_country = {
+				check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > -50.500 }
+				check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > -50.500 }
+			}
+		}
+		hidden_effect = {
+			event_target:global_event_country = {
+				change_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value = -50.0 }
+				change_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value = -50.0 }
+			}
+			country_event = { id = custom_difficulty_mm.206 }
+		}
+	}
+	option = {
+		name = custom_difficulty_change_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_1_Both
+		trigger = {
+			event_target:global_event_country = {
+				check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > -90.900 }
+				check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > -90.900 }
+			}
+		}
+		hidden_effect = {
+			event_target:global_event_country = {
+				change_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value = -10.0 }
+				change_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value = -10.0 }
+			}
+			country_event = { id = custom_difficulty_mm.206 }
+		}
+	}
+	option = {
+		name = custom_difficulty_change_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-1_Both
+		trigger = {
+			event_target:global_event_country = {
+				check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 90.900 }
+				check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 90.900 }
+			}
+		}
+		hidden_effect = {
+			event_target:global_event_country = {
+				change_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value = 10.0 }
+				change_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value = 10.0 }
+			}
+			country_event = { id = custom_difficulty_mm.206 }
+		}
+	}
+	option = {
+		name = custom_difficulty_change_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_-5_Both
+		trigger = {
+			event_target:global_event_country = {
+				check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 50.500 }
+				check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 50.500 }
+			}
+		}
+		hidden_effect = {
+			event_target:global_event_country = {
+				change_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value = 50.0 }
+				change_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value = 50.0 }
+			}
+			country_event = { id = custom_difficulty_mm.206 }
+		}
+	}
+	option = {
+		name = custom_difficulty_backMM
+		country_event = { id = custom_difficulty_mm.17 }
+	}
+	option = {
+		name = custom_difficulty_closeMM
+		hidden_effect = {
+			country_event = { id = custom_difficulty_mm.2 }
+			if = {
+				limit = { has_global_flag = custom_difficulty_active }
+				country_event = { id = custom_difficulty.41 }
+			}
+		}
+	}
+}
+country_event = {
+	id = custom_difficulty_mm.207
+	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_ship_anomaly_fail_risk
 	desc = {
 		trigger = {
@@ -58815,6 +59521,30 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > 0 }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI_curVal_G
 				event_target:global_event_country = {
 					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value < 0 }
@@ -58924,7 +59654,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value = -50.0 }
 			}
-			country_event = { id = custom_difficulty_mm.206 }
+			country_event = { id = custom_difficulty_mm.207 }
 		}
 	}
 	option = {
@@ -58938,7 +59668,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value = -10.0 }
 			}
-			country_event = { id = custom_difficulty_mm.206 }
+			country_event = { id = custom_difficulty_mm.207 }
 		}
 	}
 	option = {
@@ -58952,7 +59682,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value = 10.0 }
 			}
-			country_event = { id = custom_difficulty_mm.206 }
+			country_event = { id = custom_difficulty_mm.207 }
 		}
 	}
 	option = {
@@ -58966,7 +59696,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value = 50.0 }
 			}
-			country_event = { id = custom_difficulty_mm.206 }
+			country_event = { id = custom_difficulty_mm.207 }
 		}
 	}
 	option = {
@@ -58980,7 +59710,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_Player value = -50.0 }
 			}
-			country_event = { id = custom_difficulty_mm.206 }
+			country_event = { id = custom_difficulty_mm.207 }
 		}
 	}
 	option = {
@@ -58994,7 +59724,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_Player value = -10.0 }
 			}
-			country_event = { id = custom_difficulty_mm.206 }
+			country_event = { id = custom_difficulty_mm.207 }
 		}
 	}
 	option = {
@@ -59008,7 +59738,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_Player value = 10.0 }
 			}
-			country_event = { id = custom_difficulty_mm.206 }
+			country_event = { id = custom_difficulty_mm.207 }
 		}
 	}
 	option = {
@@ -59022,7 +59752,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_Player value = 50.0 }
 			}
-			country_event = { id = custom_difficulty_mm.206 }
+			country_event = { id = custom_difficulty_mm.207 }
 		}
 	}
 	option = {
@@ -59038,7 +59768,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value = -50.0 }
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_Player value = -50.0 }
 			}
-			country_event = { id = custom_difficulty_mm.206 }
+			country_event = { id = custom_difficulty_mm.207 }
 		}
 	}
 	option = {
@@ -59054,7 +59784,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value = -10.0 }
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_Player value = -10.0 }
 			}
-			country_event = { id = custom_difficulty_mm.206 }
+			country_event = { id = custom_difficulty_mm.207 }
 		}
 	}
 	option = {
@@ -59070,7 +59800,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value = 10.0 }
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_Player value = 10.0 }
 			}
-			country_event = { id = custom_difficulty_mm.206 }
+			country_event = { id = custom_difficulty_mm.207 }
 		}
 	}
 	option = {
@@ -59086,7 +59816,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value = 50.0 }
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_Player value = 50.0 }
 			}
-			country_event = { id = custom_difficulty_mm.206 }
+			country_event = { id = custom_difficulty_mm.207 }
 		}
 	}
 	option = {
@@ -59105,7 +59835,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.207
+	id = custom_difficulty_mm.208
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult
 	desc = {
@@ -59305,6 +60035,30 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > 0 }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI_curVal_G
 				event_target:global_event_country = {
 					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value < 0 }
@@ -59414,7 +60168,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_AI value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.207 }
+			country_event = { id = custom_difficulty_mm.208 }
 		}
 	}
 	option = {
@@ -59428,7 +60182,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_AI value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.207 }
+			country_event = { id = custom_difficulty_mm.208 }
 		}
 	}
 	option = {
@@ -59442,7 +60196,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_AI value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.207 }
+			country_event = { id = custom_difficulty_mm.208 }
 		}
 	}
 	option = {
@@ -59456,7 +60210,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_AI value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.207 }
+			country_event = { id = custom_difficulty_mm.208 }
 		}
 	}
 	option = {
@@ -59470,7 +60224,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.207 }
+			country_event = { id = custom_difficulty_mm.208 }
 		}
 	}
 	option = {
@@ -59484,7 +60238,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.207 }
+			country_event = { id = custom_difficulty_mm.208 }
 		}
 	}
 	option = {
@@ -59498,7 +60252,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.207 }
+			country_event = { id = custom_difficulty_mm.208 }
 		}
 	}
 	option = {
@@ -59512,7 +60266,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.207 }
+			country_event = { id = custom_difficulty_mm.208 }
 		}
 	}
 	option = {
@@ -59528,7 +60282,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_AI value = 50 }
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.207 }
+			country_event = { id = custom_difficulty_mm.208 }
 		}
 	}
 	option = {
@@ -59544,7 +60298,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_AI value = 10 }
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.207 }
+			country_event = { id = custom_difficulty_mm.208 }
 		}
 	}
 	option = {
@@ -59560,7 +60314,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_AI value = -10 }
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.207 }
+			country_event = { id = custom_difficulty_mm.208 }
 		}
 	}
 	option = {
@@ -59576,7 +60330,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_AI value = -50 }
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.207 }
+			country_event = { id = custom_difficulty_mm.208 }
 		}
 	}
 	option = {
@@ -59595,7 +60349,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.208
+	id = custom_difficulty_mm.209
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult
 	desc = {
@@ -59795,6 +60549,30 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > 0 }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI_curVal_G
 				event_target:global_event_country = {
 					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value < 0 }
@@ -59904,7 +60682,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_AI value = 100.0 }
 			}
-			country_event = { id = custom_difficulty_mm.208 }
+			country_event = { id = custom_difficulty_mm.209 }
 		}
 	}
 	option = {
@@ -59918,7 +60696,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_AI value = 20.0 }
 			}
-			country_event = { id = custom_difficulty_mm.208 }
+			country_event = { id = custom_difficulty_mm.209 }
 		}
 	}
 	option = {
@@ -59932,7 +60710,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_AI value = -20.0 }
 			}
-			country_event = { id = custom_difficulty_mm.208 }
+			country_event = { id = custom_difficulty_mm.209 }
 		}
 	}
 	option = {
@@ -59946,7 +60724,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_AI value = -100.0 }
 			}
-			country_event = { id = custom_difficulty_mm.208 }
+			country_event = { id = custom_difficulty_mm.209 }
 		}
 	}
 	option = {
@@ -59960,7 +60738,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_Player value = 100.0 }
 			}
-			country_event = { id = custom_difficulty_mm.208 }
+			country_event = { id = custom_difficulty_mm.209 }
 		}
 	}
 	option = {
@@ -59974,7 +60752,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_Player value = 20.0 }
 			}
-			country_event = { id = custom_difficulty_mm.208 }
+			country_event = { id = custom_difficulty_mm.209 }
 		}
 	}
 	option = {
@@ -59988,7 +60766,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_Player value = -20.0 }
 			}
-			country_event = { id = custom_difficulty_mm.208 }
+			country_event = { id = custom_difficulty_mm.209 }
 		}
 	}
 	option = {
@@ -60002,7 +60780,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_Player value = -100.0 }
 			}
-			country_event = { id = custom_difficulty_mm.208 }
+			country_event = { id = custom_difficulty_mm.209 }
 		}
 	}
 	option = {
@@ -60018,7 +60796,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_AI value = 100.0 }
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_Player value = 100.0 }
 			}
-			country_event = { id = custom_difficulty_mm.208 }
+			country_event = { id = custom_difficulty_mm.209 }
 		}
 	}
 	option = {
@@ -60034,7 +60812,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_AI value = 20.0 }
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_Player value = 20.0 }
 			}
-			country_event = { id = custom_difficulty_mm.208 }
+			country_event = { id = custom_difficulty_mm.209 }
 		}
 	}
 	option = {
@@ -60050,7 +60828,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_AI value = -20.0 }
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_Player value = -20.0 }
 			}
-			country_event = { id = custom_difficulty_mm.208 }
+			country_event = { id = custom_difficulty_mm.209 }
 		}
 	}
 	option = {
@@ -60066,7 +60844,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_AI value = -100.0 }
 				change_variable = { which = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult_Player value = -100.0 }
 			}
-			country_event = { id = custom_difficulty_mm.208 }
+			country_event = { id = custom_difficulty_mm.209 }
 		}
 	}
 	option = {
@@ -60085,7 +60863,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.209
+	id = custom_difficulty_mm.210
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_science_ship_survey_speed
 	desc = {
@@ -60285,6 +61063,30 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > 0 }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI_curVal_G
 				event_target:global_event_country = {
 					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value < 0 }
@@ -60394,7 +61196,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_AI value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.209 }
+			country_event = { id = custom_difficulty_mm.210 }
 		}
 	}
 	option = {
@@ -60408,7 +61210,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_AI value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.209 }
+			country_event = { id = custom_difficulty_mm.210 }
 		}
 	}
 	option = {
@@ -60422,7 +61224,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_AI value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.209 }
+			country_event = { id = custom_difficulty_mm.210 }
 		}
 	}
 	option = {
@@ -60436,7 +61238,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_AI value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.209 }
+			country_event = { id = custom_difficulty_mm.210 }
 		}
 	}
 	option = {
@@ -60450,7 +61252,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.209 }
+			country_event = { id = custom_difficulty_mm.210 }
 		}
 	}
 	option = {
@@ -60464,7 +61266,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.209 }
+			country_event = { id = custom_difficulty_mm.210 }
 		}
 	}
 	option = {
@@ -60478,7 +61280,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.209 }
+			country_event = { id = custom_difficulty_mm.210 }
 		}
 	}
 	option = {
@@ -60492,7 +61294,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.209 }
+			country_event = { id = custom_difficulty_mm.210 }
 		}
 	}
 	option = {
@@ -60508,7 +61310,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_AI value = 50 }
 				change_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.209 }
+			country_event = { id = custom_difficulty_mm.210 }
 		}
 	}
 	option = {
@@ -60524,7 +61326,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_AI value = 10 }
 				change_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.209 }
+			country_event = { id = custom_difficulty_mm.210 }
 		}
 	}
 	option = {
@@ -60540,7 +61342,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_AI value = -10 }
 				change_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.209 }
+			country_event = { id = custom_difficulty_mm.210 }
 		}
 	}
 	option = {
@@ -60556,7 +61358,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_AI value = -50 }
 				change_variable = { which = custom_difficulty_MM_mod_science_ship_survey_speed_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.209 }
+			country_event = { id = custom_difficulty_mm.210 }
 		}
 	}
 	option = {
@@ -60575,7 +61377,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.210
+	id = custom_difficulty_mm.211
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_army_disengage_chance_mult
 	desc = {
@@ -61004,7 +61806,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_disengage_chance_mult_AI value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.210 }
+			country_event = { id = custom_difficulty_mm.211 }
 		}
 	}
 	option = {
@@ -61018,7 +61820,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_disengage_chance_mult_AI value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.210 }
+			country_event = { id = custom_difficulty_mm.211 }
 		}
 	}
 	option = {
@@ -61032,7 +61834,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_disengage_chance_mult_AI value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.210 }
+			country_event = { id = custom_difficulty_mm.211 }
 		}
 	}
 	option = {
@@ -61046,7 +61848,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_disengage_chance_mult_AI value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.210 }
+			country_event = { id = custom_difficulty_mm.211 }
 		}
 	}
 	option = {
@@ -61060,7 +61862,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_disengage_chance_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.210 }
+			country_event = { id = custom_difficulty_mm.211 }
 		}
 	}
 	option = {
@@ -61074,7 +61876,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_disengage_chance_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.210 }
+			country_event = { id = custom_difficulty_mm.211 }
 		}
 	}
 	option = {
@@ -61088,7 +61890,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_disengage_chance_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.210 }
+			country_event = { id = custom_difficulty_mm.211 }
 		}
 	}
 	option = {
@@ -61102,7 +61904,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_disengage_chance_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.210 }
+			country_event = { id = custom_difficulty_mm.211 }
 		}
 	}
 	option = {
@@ -61118,7 +61920,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_disengage_chance_mult_AI value = 50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_disengage_chance_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.210 }
+			country_event = { id = custom_difficulty_mm.211 }
 		}
 	}
 	option = {
@@ -61134,7 +61936,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_disengage_chance_mult_AI value = 10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_disengage_chance_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.210 }
+			country_event = { id = custom_difficulty_mm.211 }
 		}
 	}
 	option = {
@@ -61150,7 +61952,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_disengage_chance_mult_AI value = -10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_disengage_chance_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.210 }
+			country_event = { id = custom_difficulty_mm.211 }
 		}
 	}
 	option = {
@@ -61166,7 +61968,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_disengage_chance_mult_AI value = -50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_disengage_chance_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.210 }
+			country_event = { id = custom_difficulty_mm.211 }
 		}
 	}
 	option = {
@@ -61185,7 +61987,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.211
+	id = custom_difficulty_mm.212
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_army_starting_experience_add
 	desc = {
@@ -61614,7 +62416,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_starting_experience_add_AI value = 5 }
 			}
-			country_event = { id = custom_difficulty_mm.211 }
+			country_event = { id = custom_difficulty_mm.212 }
 		}
 	}
 	option = {
@@ -61628,7 +62430,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_starting_experience_add_AI value = 1 }
 			}
-			country_event = { id = custom_difficulty_mm.211 }
+			country_event = { id = custom_difficulty_mm.212 }
 		}
 	}
 	option = {
@@ -61642,7 +62444,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_starting_experience_add_AI value = -1 }
 			}
-			country_event = { id = custom_difficulty_mm.211 }
+			country_event = { id = custom_difficulty_mm.212 }
 		}
 	}
 	option = {
@@ -61656,7 +62458,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_starting_experience_add_AI value = -5 }
 			}
-			country_event = { id = custom_difficulty_mm.211 }
+			country_event = { id = custom_difficulty_mm.212 }
 		}
 	}
 	option = {
@@ -61670,7 +62472,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_starting_experience_add_Player value = 5 }
 			}
-			country_event = { id = custom_difficulty_mm.211 }
+			country_event = { id = custom_difficulty_mm.212 }
 		}
 	}
 	option = {
@@ -61684,7 +62486,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_starting_experience_add_Player value = 1 }
 			}
-			country_event = { id = custom_difficulty_mm.211 }
+			country_event = { id = custom_difficulty_mm.212 }
 		}
 	}
 	option = {
@@ -61698,7 +62500,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_starting_experience_add_Player value = -1 }
 			}
-			country_event = { id = custom_difficulty_mm.211 }
+			country_event = { id = custom_difficulty_mm.212 }
 		}
 	}
 	option = {
@@ -61712,7 +62514,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_starting_experience_add_Player value = -5 }
 			}
-			country_event = { id = custom_difficulty_mm.211 }
+			country_event = { id = custom_difficulty_mm.212 }
 		}
 	}
 	option = {
@@ -61728,7 +62530,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_starting_experience_add_AI value = 5 }
 				change_variable = { which = custom_difficulty_MM_mod_army_starting_experience_add_Player value = 5 }
 			}
-			country_event = { id = custom_difficulty_mm.211 }
+			country_event = { id = custom_difficulty_mm.212 }
 		}
 	}
 	option = {
@@ -61744,7 +62546,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_starting_experience_add_AI value = 1 }
 				change_variable = { which = custom_difficulty_MM_mod_army_starting_experience_add_Player value = 1 }
 			}
-			country_event = { id = custom_difficulty_mm.211 }
+			country_event = { id = custom_difficulty_mm.212 }
 		}
 	}
 	option = {
@@ -61760,7 +62562,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_starting_experience_add_AI value = -1 }
 				change_variable = { which = custom_difficulty_MM_mod_army_starting_experience_add_Player value = -1 }
 			}
-			country_event = { id = custom_difficulty_mm.211 }
+			country_event = { id = custom_difficulty_mm.212 }
 		}
 	}
 	option = {
@@ -61776,7 +62578,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_starting_experience_add_AI value = -5 }
 				change_variable = { which = custom_difficulty_MM_mod_army_starting_experience_add_Player value = -5 }
 			}
-			country_event = { id = custom_difficulty_mm.211 }
+			country_event = { id = custom_difficulty_mm.212 }
 		}
 	}
 	option = {
@@ -61795,7 +62597,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.212
+	id = custom_difficulty_mm.213
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_army_health
 	desc = {
@@ -62224,7 +63026,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_health_AI value = 5 }
 			}
-			country_event = { id = custom_difficulty_mm.212 }
+			country_event = { id = custom_difficulty_mm.213 }
 		}
 	}
 	option = {
@@ -62238,7 +63040,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_health_AI value = 1 }
 			}
-			country_event = { id = custom_difficulty_mm.212 }
+			country_event = { id = custom_difficulty_mm.213 }
 		}
 	}
 	option = {
@@ -62252,7 +63054,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_health_AI value = -1 }
 			}
-			country_event = { id = custom_difficulty_mm.212 }
+			country_event = { id = custom_difficulty_mm.213 }
 		}
 	}
 	option = {
@@ -62266,7 +63068,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_health_AI value = -5 }
 			}
-			country_event = { id = custom_difficulty_mm.212 }
+			country_event = { id = custom_difficulty_mm.213 }
 		}
 	}
 	option = {
@@ -62280,7 +63082,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_health_Player value = 5 }
 			}
-			country_event = { id = custom_difficulty_mm.212 }
+			country_event = { id = custom_difficulty_mm.213 }
 		}
 	}
 	option = {
@@ -62294,7 +63096,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_health_Player value = 1 }
 			}
-			country_event = { id = custom_difficulty_mm.212 }
+			country_event = { id = custom_difficulty_mm.213 }
 		}
 	}
 	option = {
@@ -62308,7 +63110,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_health_Player value = -1 }
 			}
-			country_event = { id = custom_difficulty_mm.212 }
+			country_event = { id = custom_difficulty_mm.213 }
 		}
 	}
 	option = {
@@ -62322,7 +63124,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_health_Player value = -5 }
 			}
-			country_event = { id = custom_difficulty_mm.212 }
+			country_event = { id = custom_difficulty_mm.213 }
 		}
 	}
 	option = {
@@ -62338,7 +63140,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_health_AI value = 5 }
 				change_variable = { which = custom_difficulty_MM_mod_army_health_Player value = 5 }
 			}
-			country_event = { id = custom_difficulty_mm.212 }
+			country_event = { id = custom_difficulty_mm.213 }
 		}
 	}
 	option = {
@@ -62354,7 +63156,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_health_AI value = 1 }
 				change_variable = { which = custom_difficulty_MM_mod_army_health_Player value = 1 }
 			}
-			country_event = { id = custom_difficulty_mm.212 }
+			country_event = { id = custom_difficulty_mm.213 }
 		}
 	}
 	option = {
@@ -62370,7 +63172,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_health_AI value = -1 }
 				change_variable = { which = custom_difficulty_MM_mod_army_health_Player value = -1 }
 			}
-			country_event = { id = custom_difficulty_mm.212 }
+			country_event = { id = custom_difficulty_mm.213 }
 		}
 	}
 	option = {
@@ -62386,7 +63188,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_health_AI value = -5 }
 				change_variable = { which = custom_difficulty_MM_mod_army_health_Player value = -5 }
 			}
-			country_event = { id = custom_difficulty_mm.212 }
+			country_event = { id = custom_difficulty_mm.213 }
 		}
 	}
 	option = {
@@ -62405,7 +63207,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.213
+	id = custom_difficulty_mm.214
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_army_morale
 	desc = {
@@ -62834,7 +63636,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_AI value = 5 }
 			}
-			country_event = { id = custom_difficulty_mm.213 }
+			country_event = { id = custom_difficulty_mm.214 }
 		}
 	}
 	option = {
@@ -62848,7 +63650,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_AI value = 1 }
 			}
-			country_event = { id = custom_difficulty_mm.213 }
+			country_event = { id = custom_difficulty_mm.214 }
 		}
 	}
 	option = {
@@ -62862,7 +63664,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_AI value = -1 }
 			}
-			country_event = { id = custom_difficulty_mm.213 }
+			country_event = { id = custom_difficulty_mm.214 }
 		}
 	}
 	option = {
@@ -62876,7 +63678,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_AI value = -5 }
 			}
-			country_event = { id = custom_difficulty_mm.213 }
+			country_event = { id = custom_difficulty_mm.214 }
 		}
 	}
 	option = {
@@ -62890,7 +63692,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_Player value = 5 }
 			}
-			country_event = { id = custom_difficulty_mm.213 }
+			country_event = { id = custom_difficulty_mm.214 }
 		}
 	}
 	option = {
@@ -62904,7 +63706,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_Player value = 1 }
 			}
-			country_event = { id = custom_difficulty_mm.213 }
+			country_event = { id = custom_difficulty_mm.214 }
 		}
 	}
 	option = {
@@ -62918,7 +63720,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_Player value = -1 }
 			}
-			country_event = { id = custom_difficulty_mm.213 }
+			country_event = { id = custom_difficulty_mm.214 }
 		}
 	}
 	option = {
@@ -62932,7 +63734,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_Player value = -5 }
 			}
-			country_event = { id = custom_difficulty_mm.213 }
+			country_event = { id = custom_difficulty_mm.214 }
 		}
 	}
 	option = {
@@ -62948,7 +63750,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_AI value = 5 }
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_Player value = 5 }
 			}
-			country_event = { id = custom_difficulty_mm.213 }
+			country_event = { id = custom_difficulty_mm.214 }
 		}
 	}
 	option = {
@@ -62964,7 +63766,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_AI value = 1 }
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_Player value = 1 }
 			}
-			country_event = { id = custom_difficulty_mm.213 }
+			country_event = { id = custom_difficulty_mm.214 }
 		}
 	}
 	option = {
@@ -62980,7 +63782,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_AI value = -1 }
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_Player value = -1 }
 			}
-			country_event = { id = custom_difficulty_mm.213 }
+			country_event = { id = custom_difficulty_mm.214 }
 		}
 	}
 	option = {
@@ -62996,7 +63798,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_AI value = -5 }
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_Player value = -5 }
 			}
-			country_event = { id = custom_difficulty_mm.213 }
+			country_event = { id = custom_difficulty_mm.214 }
 		}
 	}
 	option = {
@@ -63015,7 +63817,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.214
+	id = custom_difficulty_mm.215
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_army_damage_mult
 	desc = {
@@ -63444,7 +64246,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_damage_mult_AI value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.214 }
+			country_event = { id = custom_difficulty_mm.215 }
 		}
 	}
 	option = {
@@ -63458,7 +64260,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_damage_mult_AI value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.214 }
+			country_event = { id = custom_difficulty_mm.215 }
 		}
 	}
 	option = {
@@ -63472,7 +64274,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_damage_mult_AI value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.214 }
+			country_event = { id = custom_difficulty_mm.215 }
 		}
 	}
 	option = {
@@ -63486,7 +64288,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_damage_mult_AI value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.214 }
+			country_event = { id = custom_difficulty_mm.215 }
 		}
 	}
 	option = {
@@ -63500,7 +64302,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_damage_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.214 }
+			country_event = { id = custom_difficulty_mm.215 }
 		}
 	}
 	option = {
@@ -63514,7 +64316,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_damage_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.214 }
+			country_event = { id = custom_difficulty_mm.215 }
 		}
 	}
 	option = {
@@ -63528,7 +64330,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_damage_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.214 }
+			country_event = { id = custom_difficulty_mm.215 }
 		}
 	}
 	option = {
@@ -63542,7 +64344,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_damage_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.214 }
+			country_event = { id = custom_difficulty_mm.215 }
 		}
 	}
 	option = {
@@ -63558,7 +64360,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_damage_mult_AI value = 50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_damage_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.214 }
+			country_event = { id = custom_difficulty_mm.215 }
 		}
 	}
 	option = {
@@ -63574,7 +64376,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_damage_mult_AI value = 10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_damage_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.214 }
+			country_event = { id = custom_difficulty_mm.215 }
 		}
 	}
 	option = {
@@ -63590,7 +64392,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_damage_mult_AI value = -10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_damage_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.214 }
+			country_event = { id = custom_difficulty_mm.215 }
 		}
 	}
 	option = {
@@ -63606,7 +64408,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_damage_mult_AI value = -50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_damage_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.214 }
+			country_event = { id = custom_difficulty_mm.215 }
 		}
 	}
 	option = {
@@ -63625,7 +64427,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.215
+	id = custom_difficulty_mm.216
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_army_collateral_damage_mult
 	desc = {
@@ -64054,7 +64856,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_collateral_damage_mult_AI value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.215 }
+			country_event = { id = custom_difficulty_mm.216 }
 		}
 	}
 	option = {
@@ -64068,7 +64870,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_collateral_damage_mult_AI value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.215 }
+			country_event = { id = custom_difficulty_mm.216 }
 		}
 	}
 	option = {
@@ -64082,7 +64884,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_collateral_damage_mult_AI value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.215 }
+			country_event = { id = custom_difficulty_mm.216 }
 		}
 	}
 	option = {
@@ -64096,7 +64898,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_collateral_damage_mult_AI value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.215 }
+			country_event = { id = custom_difficulty_mm.216 }
 		}
 	}
 	option = {
@@ -64110,7 +64912,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_collateral_damage_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.215 }
+			country_event = { id = custom_difficulty_mm.216 }
 		}
 	}
 	option = {
@@ -64124,7 +64926,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_collateral_damage_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.215 }
+			country_event = { id = custom_difficulty_mm.216 }
 		}
 	}
 	option = {
@@ -64138,7 +64940,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_collateral_damage_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.215 }
+			country_event = { id = custom_difficulty_mm.216 }
 		}
 	}
 	option = {
@@ -64152,7 +64954,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_collateral_damage_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.215 }
+			country_event = { id = custom_difficulty_mm.216 }
 		}
 	}
 	option = {
@@ -64168,7 +64970,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_collateral_damage_mult_AI value = 50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_collateral_damage_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.215 }
+			country_event = { id = custom_difficulty_mm.216 }
 		}
 	}
 	option = {
@@ -64184,7 +64986,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_collateral_damage_mult_AI value = 10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_collateral_damage_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.215 }
+			country_event = { id = custom_difficulty_mm.216 }
 		}
 	}
 	option = {
@@ -64200,7 +65002,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_collateral_damage_mult_AI value = -10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_collateral_damage_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.215 }
+			country_event = { id = custom_difficulty_mm.216 }
 		}
 	}
 	option = {
@@ -64216,7 +65018,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_collateral_damage_mult_AI value = -50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_collateral_damage_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.215 }
+			country_event = { id = custom_difficulty_mm.216 }
 		}
 	}
 	option = {
@@ -64235,7 +65037,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.216
+	id = custom_difficulty_mm.217
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_army_morale_damage_mult
 	desc = {
@@ -64664,7 +65466,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_damage_mult_AI value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.216 }
+			country_event = { id = custom_difficulty_mm.217 }
 		}
 	}
 	option = {
@@ -64678,7 +65480,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_damage_mult_AI value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.216 }
+			country_event = { id = custom_difficulty_mm.217 }
 		}
 	}
 	option = {
@@ -64692,7 +65494,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_damage_mult_AI value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.216 }
+			country_event = { id = custom_difficulty_mm.217 }
 		}
 	}
 	option = {
@@ -64706,7 +65508,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_damage_mult_AI value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.216 }
+			country_event = { id = custom_difficulty_mm.217 }
 		}
 	}
 	option = {
@@ -64720,7 +65522,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_damage_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.216 }
+			country_event = { id = custom_difficulty_mm.217 }
 		}
 	}
 	option = {
@@ -64734,7 +65536,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_damage_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.216 }
+			country_event = { id = custom_difficulty_mm.217 }
 		}
 	}
 	option = {
@@ -64748,7 +65550,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_damage_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.216 }
+			country_event = { id = custom_difficulty_mm.217 }
 		}
 	}
 	option = {
@@ -64762,7 +65564,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_damage_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.216 }
+			country_event = { id = custom_difficulty_mm.217 }
 		}
 	}
 	option = {
@@ -64778,7 +65580,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_damage_mult_AI value = 50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_damage_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.216 }
+			country_event = { id = custom_difficulty_mm.217 }
 		}
 	}
 	option = {
@@ -64794,7 +65596,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_damage_mult_AI value = 10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_damage_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.216 }
+			country_event = { id = custom_difficulty_mm.217 }
 		}
 	}
 	option = {
@@ -64810,7 +65612,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_damage_mult_AI value = -10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_damage_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.216 }
+			country_event = { id = custom_difficulty_mm.217 }
 		}
 	}
 	option = {
@@ -64826,7 +65628,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_damage_mult_AI value = -50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_morale_damage_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.216 }
+			country_event = { id = custom_difficulty_mm.217 }
 		}
 	}
 	option = {
@@ -64845,7 +65647,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.217
+	id = custom_difficulty_mm.218
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_army_defense_morale_mult
 	desc = {
@@ -65274,7 +66076,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_morale_mult_AI value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.217 }
+			country_event = { id = custom_difficulty_mm.218 }
 		}
 	}
 	option = {
@@ -65288,7 +66090,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_morale_mult_AI value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.217 }
+			country_event = { id = custom_difficulty_mm.218 }
 		}
 	}
 	option = {
@@ -65302,7 +66104,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_morale_mult_AI value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.217 }
+			country_event = { id = custom_difficulty_mm.218 }
 		}
 	}
 	option = {
@@ -65316,7 +66118,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_morale_mult_AI value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.217 }
+			country_event = { id = custom_difficulty_mm.218 }
 		}
 	}
 	option = {
@@ -65330,7 +66132,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_morale_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.217 }
+			country_event = { id = custom_difficulty_mm.218 }
 		}
 	}
 	option = {
@@ -65344,7 +66146,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_morale_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.217 }
+			country_event = { id = custom_difficulty_mm.218 }
 		}
 	}
 	option = {
@@ -65358,7 +66160,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_morale_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.217 }
+			country_event = { id = custom_difficulty_mm.218 }
 		}
 	}
 	option = {
@@ -65372,7 +66174,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_morale_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.217 }
+			country_event = { id = custom_difficulty_mm.218 }
 		}
 	}
 	option = {
@@ -65388,7 +66190,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_morale_mult_AI value = 50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_morale_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.217 }
+			country_event = { id = custom_difficulty_mm.218 }
 		}
 	}
 	option = {
@@ -65404,7 +66206,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_morale_mult_AI value = 10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_morale_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.217 }
+			country_event = { id = custom_difficulty_mm.218 }
 		}
 	}
 	option = {
@@ -65420,7 +66222,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_morale_mult_AI value = -10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_morale_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.217 }
+			country_event = { id = custom_difficulty_mm.218 }
 		}
 	}
 	option = {
@@ -65436,7 +66238,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_morale_mult_AI value = -50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_morale_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.217 }
+			country_event = { id = custom_difficulty_mm.218 }
 		}
 	}
 	option = {
@@ -65455,7 +66257,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.218
+	id = custom_difficulty_mm.219
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_army_defense_damage_mult
 	desc = {
@@ -65884,7 +66686,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_damage_mult_AI value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.218 }
+			country_event = { id = custom_difficulty_mm.219 }
 		}
 	}
 	option = {
@@ -65898,7 +66700,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_damage_mult_AI value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.218 }
+			country_event = { id = custom_difficulty_mm.219 }
 		}
 	}
 	option = {
@@ -65912,7 +66714,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_damage_mult_AI value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.218 }
+			country_event = { id = custom_difficulty_mm.219 }
 		}
 	}
 	option = {
@@ -65926,7 +66728,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_damage_mult_AI value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.218 }
+			country_event = { id = custom_difficulty_mm.219 }
 		}
 	}
 	option = {
@@ -65940,7 +66742,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_damage_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.218 }
+			country_event = { id = custom_difficulty_mm.219 }
 		}
 	}
 	option = {
@@ -65954,7 +66756,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_damage_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.218 }
+			country_event = { id = custom_difficulty_mm.219 }
 		}
 	}
 	option = {
@@ -65968,7 +66770,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_damage_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.218 }
+			country_event = { id = custom_difficulty_mm.219 }
 		}
 	}
 	option = {
@@ -65982,7 +66784,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_damage_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.218 }
+			country_event = { id = custom_difficulty_mm.219 }
 		}
 	}
 	option = {
@@ -65998,7 +66800,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_damage_mult_AI value = 50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_damage_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.218 }
+			country_event = { id = custom_difficulty_mm.219 }
 		}
 	}
 	option = {
@@ -66014,7 +66816,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_damage_mult_AI value = 10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_damage_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.218 }
+			country_event = { id = custom_difficulty_mm.219 }
 		}
 	}
 	option = {
@@ -66030,7 +66832,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_damage_mult_AI value = -10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_damage_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.218 }
+			country_event = { id = custom_difficulty_mm.219 }
 		}
 	}
 	option = {
@@ -66046,7 +66848,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_damage_mult_AI value = -50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_damage_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.218 }
+			country_event = { id = custom_difficulty_mm.219 }
 		}
 	}
 	option = {
@@ -66065,7 +66867,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.219
+	id = custom_difficulty_mm.220
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_army_attack_morale_mult
 	desc = {
@@ -66494,7 +67296,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_morale_mult_AI value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.219 }
+			country_event = { id = custom_difficulty_mm.220 }
 		}
 	}
 	option = {
@@ -66508,7 +67310,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_morale_mult_AI value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.219 }
+			country_event = { id = custom_difficulty_mm.220 }
 		}
 	}
 	option = {
@@ -66522,7 +67324,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_morale_mult_AI value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.219 }
+			country_event = { id = custom_difficulty_mm.220 }
 		}
 	}
 	option = {
@@ -66536,7 +67338,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_morale_mult_AI value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.219 }
+			country_event = { id = custom_difficulty_mm.220 }
 		}
 	}
 	option = {
@@ -66550,7 +67352,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_morale_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.219 }
+			country_event = { id = custom_difficulty_mm.220 }
 		}
 	}
 	option = {
@@ -66564,7 +67366,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_morale_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.219 }
+			country_event = { id = custom_difficulty_mm.220 }
 		}
 	}
 	option = {
@@ -66578,7 +67380,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_morale_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.219 }
+			country_event = { id = custom_difficulty_mm.220 }
 		}
 	}
 	option = {
@@ -66592,7 +67394,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_morale_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.219 }
+			country_event = { id = custom_difficulty_mm.220 }
 		}
 	}
 	option = {
@@ -66608,7 +67410,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_morale_mult_AI value = 50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_morale_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.219 }
+			country_event = { id = custom_difficulty_mm.220 }
 		}
 	}
 	option = {
@@ -66624,7 +67426,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_morale_mult_AI value = 10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_morale_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.219 }
+			country_event = { id = custom_difficulty_mm.220 }
 		}
 	}
 	option = {
@@ -66640,7 +67442,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_morale_mult_AI value = -10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_morale_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.219 }
+			country_event = { id = custom_difficulty_mm.220 }
 		}
 	}
 	option = {
@@ -66656,7 +67458,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_morale_mult_AI value = -50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_morale_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.219 }
+			country_event = { id = custom_difficulty_mm.220 }
 		}
 	}
 	option = {
@@ -66675,7 +67477,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.220
+	id = custom_difficulty_mm.221
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_army_attack_damage_mult
 	desc = {
@@ -67104,7 +67906,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_damage_mult_AI value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.220 }
+			country_event = { id = custom_difficulty_mm.221 }
 		}
 	}
 	option = {
@@ -67118,7 +67920,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_damage_mult_AI value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.220 }
+			country_event = { id = custom_difficulty_mm.221 }
 		}
 	}
 	option = {
@@ -67132,7 +67934,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_damage_mult_AI value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.220 }
+			country_event = { id = custom_difficulty_mm.221 }
 		}
 	}
 	option = {
@@ -67146,7 +67948,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_damage_mult_AI value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.220 }
+			country_event = { id = custom_difficulty_mm.221 }
 		}
 	}
 	option = {
@@ -67160,7 +67962,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_damage_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.220 }
+			country_event = { id = custom_difficulty_mm.221 }
 		}
 	}
 	option = {
@@ -67174,7 +67976,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_damage_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.220 }
+			country_event = { id = custom_difficulty_mm.221 }
 		}
 	}
 	option = {
@@ -67188,7 +67990,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_damage_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.220 }
+			country_event = { id = custom_difficulty_mm.221 }
 		}
 	}
 	option = {
@@ -67202,7 +68004,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_damage_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.220 }
+			country_event = { id = custom_difficulty_mm.221 }
 		}
 	}
 	option = {
@@ -67218,7 +68020,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_damage_mult_AI value = 50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_damage_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.220 }
+			country_event = { id = custom_difficulty_mm.221 }
 		}
 	}
 	option = {
@@ -67234,7 +68036,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_damage_mult_AI value = 10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_damage_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.220 }
+			country_event = { id = custom_difficulty_mm.221 }
 		}
 	}
 	option = {
@@ -67250,7 +68052,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_damage_mult_AI value = -10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_damage_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.220 }
+			country_event = { id = custom_difficulty_mm.221 }
 		}
 	}
 	option = {
@@ -67266,7 +68068,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_damage_mult_AI value = -50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_damage_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.220 }
+			country_event = { id = custom_difficulty_mm.221 }
 		}
 	}
 	option = {
@@ -67285,7 +68087,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.221
+	id = custom_difficulty_mm.222
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_army_attack_health_mult
 	desc = {
@@ -67714,7 +68516,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_health_mult_AI value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.221 }
+			country_event = { id = custom_difficulty_mm.222 }
 		}
 	}
 	option = {
@@ -67728,7 +68530,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_health_mult_AI value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.221 }
+			country_event = { id = custom_difficulty_mm.222 }
 		}
 	}
 	option = {
@@ -67742,7 +68544,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_health_mult_AI value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.221 }
+			country_event = { id = custom_difficulty_mm.222 }
 		}
 	}
 	option = {
@@ -67756,7 +68558,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_health_mult_AI value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.221 }
+			country_event = { id = custom_difficulty_mm.222 }
 		}
 	}
 	option = {
@@ -67770,7 +68572,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_health_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.221 }
+			country_event = { id = custom_difficulty_mm.222 }
 		}
 	}
 	option = {
@@ -67784,7 +68586,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_health_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.221 }
+			country_event = { id = custom_difficulty_mm.222 }
 		}
 	}
 	option = {
@@ -67798,7 +68600,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_health_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.221 }
+			country_event = { id = custom_difficulty_mm.222 }
 		}
 	}
 	option = {
@@ -67812,7 +68614,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_health_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.221 }
+			country_event = { id = custom_difficulty_mm.222 }
 		}
 	}
 	option = {
@@ -67828,7 +68630,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_health_mult_AI value = 50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_health_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.221 }
+			country_event = { id = custom_difficulty_mm.222 }
 		}
 	}
 	option = {
@@ -67844,7 +68646,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_health_mult_AI value = 10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_health_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.221 }
+			country_event = { id = custom_difficulty_mm.222 }
 		}
 	}
 	option = {
@@ -67860,7 +68662,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_health_mult_AI value = -10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_health_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.221 }
+			country_event = { id = custom_difficulty_mm.222 }
 		}
 	}
 	option = {
@@ -67876,7 +68678,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_health_mult_AI value = -50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_attack_health_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.221 }
+			country_event = { id = custom_difficulty_mm.222 }
 		}
 	}
 	option = {
@@ -67895,7 +68697,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.222
+	id = custom_difficulty_mm.223
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_army_defense_health_mult
 	desc = {
@@ -68324,7 +69126,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_health_mult_AI value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.222 }
+			country_event = { id = custom_difficulty_mm.223 }
 		}
 	}
 	option = {
@@ -68338,7 +69140,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_health_mult_AI value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.222 }
+			country_event = { id = custom_difficulty_mm.223 }
 		}
 	}
 	option = {
@@ -68352,7 +69154,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_health_mult_AI value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.222 }
+			country_event = { id = custom_difficulty_mm.223 }
 		}
 	}
 	option = {
@@ -68366,7 +69168,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_health_mult_AI value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.222 }
+			country_event = { id = custom_difficulty_mm.223 }
 		}
 	}
 	option = {
@@ -68380,7 +69182,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_health_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.222 }
+			country_event = { id = custom_difficulty_mm.223 }
 		}
 	}
 	option = {
@@ -68394,7 +69196,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_health_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.222 }
+			country_event = { id = custom_difficulty_mm.223 }
 		}
 	}
 	option = {
@@ -68408,7 +69210,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_health_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.222 }
+			country_event = { id = custom_difficulty_mm.223 }
 		}
 	}
 	option = {
@@ -68422,7 +69224,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_health_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.222 }
+			country_event = { id = custom_difficulty_mm.223 }
 		}
 	}
 	option = {
@@ -68438,7 +69240,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_health_mult_AI value = 50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_health_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.222 }
+			country_event = { id = custom_difficulty_mm.223 }
 		}
 	}
 	option = {
@@ -68454,7 +69256,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_health_mult_AI value = 10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_health_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.222 }
+			country_event = { id = custom_difficulty_mm.223 }
 		}
 	}
 	option = {
@@ -68470,7 +69272,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_health_mult_AI value = -10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_health_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.222 }
+			country_event = { id = custom_difficulty_mm.223 }
 		}
 	}
 	option = {
@@ -68486,7 +69288,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_health_mult_AI value = -50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_defense_health_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.222 }
+			country_event = { id = custom_difficulty_mm.223 }
 		}
 	}
 	option = {
@@ -68505,7 +69307,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.223
+	id = custom_difficulty_mm.224
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_army_experience_gain_mult
 	desc = {
@@ -68934,7 +69736,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_experience_gain_mult_AI value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.223 }
+			country_event = { id = custom_difficulty_mm.224 }
 		}
 	}
 	option = {
@@ -68948,7 +69750,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_experience_gain_mult_AI value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.223 }
+			country_event = { id = custom_difficulty_mm.224 }
 		}
 	}
 	option = {
@@ -68962,7 +69764,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_experience_gain_mult_AI value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.223 }
+			country_event = { id = custom_difficulty_mm.224 }
 		}
 	}
 	option = {
@@ -68976,7 +69778,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_experience_gain_mult_AI value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.223 }
+			country_event = { id = custom_difficulty_mm.224 }
 		}
 	}
 	option = {
@@ -68990,7 +69792,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_experience_gain_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.223 }
+			country_event = { id = custom_difficulty_mm.224 }
 		}
 	}
 	option = {
@@ -69004,7 +69806,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_experience_gain_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.223 }
+			country_event = { id = custom_difficulty_mm.224 }
 		}
 	}
 	option = {
@@ -69018,7 +69820,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_experience_gain_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.223 }
+			country_event = { id = custom_difficulty_mm.224 }
 		}
 	}
 	option = {
@@ -69032,7 +69834,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_army_experience_gain_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.223 }
+			country_event = { id = custom_difficulty_mm.224 }
 		}
 	}
 	option = {
@@ -69048,7 +69850,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_experience_gain_mult_AI value = 50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_experience_gain_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.223 }
+			country_event = { id = custom_difficulty_mm.224 }
 		}
 	}
 	option = {
@@ -69064,7 +69866,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_experience_gain_mult_AI value = 10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_experience_gain_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.223 }
+			country_event = { id = custom_difficulty_mm.224 }
 		}
 	}
 	option = {
@@ -69080,7 +69882,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_experience_gain_mult_AI value = -10 }
 				change_variable = { which = custom_difficulty_MM_mod_army_experience_gain_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.223 }
+			country_event = { id = custom_difficulty_mm.224 }
 		}
 	}
 	option = {
@@ -69096,7 +69898,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_army_experience_gain_mult_AI value = -50 }
 				change_variable = { which = custom_difficulty_MM_mod_army_experience_gain_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.223 }
+			country_event = { id = custom_difficulty_mm.224 }
 		}
 	}
 	option = {
@@ -69115,7 +69917,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.224
+	id = custom_difficulty_mm.225
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_armies_cost_mult
 	desc = {
@@ -69544,7 +70346,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_cost_mult_AI value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.224 }
+			country_event = { id = custom_difficulty_mm.225 }
 		}
 	}
 	option = {
@@ -69558,7 +70360,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_cost_mult_AI value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.224 }
+			country_event = { id = custom_difficulty_mm.225 }
 		}
 	}
 	option = {
@@ -69572,7 +70374,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_cost_mult_AI value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.224 }
+			country_event = { id = custom_difficulty_mm.225 }
 		}
 	}
 	option = {
@@ -69586,7 +70388,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_cost_mult_AI value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.224 }
+			country_event = { id = custom_difficulty_mm.225 }
 		}
 	}
 	option = {
@@ -69600,7 +70402,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_cost_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.224 }
+			country_event = { id = custom_difficulty_mm.225 }
 		}
 	}
 	option = {
@@ -69614,7 +70416,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_cost_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.224 }
+			country_event = { id = custom_difficulty_mm.225 }
 		}
 	}
 	option = {
@@ -69628,7 +70430,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_cost_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.224 }
+			country_event = { id = custom_difficulty_mm.225 }
 		}
 	}
 	option = {
@@ -69642,7 +70444,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_cost_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.224 }
+			country_event = { id = custom_difficulty_mm.225 }
 		}
 	}
 	option = {
@@ -69658,7 +70460,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_cost_mult_AI value = -50 }
 				change_variable = { which = custom_difficulty_MM_mod_armies_cost_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.224 }
+			country_event = { id = custom_difficulty_mm.225 }
 		}
 	}
 	option = {
@@ -69674,7 +70476,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_cost_mult_AI value = -10 }
 				change_variable = { which = custom_difficulty_MM_mod_armies_cost_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.224 }
+			country_event = { id = custom_difficulty_mm.225 }
 		}
 	}
 	option = {
@@ -69690,7 +70492,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_cost_mult_AI value = 10 }
 				change_variable = { which = custom_difficulty_MM_mod_armies_cost_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.224 }
+			country_event = { id = custom_difficulty_mm.225 }
 		}
 	}
 	option = {
@@ -69706,7 +70508,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_cost_mult_AI value = 50 }
 				change_variable = { which = custom_difficulty_MM_mod_armies_cost_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.224 }
+			country_event = { id = custom_difficulty_mm.225 }
 		}
 	}
 	option = {
@@ -69725,7 +70527,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.225
+	id = custom_difficulty_mm.226
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_armies_upkeep_mult
 	desc = {
@@ -70154,7 +70956,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_upkeep_mult_AI value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.225 }
+			country_event = { id = custom_difficulty_mm.226 }
 		}
 	}
 	option = {
@@ -70168,7 +70970,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_upkeep_mult_AI value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.225 }
+			country_event = { id = custom_difficulty_mm.226 }
 		}
 	}
 	option = {
@@ -70182,7 +70984,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_upkeep_mult_AI value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.225 }
+			country_event = { id = custom_difficulty_mm.226 }
 		}
 	}
 	option = {
@@ -70196,7 +70998,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_upkeep_mult_AI value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.225 }
+			country_event = { id = custom_difficulty_mm.226 }
 		}
 	}
 	option = {
@@ -70210,7 +71012,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_upkeep_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.225 }
+			country_event = { id = custom_difficulty_mm.226 }
 		}
 	}
 	option = {
@@ -70224,7 +71026,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_upkeep_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.225 }
+			country_event = { id = custom_difficulty_mm.226 }
 		}
 	}
 	option = {
@@ -70238,7 +71040,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_upkeep_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.225 }
+			country_event = { id = custom_difficulty_mm.226 }
 		}
 	}
 	option = {
@@ -70252,7 +71054,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_upkeep_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.225 }
+			country_event = { id = custom_difficulty_mm.226 }
 		}
 	}
 	option = {
@@ -70268,7 +71070,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_upkeep_mult_AI value = -50 }
 				change_variable = { which = custom_difficulty_MM_mod_armies_upkeep_mult_Player value = -50 }
 			}
-			country_event = { id = custom_difficulty_mm.225 }
+			country_event = { id = custom_difficulty_mm.226 }
 		}
 	}
 	option = {
@@ -70284,7 +71086,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_upkeep_mult_AI value = -10 }
 				change_variable = { which = custom_difficulty_MM_mod_armies_upkeep_mult_Player value = -10 }
 			}
-			country_event = { id = custom_difficulty_mm.225 }
+			country_event = { id = custom_difficulty_mm.226 }
 		}
 	}
 	option = {
@@ -70300,7 +71102,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_upkeep_mult_AI value = 10 }
 				change_variable = { which = custom_difficulty_MM_mod_armies_upkeep_mult_Player value = 10 }
 			}
-			country_event = { id = custom_difficulty_mm.225 }
+			country_event = { id = custom_difficulty_mm.226 }
 		}
 	}
 	option = {
@@ -70316,7 +71118,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_armies_upkeep_mult_AI value = 50 }
 				change_variable = { which = custom_difficulty_MM_mod_armies_upkeep_mult_Player value = 50 }
 			}
-			country_event = { id = custom_difficulty_mm.225 }
+			country_event = { id = custom_difficulty_mm.226 }
 		}
 	}
 	option = {
@@ -70335,7 +71137,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = custom_difficulty_mm.226
+	id = custom_difficulty_mm.227
 	is_triggered_only = yes
 	title = custom_difficulty_MM_mod_pop_defense_armies_add
 	desc = {
@@ -70764,7 +71566,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_pop_defense_armies_add_AI value = 5 }
 			}
-			country_event = { id = custom_difficulty_mm.226 }
+			country_event = { id = custom_difficulty_mm.227 }
 		}
 	}
 	option = {
@@ -70778,7 +71580,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_pop_defense_armies_add_AI value = 1 }
 			}
-			country_event = { id = custom_difficulty_mm.226 }
+			country_event = { id = custom_difficulty_mm.227 }
 		}
 	}
 	option = {
@@ -70792,7 +71594,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_pop_defense_armies_add_AI value = -1 }
 			}
-			country_event = { id = custom_difficulty_mm.226 }
+			country_event = { id = custom_difficulty_mm.227 }
 		}
 	}
 	option = {
@@ -70806,7 +71608,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_pop_defense_armies_add_AI value = -5 }
 			}
-			country_event = { id = custom_difficulty_mm.226 }
+			country_event = { id = custom_difficulty_mm.227 }
 		}
 	}
 	option = {
@@ -70820,7 +71622,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_pop_defense_armies_add_Player value = 5 }
 			}
-			country_event = { id = custom_difficulty_mm.226 }
+			country_event = { id = custom_difficulty_mm.227 }
 		}
 	}
 	option = {
@@ -70834,7 +71636,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_pop_defense_armies_add_Player value = 1 }
 			}
-			country_event = { id = custom_difficulty_mm.226 }
+			country_event = { id = custom_difficulty_mm.227 }
 		}
 	}
 	option = {
@@ -70848,7 +71650,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_pop_defense_armies_add_Player value = -1 }
 			}
-			country_event = { id = custom_difficulty_mm.226 }
+			country_event = { id = custom_difficulty_mm.227 }
 		}
 	}
 	option = {
@@ -70862,7 +71664,7 @@ country_event = {
 			event_target:global_event_country = {
 				change_variable = { which = custom_difficulty_MM_mod_pop_defense_armies_add_Player value = -5 }
 			}
-			country_event = { id = custom_difficulty_mm.226 }
+			country_event = { id = custom_difficulty_mm.227 }
 		}
 	}
 	option = {
@@ -70878,7 +71680,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_pop_defense_armies_add_AI value = 5 }
 				change_variable = { which = custom_difficulty_MM_mod_pop_defense_armies_add_Player value = 5 }
 			}
-			country_event = { id = custom_difficulty_mm.226 }
+			country_event = { id = custom_difficulty_mm.227 }
 		}
 	}
 	option = {
@@ -70894,7 +71696,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_pop_defense_armies_add_AI value = 1 }
 				change_variable = { which = custom_difficulty_MM_mod_pop_defense_armies_add_Player value = 1 }
 			}
-			country_event = { id = custom_difficulty_mm.226 }
+			country_event = { id = custom_difficulty_mm.227 }
 		}
 	}
 	option = {
@@ -70910,7 +71712,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_pop_defense_armies_add_AI value = -1 }
 				change_variable = { which = custom_difficulty_MM_mod_pop_defense_armies_add_Player value = -1 }
 			}
-			country_event = { id = custom_difficulty_mm.226 }
+			country_event = { id = custom_difficulty_mm.227 }
 		}
 	}
 	option = {
@@ -70926,7 +71728,7 @@ country_event = {
 				change_variable = { which = custom_difficulty_MM_mod_pop_defense_armies_add_AI value = -5 }
 				change_variable = { which = custom_difficulty_MM_mod_pop_defense_armies_add_Player value = -5 }
 			}
-			country_event = { id = custom_difficulty_mm.226 }
+			country_event = { id = custom_difficulty_mm.227 }
 		}
 	}
 	option = {

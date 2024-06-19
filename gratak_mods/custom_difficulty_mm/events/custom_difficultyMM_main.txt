@@ -3347,6 +3347,30 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_AI value > 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_G
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value < 0 }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player_curVal_R
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult_Player value > 0 }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_MM_custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI_curVal_G
 				event_target:global_event_country = {
 					check_variable = { which = custom_difficulty_MM_mod_ship_anomaly_fail_risk_AI value < 0 }
@@ -3486,24 +3510,29 @@ country_event = {
 		hidden_effect = { country_event = { id = custom_difficulty_mm.205 } }
 	}
 	option = {
-		name = custom_difficulty_MM_mod_ship_anomaly_fail_risk
+		name = custom_difficulty_MM_mod_ship_jumpdrive_cooldown_mult
 		trigger = { custom_difficulty_allow_changes = yes }
 		hidden_effect = { country_event = { id = custom_difficulty_mm.206 } }
 	}
 	option = {
-		name = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult
+		name = custom_difficulty_MM_mod_ship_anomaly_fail_risk
 		trigger = { custom_difficulty_allow_changes = yes }
 		hidden_effect = { country_event = { id = custom_difficulty_mm.207 } }
 	}
 	option = {
-		name = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult
+		name = custom_difficulty_MM_mod_ship_anomaly_research_speed_mult
 		trigger = { custom_difficulty_allow_changes = yes }
 		hidden_effect = { country_event = { id = custom_difficulty_mm.208 } }
 	}
 	option = {
-		name = custom_difficulty_MM_mod_science_ship_survey_speed
+		name = custom_difficulty_MM_mod_ship_anomaly_generation_chance_mult
 		trigger = { custom_difficulty_allow_changes = yes }
 		hidden_effect = { country_event = { id = custom_difficulty_mm.209 } }
+	}
+	option = {
+		name = custom_difficulty_MM_mod_science_ship_survey_speed
+		trigger = { custom_difficulty_allow_changes = yes }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.210 } }
 	}
 	option = {
 		name = custom_difficulty_backMM
@@ -3943,87 +3972,87 @@ country_event = {
 	option = {
 		name = custom_difficulty_MM_mod_army_disengage_chance_mult
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.210 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.211 } }
 	}
 	option = {
 		name = custom_difficulty_MM_mod_army_starting_experience_add
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.211 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.212 } }
 	}
 	option = {
 		name = custom_difficulty_MM_mod_army_health
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.212 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.213 } }
 	}
 	option = {
 		name = custom_difficulty_MM_mod_army_morale
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.213 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.214 } }
 	}
 	option = {
 		name = custom_difficulty_MM_mod_army_damage_mult
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.214 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.215 } }
 	}
 	option = {
 		name = custom_difficulty_MM_mod_army_collateral_damage_mult
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.215 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.216 } }
 	}
 	option = {
 		name = custom_difficulty_MM_mod_army_morale_damage_mult
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.216 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.217 } }
 	}
 	option = {
 		name = custom_difficulty_MM_mod_army_defense_morale_mult
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.217 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.218 } }
 	}
 	option = {
 		name = custom_difficulty_MM_mod_army_defense_damage_mult
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.218 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.219 } }
 	}
 	option = {
 		name = custom_difficulty_MM_mod_army_attack_morale_mult
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.219 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.220 } }
 	}
 	option = {
 		name = custom_difficulty_MM_mod_army_attack_damage_mult
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.220 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.221 } }
 	}
 	option = {
 		name = custom_difficulty_MM_mod_army_attack_health_mult
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.221 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.222 } }
 	}
 	option = {
 		name = custom_difficulty_MM_mod_army_defense_health_mult
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.222 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.223 } }
 	}
 	option = {
 		name = custom_difficulty_MM_mod_army_experience_gain_mult
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.223 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.224 } }
 	}
 	option = {
 		name = custom_difficulty_MM_mod_armies_cost_mult
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.224 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.225 } }
 	}
 	option = {
 		name = custom_difficulty_MM_mod_armies_upkeep_mult
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.225 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.226 } }
 	}
 	option = {
 		name = custom_difficulty_MM_mod_pop_defense_armies_add
 		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty_mm.226 } }
+		hidden_effect = { country_event = { id = custom_difficulty_mm.227 } }
 	}
 	option = {
 		name = custom_difficulty_backMM

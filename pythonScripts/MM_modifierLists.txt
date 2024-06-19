@@ -143,7 +143,7 @@ ship_winddown_mult
 ship_interstellar_speed_mult
 ship_piracy_suppression_mult
 ship_ftl_jumpdrive_range_mult
-ship_jumpdrive_cooldown_mult
+ship_jumpdrive_cooldown_mult -1 RANGE:-10:11
 ship_anomaly_fail_risk -1 %
 ship_anomaly_research_speed_mult "$MOD_SHIP_ANOMALY_RESEARCH_SPEED$"
 ship_anomaly_generation_chance_mult "$MOD_SHIP_ANOMALY_GENERATION_CHANCE$" 2 RANGE:-5:26
