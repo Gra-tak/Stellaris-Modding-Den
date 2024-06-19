@@ -125,7 +125,7 @@ def main():
   "GFX_evt_tradedeal",
   ]
   possibleBoniModifier=[
-  "stations_produces_mult", 
+  ["station_gatherers_produces_mult","station_researchers_produces_mult"],
   "planet_jobs_produces_mult", 
   "country_naval_cap_mult", 
   "ships_upkeep_mult", 

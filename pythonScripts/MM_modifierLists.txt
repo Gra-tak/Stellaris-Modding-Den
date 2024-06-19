@@ -81,6 +81,7 @@ planet_pop_assembly_mult "$MOD_POP_ASSEMBLY_SPEED$" RANGE:-10:21
  pop_environment_tolerance % 0.5
  planet_amenities_add
  planet_districts_cost_mult
+ planet_decision_enact_speed_mult
 
 "$PRODUCTION$"
 country_energy_produces_mult
@@ -142,6 +143,7 @@ ship_winddown_mult
 ship_interstellar_speed_mult
 ship_piracy_suppression_mult
 ship_ftl_jumpdrive_range_mult
+ship_jumpdrive_cooldown_mult
 ship_anomaly_fail_risk -1 %
 ship_anomaly_research_speed_mult "$MOD_SHIP_ANOMALY_RESEARCH_SPEED$"
 ship_anomaly_generation_chance_mult "$MOD_SHIP_ANOMALY_GENERATION_CHANCE$" 2 RANGE:-5:26
