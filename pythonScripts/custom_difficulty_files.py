@@ -240,7 +240,7 @@ def main():
   ["fallen_empire", "awakened_fallen_empire","ascended_empire","eternal_empire"],
   ["guardian", "guardian_dragon", "guardian_stellarite","guardian_wraith","guardian_hiver","guardian_horror","guardian_fortress","guardian_dreadnought", "guardian_sphere","guardian_scavenger_bot","guardian_elderly_tiyanki","ldragon_country","guardian_hatchling"],
   [],
-  ["swarm", "extradimensional", "extradimensional_2", "extradimensional_3", "ai_empire","cybrex_empire","sentinels", "portal_holders", "feral_prethoryn","feral_prethoryn_infighting"],
+  ["swarm", "extradimensional", "extradimensional_2", "extradimensional_3", "ai_empire","cybrex_empire","sentinels", "portal_holders", "feral_prethoryn","feral_prethoryn_infighting","synth_queen_storm","synth_queen","awakened_synth_queen"],
   ["dormant_marauders","ruined_marauders", "awakened_marauders","marauder_raiders"],
   []]
   catNotCountryType=[[], [],[],[],[],[],[],catCountryType+[["global_event"]]]
@@ -285,6 +285,7 @@ def main():
 
 
 
+  has_custom_mode=TagList("OR",TagList("has_global_flag", "custom_difficulty_activate_custom_mode").add("NOT", TagList("has_global_flag", "custom_difficulty_activate_simple_mode")))
 
 
 
@@ -366,9 +367,9 @@ def main():
       localVarName="custom_difficulty_{}_{}_value".format(cat,bonus)
       if cat=="ai_yearly":
         checkVar=TagList().add("which", localVarName).add("value","0","",">")
-        trigger.add("success_text",TagList().add("text","custom_difficulty_{}_{}_inc_desc".format(cat,bonus)).add(ET,TagList().add("check_variable", checkVar)).add("has_global_flag", "custom_difficulty_activate_custom_mode"))
+        trigger.add("success_text",TagList().add("text","custom_difficulty_{}_{}_inc_desc".format(cat,bonus)).add(ET,TagList().add("check_variable", checkVar)).addTagList(has_custom_mode))
         checkVar=TagList().add("which", localVarName).add("value","0","","<")
-        trigger.add("success_text",TagList().add("text","custom_difficulty_{}_{}_dec_desc".format(cat,bonus)).add(ET,TagList().add("check_variable", checkVar)).add("has_global_flag", "custom_difficulty_activate_custom_mode"))
+        trigger.add("success_text",TagList().add("text","custom_difficulty_{}_{}_dec_desc".format(cat,bonus)).add(ET,TagList().add("check_variable", checkVar)).addTagList(has_custom_mode))
         locClass.addEntry("custom_difficulty_{}_{}_inc_desc".format(cat,bonus),"{} §{}@{} : 1 @step @increase @every [this.custom_difficulty_{}_{}_value] @years".format(possibleBoniIcons[bonusI], possibleBoniColor[bonusI], bonus, cat,bonus)) #local tmp var
         locClass.addEntry("custom_difficulty_{}_{}_dec_desc".format(cat,bonus),"{} §{}@{} : 1 @step @decrease @every [this.custom_difficulty_{}_{}_value] @years".format(possibleBoniIcons[bonusI], possibleBoniColor[bonusI], bonus, cat,bonus)) #local tmp var
         #create a local variable and make sure it is positive!
@@ -381,7 +382,7 @@ def main():
         # trigger.add("fail_text",TagList().add("text","custom_difficulty_{}_{}_desc".format(cat,bonus)).add(ET,TagList().add("check_variable", checkVar)))
         trigger.add("success_text",TagList()
           .add("text","custom_difficulty_{}_{}_desc".format(cat,bonus)).add(ET,TagList()
-            .add("not", TagList("check_variable", checkVar))).add("has_global_flag", "custom_difficulty_activate_custom_mode"))
+            .add("not", TagList("check_variable", checkVar))).addTagList(has_custom_mode))
         locClass.append("custom_difficulty_{}_{}_desc".format(cat,bonus),"{} §{}@{} : [{}.custom_difficulty_{}_{}_value] {}".format(possibleBoniIcons[bonusI], possibleBoniColor[bonusI], bonus, ET, cat,bonus, boniUnit[bonus]))
 
       #stuff that is added here will be output AFTER all trigger (as the whole trigger is added before the loop)
@@ -679,7 +680,7 @@ def main():
       updateEvent.add("trigger", TagList("has_global_flag", "custom_difficulty_activate_simple_mode"))
     else:
       updateEvent.add("id", name_countryUpdateEvent)
-      updateEvent.add("trigger", TagList("has_global_flag", "custom_difficulty_activate_custom_mode"))
+      updateEvent.add("trigger", has_custom_mode)
     updateEvent.add("is_triggered_only",yes)
     updateEvent.add("hide_window",yes)
     immediate=TagList()

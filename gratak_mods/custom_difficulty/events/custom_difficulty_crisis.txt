@@ -44,7 +44,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_station_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_jobs_desc
@@ -53,7 +56,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_jobs_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_cap_desc
@@ -62,7 +68,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_cap_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_upkeep_desc
@@ -71,7 +80,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_upkeep_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_ship_cost_desc
@@ -80,7 +92,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_ship_cost_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_stability_desc
@@ -89,7 +104,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_stability_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_diplo_upkeep_desc
@@ -98,7 +116,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_diplo_upkeep_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_damage_desc
@@ -107,7 +128,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_damage_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_hull_desc
@@ -116,7 +140,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_hull_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_armor_desc
@@ -125,7 +152,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_armor_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_shield_desc
@@ -134,7 +164,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_shield_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_fire_rate_desc
@@ -143,7 +176,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_fire_rate_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_trade_value_desc
@@ -152,7 +188,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_trade_value_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_difficulty_modifier_desc
@@ -161,7 +200,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_difficulty_modifier_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_first_contact_desc
@@ -170,7 +212,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_first_contact_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 		}
 	}
@@ -273,7 +318,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_station_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_jobs_desc
@@ -282,7 +330,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_jobs_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_cap_desc
@@ -291,7 +342,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_cap_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_upkeep_desc
@@ -300,7 +354,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_upkeep_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_ship_cost_desc
@@ -309,7 +366,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_ship_cost_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_stability_desc
@@ -318,7 +378,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_stability_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_diplo_upkeep_desc
@@ -327,7 +390,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_diplo_upkeep_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_damage_desc
@@ -336,7 +402,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_damage_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_hull_desc
@@ -345,7 +414,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_hull_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_armor_desc
@@ -354,7 +426,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_armor_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_shield_desc
@@ -363,7 +438,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_shield_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_fire_rate_desc
@@ -372,7 +450,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_fire_rate_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_trade_value_desc
@@ -381,7 +462,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_trade_value_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_difficulty_modifier_desc
@@ -390,7 +474,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_difficulty_modifier_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_first_contact_desc
@@ -399,7 +486,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_first_contact_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 		}
 	}
@@ -586,7 +676,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_station_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_jobs_desc
@@ -595,7 +688,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_jobs_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_cap_desc
@@ -604,7 +700,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_cap_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_upkeep_desc
@@ -613,7 +712,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_upkeep_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_ship_cost_desc
@@ -622,7 +724,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_ship_cost_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_stability_desc
@@ -631,7 +736,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_stability_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_diplo_upkeep_desc
@@ -640,7 +748,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_diplo_upkeep_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_damage_desc
@@ -649,7 +760,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_damage_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_hull_desc
@@ -658,7 +772,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_hull_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_armor_desc
@@ -667,7 +784,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_armor_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_shield_desc
@@ -676,7 +796,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_shield_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_fire_rate_desc
@@ -685,7 +808,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_fire_rate_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_trade_value_desc
@@ -694,7 +820,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_trade_value_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_difficulty_modifier_desc
@@ -703,7 +832,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_difficulty_modifier_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_first_contact_desc
@@ -712,7 +844,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_first_contact_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 		}
 	}
@@ -859,7 +994,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_station_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_jobs_desc
@@ -868,7 +1006,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_jobs_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_cap_desc
@@ -877,7 +1018,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_cap_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_upkeep_desc
@@ -886,7 +1030,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_upkeep_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_ship_cost_desc
@@ -895,7 +1042,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_ship_cost_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_stability_desc
@@ -904,7 +1054,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_stability_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_diplo_upkeep_desc
@@ -913,7 +1066,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_diplo_upkeep_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_damage_desc
@@ -922,7 +1078,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_damage_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_hull_desc
@@ -931,7 +1090,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_hull_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_armor_desc
@@ -940,7 +1102,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_armor_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_shield_desc
@@ -949,7 +1114,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_shield_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_fire_rate_desc
@@ -958,7 +1126,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_fire_rate_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_trade_value_desc
@@ -967,7 +1138,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_trade_value_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_difficulty_modifier_desc
@@ -976,7 +1150,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_difficulty_modifier_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_first_contact_desc
@@ -985,7 +1162,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_first_contact_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 		}
 	}
@@ -1132,7 +1312,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_station_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_jobs_desc
@@ -1141,7 +1324,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_jobs_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_cap_desc
@@ -1150,7 +1336,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_cap_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_upkeep_desc
@@ -1159,7 +1348,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_upkeep_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_ship_cost_desc
@@ -1168,7 +1360,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_ship_cost_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_stability_desc
@@ -1177,7 +1372,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_stability_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_diplo_upkeep_desc
@@ -1186,7 +1384,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_diplo_upkeep_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_damage_desc
@@ -1195,7 +1396,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_damage_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_hull_desc
@@ -1204,7 +1408,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_hull_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_armor_desc
@@ -1213,7 +1420,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_armor_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_shield_desc
@@ -1222,7 +1432,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_shield_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_fire_rate_desc
@@ -1231,7 +1444,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_fire_rate_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_trade_value_desc
@@ -1240,7 +1456,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_trade_value_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_difficulty_modifier_desc
@@ -1249,7 +1468,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_difficulty_modifier_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_first_contact_desc
@@ -1258,7 +1480,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_first_contact_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 		}
 	}
@@ -1405,7 +1630,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_station_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_jobs_desc
@@ -1414,7 +1642,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_jobs_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_cap_desc
@@ -1423,7 +1654,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_cap_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_upkeep_desc
@@ -1432,7 +1666,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_upkeep_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_ship_cost_desc
@@ -1441,7 +1678,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_ship_cost_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_stability_desc
@@ -1450,7 +1690,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_stability_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_diplo_upkeep_desc
@@ -1459,7 +1702,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_diplo_upkeep_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_damage_desc
@@ -1468,7 +1714,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_damage_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_hull_desc
@@ -1477,7 +1726,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_hull_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_armor_desc
@@ -1486,7 +1738,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_armor_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_shield_desc
@@ -1495,7 +1750,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_shield_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_fire_rate_desc
@@ -1504,7 +1762,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_fire_rate_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_trade_value_desc
@@ -1513,7 +1774,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_trade_value_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_difficulty_modifier_desc
@@ -1522,7 +1786,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_difficulty_modifier_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_first_contact_desc
@@ -1531,7 +1798,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_first_contact_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 		}
 	}
@@ -1678,7 +1948,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_station_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_jobs_desc
@@ -1687,7 +1960,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_jobs_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_cap_desc
@@ -1696,7 +1972,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_cap_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_upkeep_desc
@@ -1705,7 +1984,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_upkeep_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_ship_cost_desc
@@ -1714,7 +1996,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_ship_cost_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_stability_desc
@@ -1723,7 +2008,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_stability_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_diplo_upkeep_desc
@@ -1732,7 +2020,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_diplo_upkeep_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_damage_desc
@@ -1741,7 +2032,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_damage_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_hull_desc
@@ -1750,7 +2044,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_hull_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_armor_desc
@@ -1759,7 +2056,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_armor_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_shield_desc
@@ -1768,7 +2068,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_shield_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_fire_rate_desc
@@ -1777,7 +2080,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_fire_rate_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_trade_value_desc
@@ -1786,7 +2092,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_trade_value_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_difficulty_modifier_desc
@@ -1795,7 +2104,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_difficulty_modifier_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 			success_text = {
 				text = custom_difficulty_crisis_first_contact_desc
@@ -1804,7 +2116,10 @@ country_event = {
 						check_variable = { which = custom_difficulty_crisis_first_contact_value value = 0 }
 					}
 				}
-				has_global_flag = custom_difficulty_activate_custom_mode
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
 			}
 		}
 	}

@@ -1,7 +1,12 @@
 namespace = custom_difficulty
 country_event = {
 	id = custom_difficulty.50
-	trigger = { has_global_flag = custom_difficulty_activate_custom_mode }
+	trigger = {
+		OR = {
+			has_global_flag = custom_difficulty_activate_custom_mode
+			NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+		}
+	}
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
@@ -884,6 +889,9 @@ country_event = {
 							is_country_type = portal_holders
 							is_country_type = feral_prethoryn
 							is_country_type = feral_prethoryn_infighting
+							is_country_type = synth_queen_storm
+							is_country_type = synth_queen
+							is_country_type = awakened_synth_queen
 						}
 						is_ai = yes
 					}
@@ -1268,6 +1276,7 @@ country_event = {
 							is_country_type = ascended_empire
 							is_country_type = awakened_fallen_empire
 							is_country_type = awakened_marauders
+							is_country_type = awakened_synth_queen
 							is_country_type = cybrex_empire
 							is_country_type = default
 							is_country_type = dormant_marauders
@@ -1297,6 +1306,8 @@ country_event = {
 							is_country_type = ruined_marauders
 							is_country_type = sentinels
 							is_country_type = swarm
+							is_country_type = synth_queen
+							is_country_type = synth_queen_storm
 						}
 						is_ai = yes
 					}
@@ -1847,6 +1858,9 @@ country_event = {
 							is_country_type = portal_holders
 							is_country_type = feral_prethoryn
 							is_country_type = feral_prethoryn_infighting
+							is_country_type = synth_queen_storm
+							is_country_type = synth_queen
+							is_country_type = awakened_synth_queen
 						}
 						is_ai = yes
 					}
@@ -1991,6 +2005,7 @@ country_event = {
 							is_country_type = ascended_empire
 							is_country_type = awakened_fallen_empire
 							is_country_type = awakened_marauders
+							is_country_type = awakened_synth_queen
 							is_country_type = cybrex_empire
 							is_country_type = default
 							is_country_type = dormant_marauders
@@ -2020,6 +2035,8 @@ country_event = {
 							is_country_type = ruined_marauders
 							is_country_type = sentinels
 							is_country_type = swarm
+							is_country_type = synth_queen
+							is_country_type = synth_queen_storm
 						}
 						is_ai = yes
 					}
