@@ -6,6 +6,7 @@ namespace = custom_difficulty_mm
 country_event = {
 	id = custom_difficulty_mm.0
 	title = custom_difficulty_init
+	mean_time_to_happen = { days = 1 }
 	trigger = {
 		is_ai = no
 		not = { has_global_flag = custom_difficultyMM_active }

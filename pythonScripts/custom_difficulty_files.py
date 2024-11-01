@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys, os, io
+import sys, os, io, argparse
 from stellarisTxtRead import *
 from copy import deepcopy
 # from googletrans import Translator
@@ -81,10 +81,45 @@ crisisFlag="custom_difficulty_crisis_flag"
 marauderFlag="custom_difficulty_marauder_flag"
 noBonusFlag="custom_difficulty_no_bonuses_flag"
 
+def parse(argv):
+  parser = argparse.ArgumentParser(description="Create files for dynamic difficulty mod.")
+  parser.add_argument('-s','--stellaris_path', default=os.path.expanduser("~")+"/.steam/debian-installation/steamapps/common/Stellaris/", help="Required to read country types.")
 
-def main():
+  args=parser.parse_args(argv)
+  return args
+
+def main(args):
   os.chdir(os.path.dirname(os.path.abspath(__file__)))
   debugMode=False
+
+
+  vanillaCountryList=TagList()
+  directory=args.stellaris_path+"/common/country_types"
+  for fileName in os.listdir(directory):
+    tmp=TagList()
+    tmp.readFile(os.path.join(directory,fileName))
+    vanillaCountryList.addTagList(tmp)
+  # vanillaCountryList.readFile(args.stellaris_path+"/common/country_types/00_country_types.txt")
+  factionToMultiplier=dict()
+  vanillaCrisis=[]
+  vanillaMidCrisis=[]
+  for name, val in vanillaCountryList.getNameVal():
+    if type(val)==TagList:
+      if "scaled_difficulty_bonuses" in val.names:
+        factionToMultiplier[name]=float(val.get("scaled_difficulty_bonuses"))
+      elif "is_space_critter" in val.names and val.get("is_space_critter")=="yes":
+        factionToMultiplier[name]=0.5
+      if "end_game_crisis" in val.names and val.get("end_game_crisis")=="yes" or "anti_end_game_crisis" in val.names and val.get("anti_end_game_crisis")=="yes":
+        vanillaCrisis.append(name)
+        if name in factionToMultiplier:
+          factionToMultiplier[name]/=3 #already included in the defaults
+      if "mid_game_crisis" in val.names and val.get("mid_game_crisis")=="yes":
+        vanillaMidCrisis.append(name)
+  factionToMultiplierInv=dict()
+  for name, val in factionToMultiplier.items():
+    if not val in factionToMultiplierInv.keys():
+      factionToMultiplierInv[val]=[]
+    factionToMultiplierInv[val].append(name)
 
   changeStepYears=[5,4,3,2,1]
   changeSteps = [50, 25, 10, 5, 1]
@@ -238,10 +273,13 @@ def main():
   ["default"], 
   ["default"],
   ["fallen_empire", "awakened_fallen_empire","ascended_empire","eternal_empire"],
-  ["guardian", "guardian_dragon", "guardian_stellarite","guardian_wraith","guardian_hiver","guardian_horror","guardian_fortress","guardian_dreadnought", "guardian_sphere","guardian_scavenger_bot","guardian_elderly_tiyanki","ldragon_country","guardian_hatchling"],
+  # ["guardian", "guardian_dragon", "guardian_stellarite","guardian_wraith","guardian_hiver","guardian_horror","guardian_fortress","guardian_dreadnought", "guardian_sphere","guardian_scavenger_bot","guardian_elderly_tiyanki","ldragon_country","guardian_hatchling"],
   [],
-  ["swarm", "extradimensional", "extradimensional_2", "extradimensional_3", "ai_empire","cybrex_empire","sentinels", "portal_holders", "feral_prethoryn","feral_prethoryn_infighting","synth_queen_storm","synth_queen","awakened_synth_queen"],
-  ["dormant_marauders","ruined_marauders", "awakened_marauders","marauder_raiders"],
+  [],
+  # ["swarm", "extradimensional", "extradimensional_2", "extradimensional_3", "ai_empire","cybrex_empire","sentinels", "portal_holders", "feral_prethoryn","feral_prethoryn_infighting","synth_queen_storm","synth_queen","awakened_synth_queen"],
+  vanillaCrisis+["portal_holders","feral_prethoryn","feral_prethoryn_infighting"],
+  # ["dormant_marauders","ruined_marauders", "awakened_marauders","marauder_raiders"],
+  vanillaMidCrisis+["dormant_marauders","ruined_marauders","marauder_raiders"],
   []]
   catNotCountryType=[[], [],[],[],[],[],[],catCountryType+[["global_event"]]]
   catPictures=["GFX_evt_throne_room","GFX_evt_organic_oppression","GFX_evt_fallen_empire_awakes","GFX_evt_wraith","GFX_evt_towel","GFX_evt_ai_planet","GFX_evt_khan_throne_room","GFX_evt_unknown_ships"]
@@ -494,7 +532,7 @@ def main():
     os.mkdir(outFolder)
   for cat, eventFileCont in zip(cats, difficultyChangeWindows):
     with open(outFolder+"/"+"custom_difficulty_"+cat+".txt",'w') as file:
-      eventFileCont.writeAll(file,args())
+      eventFileCont.writeAll(file,argsClass())
 
 
 
@@ -520,8 +558,8 @@ def main():
     difficultiesPresetProperties[diff]["player"]=[0 for _ in possibleBoniNames]
     for cat in catsWithnpcBoniBoni:
       difficultiesPresetProperties[diff][cat]=[condVal(1,s)*(npcBonusBase+i*npcBonusAdd) for s in npcBoni[:-1]]
-      if cat != "crisis":
-        difficultiesPresetProperties[diff][cat]=[f/2 for f in difficultiesPresetProperties[diff][cat]]
+      # if cat != "crisis":
+        # difficultiesPresetProperties[diff][cat]=[f/2 for f in difficultiesPresetProperties[diff][cat]]
   difficultiesPresetProperties["cadet"]=deepcopy(difficultiesPresetProperties["ensign"])
   difficultiesPresetProperties["cadet"]["player"]=[defaultEmpireBonusMultCadet[bonus]*i for bonus in possibleBoniNames]
   difficultiesPresetProperties["civilian"]=deepcopy(difficultiesPresetProperties["ensign"])
@@ -560,6 +598,8 @@ def main():
   defaultDifficultyEvent=TagList("id", eventNameSpace.format(id_updateEventCountryEvents))
   defaultEvents.add("country_event",defaultDifficultyEvent)
   defaultDifficultyEvent.add("fire_only_once",yes)
+  mtth=defaultDifficultyEvent.addReturn("mean_time_to_happen")
+  mtth.add("days", 1)
   defaultDifficultyEvent.add("hide_window",yes)
   t=defaultDifficultyEvent.addReturn("trigger")
   t.addReturn("NOT").add("has_global_flag", "custom_difficulty_variables_transfered")
@@ -616,7 +656,7 @@ def main():
           ifCrisisNotSet.add("multiply_variable", TagList("which", crisisVar).add("value", 3))
 
   with open(outFolder+"/"+"custom_difficulty_defaults.txt",'w') as file:
-    defaultEvents.writeAll(file, args())
+    defaultEvents.writeAll(file, argsClass())
 
 
   staticModifiers=TagList()
@@ -685,6 +725,21 @@ def main():
     updateEvent.add("hide_window",yes)
     immediate=TagList()
     updateEvent.add("immediate",immediate)
+    immediate.variableOp("set", "custom_difficulty_scaled_difficulty_bonuses",1)
+    first=True
+    for multiplier, factionList in factionToMultiplierInv.items():
+      if multiplier==1 or multiplier==1.0:
+        continue
+      if first:
+        ifList=immediate.addReturn("if")
+        first=False
+      else:
+        ifList=immediate.addReturn("else_if")
+      cond=ifList.addReturn("limit").addReturn("or")
+      for f in factionList:
+        cond.add("is_country_type", f)
+      ifList.variableOp("set", "custom_difficulty_scaled_difficulty_bonuses",multiplier)
+
     after=TagList()
     # updateEvent.add("after",after)
     for catI,cat in enumerate(cats+["no_bonuses"]):
@@ -733,6 +788,8 @@ def main():
             limitOr.add("is_country_type", countryType)
         elif len(catCountryType[catI])==1:
           limit.add("is_country_type", catCountryType[catI][0])
+        elif cats[catI]=="leviathan":
+          limit.add("is_guardian_country","yes")
 
 
         if catNotCountryType[catI]:
@@ -749,6 +806,7 @@ def main():
           limit.add("NOR", norTagList)
           for entry in sorted(norSet):
             norTagList.add("is_country_type", entry)
+          norTagList.add("is_guardian_country","yes")
         if "player"==cat or "ai" in cat:
           # orTagList=TagList()
           if cat=="player":
@@ -769,17 +827,18 @@ def main():
         for bonus, bonusModifier, val in zip(possibleBoniNames,possibleBoniModifier,defaultEmpireBonusMultList):
           if groupUpdate and not bonus in representGroup:
             continue
-          et.add("set_variable", TagList().add("which", "custom_difficulty_{}_value".format(bonus)).add("value", "custom_difficulty_{}_{}_value".format(cat,bonus)))
+          varName="custom_difficulty_{}_value".format(bonus)
+          et.add("set_variable", TagList().add("which", varName).add("value", "custom_difficulty_{}_{}_value".format(cat,bonus)))
           if cat=="ai":
             if val!=0:
-              t=et2.createReturnIf(variableOpNew("check", "custom_difficulty_{}_value".format(bonus), val*9//10, ">" if val>0 else "<"))
-              t.variableOpNew("change", "custom_difficulty_{}_value".format(bonus), -val)
+              t=et2.createReturnIf(variableOpNew("check", varName, val*9//10, ">" if val>0 else "<"))
+              t.variableOpNew("change", varName, -val)
               # et2.add("set_variable", TagList().add("which", "custom_difficulty_{}_value".format(bonus)).add("value", "custom_difficulty_{}_{}_value".format(cat,bonus)))
 
 
 
           ifChanged=TagList("limit", TagList("not", 
-            variableOpNew("check","custom_difficulty_{}_value".format(bonus), ET)))
+            variableOpNew("check",varName, ET)))
           # ifChanged=TagList("limit", TagList("not", 
           #   TagList("check_variable", 
           #     TagList("which","custom_difficulty_{}_value".format(bonus))
@@ -788,7 +847,9 @@ def main():
           ifChanged.add("set_country_flag", "custom_difficulty_{}_changed".format(bonus))
           if debugMode:
             ifChanged.add("log",'"setting flag {}"'.format("custom_difficulty_{}_changed".format(bonus)))
-          ifChanged.variableOp("set","custom_difficulty_{}_value".format(bonus), ET)
+          ifChanged.variableOp("set",varName, ET)
+          if not cat in ["ai","ai_yearly","player"]:
+            ifChanged.variableOp("multiply", varName, "custom_difficulty_scaled_difficulty_bonuses")
           if bonus=="minerals":
             ifChanged.createReturnIf(TagList("has_global_flag","core_game_mechanics_and_ai")).add("check_country_imbalanced_difficulty_bonuses","yes")
           if cat in modifierCats: #only create the modifier for these cats. Rest use the same as one of those!
@@ -917,19 +978,19 @@ def main():
 
 
   with open(outFolder+"/"+"custom_difficulty_remove_modifiers.txt",'w') as file:
-    removeEvents.writeAll(file, args(1))
+    removeEvents.writeAll(file, argsClass(1))
   with open(outFolder+"/"+"custom_difficulty_add_modifiers.txt",'w') as file:
-    addEvents.writeAll(file, args(1))
+    addEvents.writeAll(file, argsClass(1))
 
   with open(outFolder+"/"+"custom_difficulty_update.txt",'w') as file:
-    updateFile.writeAll(file, args())
+    updateFile.writeAll(file, argsClass())
 
 
   outputFolderStaticModifiers="../gratak_mods/custom_difficulty/common/static_modifiers"
   if not os.path.exists(outputFolderStaticModifiers):
     os.makedirs(outputFolderStaticModifiers)
   with open(outputFolderStaticModifiers+"/"+"custom_difficulty_static_modifiers.txt",'w') as file:
-    staticModifiers.writeAll(file, args())
+    staticModifiers.writeAll(file, argsClass())
 
 
   yearlyFile=TagList()
@@ -972,7 +1033,7 @@ def main():
     ifTagList.add("change_variable", TagList().add("which", bonusVar).add("value", f"-{abs(boniFactor[bonus])}"))
 
   with open(outFolder+"/"+"custom_difficulty_yealy_event.txt",'w') as file:
-    yearlyFile.writeAll(file, args())
+    yearlyFile.writeAll(file, argsClass())
 
 
 
@@ -1085,13 +1146,13 @@ def createMenuFile(locClass, cats, catColors, difficulties, debugMode=False, mod
     locClass.append("custom_difficulty_customize_colored.name","§Y@difficulty @customization")
     locClass.append("custom_difficulty_customize.name","§Y@difficulty @customization")
     locClass.addEntry("custom_difficulty_no_player_bonus.name", "§G@no @bonus @forPlayer§!")
-    locClass.addEntry("custom_difficulty_civilian.name", "§B@civilian - 100% @bonus @forPlayer. @no @bonus @forAI. 15% @forNPCs§!")
-    locClass.addEntry("custom_difficulty_cadet.name", "§B@cadet - 30-50% @bonus @forPlayer. @no @bonus @forAI. 15% @forNPCs§!")
-    locClass.addEntry("custom_difficulty_ensign.name", "§B@ensign - @no @bonus @forAI. 15% @bonus @forNPCs§!")
-    locClass.addEntry("custom_difficulty_captain.name", "§B@captain - 15-25% @bonus @forAI. 17.5% @forNPCs§!")
-    locClass.addEntry("custom_difficulty_commodore.name", "§B@commodore - 30-50% @bonus @forAI. 20% @forNPCs§!")
-    locClass.addEntry("custom_difficulty_admiral.name", "§B@admiral - 45-75% @bonus @forAI. 22.5% @forNPCs§!")
-    locClass.addEntry("custom_difficulty_grand_admiral.name", "§B@grandAdmiral - 60-100% @bonus @forAI. 25% @forNPCs§!")
+    locClass.addEntry("custom_difficulty_civilian.name", "§B@civilian - 100% @bonus @forPlayer. @no @bonus @forAI. 30% @forNPCs§!")
+    locClass.addEntry("custom_difficulty_cadet.name", "§B@cadet - 30-50% @bonus @forPlayer. @no @bonus @forAI. 30% @forNPCs§!")
+    locClass.addEntry("custom_difficulty_ensign.name", "§B@ensign - @no @bonus @forAI. 30% @bonus @forNPCs§!")
+    locClass.addEntry("custom_difficulty_captain.name", "§B@captain - 15-25% @bonus @forAI. 35% @forNPCs§!")
+    locClass.addEntry("custom_difficulty_commodore.name", "§B@commodore - 30-50% @bonus @forAI. 40% @forNPCs§!")
+    locClass.addEntry("custom_difficulty_admiral.name", "§B@admiral - 45-75% @bonus @forAI. 45% @forNPCs§!")
+    locClass.addEntry("custom_difficulty_grand_admiral.name", "§B@grandAdmiral - 60-100% @bonus @forAI. 50% @forNPCs§!")
     locClass.addEntry("custom_difficulty_scaling.name", "§H@scaling - @increase @bonus @forAI @every 4 @years§!")
     locClass.addEntry("custom_difficulty_no_scaling.name", "§H@no @scaling§!")
     locClass.addEntry("custom_difficulty_advanced_configuration.name", "§B@advCust @nonPlayer§!")
@@ -1238,6 +1299,8 @@ def createMenuFile(locClass, cats, catColors, difficulties, debugMode=False, mod
   gameStartInitEventWithDialog.add("is_triggered_only", yes)
   gameStartInitEvent=TagList("id", name_gameStartFireOnlyOnce)
   gameStartInitEvent.add("hide_window", yes)
+  mtth=gameStartInitEvent.addReturn("mean_time_to_happen")
+  mtth.add("days", 1)
   trigger=TagList()
   gameStartInitEventWithDialog.add("desc", TagList("trigger", trigger)) #"" )
   trigger.add("text","custom_difficulty_init_desc")
@@ -1308,6 +1371,8 @@ def createMenuFile(locClass, cats, catColors, difficulties, debugMode=False, mod
   randomInitEvent=mainFileContent.addReturn("country_event")
   randomInitEvent.add("id", name_randomDiffFireOnlyOnce)
   randomInitEvent.add("hide_window",yes)
+  mtth=randomInitEvent.addReturn("mean_time_to_happen")
+  mtth.add("days", 1)
   randomInitEvent.add("trigger", TagList("NOT", TagList("has_global_flag", "custom_difficulty_random_difficulty_given")))
   immediate=randomInitEvent.addReturn("immediate")
   immediate.add("set_global_flag", "custom_difficulty_random_difficulty_given")
@@ -1464,6 +1529,7 @@ def createMenuFile(locClass, cats, catColors, difficulties, debugMode=False, mod
     resetEvent=deepcopy(gameStartInitEvent)
     resetEvent.replace("id", name_resetEvent)
     resetEvent.remove("fire_only_once")
+    resetEvent.remove("mean_time_to_happen")
     resetEvent.remove("trigger")
     resetEvent.add("is_triggered_only",yes)
     resetEvent.get("immediate").remove("if")
@@ -1579,7 +1645,7 @@ def outputToFolderAndFile(tagList, folder, fileName, level=2, modFolder="../grat
   if not os.path.exists(folder):
     os.makedirs(folder)
   with open(folder+"/"+fileName,'w',encoding=encoding) as file:
-    tagList.writeAll(file, args(level))
+    tagList.writeAll(file, argsClass(level))
   return folder+"/"+fileName
 
 
@@ -1607,7 +1673,7 @@ def ifDelay(name):
   return self
 
 
-class args:
+class argsClass:
   def __init__(self, level=2):
     self.one_line_level=level
 
@@ -1747,7 +1813,7 @@ def globalAddLocs(locClass):
   locClass.addLoc("player", "Player")
   locClass.addLoc("Player", "Player")
   locClass.addLoc("crisis", "Crisis")
-  locClass.addLoc("marauders", "Marauders")
+  locClass.addLoc("marauders", "Marauders and Midgame-Crisis")
   locClass.addLoc("other", "Other")
 
   locClass.addLoc("for", "for")
@@ -1848,5 +1914,6 @@ def globalAddLocs(locClass):
 
 
 if __name__ == "__main__":
-  main()
+  args=parse(sys.argv[1:])
+  main(args)
 

@@ -10,6 +10,67 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
+		set_variable = { which = custom_difficulty_scaled_difficulty_bonuses value = 1 }
+		if = {
+			limit = {
+				or = {
+					is_country_type = guardian
+					is_country_type = guardian_dragon
+					is_country_type = guardian_toxic_god
+					is_country_type = guardian_stellarite
+					is_country_type = guardian_wraith
+					is_country_type = guardian_hiver
+					is_country_type = guardian_horror
+					is_country_type = guardian_fortress
+					is_country_type = guardian_dreadnought
+					is_country_type = guardian_sphere
+					is_country_type = guardian_warden
+					is_country_type = guardian_scavenger_bot
+					is_country_type = guardian_elderly_tiyanki
+					is_country_type = ldragon_country
+					is_country_type = guardian_hatchling
+					is_country_type = origin_dragon
+					is_country_type = clutch_of_whelps
+					is_country_type = neutral_faction
+					is_country_type = shroud_spirits
+					is_country_type = tiyanki
+					is_country_type = tiyanki_garrison
+					is_country_type = amoeba
+					is_country_type = amoeba_borderless
+					is_country_type = amoeba_garrison
+					is_country_type = crystal
+					is_country_type = drone
+					is_country_type = cloud
+					is_country_type = portal_holder
+					is_country_type = feral_prethoryn
+					is_country_type = feral_prethoryn_infighting
+					is_country_type = enigmatic_cache
+					is_country_type = vluur
+					is_country_type = no_contact_neutral_faction
+					is_country_type = voidworms
+					is_country_type = voidworms_treasure_hunters
+					is_country_type = cutholoids
+					is_country_type = lured_fauna_faction
+				}
+			}
+			set_variable = { which = custom_difficulty_scaled_difficulty_bonuses value = 0.5 }
+		}
+		else_if = {
+			limit = {
+				or = {
+					is_country_type = awakened_marauders
+					is_country_type = gate_builders
+					is_country_type = gray_goo
+					is_country_type = formless
+					is_country_type = formless_event_aberrant_country
+				}
+			}
+			set_variable = { which = custom_difficulty_scaled_difficulty_bonuses value = 3.0 }
+		}
+		else_if = {
+			limit = { or = { is_country_type = grave_guardian } }
+			set_variable = { which = custom_difficulty_scaled_difficulty_bonuses value = 10.0 }
+		}
 		 #ai
 		if = {
 			limit = {
@@ -334,6 +395,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_station_changed
 				set_variable = { which = custom_difficulty_station_value value = event_target:global_event_country.custom_difficulty_station_value }
+				multiply_variable = { which = custom_difficulty_station_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -343,6 +405,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_jobs_changed
 				set_variable = { which = custom_difficulty_jobs_value value = event_target:global_event_country.custom_difficulty_jobs_value }
+				multiply_variable = { which = custom_difficulty_jobs_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -352,6 +415,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_cap_changed
 				set_variable = { which = custom_difficulty_cap_value value = event_target:global_event_country.custom_difficulty_cap_value }
+				multiply_variable = { which = custom_difficulty_cap_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -361,6 +425,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_upkeep_changed
 				set_variable = { which = custom_difficulty_upkeep_value value = event_target:global_event_country.custom_difficulty_upkeep_value }
+				multiply_variable = { which = custom_difficulty_upkeep_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -370,6 +435,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_ship_cost_changed
 				set_variable = { which = custom_difficulty_ship_cost_value value = event_target:global_event_country.custom_difficulty_ship_cost_value }
+				multiply_variable = { which = custom_difficulty_ship_cost_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -379,6 +445,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_stability_changed
 				set_variable = { which = custom_difficulty_stability_value value = event_target:global_event_country.custom_difficulty_stability_value }
+				multiply_variable = { which = custom_difficulty_stability_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -388,6 +455,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_diplo_upkeep_changed
 				set_variable = { which = custom_difficulty_diplo_upkeep_value value = event_target:global_event_country.custom_difficulty_diplo_upkeep_value }
+				multiply_variable = { which = custom_difficulty_diplo_upkeep_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -397,6 +465,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_damage_changed
 				set_variable = { which = custom_difficulty_damage_value value = event_target:global_event_country.custom_difficulty_damage_value }
+				multiply_variable = { which = custom_difficulty_damage_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -406,6 +475,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_hull_changed
 				set_variable = { which = custom_difficulty_hull_value value = event_target:global_event_country.custom_difficulty_hull_value }
+				multiply_variable = { which = custom_difficulty_hull_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -415,6 +485,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_armor_changed
 				set_variable = { which = custom_difficulty_armor_value value = event_target:global_event_country.custom_difficulty_armor_value }
+				multiply_variable = { which = custom_difficulty_armor_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -424,6 +495,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_shield_changed
 				set_variable = { which = custom_difficulty_shield_value value = event_target:global_event_country.custom_difficulty_shield_value }
+				multiply_variable = { which = custom_difficulty_shield_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -433,6 +505,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_fire_rate_changed
 				set_variable = { which = custom_difficulty_fire_rate_value value = event_target:global_event_country.custom_difficulty_fire_rate_value }
+				multiply_variable = { which = custom_difficulty_fire_rate_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -442,6 +515,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_trade_value_changed
 				set_variable = { which = custom_difficulty_trade_value_value value = event_target:global_event_country.custom_difficulty_trade_value_value }
+				multiply_variable = { which = custom_difficulty_trade_value_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -451,6 +525,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_difficulty_modifier_changed
 				set_variable = { which = custom_difficulty_difficulty_modifier_value value = event_target:global_event_country.custom_difficulty_difficulty_modifier_value }
+				multiply_variable = { which = custom_difficulty_difficulty_modifier_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -460,6 +535,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_first_contact_changed
 				set_variable = { which = custom_difficulty_first_contact_value value = event_target:global_event_country.custom_difficulty_first_contact_value }
+				multiply_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			 #removing ai bonuses if they exist
 			if = {
@@ -491,21 +567,7 @@ country_event = {
 						not = { has_country_flag = custom_difficulty_crisis_flag }
 						not = { has_country_flag = custom_difficulty_marauder_flag }
 						not = { has_country_flag = custom_difficulty_no_bonuses_flag }
-						or = {
-							is_country_type = guardian
-							is_country_type = guardian_dragon
-							is_country_type = guardian_stellarite
-							is_country_type = guardian_wraith
-							is_country_type = guardian_hiver
-							is_country_type = guardian_horror
-							is_country_type = guardian_fortress
-							is_country_type = guardian_dreadnought
-							is_country_type = guardian_sphere
-							is_country_type = guardian_scavenger_bot
-							is_country_type = guardian_elderly_tiyanki
-							is_country_type = ldragon_country
-							is_country_type = guardian_hatchling
-						}
+						is_guardian_country = yes
 						is_ai = yes
 					}
 				}
@@ -535,6 +597,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_station_changed
 				set_variable = { which = custom_difficulty_station_value value = event_target:global_event_country.custom_difficulty_station_value }
+				multiply_variable = { which = custom_difficulty_station_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -544,6 +607,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_jobs_changed
 				set_variable = { which = custom_difficulty_jobs_value value = event_target:global_event_country.custom_difficulty_jobs_value }
+				multiply_variable = { which = custom_difficulty_jobs_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -553,6 +617,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_cap_changed
 				set_variable = { which = custom_difficulty_cap_value value = event_target:global_event_country.custom_difficulty_cap_value }
+				multiply_variable = { which = custom_difficulty_cap_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -562,6 +627,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_upkeep_changed
 				set_variable = { which = custom_difficulty_upkeep_value value = event_target:global_event_country.custom_difficulty_upkeep_value }
+				multiply_variable = { which = custom_difficulty_upkeep_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -571,6 +637,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_ship_cost_changed
 				set_variable = { which = custom_difficulty_ship_cost_value value = event_target:global_event_country.custom_difficulty_ship_cost_value }
+				multiply_variable = { which = custom_difficulty_ship_cost_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -580,6 +647,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_stability_changed
 				set_variable = { which = custom_difficulty_stability_value value = event_target:global_event_country.custom_difficulty_stability_value }
+				multiply_variable = { which = custom_difficulty_stability_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -589,6 +657,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_diplo_upkeep_changed
 				set_variable = { which = custom_difficulty_diplo_upkeep_value value = event_target:global_event_country.custom_difficulty_diplo_upkeep_value }
+				multiply_variable = { which = custom_difficulty_diplo_upkeep_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -598,6 +667,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_damage_changed
 				set_variable = { which = custom_difficulty_damage_value value = event_target:global_event_country.custom_difficulty_damage_value }
+				multiply_variable = { which = custom_difficulty_damage_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -607,6 +677,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_hull_changed
 				set_variable = { which = custom_difficulty_hull_value value = event_target:global_event_country.custom_difficulty_hull_value }
+				multiply_variable = { which = custom_difficulty_hull_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -616,6 +687,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_armor_changed
 				set_variable = { which = custom_difficulty_armor_value value = event_target:global_event_country.custom_difficulty_armor_value }
+				multiply_variable = { which = custom_difficulty_armor_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -625,6 +697,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_shield_changed
 				set_variable = { which = custom_difficulty_shield_value value = event_target:global_event_country.custom_difficulty_shield_value }
+				multiply_variable = { which = custom_difficulty_shield_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -634,6 +707,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_fire_rate_changed
 				set_variable = { which = custom_difficulty_fire_rate_value value = event_target:global_event_country.custom_difficulty_fire_rate_value }
+				multiply_variable = { which = custom_difficulty_fire_rate_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -643,6 +717,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_trade_value_changed
 				set_variable = { which = custom_difficulty_trade_value_value value = event_target:global_event_country.custom_difficulty_trade_value_value }
+				multiply_variable = { which = custom_difficulty_trade_value_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -652,6 +727,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_difficulty_modifier_changed
 				set_variable = { which = custom_difficulty_difficulty_modifier_value value = event_target:global_event_country.custom_difficulty_difficulty_modifier_value }
+				multiply_variable = { which = custom_difficulty_difficulty_modifier_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -661,6 +737,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_first_contact_changed
 				set_variable = { which = custom_difficulty_first_contact_value value = event_target:global_event_country.custom_difficulty_first_contact_value }
+				multiply_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			 #removing ai bonuses if they exist
 			if = {
@@ -886,12 +963,12 @@ country_event = {
 							is_country_type = ai_empire
 							is_country_type = cybrex_empire
 							is_country_type = sentinels
-							is_country_type = portal_holders
-							is_country_type = feral_prethoryn
-							is_country_type = feral_prethoryn_infighting
 							is_country_type = synth_queen_storm
 							is_country_type = synth_queen
 							is_country_type = awakened_synth_queen
+							is_country_type = portal_holders
+							is_country_type = feral_prethoryn
+							is_country_type = feral_prethoryn_infighting
 						}
 						is_ai = yes
 					}
@@ -922,6 +999,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_station_changed
 				set_variable = { which = custom_difficulty_station_value value = event_target:global_event_country.custom_difficulty_station_value }
+				multiply_variable = { which = custom_difficulty_station_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -931,6 +1009,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_jobs_changed
 				set_variable = { which = custom_difficulty_jobs_value value = event_target:global_event_country.custom_difficulty_jobs_value }
+				multiply_variable = { which = custom_difficulty_jobs_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -940,6 +1019,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_cap_changed
 				set_variable = { which = custom_difficulty_cap_value value = event_target:global_event_country.custom_difficulty_cap_value }
+				multiply_variable = { which = custom_difficulty_cap_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -949,6 +1029,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_upkeep_changed
 				set_variable = { which = custom_difficulty_upkeep_value value = event_target:global_event_country.custom_difficulty_upkeep_value }
+				multiply_variable = { which = custom_difficulty_upkeep_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -958,6 +1039,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_ship_cost_changed
 				set_variable = { which = custom_difficulty_ship_cost_value value = event_target:global_event_country.custom_difficulty_ship_cost_value }
+				multiply_variable = { which = custom_difficulty_ship_cost_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -967,6 +1049,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_stability_changed
 				set_variable = { which = custom_difficulty_stability_value value = event_target:global_event_country.custom_difficulty_stability_value }
+				multiply_variable = { which = custom_difficulty_stability_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -976,6 +1059,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_diplo_upkeep_changed
 				set_variable = { which = custom_difficulty_diplo_upkeep_value value = event_target:global_event_country.custom_difficulty_diplo_upkeep_value }
+				multiply_variable = { which = custom_difficulty_diplo_upkeep_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -985,6 +1069,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_damage_changed
 				set_variable = { which = custom_difficulty_damage_value value = event_target:global_event_country.custom_difficulty_damage_value }
+				multiply_variable = { which = custom_difficulty_damage_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -994,6 +1079,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_hull_changed
 				set_variable = { which = custom_difficulty_hull_value value = event_target:global_event_country.custom_difficulty_hull_value }
+				multiply_variable = { which = custom_difficulty_hull_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1003,6 +1089,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_armor_changed
 				set_variable = { which = custom_difficulty_armor_value value = event_target:global_event_country.custom_difficulty_armor_value }
+				multiply_variable = { which = custom_difficulty_armor_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1012,6 +1099,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_shield_changed
 				set_variable = { which = custom_difficulty_shield_value value = event_target:global_event_country.custom_difficulty_shield_value }
+				multiply_variable = { which = custom_difficulty_shield_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1021,6 +1109,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_fire_rate_changed
 				set_variable = { which = custom_difficulty_fire_rate_value value = event_target:global_event_country.custom_difficulty_fire_rate_value }
+				multiply_variable = { which = custom_difficulty_fire_rate_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1030,6 +1119,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_trade_value_changed
 				set_variable = { which = custom_difficulty_trade_value_value value = event_target:global_event_country.custom_difficulty_trade_value_value }
+				multiply_variable = { which = custom_difficulty_trade_value_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1039,6 +1129,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_difficulty_modifier_changed
 				set_variable = { which = custom_difficulty_difficulty_modifier_value value = event_target:global_event_country.custom_difficulty_difficulty_modifier_value }
+				multiply_variable = { which = custom_difficulty_difficulty_modifier_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1048,6 +1139,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_first_contact_changed
 				set_variable = { which = custom_difficulty_first_contact_value value = event_target:global_event_country.custom_difficulty_first_contact_value }
+				multiply_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			 #removing ai bonuses if they exist
 			if = {
@@ -1080,9 +1172,12 @@ country_event = {
 						not = { has_country_flag = custom_difficulty_crisis_flag }
 						not = { has_country_flag = custom_difficulty_no_bonuses_flag }
 						or = {
+							is_country_type = awakened_marauders
+							is_country_type = gray_goo
+							is_country_type = formless
+							is_country_type = voidworms_crisis
 							is_country_type = dormant_marauders
 							is_country_type = ruined_marauders
-							is_country_type = awakened_marauders
 							is_country_type = marauder_raiders
 						}
 						is_ai = yes
@@ -1114,6 +1209,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_station_changed
 				set_variable = { which = custom_difficulty_station_value value = event_target:global_event_country.custom_difficulty_station_value }
+				multiply_variable = { which = custom_difficulty_station_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1123,6 +1219,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_jobs_changed
 				set_variable = { which = custom_difficulty_jobs_value value = event_target:global_event_country.custom_difficulty_jobs_value }
+				multiply_variable = { which = custom_difficulty_jobs_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1132,6 +1229,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_cap_changed
 				set_variable = { which = custom_difficulty_cap_value value = event_target:global_event_country.custom_difficulty_cap_value }
+				multiply_variable = { which = custom_difficulty_cap_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1141,6 +1239,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_upkeep_changed
 				set_variable = { which = custom_difficulty_upkeep_value value = event_target:global_event_country.custom_difficulty_upkeep_value }
+				multiply_variable = { which = custom_difficulty_upkeep_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1150,6 +1249,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_ship_cost_changed
 				set_variable = { which = custom_difficulty_ship_cost_value value = event_target:global_event_country.custom_difficulty_ship_cost_value }
+				multiply_variable = { which = custom_difficulty_ship_cost_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1159,6 +1259,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_stability_changed
 				set_variable = { which = custom_difficulty_stability_value value = event_target:global_event_country.custom_difficulty_stability_value }
+				multiply_variable = { which = custom_difficulty_stability_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1168,6 +1269,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_diplo_upkeep_changed
 				set_variable = { which = custom_difficulty_diplo_upkeep_value value = event_target:global_event_country.custom_difficulty_diplo_upkeep_value }
+				multiply_variable = { which = custom_difficulty_diplo_upkeep_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1177,6 +1279,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_damage_changed
 				set_variable = { which = custom_difficulty_damage_value value = event_target:global_event_country.custom_difficulty_damage_value }
+				multiply_variable = { which = custom_difficulty_damage_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1186,6 +1289,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_hull_changed
 				set_variable = { which = custom_difficulty_hull_value value = event_target:global_event_country.custom_difficulty_hull_value }
+				multiply_variable = { which = custom_difficulty_hull_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1195,6 +1299,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_armor_changed
 				set_variable = { which = custom_difficulty_armor_value value = event_target:global_event_country.custom_difficulty_armor_value }
+				multiply_variable = { which = custom_difficulty_armor_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1204,6 +1309,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_shield_changed
 				set_variable = { which = custom_difficulty_shield_value value = event_target:global_event_country.custom_difficulty_shield_value }
+				multiply_variable = { which = custom_difficulty_shield_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1213,6 +1319,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_fire_rate_changed
 				set_variable = { which = custom_difficulty_fire_rate_value value = event_target:global_event_country.custom_difficulty_fire_rate_value }
+				multiply_variable = { which = custom_difficulty_fire_rate_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1222,6 +1329,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_trade_value_changed
 				set_variable = { which = custom_difficulty_trade_value_value value = event_target:global_event_country.custom_difficulty_trade_value_value }
+				multiply_variable = { which = custom_difficulty_trade_value_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1231,6 +1339,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_difficulty_modifier_changed
 				set_variable = { which = custom_difficulty_difficulty_modifier_value value = event_target:global_event_country.custom_difficulty_difficulty_modifier_value }
+				multiply_variable = { which = custom_difficulty_difficulty_modifier_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1240,6 +1349,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_first_contact_changed
 				set_variable = { which = custom_difficulty_first_contact_value value = event_target:global_event_country.custom_difficulty_first_contact_value }
+				multiply_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			 #removing ai bonuses if they exist
 			if = {
@@ -1287,20 +1397,9 @@ country_event = {
 							is_country_type = fallen_empire
 							is_country_type = feral_prethoryn
 							is_country_type = feral_prethoryn_infighting
+							is_country_type = formless
 							is_country_type = global_event
-							is_country_type = guardian
-							is_country_type = guardian_dragon
-							is_country_type = guardian_dreadnought
-							is_country_type = guardian_elderly_tiyanki
-							is_country_type = guardian_fortress
-							is_country_type = guardian_hatchling
-							is_country_type = guardian_hiver
-							is_country_type = guardian_horror
-							is_country_type = guardian_scavenger_bot
-							is_country_type = guardian_sphere
-							is_country_type = guardian_stellarite
-							is_country_type = guardian_wraith
-							is_country_type = ldragon_country
+							is_country_type = gray_goo
 							is_country_type = marauder_raiders
 							is_country_type = portal_holders
 							is_country_type = ruined_marauders
@@ -1308,6 +1407,8 @@ country_event = {
 							is_country_type = swarm
 							is_country_type = synth_queen
 							is_country_type = synth_queen_storm
+							is_country_type = voidworms_crisis
+							is_guardian_country = yes
 						}
 						is_ai = yes
 					}
@@ -1338,6 +1439,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_station_changed
 				set_variable = { which = custom_difficulty_station_value value = event_target:global_event_country.custom_difficulty_station_value }
+				multiply_variable = { which = custom_difficulty_station_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1347,6 +1449,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_jobs_changed
 				set_variable = { which = custom_difficulty_jobs_value value = event_target:global_event_country.custom_difficulty_jobs_value }
+				multiply_variable = { which = custom_difficulty_jobs_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1356,6 +1459,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_cap_changed
 				set_variable = { which = custom_difficulty_cap_value value = event_target:global_event_country.custom_difficulty_cap_value }
+				multiply_variable = { which = custom_difficulty_cap_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1365,6 +1469,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_upkeep_changed
 				set_variable = { which = custom_difficulty_upkeep_value value = event_target:global_event_country.custom_difficulty_upkeep_value }
+				multiply_variable = { which = custom_difficulty_upkeep_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1374,6 +1479,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_ship_cost_changed
 				set_variable = { which = custom_difficulty_ship_cost_value value = event_target:global_event_country.custom_difficulty_ship_cost_value }
+				multiply_variable = { which = custom_difficulty_ship_cost_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1383,6 +1489,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_stability_changed
 				set_variable = { which = custom_difficulty_stability_value value = event_target:global_event_country.custom_difficulty_stability_value }
+				multiply_variable = { which = custom_difficulty_stability_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1392,6 +1499,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_diplo_upkeep_changed
 				set_variable = { which = custom_difficulty_diplo_upkeep_value value = event_target:global_event_country.custom_difficulty_diplo_upkeep_value }
+				multiply_variable = { which = custom_difficulty_diplo_upkeep_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1401,6 +1509,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_damage_changed
 				set_variable = { which = custom_difficulty_damage_value value = event_target:global_event_country.custom_difficulty_damage_value }
+				multiply_variable = { which = custom_difficulty_damage_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1410,6 +1519,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_hull_changed
 				set_variable = { which = custom_difficulty_hull_value value = event_target:global_event_country.custom_difficulty_hull_value }
+				multiply_variable = { which = custom_difficulty_hull_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1419,6 +1529,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_armor_changed
 				set_variable = { which = custom_difficulty_armor_value value = event_target:global_event_country.custom_difficulty_armor_value }
+				multiply_variable = { which = custom_difficulty_armor_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1428,6 +1539,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_shield_changed
 				set_variable = { which = custom_difficulty_shield_value value = event_target:global_event_country.custom_difficulty_shield_value }
+				multiply_variable = { which = custom_difficulty_shield_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1437,6 +1549,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_fire_rate_changed
 				set_variable = { which = custom_difficulty_fire_rate_value value = event_target:global_event_country.custom_difficulty_fire_rate_value }
+				multiply_variable = { which = custom_difficulty_fire_rate_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1446,6 +1559,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_trade_value_changed
 				set_variable = { which = custom_difficulty_trade_value_value value = event_target:global_event_country.custom_difficulty_trade_value_value }
+				multiply_variable = { which = custom_difficulty_trade_value_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1455,6 +1569,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_difficulty_modifier_changed
 				set_variable = { which = custom_difficulty_difficulty_modifier_value value = event_target:global_event_country.custom_difficulty_difficulty_modifier_value }
+				multiply_variable = { which = custom_difficulty_difficulty_modifier_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1464,6 +1579,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_first_contact_changed
 				set_variable = { which = custom_difficulty_first_contact_value value = event_target:global_event_country.custom_difficulty_first_contact_value }
+				multiply_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			 #removing ai bonuses if they exist
 			if = {
@@ -1513,6 +1629,67 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
+		set_variable = { which = custom_difficulty_scaled_difficulty_bonuses value = 1 }
+		if = {
+			limit = {
+				or = {
+					is_country_type = guardian
+					is_country_type = guardian_dragon
+					is_country_type = guardian_toxic_god
+					is_country_type = guardian_stellarite
+					is_country_type = guardian_wraith
+					is_country_type = guardian_hiver
+					is_country_type = guardian_horror
+					is_country_type = guardian_fortress
+					is_country_type = guardian_dreadnought
+					is_country_type = guardian_sphere
+					is_country_type = guardian_warden
+					is_country_type = guardian_scavenger_bot
+					is_country_type = guardian_elderly_tiyanki
+					is_country_type = ldragon_country
+					is_country_type = guardian_hatchling
+					is_country_type = origin_dragon
+					is_country_type = clutch_of_whelps
+					is_country_type = neutral_faction
+					is_country_type = shroud_spirits
+					is_country_type = tiyanki
+					is_country_type = tiyanki_garrison
+					is_country_type = amoeba
+					is_country_type = amoeba_borderless
+					is_country_type = amoeba_garrison
+					is_country_type = crystal
+					is_country_type = drone
+					is_country_type = cloud
+					is_country_type = portal_holder
+					is_country_type = feral_prethoryn
+					is_country_type = feral_prethoryn_infighting
+					is_country_type = enigmatic_cache
+					is_country_type = vluur
+					is_country_type = no_contact_neutral_faction
+					is_country_type = voidworms
+					is_country_type = voidworms_treasure_hunters
+					is_country_type = cutholoids
+					is_country_type = lured_fauna_faction
+				}
+			}
+			set_variable = { which = custom_difficulty_scaled_difficulty_bonuses value = 0.5 }
+		}
+		else_if = {
+			limit = {
+				or = {
+					is_country_type = awakened_marauders
+					is_country_type = gate_builders
+					is_country_type = gray_goo
+					is_country_type = formless
+					is_country_type = formless_event_aberrant_country
+				}
+			}
+			set_variable = { which = custom_difficulty_scaled_difficulty_bonuses value = 3.0 }
+		}
+		else_if = {
+			limit = { or = { is_country_type = grave_guardian } }
+			set_variable = { which = custom_difficulty_scaled_difficulty_bonuses value = 10.0 }
+		}
 		 #ai
 		if = {
 			limit = {
@@ -1651,6 +1828,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_station_changed
 				set_variable = { which = custom_difficulty_station_value value = event_target:global_event_country.custom_difficulty_station_value }
+				multiply_variable = { which = custom_difficulty_station_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1660,6 +1838,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_jobs_changed
 				set_variable = { which = custom_difficulty_jobs_value value = event_target:global_event_country.custom_difficulty_jobs_value }
+				multiply_variable = { which = custom_difficulty_jobs_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1669,6 +1848,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_damage_changed
 				set_variable = { which = custom_difficulty_damage_value value = event_target:global_event_country.custom_difficulty_damage_value }
+				multiply_variable = { which = custom_difficulty_damage_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			 #removing ai bonuses if they exist
 			if = {
@@ -1700,21 +1880,7 @@ country_event = {
 						not = { has_country_flag = custom_difficulty_crisis_flag }
 						not = { has_country_flag = custom_difficulty_marauder_flag }
 						not = { has_country_flag = custom_difficulty_no_bonuses_flag }
-						or = {
-							is_country_type = guardian
-							is_country_type = guardian_dragon
-							is_country_type = guardian_stellarite
-							is_country_type = guardian_wraith
-							is_country_type = guardian_hiver
-							is_country_type = guardian_horror
-							is_country_type = guardian_fortress
-							is_country_type = guardian_dreadnought
-							is_country_type = guardian_sphere
-							is_country_type = guardian_scavenger_bot
-							is_country_type = guardian_elderly_tiyanki
-							is_country_type = ldragon_country
-							is_country_type = guardian_hatchling
-						}
+						is_guardian_country = yes
 						is_ai = yes
 					}
 				}
@@ -1732,6 +1898,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_station_changed
 				set_variable = { which = custom_difficulty_station_value value = event_target:global_event_country.custom_difficulty_station_value }
+				multiply_variable = { which = custom_difficulty_station_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1741,6 +1908,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_jobs_changed
 				set_variable = { which = custom_difficulty_jobs_value value = event_target:global_event_country.custom_difficulty_jobs_value }
+				multiply_variable = { which = custom_difficulty_jobs_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1750,6 +1918,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_damage_changed
 				set_variable = { which = custom_difficulty_damage_value value = event_target:global_event_country.custom_difficulty_damage_value }
+				multiply_variable = { which = custom_difficulty_damage_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			 #removing ai bonuses if they exist
 			if = {
@@ -1855,12 +2024,12 @@ country_event = {
 							is_country_type = ai_empire
 							is_country_type = cybrex_empire
 							is_country_type = sentinels
-							is_country_type = portal_holders
-							is_country_type = feral_prethoryn
-							is_country_type = feral_prethoryn_infighting
 							is_country_type = synth_queen_storm
 							is_country_type = synth_queen
 							is_country_type = awakened_synth_queen
+							is_country_type = portal_holders
+							is_country_type = feral_prethoryn
+							is_country_type = feral_prethoryn_infighting
 						}
 						is_ai = yes
 					}
@@ -1879,6 +2048,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_station_changed
 				set_variable = { which = custom_difficulty_station_value value = event_target:global_event_country.custom_difficulty_station_value }
+				multiply_variable = { which = custom_difficulty_station_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1888,6 +2058,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_jobs_changed
 				set_variable = { which = custom_difficulty_jobs_value value = event_target:global_event_country.custom_difficulty_jobs_value }
+				multiply_variable = { which = custom_difficulty_jobs_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1897,6 +2068,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_damage_changed
 				set_variable = { which = custom_difficulty_damage_value value = event_target:global_event_country.custom_difficulty_damage_value }
+				multiply_variable = { which = custom_difficulty_damage_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			 #removing ai bonuses if they exist
 			if = {
@@ -1929,9 +2101,12 @@ country_event = {
 						not = { has_country_flag = custom_difficulty_crisis_flag }
 						not = { has_country_flag = custom_difficulty_no_bonuses_flag }
 						or = {
+							is_country_type = awakened_marauders
+							is_country_type = gray_goo
+							is_country_type = formless
+							is_country_type = voidworms_crisis
 							is_country_type = dormant_marauders
 							is_country_type = ruined_marauders
-							is_country_type = awakened_marauders
 							is_country_type = marauder_raiders
 						}
 						is_ai = yes
@@ -1951,6 +2126,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_station_changed
 				set_variable = { which = custom_difficulty_station_value value = event_target:global_event_country.custom_difficulty_station_value }
+				multiply_variable = { which = custom_difficulty_station_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1960,6 +2136,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_jobs_changed
 				set_variable = { which = custom_difficulty_jobs_value value = event_target:global_event_country.custom_difficulty_jobs_value }
+				multiply_variable = { which = custom_difficulty_jobs_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -1969,6 +2146,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_damage_changed
 				set_variable = { which = custom_difficulty_damage_value value = event_target:global_event_country.custom_difficulty_damage_value }
+				multiply_variable = { which = custom_difficulty_damage_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			 #removing ai bonuses if they exist
 			if = {
@@ -2016,20 +2194,9 @@ country_event = {
 							is_country_type = fallen_empire
 							is_country_type = feral_prethoryn
 							is_country_type = feral_prethoryn_infighting
+							is_country_type = formless
 							is_country_type = global_event
-							is_country_type = guardian
-							is_country_type = guardian_dragon
-							is_country_type = guardian_dreadnought
-							is_country_type = guardian_elderly_tiyanki
-							is_country_type = guardian_fortress
-							is_country_type = guardian_hatchling
-							is_country_type = guardian_hiver
-							is_country_type = guardian_horror
-							is_country_type = guardian_scavenger_bot
-							is_country_type = guardian_sphere
-							is_country_type = guardian_stellarite
-							is_country_type = guardian_wraith
-							is_country_type = ldragon_country
+							is_country_type = gray_goo
 							is_country_type = marauder_raiders
 							is_country_type = portal_holders
 							is_country_type = ruined_marauders
@@ -2037,6 +2204,8 @@ country_event = {
 							is_country_type = swarm
 							is_country_type = synth_queen
 							is_country_type = synth_queen_storm
+							is_country_type = voidworms_crisis
+							is_guardian_country = yes
 						}
 						is_ai = yes
 					}
@@ -2055,6 +2224,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_station_changed
 				set_variable = { which = custom_difficulty_station_value value = event_target:global_event_country.custom_difficulty_station_value }
+				multiply_variable = { which = custom_difficulty_station_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -2064,6 +2234,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_jobs_changed
 				set_variable = { which = custom_difficulty_jobs_value value = event_target:global_event_country.custom_difficulty_jobs_value }
+				multiply_variable = { which = custom_difficulty_jobs_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			if = {
 				limit = {
@@ -2073,6 +2244,7 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_damage_changed
 				set_variable = { which = custom_difficulty_damage_value value = event_target:global_event_country.custom_difficulty_damage_value }
+				multiply_variable = { which = custom_difficulty_damage_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			 #removing ai bonuses if they exist
 			if = {
