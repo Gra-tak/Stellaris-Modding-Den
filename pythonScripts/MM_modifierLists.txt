@@ -2,6 +2,7 @@
 
 "Space"
 country_starbase_capacity_mult
+starbase_defense_platform_capacity_mult
 terraforming_cost_mult "$MOD_COUNTRY_TERRAFORMING_COST_MULT$"
 terraform_speed_mult "$MOD_COUNTRY_TERRAFORM_SPEED_MULT$"
 command_limit_mult

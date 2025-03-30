@@ -50,6 +50,10 @@ def main():
   # debugMode=False
 
   locList=LocList()
+  locList.languages+=["simp_chinese","japanese","korean"]
+  locList.languageCodes+=["zh","jp","kr"]
+  for languageCode in locList.languageCodes:
+    locList.dicts[languageCode]=dict()
   cdf.globalAddLocs(locList)
 
   #TODO: File that is overwritten by standard DD that makes sure there is a reduced main menu
