@@ -31,6 +31,36 @@ custom_difficulty_MM_mod_country_starbase_capacity_mult_17 = { country_starbase_
 custom_difficulty_MM_mod_country_starbase_capacity_mult_18 = { country_starbase_capacity_mult = 1.800 }
 custom_difficulty_MM_mod_country_starbase_capacity_mult_19 = { country_starbase_capacity_mult = 1.900 }
 custom_difficulty_MM_mod_country_starbase_capacity_mult_20 = { country_starbase_capacity_mult = 2.000 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_-10 = { starbase_defense_platform_capacity_mult = -1.000 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_-9 = { starbase_defense_platform_capacity_mult = -0.900 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_-8 = { starbase_defense_platform_capacity_mult = -0.800 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_-7 = { starbase_defense_platform_capacity_mult = -0.700 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_-6 = { starbase_defense_platform_capacity_mult = -0.600 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_-5 = { starbase_defense_platform_capacity_mult = -0.500 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_-4 = { starbase_defense_platform_capacity_mult = -0.400 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_-3 = { starbase_defense_platform_capacity_mult = -0.300 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_-2 = { starbase_defense_platform_capacity_mult = -0.200 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_-1 = { starbase_defense_platform_capacity_mult = -0.100 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_1 = { starbase_defense_platform_capacity_mult = 0.100 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_2 = { starbase_defense_platform_capacity_mult = 0.200 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_3 = { starbase_defense_platform_capacity_mult = 0.300 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_4 = { starbase_defense_platform_capacity_mult = 0.400 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_5 = { starbase_defense_platform_capacity_mult = 0.500 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_6 = { starbase_defense_platform_capacity_mult = 0.600 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_7 = { starbase_defense_platform_capacity_mult = 0.700 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_8 = { starbase_defense_platform_capacity_mult = 0.800 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_9 = { starbase_defense_platform_capacity_mult = 0.900 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_10 = { starbase_defense_platform_capacity_mult = 1.000 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_11 = { starbase_defense_platform_capacity_mult = 1.100 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_12 = { starbase_defense_platform_capacity_mult = 1.200 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_13 = { starbase_defense_platform_capacity_mult = 1.300 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_14 = { starbase_defense_platform_capacity_mult = 1.400 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_15 = { starbase_defense_platform_capacity_mult = 1.500 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_16 = { starbase_defense_platform_capacity_mult = 1.600 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_17 = { starbase_defense_platform_capacity_mult = 1.700 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_18 = { starbase_defense_platform_capacity_mult = 1.800 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_19 = { starbase_defense_platform_capacity_mult = 1.900 }
+custom_difficulty_MM_mod_starbase_defense_platform_capacity_mult_20 = { starbase_defense_platform_capacity_mult = 2.000 }
 custom_difficulty_MM_mod_terraforming_cost_mult_-10 = { terraforming_cost_mult = 1.000 }
 custom_difficulty_MM_mod_terraforming_cost_mult_-9 = { terraforming_cost_mult = 0.900 }
 custom_difficulty_MM_mod_terraforming_cost_mult_-8 = { terraforming_cost_mult = 0.800 }
@@ -413,6 +443,426 @@ custom_difficulty_MM_mod_station_researchers_produces_mult_17 = { station_resear
 custom_difficulty_MM_mod_station_researchers_produces_mult_18 = { station_researchers_produces_mult = 1.800 }
 custom_difficulty_MM_mod_station_researchers_produces_mult_19 = { station_researchers_produces_mult = 1.900 }
 custom_difficulty_MM_mod_station_researchers_produces_mult_20 = { station_researchers_produces_mult = 2.000 }
+custom_difficulty_MM_Ship_Build_Speed_-10 = {
+	shipsize_corvette_build_speed_mult = -1.000
+	shipsize_frigate_build_speed_mult = -1.000
+	shipsize_destroyer_build_speed_mult = -1.000
+	shipsize_cruiser_build_speed_mult = -1.000
+	shipsize_battleship_build_speed_mult = -1.000
+	shipsize_titan_build_speed_mult = -1.000
+	shipsize_constructor_build_speed_mult = -1.000
+	shipsize_colonizer_build_speed_mult = -1.000
+	shipsize_sponsored_colonizer_build_speed_mult = -1.000
+	shipsize_science_build_speed_mult = -1.000
+	shipsize_transport_build_speed_mult = -1.000
+	shipsize_colossus_build_speed_mult = -1.000
+}
+custom_difficulty_MM_Ship_Build_Speed_-9 = {
+	shipsize_corvette_build_speed_mult = -0.900
+	shipsize_frigate_build_speed_mult = -0.900
+	shipsize_destroyer_build_speed_mult = -0.900
+	shipsize_cruiser_build_speed_mult = -0.900
+	shipsize_battleship_build_speed_mult = -0.900
+	shipsize_titan_build_speed_mult = -0.900
+	shipsize_constructor_build_speed_mult = -0.900
+	shipsize_colonizer_build_speed_mult = -0.900
+	shipsize_sponsored_colonizer_build_speed_mult = -0.900
+	shipsize_science_build_speed_mult = -0.900
+	shipsize_transport_build_speed_mult = -0.900
+	shipsize_colossus_build_speed_mult = -0.900
+}
+custom_difficulty_MM_Ship_Build_Speed_-8 = {
+	shipsize_corvette_build_speed_mult = -0.800
+	shipsize_frigate_build_speed_mult = -0.800
+	shipsize_destroyer_build_speed_mult = -0.800
+	shipsize_cruiser_build_speed_mult = -0.800
+	shipsize_battleship_build_speed_mult = -0.800
+	shipsize_titan_build_speed_mult = -0.800
+	shipsize_constructor_build_speed_mult = -0.800
+	shipsize_colonizer_build_speed_mult = -0.800
+	shipsize_sponsored_colonizer_build_speed_mult = -0.800
+	shipsize_science_build_speed_mult = -0.800
+	shipsize_transport_build_speed_mult = -0.800
+	shipsize_colossus_build_speed_mult = -0.800
+}
+custom_difficulty_MM_Ship_Build_Speed_-7 = {
+	shipsize_corvette_build_speed_mult = -0.700
+	shipsize_frigate_build_speed_mult = -0.700
+	shipsize_destroyer_build_speed_mult = -0.700
+	shipsize_cruiser_build_speed_mult = -0.700
+	shipsize_battleship_build_speed_mult = -0.700
+	shipsize_titan_build_speed_mult = -0.700
+	shipsize_constructor_build_speed_mult = -0.700
+	shipsize_colonizer_build_speed_mult = -0.700
+	shipsize_sponsored_colonizer_build_speed_mult = -0.700
+	shipsize_science_build_speed_mult = -0.700
+	shipsize_transport_build_speed_mult = -0.700
+	shipsize_colossus_build_speed_mult = -0.700
+}
+custom_difficulty_MM_Ship_Build_Speed_-6 = {
+	shipsize_corvette_build_speed_mult = -0.600
+	shipsize_frigate_build_speed_mult = -0.600
+	shipsize_destroyer_build_speed_mult = -0.600
+	shipsize_cruiser_build_speed_mult = -0.600
+	shipsize_battleship_build_speed_mult = -0.600
+	shipsize_titan_build_speed_mult = -0.600
+	shipsize_constructor_build_speed_mult = -0.600
+	shipsize_colonizer_build_speed_mult = -0.600
+	shipsize_sponsored_colonizer_build_speed_mult = -0.600
+	shipsize_science_build_speed_mult = -0.600
+	shipsize_transport_build_speed_mult = -0.600
+	shipsize_colossus_build_speed_mult = -0.600
+}
+custom_difficulty_MM_Ship_Build_Speed_-5 = {
+	shipsize_corvette_build_speed_mult = -0.500
+	shipsize_frigate_build_speed_mult = -0.500
+	shipsize_destroyer_build_speed_mult = -0.500
+	shipsize_cruiser_build_speed_mult = -0.500
+	shipsize_battleship_build_speed_mult = -0.500
+	shipsize_titan_build_speed_mult = -0.500
+	shipsize_constructor_build_speed_mult = -0.500
+	shipsize_colonizer_build_speed_mult = -0.500
+	shipsize_sponsored_colonizer_build_speed_mult = -0.500
+	shipsize_science_build_speed_mult = -0.500
+	shipsize_transport_build_speed_mult = -0.500
+	shipsize_colossus_build_speed_mult = -0.500
+}
+custom_difficulty_MM_Ship_Build_Speed_-4 = {
+	shipsize_corvette_build_speed_mult = -0.400
+	shipsize_frigate_build_speed_mult = -0.400
+	shipsize_destroyer_build_speed_mult = -0.400
+	shipsize_cruiser_build_speed_mult = -0.400
+	shipsize_battleship_build_speed_mult = -0.400
+	shipsize_titan_build_speed_mult = -0.400
+	shipsize_constructor_build_speed_mult = -0.400
+	shipsize_colonizer_build_speed_mult = -0.400
+	shipsize_sponsored_colonizer_build_speed_mult = -0.400
+	shipsize_science_build_speed_mult = -0.400
+	shipsize_transport_build_speed_mult = -0.400
+	shipsize_colossus_build_speed_mult = -0.400
+}
+custom_difficulty_MM_Ship_Build_Speed_-3 = {
+	shipsize_corvette_build_speed_mult = -0.300
+	shipsize_frigate_build_speed_mult = -0.300
+	shipsize_destroyer_build_speed_mult = -0.300
+	shipsize_cruiser_build_speed_mult = -0.300
+	shipsize_battleship_build_speed_mult = -0.300
+	shipsize_titan_build_speed_mult = -0.300
+	shipsize_constructor_build_speed_mult = -0.300
+	shipsize_colonizer_build_speed_mult = -0.300
+	shipsize_sponsored_colonizer_build_speed_mult = -0.300
+	shipsize_science_build_speed_mult = -0.300
+	shipsize_transport_build_speed_mult = -0.300
+	shipsize_colossus_build_speed_mult = -0.300
+}
+custom_difficulty_MM_Ship_Build_Speed_-2 = {
+	shipsize_corvette_build_speed_mult = -0.200
+	shipsize_frigate_build_speed_mult = -0.200
+	shipsize_destroyer_build_speed_mult = -0.200
+	shipsize_cruiser_build_speed_mult = -0.200
+	shipsize_battleship_build_speed_mult = -0.200
+	shipsize_titan_build_speed_mult = -0.200
+	shipsize_constructor_build_speed_mult = -0.200
+	shipsize_colonizer_build_speed_mult = -0.200
+	shipsize_sponsored_colonizer_build_speed_mult = -0.200
+	shipsize_science_build_speed_mult = -0.200
+	shipsize_transport_build_speed_mult = -0.200
+	shipsize_colossus_build_speed_mult = -0.200
+}
+custom_difficulty_MM_Ship_Build_Speed_-1 = {
+	shipsize_corvette_build_speed_mult = -0.100
+	shipsize_frigate_build_speed_mult = -0.100
+	shipsize_destroyer_build_speed_mult = -0.100
+	shipsize_cruiser_build_speed_mult = -0.100
+	shipsize_battleship_build_speed_mult = -0.100
+	shipsize_titan_build_speed_mult = -0.100
+	shipsize_constructor_build_speed_mult = -0.100
+	shipsize_colonizer_build_speed_mult = -0.100
+	shipsize_sponsored_colonizer_build_speed_mult = -0.100
+	shipsize_science_build_speed_mult = -0.100
+	shipsize_transport_build_speed_mult = -0.100
+	shipsize_colossus_build_speed_mult = -0.100
+}
+custom_difficulty_MM_Ship_Build_Speed_1 = {
+	shipsize_corvette_build_speed_mult = 0.100
+	shipsize_frigate_build_speed_mult = 0.100
+	shipsize_destroyer_build_speed_mult = 0.100
+	shipsize_cruiser_build_speed_mult = 0.100
+	shipsize_battleship_build_speed_mult = 0.100
+	shipsize_titan_build_speed_mult = 0.100
+	shipsize_constructor_build_speed_mult = 0.100
+	shipsize_colonizer_build_speed_mult = 0.100
+	shipsize_sponsored_colonizer_build_speed_mult = 0.100
+	shipsize_science_build_speed_mult = 0.100
+	shipsize_transport_build_speed_mult = 0.100
+	shipsize_colossus_build_speed_mult = 0.100
+}
+custom_difficulty_MM_Ship_Build_Speed_2 = {
+	shipsize_corvette_build_speed_mult = 0.200
+	shipsize_frigate_build_speed_mult = 0.200
+	shipsize_destroyer_build_speed_mult = 0.200
+	shipsize_cruiser_build_speed_mult = 0.200
+	shipsize_battleship_build_speed_mult = 0.200
+	shipsize_titan_build_speed_mult = 0.200
+	shipsize_constructor_build_speed_mult = 0.200
+	shipsize_colonizer_build_speed_mult = 0.200
+	shipsize_sponsored_colonizer_build_speed_mult = 0.200
+	shipsize_science_build_speed_mult = 0.200
+	shipsize_transport_build_speed_mult = 0.200
+	shipsize_colossus_build_speed_mult = 0.200
+}
+custom_difficulty_MM_Ship_Build_Speed_3 = {
+	shipsize_corvette_build_speed_mult = 0.300
+	shipsize_frigate_build_speed_mult = 0.300
+	shipsize_destroyer_build_speed_mult = 0.300
+	shipsize_cruiser_build_speed_mult = 0.300
+	shipsize_battleship_build_speed_mult = 0.300
+	shipsize_titan_build_speed_mult = 0.300
+	shipsize_constructor_build_speed_mult = 0.300
+	shipsize_colonizer_build_speed_mult = 0.300
+	shipsize_sponsored_colonizer_build_speed_mult = 0.300
+	shipsize_science_build_speed_mult = 0.300
+	shipsize_transport_build_speed_mult = 0.300
+	shipsize_colossus_build_speed_mult = 0.300
+}
+custom_difficulty_MM_Ship_Build_Speed_4 = {
+	shipsize_corvette_build_speed_mult = 0.400
+	shipsize_frigate_build_speed_mult = 0.400
+	shipsize_destroyer_build_speed_mult = 0.400
+	shipsize_cruiser_build_speed_mult = 0.400
+	shipsize_battleship_build_speed_mult = 0.400
+	shipsize_titan_build_speed_mult = 0.400
+	shipsize_constructor_build_speed_mult = 0.400
+	shipsize_colonizer_build_speed_mult = 0.400
+	shipsize_sponsored_colonizer_build_speed_mult = 0.400
+	shipsize_science_build_speed_mult = 0.400
+	shipsize_transport_build_speed_mult = 0.400
+	shipsize_colossus_build_speed_mult = 0.400
+}
+custom_difficulty_MM_Ship_Build_Speed_5 = {
+	shipsize_corvette_build_speed_mult = 0.500
+	shipsize_frigate_build_speed_mult = 0.500
+	shipsize_destroyer_build_speed_mult = 0.500
+	shipsize_cruiser_build_speed_mult = 0.500
+	shipsize_battleship_build_speed_mult = 0.500
+	shipsize_titan_build_speed_mult = 0.500
+	shipsize_constructor_build_speed_mult = 0.500
+	shipsize_colonizer_build_speed_mult = 0.500
+	shipsize_sponsored_colonizer_build_speed_mult = 0.500
+	shipsize_science_build_speed_mult = 0.500
+	shipsize_transport_build_speed_mult = 0.500
+	shipsize_colossus_build_speed_mult = 0.500
+}
+custom_difficulty_MM_Ship_Build_Speed_6 = {
+	shipsize_corvette_build_speed_mult = 0.600
+	shipsize_frigate_build_speed_mult = 0.600
+	shipsize_destroyer_build_speed_mult = 0.600
+	shipsize_cruiser_build_speed_mult = 0.600
+	shipsize_battleship_build_speed_mult = 0.600
+	shipsize_titan_build_speed_mult = 0.600
+	shipsize_constructor_build_speed_mult = 0.600
+	shipsize_colonizer_build_speed_mult = 0.600
+	shipsize_sponsored_colonizer_build_speed_mult = 0.600
+	shipsize_science_build_speed_mult = 0.600
+	shipsize_transport_build_speed_mult = 0.600
+	shipsize_colossus_build_speed_mult = 0.600
+}
+custom_difficulty_MM_Ship_Build_Speed_7 = {
+	shipsize_corvette_build_speed_mult = 0.700
+	shipsize_frigate_build_speed_mult = 0.700
+	shipsize_destroyer_build_speed_mult = 0.700
+	shipsize_cruiser_build_speed_mult = 0.700
+	shipsize_battleship_build_speed_mult = 0.700
+	shipsize_titan_build_speed_mult = 0.700
+	shipsize_constructor_build_speed_mult = 0.700
+	shipsize_colonizer_build_speed_mult = 0.700
+	shipsize_sponsored_colonizer_build_speed_mult = 0.700
+	shipsize_science_build_speed_mult = 0.700
+	shipsize_transport_build_speed_mult = 0.700
+	shipsize_colossus_build_speed_mult = 0.700
+}
+custom_difficulty_MM_Ship_Build_Speed_8 = {
+	shipsize_corvette_build_speed_mult = 0.800
+	shipsize_frigate_build_speed_mult = 0.800
+	shipsize_destroyer_build_speed_mult = 0.800
+	shipsize_cruiser_build_speed_mult = 0.800
+	shipsize_battleship_build_speed_mult = 0.800
+	shipsize_titan_build_speed_mult = 0.800
+	shipsize_constructor_build_speed_mult = 0.800
+	shipsize_colonizer_build_speed_mult = 0.800
+	shipsize_sponsored_colonizer_build_speed_mult = 0.800
+	shipsize_science_build_speed_mult = 0.800
+	shipsize_transport_build_speed_mult = 0.800
+	shipsize_colossus_build_speed_mult = 0.800
+}
+custom_difficulty_MM_Ship_Build_Speed_9 = {
+	shipsize_corvette_build_speed_mult = 0.900
+	shipsize_frigate_build_speed_mult = 0.900
+	shipsize_destroyer_build_speed_mult = 0.900
+	shipsize_cruiser_build_speed_mult = 0.900
+	shipsize_battleship_build_speed_mult = 0.900
+	shipsize_titan_build_speed_mult = 0.900
+	shipsize_constructor_build_speed_mult = 0.900
+	shipsize_colonizer_build_speed_mult = 0.900
+	shipsize_sponsored_colonizer_build_speed_mult = 0.900
+	shipsize_science_build_speed_mult = 0.900
+	shipsize_transport_build_speed_mult = 0.900
+	shipsize_colossus_build_speed_mult = 0.900
+}
+custom_difficulty_MM_Ship_Build_Speed_10 = {
+	shipsize_corvette_build_speed_mult = 1.000
+	shipsize_frigate_build_speed_mult = 1.000
+	shipsize_destroyer_build_speed_mult = 1.000
+	shipsize_cruiser_build_speed_mult = 1.000
+	shipsize_battleship_build_speed_mult = 1.000
+	shipsize_titan_build_speed_mult = 1.000
+	shipsize_constructor_build_speed_mult = 1.000
+	shipsize_colonizer_build_speed_mult = 1.000
+	shipsize_sponsored_colonizer_build_speed_mult = 1.000
+	shipsize_science_build_speed_mult = 1.000
+	shipsize_transport_build_speed_mult = 1.000
+	shipsize_colossus_build_speed_mult = 1.000
+}
+custom_difficulty_MM_Ship_Build_Speed_11 = {
+	shipsize_corvette_build_speed_mult = 1.100
+	shipsize_frigate_build_speed_mult = 1.100
+	shipsize_destroyer_build_speed_mult = 1.100
+	shipsize_cruiser_build_speed_mult = 1.100
+	shipsize_battleship_build_speed_mult = 1.100
+	shipsize_titan_build_speed_mult = 1.100
+	shipsize_constructor_build_speed_mult = 1.100
+	shipsize_colonizer_build_speed_mult = 1.100
+	shipsize_sponsored_colonizer_build_speed_mult = 1.100
+	shipsize_science_build_speed_mult = 1.100
+	shipsize_transport_build_speed_mult = 1.100
+	shipsize_colossus_build_speed_mult = 1.100
+}
+custom_difficulty_MM_Ship_Build_Speed_12 = {
+	shipsize_corvette_build_speed_mult = 1.200
+	shipsize_frigate_build_speed_mult = 1.200
+	shipsize_destroyer_build_speed_mult = 1.200
+	shipsize_cruiser_build_speed_mult = 1.200
+	shipsize_battleship_build_speed_mult = 1.200
+	shipsize_titan_build_speed_mult = 1.200
+	shipsize_constructor_build_speed_mult = 1.200
+	shipsize_colonizer_build_speed_mult = 1.200
+	shipsize_sponsored_colonizer_build_speed_mult = 1.200
+	shipsize_science_build_speed_mult = 1.200
+	shipsize_transport_build_speed_mult = 1.200
+	shipsize_colossus_build_speed_mult = 1.200
+}
+custom_difficulty_MM_Ship_Build_Speed_13 = {
+	shipsize_corvette_build_speed_mult = 1.300
+	shipsize_frigate_build_speed_mult = 1.300
+	shipsize_destroyer_build_speed_mult = 1.300
+	shipsize_cruiser_build_speed_mult = 1.300
+	shipsize_battleship_build_speed_mult = 1.300
+	shipsize_titan_build_speed_mult = 1.300
+	shipsize_constructor_build_speed_mult = 1.300
+	shipsize_colonizer_build_speed_mult = 1.300
+	shipsize_sponsored_colonizer_build_speed_mult = 1.300
+	shipsize_science_build_speed_mult = 1.300
+	shipsize_transport_build_speed_mult = 1.300
+	shipsize_colossus_build_speed_mult = 1.300
+}
+custom_difficulty_MM_Ship_Build_Speed_14 = {
+	shipsize_corvette_build_speed_mult = 1.400
+	shipsize_frigate_build_speed_mult = 1.400
+	shipsize_destroyer_build_speed_mult = 1.400
+	shipsize_cruiser_build_speed_mult = 1.400
+	shipsize_battleship_build_speed_mult = 1.400
+	shipsize_titan_build_speed_mult = 1.400
+	shipsize_constructor_build_speed_mult = 1.400
+	shipsize_colonizer_build_speed_mult = 1.400
+	shipsize_sponsored_colonizer_build_speed_mult = 1.400
+	shipsize_science_build_speed_mult = 1.400
+	shipsize_transport_build_speed_mult = 1.400
+	shipsize_colossus_build_speed_mult = 1.400
+}
+custom_difficulty_MM_Ship_Build_Speed_15 = {
+	shipsize_corvette_build_speed_mult = 1.500
+	shipsize_frigate_build_speed_mult = 1.500
+	shipsize_destroyer_build_speed_mult = 1.500
+	shipsize_cruiser_build_speed_mult = 1.500
+	shipsize_battleship_build_speed_mult = 1.500
+	shipsize_titan_build_speed_mult = 1.500
+	shipsize_constructor_build_speed_mult = 1.500
+	shipsize_colonizer_build_speed_mult = 1.500
+	shipsize_sponsored_colonizer_build_speed_mult = 1.500
+	shipsize_science_build_speed_mult = 1.500
+	shipsize_transport_build_speed_mult = 1.500
+	shipsize_colossus_build_speed_mult = 1.500
+}
+custom_difficulty_MM_Ship_Build_Speed_16 = {
+	shipsize_corvette_build_speed_mult = 1.600
+	shipsize_frigate_build_speed_mult = 1.600
+	shipsize_destroyer_build_speed_mult = 1.600
+	shipsize_cruiser_build_speed_mult = 1.600
+	shipsize_battleship_build_speed_mult = 1.600
+	shipsize_titan_build_speed_mult = 1.600
+	shipsize_constructor_build_speed_mult = 1.600
+	shipsize_colonizer_build_speed_mult = 1.600
+	shipsize_sponsored_colonizer_build_speed_mult = 1.600
+	shipsize_science_build_speed_mult = 1.600
+	shipsize_transport_build_speed_mult = 1.600
+	shipsize_colossus_build_speed_mult = 1.600
+}
+custom_difficulty_MM_Ship_Build_Speed_17 = {
+	shipsize_corvette_build_speed_mult = 1.700
+	shipsize_frigate_build_speed_mult = 1.700
+	shipsize_destroyer_build_speed_mult = 1.700
+	shipsize_cruiser_build_speed_mult = 1.700
+	shipsize_battleship_build_speed_mult = 1.700
+	shipsize_titan_build_speed_mult = 1.700
+	shipsize_constructor_build_speed_mult = 1.700
+	shipsize_colonizer_build_speed_mult = 1.700
+	shipsize_sponsored_colonizer_build_speed_mult = 1.700
+	shipsize_science_build_speed_mult = 1.700
+	shipsize_transport_build_speed_mult = 1.700
+	shipsize_colossus_build_speed_mult = 1.700
+}
+custom_difficulty_MM_Ship_Build_Speed_18 = {
+	shipsize_corvette_build_speed_mult = 1.800
+	shipsize_frigate_build_speed_mult = 1.800
+	shipsize_destroyer_build_speed_mult = 1.800
+	shipsize_cruiser_build_speed_mult = 1.800
+	shipsize_battleship_build_speed_mult = 1.800
+	shipsize_titan_build_speed_mult = 1.800
+	shipsize_constructor_build_speed_mult = 1.800
+	shipsize_colonizer_build_speed_mult = 1.800
+	shipsize_sponsored_colonizer_build_speed_mult = 1.800
+	shipsize_science_build_speed_mult = 1.800
+	shipsize_transport_build_speed_mult = 1.800
+	shipsize_colossus_build_speed_mult = 1.800
+}
+custom_difficulty_MM_Ship_Build_Speed_19 = {
+	shipsize_corvette_build_speed_mult = 1.900
+	shipsize_frigate_build_speed_mult = 1.900
+	shipsize_destroyer_build_speed_mult = 1.900
+	shipsize_cruiser_build_speed_mult = 1.900
+	shipsize_battleship_build_speed_mult = 1.900
+	shipsize_titan_build_speed_mult = 1.900
+	shipsize_constructor_build_speed_mult = 1.900
+	shipsize_colonizer_build_speed_mult = 1.900
+	shipsize_sponsored_colonizer_build_speed_mult = 1.900
+	shipsize_science_build_speed_mult = 1.900
+	shipsize_transport_build_speed_mult = 1.900
+	shipsize_colossus_build_speed_mult = 1.900
+}
+custom_difficulty_MM_Ship_Build_Speed_20 = {
+	shipsize_corvette_build_speed_mult = 2.000
+	shipsize_frigate_build_speed_mult = 2.000
+	shipsize_destroyer_build_speed_mult = 2.000
+	shipsize_cruiser_build_speed_mult = 2.000
+	shipsize_battleship_build_speed_mult = 2.000
+	shipsize_titan_build_speed_mult = 2.000
+	shipsize_constructor_build_speed_mult = 2.000
+	shipsize_colonizer_build_speed_mult = 2.000
+	shipsize_sponsored_colonizer_build_speed_mult = 2.000
+	shipsize_science_build_speed_mult = 2.000
+	shipsize_transport_build_speed_mult = 2.000
+	shipsize_colossus_build_speed_mult = 2.000
+}
 custom_difficulty_MM_mod_country_admin_cap_add_-10 = { country_admin_cap_add = -200.000 }
 custom_difficulty_MM_mod_country_admin_cap_add_-9 = { country_admin_cap_add = -180.000 }
 custom_difficulty_MM_mod_country_admin_cap_add_-8 = { country_admin_cap_add = -160.000 }
@@ -1178,126 +1628,6 @@ custom_difficulty_MM_mod_country_trade_fee_17 = { country_trade_fee = -0.340 }
 custom_difficulty_MM_mod_country_trade_fee_18 = { country_trade_fee = -0.360 }
 custom_difficulty_MM_mod_country_trade_fee_19 = { country_trade_fee = -0.380 }
 custom_difficulty_MM_mod_country_trade_fee_20 = { country_trade_fee = -0.400 }
-custom_difficulty_MM_mod_local_trade_protection_add_-10 = { local_trade_protection_add = -10.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_-9 = { local_trade_protection_add = -9.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_-8 = { local_trade_protection_add = -8.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_-7 = { local_trade_protection_add = -7.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_-6 = { local_trade_protection_add = -6.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_-5 = { local_trade_protection_add = -5.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_-4 = { local_trade_protection_add = -4.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_-3 = { local_trade_protection_add = -3.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_-2 = { local_trade_protection_add = -2.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_-1 = { local_trade_protection_add = -1.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_1 = { local_trade_protection_add = 1.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_2 = { local_trade_protection_add = 2.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_3 = { local_trade_protection_add = 3.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_4 = { local_trade_protection_add = 4.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_5 = { local_trade_protection_add = 5.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_6 = { local_trade_protection_add = 6.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_7 = { local_trade_protection_add = 7.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_8 = { local_trade_protection_add = 8.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_9 = { local_trade_protection_add = 9.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_10 = { local_trade_protection_add = 10.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_11 = { local_trade_protection_add = 11.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_12 = { local_trade_protection_add = 12.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_13 = { local_trade_protection_add = 13.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_14 = { local_trade_protection_add = 14.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_15 = { local_trade_protection_add = 15.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_16 = { local_trade_protection_add = 16.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_17 = { local_trade_protection_add = 17.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_18 = { local_trade_protection_add = 18.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_19 = { local_trade_protection_add = 19.000 }
-custom_difficulty_MM_mod_local_trade_protection_add_20 = { local_trade_protection_add = 20.000 }
-custom_difficulty_MM_mod_trade_value_mult_-10 = { trade_value_mult = -1.000 }
-custom_difficulty_MM_mod_trade_value_mult_-9 = { trade_value_mult = -0.900 }
-custom_difficulty_MM_mod_trade_value_mult_-8 = { trade_value_mult = -0.800 }
-custom_difficulty_MM_mod_trade_value_mult_-7 = { trade_value_mult = -0.700 }
-custom_difficulty_MM_mod_trade_value_mult_-6 = { trade_value_mult = -0.600 }
-custom_difficulty_MM_mod_trade_value_mult_-5 = { trade_value_mult = -0.500 }
-custom_difficulty_MM_mod_trade_value_mult_-4 = { trade_value_mult = -0.400 }
-custom_difficulty_MM_mod_trade_value_mult_-3 = { trade_value_mult = -0.300 }
-custom_difficulty_MM_mod_trade_value_mult_-2 = { trade_value_mult = -0.200 }
-custom_difficulty_MM_mod_trade_value_mult_-1 = { trade_value_mult = -0.100 }
-custom_difficulty_MM_mod_trade_value_mult_1 = { trade_value_mult = 0.100 }
-custom_difficulty_MM_mod_trade_value_mult_2 = { trade_value_mult = 0.200 }
-custom_difficulty_MM_mod_trade_value_mult_3 = { trade_value_mult = 0.300 }
-custom_difficulty_MM_mod_trade_value_mult_4 = { trade_value_mult = 0.400 }
-custom_difficulty_MM_mod_trade_value_mult_5 = { trade_value_mult = 0.500 }
-custom_difficulty_MM_mod_trade_value_mult_6 = { trade_value_mult = 0.600 }
-custom_difficulty_MM_mod_trade_value_mult_7 = { trade_value_mult = 0.700 }
-custom_difficulty_MM_mod_trade_value_mult_8 = { trade_value_mult = 0.800 }
-custom_difficulty_MM_mod_trade_value_mult_9 = { trade_value_mult = 0.900 }
-custom_difficulty_MM_mod_trade_value_mult_10 = { trade_value_mult = 1.000 }
-custom_difficulty_MM_mod_trade_value_mult_11 = { trade_value_mult = 1.100 }
-custom_difficulty_MM_mod_trade_value_mult_12 = { trade_value_mult = 1.200 }
-custom_difficulty_MM_mod_trade_value_mult_13 = { trade_value_mult = 1.300 }
-custom_difficulty_MM_mod_trade_value_mult_14 = { trade_value_mult = 1.400 }
-custom_difficulty_MM_mod_trade_value_mult_15 = { trade_value_mult = 1.500 }
-custom_difficulty_MM_mod_trade_value_mult_16 = { trade_value_mult = 1.600 }
-custom_difficulty_MM_mod_trade_value_mult_17 = { trade_value_mult = 1.700 }
-custom_difficulty_MM_mod_trade_value_mult_18 = { trade_value_mult = 1.800 }
-custom_difficulty_MM_mod_trade_value_mult_19 = { trade_value_mult = 1.900 }
-custom_difficulty_MM_mod_trade_value_mult_20 = { trade_value_mult = 2.000 }
-custom_difficulty_MM_mod_piracy_growth_mult_-10 = { piracy_growth_mult = -1.000 }
-custom_difficulty_MM_mod_piracy_growth_mult_-9 = { piracy_growth_mult = -0.900 }
-custom_difficulty_MM_mod_piracy_growth_mult_-8 = { piracy_growth_mult = -0.800 }
-custom_difficulty_MM_mod_piracy_growth_mult_-7 = { piracy_growth_mult = -0.700 }
-custom_difficulty_MM_mod_piracy_growth_mult_-6 = { piracy_growth_mult = -0.600 }
-custom_difficulty_MM_mod_piracy_growth_mult_-5 = { piracy_growth_mult = -0.500 }
-custom_difficulty_MM_mod_piracy_growth_mult_-4 = { piracy_growth_mult = -0.400 }
-custom_difficulty_MM_mod_piracy_growth_mult_-3 = { piracy_growth_mult = -0.300 }
-custom_difficulty_MM_mod_piracy_growth_mult_-2 = { piracy_growth_mult = -0.200 }
-custom_difficulty_MM_mod_piracy_growth_mult_-1 = { piracy_growth_mult = -0.100 }
-custom_difficulty_MM_mod_piracy_growth_mult_1 = { piracy_growth_mult = 0.100 }
-custom_difficulty_MM_mod_piracy_growth_mult_2 = { piracy_growth_mult = 0.200 }
-custom_difficulty_MM_mod_piracy_growth_mult_3 = { piracy_growth_mult = 0.300 }
-custom_difficulty_MM_mod_piracy_growth_mult_4 = { piracy_growth_mult = 0.400 }
-custom_difficulty_MM_mod_piracy_growth_mult_5 = { piracy_growth_mult = 0.500 }
-custom_difficulty_MM_mod_piracy_growth_mult_6 = { piracy_growth_mult = 0.600 }
-custom_difficulty_MM_mod_piracy_growth_mult_7 = { piracy_growth_mult = 0.700 }
-custom_difficulty_MM_mod_piracy_growth_mult_8 = { piracy_growth_mult = 0.800 }
-custom_difficulty_MM_mod_piracy_growth_mult_9 = { piracy_growth_mult = 0.900 }
-custom_difficulty_MM_mod_piracy_growth_mult_10 = { piracy_growth_mult = 1.000 }
-custom_difficulty_MM_mod_piracy_growth_mult_11 = { piracy_growth_mult = 1.100 }
-custom_difficulty_MM_mod_piracy_growth_mult_12 = { piracy_growth_mult = 1.200 }
-custom_difficulty_MM_mod_piracy_growth_mult_13 = { piracy_growth_mult = 1.300 }
-custom_difficulty_MM_mod_piracy_growth_mult_14 = { piracy_growth_mult = 1.400 }
-custom_difficulty_MM_mod_piracy_growth_mult_15 = { piracy_growth_mult = 1.500 }
-custom_difficulty_MM_mod_piracy_growth_mult_16 = { piracy_growth_mult = 1.600 }
-custom_difficulty_MM_mod_piracy_growth_mult_17 = { piracy_growth_mult = 1.700 }
-custom_difficulty_MM_mod_piracy_growth_mult_18 = { piracy_growth_mult = 1.800 }
-custom_difficulty_MM_mod_piracy_growth_mult_19 = { piracy_growth_mult = 1.900 }
-custom_difficulty_MM_mod_piracy_growth_mult_20 = { piracy_growth_mult = 2.000 }
-custom_difficulty_MM_mod_piracy_suppression_mult_-10 = { piracy_suppression_mult = -1.000 }
-custom_difficulty_MM_mod_piracy_suppression_mult_-9 = { piracy_suppression_mult = -0.900 }
-custom_difficulty_MM_mod_piracy_suppression_mult_-8 = { piracy_suppression_mult = -0.800 }
-custom_difficulty_MM_mod_piracy_suppression_mult_-7 = { piracy_suppression_mult = -0.700 }
-custom_difficulty_MM_mod_piracy_suppression_mult_-6 = { piracy_suppression_mult = -0.600 }
-custom_difficulty_MM_mod_piracy_suppression_mult_-5 = { piracy_suppression_mult = -0.500 }
-custom_difficulty_MM_mod_piracy_suppression_mult_-4 = { piracy_suppression_mult = -0.400 }
-custom_difficulty_MM_mod_piracy_suppression_mult_-3 = { piracy_suppression_mult = -0.300 }
-custom_difficulty_MM_mod_piracy_suppression_mult_-2 = { piracy_suppression_mult = -0.200 }
-custom_difficulty_MM_mod_piracy_suppression_mult_-1 = { piracy_suppression_mult = -0.100 }
-custom_difficulty_MM_mod_piracy_suppression_mult_1 = { piracy_suppression_mult = 0.100 }
-custom_difficulty_MM_mod_piracy_suppression_mult_2 = { piracy_suppression_mult = 0.200 }
-custom_difficulty_MM_mod_piracy_suppression_mult_3 = { piracy_suppression_mult = 0.300 }
-custom_difficulty_MM_mod_piracy_suppression_mult_4 = { piracy_suppression_mult = 0.400 }
-custom_difficulty_MM_mod_piracy_suppression_mult_5 = { piracy_suppression_mult = 0.500 }
-custom_difficulty_MM_mod_piracy_suppression_mult_6 = { piracy_suppression_mult = 0.600 }
-custom_difficulty_MM_mod_piracy_suppression_mult_7 = { piracy_suppression_mult = 0.700 }
-custom_difficulty_MM_mod_piracy_suppression_mult_8 = { piracy_suppression_mult = 0.800 }
-custom_difficulty_MM_mod_piracy_suppression_mult_9 = { piracy_suppression_mult = 0.900 }
-custom_difficulty_MM_mod_piracy_suppression_mult_10 = { piracy_suppression_mult = 1.000 }
-custom_difficulty_MM_mod_piracy_suppression_mult_11 = { piracy_suppression_mult = 1.100 }
-custom_difficulty_MM_mod_piracy_suppression_mult_12 = { piracy_suppression_mult = 1.200 }
-custom_difficulty_MM_mod_piracy_suppression_mult_13 = { piracy_suppression_mult = 1.300 }
-custom_difficulty_MM_mod_piracy_suppression_mult_14 = { piracy_suppression_mult = 1.400 }
-custom_difficulty_MM_mod_piracy_suppression_mult_15 = { piracy_suppression_mult = 1.500 }
-custom_difficulty_MM_mod_piracy_suppression_mult_16 = { piracy_suppression_mult = 1.600 }
-custom_difficulty_MM_mod_piracy_suppression_mult_17 = { piracy_suppression_mult = 1.700 }
-custom_difficulty_MM_mod_piracy_suppression_mult_18 = { piracy_suppression_mult = 1.800 }
-custom_difficulty_MM_mod_piracy_suppression_mult_19 = { piracy_suppression_mult = 1.900 }
-custom_difficulty_MM_mod_piracy_suppression_mult_20 = { piracy_suppression_mult = 2.000 }
 custom_difficulty_MM_mod_branch_office_value_mult_-10 = { branch_office_value_mult = -1.000 }
 custom_difficulty_MM_mod_branch_office_value_mult_-9 = { branch_office_value_mult = -0.900 }
 custom_difficulty_MM_mod_branch_office_value_mult_-8 = { branch_office_value_mult = -0.800 }
@@ -1428,26 +1758,26 @@ custom_difficulty_MM_mod_job_clerk_per_pop_17 = { job_clerk_per_pop = 0.340 }
 custom_difficulty_MM_mod_job_clerk_per_pop_18 = { job_clerk_per_pop = 0.360 }
 custom_difficulty_MM_mod_job_clerk_per_pop_19 = { job_clerk_per_pop = 0.380 }
 custom_difficulty_MM_mod_job_clerk_per_pop_20 = { job_clerk_per_pop = 0.400 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_1 = { colony_start_num_pops_add = 1.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_2 = { colony_start_num_pops_add = 2.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_3 = { colony_start_num_pops_add = 3.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_4 = { colony_start_num_pops_add = 4.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_5 = { colony_start_num_pops_add = 5.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_6 = { colony_start_num_pops_add = 6.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_7 = { colony_start_num_pops_add = 7.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_8 = { colony_start_num_pops_add = 8.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_9 = { colony_start_num_pops_add = 9.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_10 = { colony_start_num_pops_add = 10.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_11 = { colony_start_num_pops_add = 11.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_12 = { colony_start_num_pops_add = 12.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_13 = { colony_start_num_pops_add = 13.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_14 = { colony_start_num_pops_add = 14.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_15 = { colony_start_num_pops_add = 15.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_16 = { colony_start_num_pops_add = 16.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_17 = { colony_start_num_pops_add = 17.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_18 = { colony_start_num_pops_add = 18.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_19 = { colony_start_num_pops_add = 19.000 }
-custom_difficulty_MM_mod_colony_start_num_pops_add_20 = { colony_start_num_pops_add = 20.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_1 = { colony_start_urban_districts_add = 1.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_2 = { colony_start_urban_districts_add = 2.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_3 = { colony_start_urban_districts_add = 3.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_4 = { colony_start_urban_districts_add = 4.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_5 = { colony_start_urban_districts_add = 5.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_6 = { colony_start_urban_districts_add = 6.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_7 = { colony_start_urban_districts_add = 7.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_8 = { colony_start_urban_districts_add = 8.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_9 = { colony_start_urban_districts_add = 9.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_10 = { colony_start_urban_districts_add = 10.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_11 = { colony_start_urban_districts_add = 11.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_12 = { colony_start_urban_districts_add = 12.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_13 = { colony_start_urban_districts_add = 13.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_14 = { colony_start_urban_districts_add = 14.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_15 = { colony_start_urban_districts_add = 15.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_16 = { colony_start_urban_districts_add = 16.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_17 = { colony_start_urban_districts_add = 17.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_18 = { colony_start_urban_districts_add = 18.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_19 = { colony_start_urban_districts_add = 19.000 }
+custom_difficulty_MM_mod_colony_start_urban_districts_add_20 = { colony_start_urban_districts_add = 20.000 }
 custom_difficulty_MM_mod_all_technology_research_speed_-30 = { all_technology_research_speed = -3.000 }
 custom_difficulty_MM_mod_all_technology_research_speed_-29 = { all_technology_research_speed = -2.900 }
 custom_difficulty_MM_mod_all_technology_research_speed_-28 = { all_technology_research_speed = -2.800 }
@@ -1618,36 +1948,36 @@ custom_difficulty_MM_mod_planet_amenities_mult_17 = { planet_amenities_mult = 1.
 custom_difficulty_MM_mod_planet_amenities_mult_18 = { planet_amenities_mult = 1.800 }
 custom_difficulty_MM_mod_planet_amenities_mult_19 = { planet_amenities_mult = 1.900 }
 custom_difficulty_MM_mod_planet_amenities_mult_20 = { planet_amenities_mult = 2.000 }
-custom_difficulty_MM_mod_pop_growth_speed_-10 = { pop_growth_speed = -1.000 }
-custom_difficulty_MM_mod_pop_growth_speed_-9 = { pop_growth_speed = -0.900 }
-custom_difficulty_MM_mod_pop_growth_speed_-8 = { pop_growth_speed = -0.800 }
-custom_difficulty_MM_mod_pop_growth_speed_-7 = { pop_growth_speed = -0.700 }
-custom_difficulty_MM_mod_pop_growth_speed_-6 = { pop_growth_speed = -0.600 }
-custom_difficulty_MM_mod_pop_growth_speed_-5 = { pop_growth_speed = -0.500 }
-custom_difficulty_MM_mod_pop_growth_speed_-4 = { pop_growth_speed = -0.400 }
-custom_difficulty_MM_mod_pop_growth_speed_-3 = { pop_growth_speed = -0.300 }
-custom_difficulty_MM_mod_pop_growth_speed_-2 = { pop_growth_speed = -0.200 }
-custom_difficulty_MM_mod_pop_growth_speed_-1 = { pop_growth_speed = -0.100 }
-custom_difficulty_MM_mod_pop_growth_speed_1 = { pop_growth_speed = 0.100 }
-custom_difficulty_MM_mod_pop_growth_speed_2 = { pop_growth_speed = 0.200 }
-custom_difficulty_MM_mod_pop_growth_speed_3 = { pop_growth_speed = 0.300 }
-custom_difficulty_MM_mod_pop_growth_speed_4 = { pop_growth_speed = 0.400 }
-custom_difficulty_MM_mod_pop_growth_speed_5 = { pop_growth_speed = 0.500 }
-custom_difficulty_MM_mod_pop_growth_speed_6 = { pop_growth_speed = 0.600 }
-custom_difficulty_MM_mod_pop_growth_speed_7 = { pop_growth_speed = 0.700 }
-custom_difficulty_MM_mod_pop_growth_speed_8 = { pop_growth_speed = 0.800 }
-custom_difficulty_MM_mod_pop_growth_speed_9 = { pop_growth_speed = 0.900 }
-custom_difficulty_MM_mod_pop_growth_speed_10 = { pop_growth_speed = 1.000 }
-custom_difficulty_MM_mod_pop_growth_speed_11 = { pop_growth_speed = 1.100 }
-custom_difficulty_MM_mod_pop_growth_speed_12 = { pop_growth_speed = 1.200 }
-custom_difficulty_MM_mod_pop_growth_speed_13 = { pop_growth_speed = 1.300 }
-custom_difficulty_MM_mod_pop_growth_speed_14 = { pop_growth_speed = 1.400 }
-custom_difficulty_MM_mod_pop_growth_speed_15 = { pop_growth_speed = 1.500 }
-custom_difficulty_MM_mod_pop_growth_speed_16 = { pop_growth_speed = 1.600 }
-custom_difficulty_MM_mod_pop_growth_speed_17 = { pop_growth_speed = 1.700 }
-custom_difficulty_MM_mod_pop_growth_speed_18 = { pop_growth_speed = 1.800 }
-custom_difficulty_MM_mod_pop_growth_speed_19 = { pop_growth_speed = 1.900 }
-custom_difficulty_MM_mod_pop_growth_speed_20 = { pop_growth_speed = 2.000 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_-10 = { bonus_pop_growth_mult = -1.000 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_-9 = { bonus_pop_growth_mult = -0.900 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_-8 = { bonus_pop_growth_mult = -0.800 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_-7 = { bonus_pop_growth_mult = -0.700 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_-6 = { bonus_pop_growth_mult = -0.600 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_-5 = { bonus_pop_growth_mult = -0.500 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_-4 = { bonus_pop_growth_mult = -0.400 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_-3 = { bonus_pop_growth_mult = -0.300 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_-2 = { bonus_pop_growth_mult = -0.200 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_-1 = { bonus_pop_growth_mult = -0.100 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_1 = { bonus_pop_growth_mult = 0.100 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_2 = { bonus_pop_growth_mult = 0.200 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_3 = { bonus_pop_growth_mult = 0.300 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_4 = { bonus_pop_growth_mult = 0.400 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_5 = { bonus_pop_growth_mult = 0.500 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_6 = { bonus_pop_growth_mult = 0.600 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_7 = { bonus_pop_growth_mult = 0.700 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_8 = { bonus_pop_growth_mult = 0.800 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_9 = { bonus_pop_growth_mult = 0.900 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_10 = { bonus_pop_growth_mult = 1.000 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_11 = { bonus_pop_growth_mult = 1.100 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_12 = { bonus_pop_growth_mult = 1.200 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_13 = { bonus_pop_growth_mult = 1.300 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_14 = { bonus_pop_growth_mult = 1.400 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_15 = { bonus_pop_growth_mult = 1.500 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_16 = { bonus_pop_growth_mult = 1.600 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_17 = { bonus_pop_growth_mult = 1.700 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_18 = { bonus_pop_growth_mult = 1.800 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_19 = { bonus_pop_growth_mult = 1.900 }
+custom_difficulty_MM_mod_bonus_pop_growth_mult_20 = { bonus_pop_growth_mult = 2.000 }
 custom_difficulty_MM_mod_planet_pop_assembly_mult_-10 = { planet_pop_assembly_mult = -1.000 }
 custom_difficulty_MM_mod_planet_pop_assembly_mult_-9 = { planet_pop_assembly_mult = -0.900 }
 custom_difficulty_MM_mod_planet_pop_assembly_mult_-8 = { planet_pop_assembly_mult = -0.800 }
@@ -3728,36 +4058,6 @@ custom_difficulty_MM_mod_ship_interstellar_speed_mult_17 = { ship_interstellar_s
 custom_difficulty_MM_mod_ship_interstellar_speed_mult_18 = { ship_interstellar_speed_mult = 1.800 }
 custom_difficulty_MM_mod_ship_interstellar_speed_mult_19 = { ship_interstellar_speed_mult = 1.900 }
 custom_difficulty_MM_mod_ship_interstellar_speed_mult_20 = { ship_interstellar_speed_mult = 2.000 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_-10 = { ship_piracy_suppression_mult = -1.000 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_-9 = { ship_piracy_suppression_mult = -0.900 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_-8 = { ship_piracy_suppression_mult = -0.800 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_-7 = { ship_piracy_suppression_mult = -0.700 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_-6 = { ship_piracy_suppression_mult = -0.600 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_-5 = { ship_piracy_suppression_mult = -0.500 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_-4 = { ship_piracy_suppression_mult = -0.400 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_-3 = { ship_piracy_suppression_mult = -0.300 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_-2 = { ship_piracy_suppression_mult = -0.200 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_-1 = { ship_piracy_suppression_mult = -0.100 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_1 = { ship_piracy_suppression_mult = 0.100 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_2 = { ship_piracy_suppression_mult = 0.200 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_3 = { ship_piracy_suppression_mult = 0.300 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_4 = { ship_piracy_suppression_mult = 0.400 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_5 = { ship_piracy_suppression_mult = 0.500 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_6 = { ship_piracy_suppression_mult = 0.600 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_7 = { ship_piracy_suppression_mult = 0.700 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_8 = { ship_piracy_suppression_mult = 0.800 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_9 = { ship_piracy_suppression_mult = 0.900 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_10 = { ship_piracy_suppression_mult = 1.000 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_11 = { ship_piracy_suppression_mult = 1.100 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_12 = { ship_piracy_suppression_mult = 1.200 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_13 = { ship_piracy_suppression_mult = 1.300 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_14 = { ship_piracy_suppression_mult = 1.400 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_15 = { ship_piracy_suppression_mult = 1.500 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_16 = { ship_piracy_suppression_mult = 1.600 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_17 = { ship_piracy_suppression_mult = 1.700 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_18 = { ship_piracy_suppression_mult = 1.800 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_19 = { ship_piracy_suppression_mult = 1.900 }
-custom_difficulty_MM_mod_ship_piracy_suppression_mult_20 = { ship_piracy_suppression_mult = 2.000 }
 custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_-10 = { ship_ftl_jumpdrive_range_mult = -1.000 }
 custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_-9 = { ship_ftl_jumpdrive_range_mult = -0.900 }
 custom_difficulty_MM_mod_ship_ftl_jumpdrive_range_mult_-8 = { ship_ftl_jumpdrive_range_mult = -0.800 }
@@ -3928,6 +4228,46 @@ custom_difficulty_MM_mod_science_ship_survey_speed_17 = { science_ship_survey_sp
 custom_difficulty_MM_mod_science_ship_survey_speed_18 = { science_ship_survey_speed = 1.800 }
 custom_difficulty_MM_mod_science_ship_survey_speed_19 = { science_ship_survey_speed = 1.900 }
 custom_difficulty_MM_mod_science_ship_survey_speed_20 = { science_ship_survey_speed = 2.000 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_-10 = { ship_archaeological_site_excavation_speed_mult = -1.000 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_-9 = { ship_archaeological_site_excavation_speed_mult = -0.900 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_-8 = { ship_archaeological_site_excavation_speed_mult = -0.800 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_-7 = { ship_archaeological_site_excavation_speed_mult = -0.700 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_-6 = { ship_archaeological_site_excavation_speed_mult = -0.600 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_-5 = { ship_archaeological_site_excavation_speed_mult = -0.500 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_-4 = { ship_archaeological_site_excavation_speed_mult = -0.400 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_-3 = { ship_archaeological_site_excavation_speed_mult = -0.300 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_-2 = { ship_archaeological_site_excavation_speed_mult = -0.200 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_-1 = { ship_archaeological_site_excavation_speed_mult = -0.100 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_1 = { ship_archaeological_site_excavation_speed_mult = 0.100 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_2 = { ship_archaeological_site_excavation_speed_mult = 0.200 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_3 = { ship_archaeological_site_excavation_speed_mult = 0.300 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_4 = { ship_archaeological_site_excavation_speed_mult = 0.400 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_5 = { ship_archaeological_site_excavation_speed_mult = 0.500 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_6 = { ship_archaeological_site_excavation_speed_mult = 0.600 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_7 = { ship_archaeological_site_excavation_speed_mult = 0.700 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_8 = { ship_archaeological_site_excavation_speed_mult = 0.800 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_9 = { ship_archaeological_site_excavation_speed_mult = 0.900 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_10 = { ship_archaeological_site_excavation_speed_mult = 1.000 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_11 = { ship_archaeological_site_excavation_speed_mult = 1.100 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_12 = { ship_archaeological_site_excavation_speed_mult = 1.200 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_13 = { ship_archaeological_site_excavation_speed_mult = 1.300 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_14 = { ship_archaeological_site_excavation_speed_mult = 1.400 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_15 = { ship_archaeological_site_excavation_speed_mult = 1.500 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_16 = { ship_archaeological_site_excavation_speed_mult = 1.600 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_17 = { ship_archaeological_site_excavation_speed_mult = 1.700 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_18 = { ship_archaeological_site_excavation_speed_mult = 1.800 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_19 = { ship_archaeological_site_excavation_speed_mult = 1.900 }
+custom_difficulty_MM_mod_ship_archaeological_site_excavation_speed_mult_20 = { ship_archaeological_site_excavation_speed_mult = 2.000 }
+custom_difficulty_MM_mod_ship_archaeological_site_clues_add_1 = { ship_archaeological_site_clues_add = 1.000 }
+custom_difficulty_MM_mod_ship_archaeological_site_clues_add_2 = { ship_archaeological_site_clues_add = 2.000 }
+custom_difficulty_MM_mod_ship_archaeological_site_clues_add_3 = { ship_archaeological_site_clues_add = 3.000 }
+custom_difficulty_MM_mod_ship_archaeological_site_clues_add_4 = { ship_archaeological_site_clues_add = 4.000 }
+custom_difficulty_MM_mod_ship_archaeological_site_clues_add_5 = { ship_archaeological_site_clues_add = 5.000 }
+custom_difficulty_MM_mod_ship_archaeological_site_clues_add_6 = { ship_archaeological_site_clues_add = 6.000 }
+custom_difficulty_MM_mod_ship_archaeological_site_clues_add_7 = { ship_archaeological_site_clues_add = 7.000 }
+custom_difficulty_MM_mod_ship_archaeological_site_clues_add_8 = { ship_archaeological_site_clues_add = 8.000 }
+custom_difficulty_MM_mod_ship_archaeological_site_clues_add_9 = { ship_archaeological_site_clues_add = 9.000 }
+custom_difficulty_MM_mod_ship_archaeological_site_clues_add_10 = { ship_archaeological_site_clues_add = 10.000 }
 custom_difficulty_MM_mod_army_disengage_chance_mult_-10 = { army_disengage_chance_mult = -1.000 }
 custom_difficulty_MM_mod_army_disengage_chance_mult_-9 = { army_disengage_chance_mult = -0.900 }
 custom_difficulty_MM_mod_army_disengage_chance_mult_-8 = { army_disengage_chance_mult = -0.800 }
@@ -4408,33 +4748,33 @@ custom_difficulty_MM_mod_armies_upkeep_mult_17 = { armies_upkeep_mult = -1.700 }
 custom_difficulty_MM_mod_armies_upkeep_mult_18 = { armies_upkeep_mult = -1.800 }
 custom_difficulty_MM_mod_armies_upkeep_mult_19 = { armies_upkeep_mult = -1.900 }
 custom_difficulty_MM_mod_armies_upkeep_mult_20 = { armies_upkeep_mult = -2.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_-10 = { pop_defense_armies_add = -10.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_-9 = { pop_defense_armies_add = -9.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_-8 = { pop_defense_armies_add = -8.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_-7 = { pop_defense_armies_add = -7.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_-6 = { pop_defense_armies_add = -6.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_-5 = { pop_defense_armies_add = -5.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_-4 = { pop_defense_armies_add = -4.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_-3 = { pop_defense_armies_add = -3.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_-2 = { pop_defense_armies_add = -2.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_-1 = { pop_defense_armies_add = -1.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_1 = { pop_defense_armies_add = 1.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_2 = { pop_defense_armies_add = 2.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_3 = { pop_defense_armies_add = 3.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_4 = { pop_defense_armies_add = 4.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_5 = { pop_defense_armies_add = 5.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_6 = { pop_defense_armies_add = 6.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_7 = { pop_defense_armies_add = 7.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_8 = { pop_defense_armies_add = 8.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_9 = { pop_defense_armies_add = 9.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_10 = { pop_defense_armies_add = 10.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_11 = { pop_defense_armies_add = 11.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_12 = { pop_defense_armies_add = 12.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_13 = { pop_defense_armies_add = 13.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_14 = { pop_defense_armies_add = 14.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_15 = { pop_defense_armies_add = 15.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_16 = { pop_defense_armies_add = 16.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_17 = { pop_defense_armies_add = 17.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_18 = { pop_defense_armies_add = 18.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_19 = { pop_defense_armies_add = 19.000 }
-custom_difficulty_MM_mod_pop_defense_armies_add_20 = { pop_defense_armies_add = 20.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_-10 = { planet_defense_armies_add = -10.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_-9 = { planet_defense_armies_add = -9.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_-8 = { planet_defense_armies_add = -8.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_-7 = { planet_defense_armies_add = -7.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_-6 = { planet_defense_armies_add = -6.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_-5 = { planet_defense_armies_add = -5.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_-4 = { planet_defense_armies_add = -4.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_-3 = { planet_defense_armies_add = -3.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_-2 = { planet_defense_armies_add = -2.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_-1 = { planet_defense_armies_add = -1.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_1 = { planet_defense_armies_add = 1.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_2 = { planet_defense_armies_add = 2.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_3 = { planet_defense_armies_add = 3.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_4 = { planet_defense_armies_add = 4.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_5 = { planet_defense_armies_add = 5.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_6 = { planet_defense_armies_add = 6.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_7 = { planet_defense_armies_add = 7.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_8 = { planet_defense_armies_add = 8.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_9 = { planet_defense_armies_add = 9.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_10 = { planet_defense_armies_add = 10.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_11 = { planet_defense_armies_add = 11.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_12 = { planet_defense_armies_add = 12.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_13 = { planet_defense_armies_add = 13.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_14 = { planet_defense_armies_add = 14.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_15 = { planet_defense_armies_add = 15.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_16 = { planet_defense_armies_add = 16.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_17 = { planet_defense_armies_add = 17.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_18 = { planet_defense_armies_add = 18.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_19 = { planet_defense_armies_add = 19.000 }
+custom_difficulty_MM_mod_planet_defense_armies_add_20 = { planet_defense_armies_add = 20.000 }

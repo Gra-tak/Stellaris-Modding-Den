@@ -181,18 +181,6 @@ country_event = {
 				}
 			}
 			success_text = {
-				text = custom_difficulty_leviathan_trade_value_desc
-				event_target:global_event_country = {
-					not = {
-						check_variable = { which = custom_difficulty_leviathan_trade_value_value value = 0 }
-					}
-				}
-				OR = {
-					has_global_flag = custom_difficulty_activate_custom_mode
-					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
-				}
-			}
-			success_text = {
 				text = custom_difficulty_leviathan_difficulty_modifier_desc
 				event_target:global_event_country = {
 					not = {
@@ -440,18 +428,6 @@ country_event = {
 				event_target:global_event_country = {
 					not = {
 						check_variable = { which = custom_difficulty_leviathan_fire_rate_value value = 0 }
-					}
-				}
-				OR = {
-					has_global_flag = custom_difficulty_activate_custom_mode
-					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
-				}
-			}
-			success_text = {
-				text = custom_difficulty_leviathan_trade_value_desc
-				event_target:global_event_country = {
-					not = {
-						check_variable = { which = custom_difficulty_leviathan_trade_value_value value = 0 }
 					}
 				}
 				OR = {
@@ -825,18 +801,6 @@ country_event = {
 				}
 			}
 			success_text = {
-				text = custom_difficulty_leviathan_trade_value_desc
-				event_target:global_event_country = {
-					not = {
-						check_variable = { which = custom_difficulty_leviathan_trade_value_value value = 0 }
-					}
-				}
-				OR = {
-					has_global_flag = custom_difficulty_activate_custom_mode
-					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
-				}
-			}
-			success_text = {
 				text = custom_difficulty_leviathan_difficulty_modifier_desc
 				event_target:global_event_country = {
 					not = {
@@ -1154,18 +1118,6 @@ country_event = {
 				event_target:global_event_country = {
 					not = {
 						check_variable = { which = custom_difficulty_leviathan_fire_rate_value value = 0 }
-					}
-				}
-				OR = {
-					has_global_flag = custom_difficulty_activate_custom_mode
-					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
-				}
-			}
-			success_text = {
-				text = custom_difficulty_leviathan_trade_value_desc
-				event_target:global_event_country = {
-					not = {
-						check_variable = { which = custom_difficulty_leviathan_trade_value_value value = 0 }
 					}
 				}
 				OR = {
@@ -1499,18 +1451,6 @@ country_event = {
 				}
 			}
 			success_text = {
-				text = custom_difficulty_leviathan_trade_value_desc
-				event_target:global_event_country = {
-					not = {
-						check_variable = { which = custom_difficulty_leviathan_trade_value_value value = 0 }
-					}
-				}
-				OR = {
-					has_global_flag = custom_difficulty_activate_custom_mode
-					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
-				}
-			}
-			success_text = {
 				text = custom_difficulty_leviathan_difficulty_modifier_desc
 				event_target:global_event_country = {
 					not = {
@@ -1836,18 +1776,6 @@ country_event = {
 				}
 			}
 			success_text = {
-				text = custom_difficulty_leviathan_trade_value_desc
-				event_target:global_event_country = {
-					not = {
-						check_variable = { which = custom_difficulty_leviathan_trade_value_value value = 0 }
-					}
-				}
-				OR = {
-					has_global_flag = custom_difficulty_activate_custom_mode
-					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
-				}
-			}
-			success_text = {
 				text = custom_difficulty_leviathan_difficulty_modifier_desc
 				event_target:global_event_country = {
 					not = {
@@ -2165,18 +2093,6 @@ country_event = {
 				event_target:global_event_country = {
 					not = {
 						check_variable = { which = custom_difficulty_leviathan_fire_rate_value value = 0 }
-					}
-				}
-				OR = {
-					has_global_flag = custom_difficulty_activate_custom_mode
-					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
-				}
-			}
-			success_text = {
-				text = custom_difficulty_leviathan_trade_value_desc
-				event_target:global_event_country = {
-					not = {
-						check_variable = { which = custom_difficulty_leviathan_trade_value_value value = 0 }
 					}
 				}
 				OR = {

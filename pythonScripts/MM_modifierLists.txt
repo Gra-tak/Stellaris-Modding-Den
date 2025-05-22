@@ -15,7 +15,21 @@ country_megastructure_build_cap_add RANGE:-2:21
 starbase_upgrade_cost_mult
 starbase_upgrade_speed_mult
  station_gatherers_produces_mult 
- station_researchers_produces_mult 
+ station_researchers_produces_mult
+ "Ship Build Speed" 12
+ shipsize_corvette_build_speed_mult
+ shipsize_frigate_build_speed_mult
+ shipsize_destroyer_build_speed_mult
+ shipsize_cruiser_build_speed_mult
+ shipsize_battleship_build_speed_mult
+ shipsize_titan_build_speed_mult
+ shipsize_constructor_build_speed_mult
+ shipsize_colonizer_build_speed_mult
+ shipsize_sponsored_colonizer_build_speed_mult
+ shipsize_science_build_speed_mult
+ shipsize_transport_build_speed_mult
+ shipsize_colossus_build_speed_mult
+
 
 
 "$EMPIRE_SIZE$ and $EDICT$"
@@ -50,11 +64,7 @@ tech_cost_empire_size_mult RANGE:-15:11 2# DO NOT WORK: leader_cost_empire_size_
 
 
  "$trade$"
-  COUNTRY_TRADE_FEE -0.2 %
-local_trade_protection_add "Base $MOD_STARBASE_TRADE_PROTECTION_ADD$"#broken on country scope: starbase_trade_collection_range_add starbase_trade_protection_range_add starbase_trade_protection_add #base?
-trade_value_mult
-piracy_growth_mult
-piracy_suppression_mult
+  COUNTRY_TRADE_FEE -0.2 % #local_trade_protection_add "Base $MOD_STARBASE_TRADE_PROTECTION_ADD$"#broken on country scope: starbase_trade_collection_range_add starbase_trade_protection_range_add starbase_trade_protection_add #base? #pop_lifestyle_trade_value_mult #piracy_growth_mult #piracy_suppression_mult
 branch_office_value_mult
 planet_branch_offices_cost_mult
 slave_market_cost_mult RANGE:-30:11 "$MOD_COUNTRY_SLAVE_MARKET_COST_MULT$"
@@ -63,13 +73,13 @@ job_clerk_per_pop 0.2 %
 
 
 "$OUTLINER_PLANETS$"
-COLONY_START_NUM_POPS_ADD RANGE:0:21
+colony_start_urban_districts_add RANGE:0:21
  all_technology_research_speed "$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$" RANGE:-30:21 %
  num_tech_alternatives_add "$MOD_COUNTRY_NUM_TECH_ALTERNATIVES_ADD$"
 planet_pops_consumer_goods_upkeep_mult "$MOD_POP_CONSUMER_GOODS_MULT$"
  POP_HOUSING_USAGE_MULT -1
 PLANET_AMENITIES_MULT "<this> $PRODUCTION$"
-POP_GROWTH_SPEED RANGE:-10:21 %
+bonus_pop_growth_mult RANGE:-10:21 %
 planet_pop_assembly_mult "$MOD_POP_ASSEMBLY_SPEED$" RANGE:-10:21
  deposit_blockers_cost_mult "$MOD_COUNTRY_CLEAR_BLOCKER_COST_MULT$"
  planet_crime_mult -1 RANGE:-20:11
@@ -141,14 +151,15 @@ ship_sensor_range_add
 ship_orbital_bombardment_mult
 ship_windup_mult
 ship_winddown_mult
-ship_interstellar_speed_mult
-ship_piracy_suppression_mult
+ship_interstellar_speed_mult # ship_piracy_suppression_mult
 ship_ftl_jumpdrive_range_mult
 ship_jumpdrive_cooldown_mult -1 RANGE:-10:11
 ship_anomaly_fail_risk -1 %
 ship_anomaly_research_speed_mult "$MOD_SHIP_ANOMALY_RESEARCH_SPEED$"
 ship_anomaly_generation_chance_mult "$MOD_SHIP_ANOMALY_GENERATION_CHANCE$" 2 RANGE:-5:26
 science_ship_survey_speed "$MOD_SHIP_SCIENCE_SURVEY_SPEED$" %
+ship_archaeological_site_excavation_speed_mult
+ship_archaeological_site_clues_add RANGE:0:11
 
 "$ARMY_MODIFIERS$"
 army_disengage_chance_mult
@@ -167,4 +178,4 @@ army_defense_health_mult
 army_experience_gain_mult
 armies_cost_mult
 armies_upkeep_mult
-pop_defense_armies_add
+planet_defense_armies_add

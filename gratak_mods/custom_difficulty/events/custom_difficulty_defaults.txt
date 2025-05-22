@@ -59,10 +59,6 @@ country_event = {
 				set_variable = { which = custom_difficulty_ai_fire_rate_value value = event_target:custom_difficulty_var_storage.custom_difficulty_ai_fire_rate_value }
 			}
 			if = {
-				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_ai_trade_value_value } }
-				set_variable = { which = custom_difficulty_ai_trade_value_value value = event_target:custom_difficulty_var_storage.custom_difficulty_ai_trade_value_value }
-			}
-			if = {
 				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_ai_difficulty_modifier_value } }
 				set_variable = { which = custom_difficulty_ai_difficulty_modifier_value value = event_target:custom_difficulty_var_storage.custom_difficulty_ai_difficulty_modifier_value }
 			}
@@ -117,10 +113,6 @@ country_event = {
 			if = {
 				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_ai_yearly_fire_rate_value } }
 				set_variable = { which = custom_difficulty_ai_yearly_fire_rate_value value = event_target:custom_difficulty_var_storage.custom_difficulty_ai_yearly_fire_rate_value }
-			}
-			if = {
-				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_ai_yearly_trade_value_value } }
-				set_variable = { which = custom_difficulty_ai_yearly_trade_value_value value = event_target:custom_difficulty_var_storage.custom_difficulty_ai_yearly_trade_value_value }
 			}
 			if = {
 				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_ai_yearly_difficulty_modifier_value } }
@@ -179,10 +171,6 @@ country_event = {
 				set_variable = { which = custom_difficulty_fe_fire_rate_value value = event_target:custom_difficulty_var_storage.custom_difficulty_fe_fire_rate_value }
 			}
 			if = {
-				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_fe_trade_value_value } }
-				set_variable = { which = custom_difficulty_fe_trade_value_value value = event_target:custom_difficulty_var_storage.custom_difficulty_fe_trade_value_value }
-			}
-			if = {
 				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_fe_difficulty_modifier_value } }
 				set_variable = { which = custom_difficulty_fe_difficulty_modifier_value value = event_target:custom_difficulty_var_storage.custom_difficulty_fe_difficulty_modifier_value }
 			}
@@ -237,10 +225,6 @@ country_event = {
 			if = {
 				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_leviathan_fire_rate_value } }
 				set_variable = { which = custom_difficulty_leviathan_fire_rate_value value = event_target:custom_difficulty_var_storage.custom_difficulty_leviathan_fire_rate_value }
-			}
-			if = {
-				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_leviathan_trade_value_value } }
-				set_variable = { which = custom_difficulty_leviathan_trade_value_value value = event_target:custom_difficulty_var_storage.custom_difficulty_leviathan_trade_value_value }
 			}
 			if = {
 				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_leviathan_difficulty_modifier_value } }
@@ -299,10 +283,6 @@ country_event = {
 				set_variable = { which = custom_difficulty_player_fire_rate_value value = event_target:custom_difficulty_var_storage.custom_difficulty_player_fire_rate_value }
 			}
 			if = {
-				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_player_trade_value_value } }
-				set_variable = { which = custom_difficulty_player_trade_value_value value = event_target:custom_difficulty_var_storage.custom_difficulty_player_trade_value_value }
-			}
-			if = {
 				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_player_difficulty_modifier_value } }
 				set_variable = { which = custom_difficulty_player_difficulty_modifier_value value = event_target:custom_difficulty_var_storage.custom_difficulty_player_difficulty_modifier_value }
 			}
@@ -357,10 +337,6 @@ country_event = {
 			if = {
 				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_crisis_fire_rate_value } }
 				set_variable = { which = custom_difficulty_crisis_fire_rate_value value = event_target:custom_difficulty_var_storage.custom_difficulty_crisis_fire_rate_value }
-			}
-			if = {
-				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_crisis_trade_value_value } }
-				set_variable = { which = custom_difficulty_crisis_trade_value_value value = event_target:custom_difficulty_var_storage.custom_difficulty_crisis_trade_value_value }
 			}
 			if = {
 				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_crisis_difficulty_modifier_value } }
@@ -419,10 +395,6 @@ country_event = {
 				set_variable = { which = custom_difficulty_marauders_fire_rate_value value = event_target:custom_difficulty_var_storage.custom_difficulty_marauders_fire_rate_value }
 			}
 			if = {
-				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_marauders_trade_value_value } }
-				set_variable = { which = custom_difficulty_marauders_trade_value_value value = event_target:custom_difficulty_var_storage.custom_difficulty_marauders_trade_value_value }
-			}
-			if = {
 				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_marauders_difficulty_modifier_value } }
 				set_variable = { which = custom_difficulty_marauders_difficulty_modifier_value value = event_target:custom_difficulty_var_storage.custom_difficulty_marauders_difficulty_modifier_value }
 			}
@@ -479,10 +451,6 @@ country_event = {
 				set_variable = { which = custom_difficulty_other_fire_rate_value value = event_target:custom_difficulty_var_storage.custom_difficulty_other_fire_rate_value }
 			}
 			if = {
-				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_other_trade_value_value } }
-				set_variable = { which = custom_difficulty_other_trade_value_value value = event_target:custom_difficulty_var_storage.custom_difficulty_other_trade_value_value }
-			}
-			if = {
 				limit = { event_target:custom_difficulty_var_storage = { is_variable_set = custom_difficulty_other_difficulty_modifier_value } }
 				set_variable = { which = custom_difficulty_other_difficulty_modifier_value value = event_target:custom_difficulty_var_storage.custom_difficulty_other_difficulty_modifier_value }
 			}
@@ -520,7 +488,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_ai_armor_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_shield_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_fire_rate_value value = 0 }
-			set_variable = { which = custom_difficulty_ai_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_first_contact_value value = 0 }
 			set_variable = { which = custom_difficulty_player_station_value value = 100 }
@@ -535,7 +502,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_player_armor_value value = 0 }
 			set_variable = { which = custom_difficulty_player_shield_value value = 0 }
 			set_variable = { which = custom_difficulty_player_fire_rate_value value = 0 }
-			set_variable = { which = custom_difficulty_player_trade_value_value value = 100 }
 			set_variable = { which = custom_difficulty_player_difficulty_modifier_value value = 100 }
 			set_variable = { which = custom_difficulty_player_first_contact_value value = 0 }
 			set_variable = { which = custom_difficulty_fe_station_value value = 0 }
@@ -550,7 +516,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_fe_armor_value value = 30 }
 			set_variable = { which = custom_difficulty_fe_shield_value value = 30 }
 			set_variable = { which = custom_difficulty_fe_fire_rate_value value = 30 }
-			set_variable = { which = custom_difficulty_fe_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_fe_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_station_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_jobs_value value = 0 }
@@ -564,7 +529,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_leviathan_armor_value value = 30 }
 			set_variable = { which = custom_difficulty_leviathan_shield_value value = 30 }
 			set_variable = { which = custom_difficulty_leviathan_fire_rate_value value = 30 }
-			set_variable = { which = custom_difficulty_leviathan_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_station_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_jobs_value value = 0 }
@@ -578,7 +542,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_marauders_armor_value value = 30 }
 			set_variable = { which = custom_difficulty_marauders_shield_value value = 30 }
 			set_variable = { which = custom_difficulty_marauders_fire_rate_value value = 30 }
-			set_variable = { which = custom_difficulty_marauders_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_other_station_value value = 0 }
 			set_variable = { which = custom_difficulty_other_jobs_value value = 0 }
@@ -592,7 +555,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_other_armor_value value = 30 }
 			set_variable = { which = custom_difficulty_other_shield_value value = 30 }
 			set_variable = { which = custom_difficulty_other_fire_rate_value value = 30 }
-			set_variable = { which = custom_difficulty_other_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_other_difficulty_modifier_value value = 0 }
 			 #Crisis strength multiply
 			if = {
@@ -658,7 +620,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_ai_armor_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_shield_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_fire_rate_value value = 0 }
-			set_variable = { which = custom_difficulty_ai_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_first_contact_value value = 0 }
 			set_variable = { which = custom_difficulty_player_station_value value = 200 }
@@ -673,7 +634,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_player_armor_value value = 0 }
 			set_variable = { which = custom_difficulty_player_shield_value value = 0 }
 			set_variable = { which = custom_difficulty_player_fire_rate_value value = 0 }
-			set_variable = { which = custom_difficulty_player_trade_value_value value = 200 }
 			set_variable = { which = custom_difficulty_player_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_player_first_contact_value value = 0 }
 			set_variable = { which = custom_difficulty_fe_station_value value = 0 }
@@ -688,7 +648,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_fe_armor_value value = 30 }
 			set_variable = { which = custom_difficulty_fe_shield_value value = 30 }
 			set_variable = { which = custom_difficulty_fe_fire_rate_value value = 30 }
-			set_variable = { which = custom_difficulty_fe_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_fe_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_station_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_jobs_value value = 0 }
@@ -702,7 +661,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_leviathan_armor_value value = 30 }
 			set_variable = { which = custom_difficulty_leviathan_shield_value value = 30 }
 			set_variable = { which = custom_difficulty_leviathan_fire_rate_value value = 30 }
-			set_variable = { which = custom_difficulty_leviathan_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_station_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_jobs_value value = 0 }
@@ -716,7 +674,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_marauders_armor_value value = 30 }
 			set_variable = { which = custom_difficulty_marauders_shield_value value = 30 }
 			set_variable = { which = custom_difficulty_marauders_fire_rate_value value = 30 }
-			set_variable = { which = custom_difficulty_marauders_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_other_station_value value = 0 }
 			set_variable = { which = custom_difficulty_other_jobs_value value = 0 }
@@ -730,7 +687,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_other_armor_value value = 30 }
 			set_variable = { which = custom_difficulty_other_shield_value value = 30 }
 			set_variable = { which = custom_difficulty_other_fire_rate_value value = 30 }
-			set_variable = { which = custom_difficulty_other_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_other_difficulty_modifier_value value = 0 }
 			 #Crisis strength multiply
 			if = {
@@ -796,7 +752,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_ai_armor_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_shield_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_fire_rate_value value = 0 }
-			set_variable = { which = custom_difficulty_ai_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_first_contact_value value = 0 }
 			set_variable = { which = custom_difficulty_player_station_value value = 0 }
@@ -811,7 +766,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_player_armor_value value = 0 }
 			set_variable = { which = custom_difficulty_player_shield_value value = 0 }
 			set_variable = { which = custom_difficulty_player_fire_rate_value value = 0 }
-			set_variable = { which = custom_difficulty_player_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_player_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_player_first_contact_value value = 0 }
 			set_variable = { which = custom_difficulty_fe_station_value value = 0 }
@@ -826,7 +780,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_fe_armor_value value = 30 }
 			set_variable = { which = custom_difficulty_fe_shield_value value = 30 }
 			set_variable = { which = custom_difficulty_fe_fire_rate_value value = 30 }
-			set_variable = { which = custom_difficulty_fe_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_fe_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_station_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_jobs_value value = 0 }
@@ -840,7 +793,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_leviathan_armor_value value = 30 }
 			set_variable = { which = custom_difficulty_leviathan_shield_value value = 30 }
 			set_variable = { which = custom_difficulty_leviathan_fire_rate_value value = 30 }
-			set_variable = { which = custom_difficulty_leviathan_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_station_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_jobs_value value = 0 }
@@ -854,7 +806,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_marauders_armor_value value = 30 }
 			set_variable = { which = custom_difficulty_marauders_shield_value value = 30 }
 			set_variable = { which = custom_difficulty_marauders_fire_rate_value value = 30 }
-			set_variable = { which = custom_difficulty_marauders_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_other_station_value value = 0 }
 			set_variable = { which = custom_difficulty_other_jobs_value value = 0 }
@@ -868,7 +819,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_other_armor_value value = 30 }
 			set_variable = { which = custom_difficulty_other_shield_value value = 30 }
 			set_variable = { which = custom_difficulty_other_fire_rate_value value = 30 }
-			set_variable = { which = custom_difficulty_other_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_other_difficulty_modifier_value value = 0 }
 			 #Crisis strength multiply
 			if = {
@@ -934,7 +884,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_ai_armor_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_shield_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_fire_rate_value value = 0 }
-			set_variable = { which = custom_difficulty_ai_trade_value_value value = 25 }
 			set_variable = { which = custom_difficulty_ai_difficulty_modifier_value value = 25 }
 			set_variable = { which = custom_difficulty_ai_first_contact_value value = 0 }
 			set_variable = { which = custom_difficulty_player_station_value value = 0 }
@@ -949,7 +898,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_player_armor_value value = 0 }
 			set_variable = { which = custom_difficulty_player_shield_value value = 0 }
 			set_variable = { which = custom_difficulty_player_fire_rate_value value = 0 }
-			set_variable = { which = custom_difficulty_player_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_player_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_player_first_contact_value value = 0 }
 			set_variable = { which = custom_difficulty_fe_station_value value = 0 }
@@ -964,7 +912,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_fe_armor_value value = 35 }
 			set_variable = { which = custom_difficulty_fe_shield_value value = 35 }
 			set_variable = { which = custom_difficulty_fe_fire_rate_value value = 35 }
-			set_variable = { which = custom_difficulty_fe_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_fe_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_station_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_jobs_value value = 0 }
@@ -978,7 +925,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_leviathan_armor_value value = 35 }
 			set_variable = { which = custom_difficulty_leviathan_shield_value value = 35 }
 			set_variable = { which = custom_difficulty_leviathan_fire_rate_value value = 35 }
-			set_variable = { which = custom_difficulty_leviathan_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_station_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_jobs_value value = 0 }
@@ -992,7 +938,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_marauders_armor_value value = 35 }
 			set_variable = { which = custom_difficulty_marauders_shield_value value = 35 }
 			set_variable = { which = custom_difficulty_marauders_fire_rate_value value = 35 }
-			set_variable = { which = custom_difficulty_marauders_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_other_station_value value = 0 }
 			set_variable = { which = custom_difficulty_other_jobs_value value = 0 }
@@ -1006,7 +951,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_other_armor_value value = 35 }
 			set_variable = { which = custom_difficulty_other_shield_value value = 35 }
 			set_variable = { which = custom_difficulty_other_fire_rate_value value = 35 }
-			set_variable = { which = custom_difficulty_other_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_other_difficulty_modifier_value value = 0 }
 			 #Crisis strength multiply
 			if = {
@@ -1072,7 +1016,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_ai_armor_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_shield_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_fire_rate_value value = 0 }
-			set_variable = { which = custom_difficulty_ai_trade_value_value value = 50 }
 			set_variable = { which = custom_difficulty_ai_difficulty_modifier_value value = 50 }
 			set_variable = { which = custom_difficulty_ai_first_contact_value value = 0 }
 			set_variable = { which = custom_difficulty_player_station_value value = 0 }
@@ -1087,7 +1030,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_player_armor_value value = 0 }
 			set_variable = { which = custom_difficulty_player_shield_value value = 0 }
 			set_variable = { which = custom_difficulty_player_fire_rate_value value = 0 }
-			set_variable = { which = custom_difficulty_player_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_player_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_player_first_contact_value value = 0 }
 			set_variable = { which = custom_difficulty_fe_station_value value = 0 }
@@ -1102,7 +1044,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_fe_armor_value value = 40 }
 			set_variable = { which = custom_difficulty_fe_shield_value value = 40 }
 			set_variable = { which = custom_difficulty_fe_fire_rate_value value = 40 }
-			set_variable = { which = custom_difficulty_fe_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_fe_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_station_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_jobs_value value = 0 }
@@ -1116,7 +1057,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_leviathan_armor_value value = 40 }
 			set_variable = { which = custom_difficulty_leviathan_shield_value value = 40 }
 			set_variable = { which = custom_difficulty_leviathan_fire_rate_value value = 40 }
-			set_variable = { which = custom_difficulty_leviathan_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_station_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_jobs_value value = 0 }
@@ -1130,7 +1070,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_marauders_armor_value value = 40 }
 			set_variable = { which = custom_difficulty_marauders_shield_value value = 40 }
 			set_variable = { which = custom_difficulty_marauders_fire_rate_value value = 40 }
-			set_variable = { which = custom_difficulty_marauders_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_other_station_value value = 0 }
 			set_variable = { which = custom_difficulty_other_jobs_value value = 0 }
@@ -1144,7 +1083,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_other_armor_value value = 40 }
 			set_variable = { which = custom_difficulty_other_shield_value value = 40 }
 			set_variable = { which = custom_difficulty_other_fire_rate_value value = 40 }
-			set_variable = { which = custom_difficulty_other_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_other_difficulty_modifier_value value = 0 }
 			 #Crisis strength multiply
 			if = {
@@ -1210,7 +1148,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_ai_armor_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_shield_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_fire_rate_value value = 0 }
-			set_variable = { which = custom_difficulty_ai_trade_value_value value = 75 }
 			set_variable = { which = custom_difficulty_ai_difficulty_modifier_value value = 75 }
 			set_variable = { which = custom_difficulty_ai_first_contact_value value = 0 }
 			set_variable = { which = custom_difficulty_player_station_value value = 0 }
@@ -1225,7 +1162,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_player_armor_value value = 0 }
 			set_variable = { which = custom_difficulty_player_shield_value value = 0 }
 			set_variable = { which = custom_difficulty_player_fire_rate_value value = 0 }
-			set_variable = { which = custom_difficulty_player_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_player_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_player_first_contact_value value = 0 }
 			set_variable = { which = custom_difficulty_fe_station_value value = 0 }
@@ -1240,7 +1176,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_fe_armor_value value = 45 }
 			set_variable = { which = custom_difficulty_fe_shield_value value = 45 }
 			set_variable = { which = custom_difficulty_fe_fire_rate_value value = 45 }
-			set_variable = { which = custom_difficulty_fe_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_fe_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_station_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_jobs_value value = 0 }
@@ -1254,7 +1189,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_leviathan_armor_value value = 45 }
 			set_variable = { which = custom_difficulty_leviathan_shield_value value = 45 }
 			set_variable = { which = custom_difficulty_leviathan_fire_rate_value value = 45 }
-			set_variable = { which = custom_difficulty_leviathan_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_station_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_jobs_value value = 0 }
@@ -1268,7 +1202,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_marauders_armor_value value = 45 }
 			set_variable = { which = custom_difficulty_marauders_shield_value value = 45 }
 			set_variable = { which = custom_difficulty_marauders_fire_rate_value value = 45 }
-			set_variable = { which = custom_difficulty_marauders_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_other_station_value value = 0 }
 			set_variable = { which = custom_difficulty_other_jobs_value value = 0 }
@@ -1282,7 +1215,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_other_armor_value value = 45 }
 			set_variable = { which = custom_difficulty_other_shield_value value = 45 }
 			set_variable = { which = custom_difficulty_other_fire_rate_value value = 45 }
-			set_variable = { which = custom_difficulty_other_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_other_difficulty_modifier_value value = 0 }
 			 #Crisis strength multiply
 			if = {
@@ -1348,7 +1280,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_ai_armor_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_shield_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_fire_rate_value value = 0 }
-			set_variable = { which = custom_difficulty_ai_trade_value_value value = 100 }
 			set_variable = { which = custom_difficulty_ai_difficulty_modifier_value value = 100 }
 			set_variable = { which = custom_difficulty_ai_first_contact_value value = 0 }
 			set_variable = { which = custom_difficulty_player_station_value value = 0 }
@@ -1363,7 +1294,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_player_armor_value value = 0 }
 			set_variable = { which = custom_difficulty_player_shield_value value = 0 }
 			set_variable = { which = custom_difficulty_player_fire_rate_value value = 0 }
-			set_variable = { which = custom_difficulty_player_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_player_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_player_first_contact_value value = 0 }
 			set_variable = { which = custom_difficulty_fe_station_value value = 0 }
@@ -1378,7 +1308,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_fe_armor_value value = 50 }
 			set_variable = { which = custom_difficulty_fe_shield_value value = 50 }
 			set_variable = { which = custom_difficulty_fe_fire_rate_value value = 50 }
-			set_variable = { which = custom_difficulty_fe_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_fe_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_station_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_jobs_value value = 0 }
@@ -1392,7 +1321,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_leviathan_armor_value value = 50 }
 			set_variable = { which = custom_difficulty_leviathan_shield_value value = 50 }
 			set_variable = { which = custom_difficulty_leviathan_fire_rate_value value = 50 }
-			set_variable = { which = custom_difficulty_leviathan_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_leviathan_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_station_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_jobs_value value = 0 }
@@ -1406,7 +1334,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_marauders_armor_value value = 50 }
 			set_variable = { which = custom_difficulty_marauders_shield_value value = 50 }
 			set_variable = { which = custom_difficulty_marauders_fire_rate_value value = 50 }
-			set_variable = { which = custom_difficulty_marauders_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_marauders_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_other_station_value value = 0 }
 			set_variable = { which = custom_difficulty_other_jobs_value value = 0 }
@@ -1420,7 +1347,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_other_armor_value value = 50 }
 			set_variable = { which = custom_difficulty_other_shield_value value = 50 }
 			set_variable = { which = custom_difficulty_other_fire_rate_value value = 50 }
-			set_variable = { which = custom_difficulty_other_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_other_difficulty_modifier_value value = 0 }
 			 #Crisis strength multiply
 			if = {
@@ -1486,7 +1412,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_ai_yearly_armor_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_yearly_shield_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_yearly_fire_rate_value value = 0 }
-			set_variable = { which = custom_difficulty_ai_yearly_trade_value_value value = 4 }
 			set_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value = 4 }
 			set_variable = { which = custom_difficulty_ai_yearly_first_contact_value value = 0 }
 		}
@@ -1512,7 +1437,6 @@ country_event = {
 			set_variable = { which = custom_difficulty_ai_yearly_armor_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_yearly_shield_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_yearly_fire_rate_value value = 0 }
-			set_variable = { which = custom_difficulty_ai_yearly_trade_value_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value = 0 }
 			set_variable = { which = custom_difficulty_ai_yearly_first_contact_value value = 0 }
 		}
