@@ -1436,14 +1436,16 @@ def createMenuFile(locClass, cats, catColors, difficulties, debugMode=False, mod
   optionWithInverse["deactivate_edict"]=["activate_edict"]
   optionWithInverse["activate_host_only"]=["deactivate_host_only"]
   optionWithInverse["deactivate_host_only"]=["activate_host_only"]
+  optionWithInverse["apply_mm_to_all_countries"]=["apply_mm_to_specific_countries"]
+  optionWithInverse["apply_mm_to_specific_countries"]=["apply_mm_to_all_countries"]
   # optionWithInverse[]=[]
 
   optionExtraEvents=dict()
   optionExtraEvents["activate_simple_mode"]=["name_removeAllModifiers"]
   optionExtraEvents["activate_custom_mode"]=["name_removeAllModifiers"]
 
-  optionColors="GGBBYYEERR"
-  defaultOptions=[]
+  optionColors="GGBBYYEERRGG"
+  defaultOptions=["apply_mm_to_specific_countries"]
 
 
   optionI=-1
@@ -1924,6 +1926,10 @@ def globalAddLocs(locClass):
   locClass.addLoc("activate_host_only"+"Desc", "Only the host of the game will be able to change any settings. Other players can open the dynamic difficulty menu and see the settings, but won't be able to change anything")
   locClass.addLoc("deactivate_host_only", "Deactivate Host Changes Only")
   locClass.addLoc("deactivate_host_only"+"Desc", "Everybody can change any dynamic difficulty settings, unless settings have been locked")
+  locClass.addLoc("apply_mm_to_all_countries", "Apply more modifier submod to all countries")
+  locClass.addLoc("apply_mm_to_all_countries"+"Desc", "More Modifier submod applied to all countries including space critters. Only has an effect if more modifiers submod is actually installed.")
+  locClass.addLoc("apply_mm_to_specific_countries", "Apply more modifier submod to specific countries")
+  locClass.addLoc("apply_mm_to_specific_countries"+"Desc", "More Modifier submod applied only to playable and fallen and awakened empires, as well as countries that have custom difficulty flags set as those. Only has an effect if more modifiers submod is actually installed. When this is applied, all other countries will KEEP all modifiers set the last time the event was closed with apply to all countries selected.")
 
 
 

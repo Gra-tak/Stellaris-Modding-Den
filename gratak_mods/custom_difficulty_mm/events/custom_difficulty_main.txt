@@ -73,6 +73,14 @@ country_event = {
 				is_multiplayer = yes
 			}
 			success_text = {
+				text = custom_difficulty_apply_mm_to_all_countries.desc
+				has_global_flag = custom_difficulty_apply_mm_to_all_countries
+			}
+			success_text = {
+				text = custom_difficulty_apply_mm_to_specific_countries.desc
+				has_global_flag = custom_difficulty_apply_mm_to_specific_countries
+			}
+			success_text = {
 				text = custom_difficulty_random_handicap.desc
 				event_target:global_event_country = {
 					not = {
@@ -138,6 +146,32 @@ country_event = {
 		hidden_effect = {
 			set_global_flag = custom_difficulty_deactivate_host_only
 			remove_global_flag = custom_difficulty_activate_host_only
+			country_event = { id = custom_difficulty.3 }  #optionsEvent
+		}
+	}
+	option = {
+		name = custom_difficulty_apply_mm_to_all_countries.name
+		custom_tooltip = custom_difficulty_apply_mm_to_all_countries.desc
+		trigger = {
+			custom_difficulty_allow_changes = yes
+			not = { has_global_flag = custom_difficulty_apply_mm_to_all_countries }
+		}
+		hidden_effect = {
+			set_global_flag = custom_difficulty_apply_mm_to_all_countries
+			remove_global_flag = custom_difficulty_apply_mm_to_specific_countries
+			country_event = { id = custom_difficulty.3 }  #optionsEvent
+		}
+	}
+	option = {
+		name = custom_difficulty_apply_mm_to_specific_countries.name
+		custom_tooltip = custom_difficulty_apply_mm_to_specific_countries.desc
+		trigger = {
+			custom_difficulty_allow_changes = yes
+			not = { has_global_flag = custom_difficulty_apply_mm_to_specific_countries }
+		}
+		hidden_effect = {
+			set_global_flag = custom_difficulty_apply_mm_to_specific_countries
+			remove_global_flag = custom_difficulty_apply_mm_to_all_countries
 			country_event = { id = custom_difficulty.3 }  #optionsEvent
 		}
 	}
@@ -279,6 +313,8 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			remove_global_flag = custom_difficulty_apply_mm_to_all_countries
+			set_global_flag = custom_difficulty_apply_mm_to_specific_countries
 			remove_global_flag = custom_difficulty_deactivate_host_only
 			set_global_flag = custom_difficulty_activate_host_only
 			remove_global_flag = custom_difficulty_deactivate_edict

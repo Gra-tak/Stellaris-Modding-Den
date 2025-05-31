@@ -105,6 +105,7 @@ country_event = {
 					is_country_type = eternal_empire
 					has_country_flag = custom_difficulty_ai_flag
 					has_country_flag = custom_difficulty_player_flag
+					has_global_flag = custom_difficulty_apply_mm_to_all_countries
 				}
 			}
 			if = {
