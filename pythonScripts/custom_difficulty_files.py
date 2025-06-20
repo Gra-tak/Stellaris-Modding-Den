@@ -127,17 +127,16 @@ def main(args):
     changeSteps.append(-s)
   for s in reversed(changeStepYears):
     changeStepYears.append(-s)
-  possibleBoniNames=["station", "jobs",  "cap",   "upkeep", "ship_cost","stability", "diplo_upkeep", "damage","hull","armor","shield","fire_rate"
-  # , "trade_value"
-  , "difficulty_modifier", "first_contact"] #, "growth"
-  npcBoni=[           False,      False,   False,   False,    False,    False       ,False          ,True,   True,     True, True,True
-  # ,              False
-  ,         False,                False]
+  possibleBoniNames=["station", "jobs",  "cap",   "upkeep", "ship_cost","stability", "diplo_upkeep", "damage","hull","armor","shield","fire_rate", "jobs_player"
+  , "difficulty_modifier", "first_contact", "max_resource", "unemployed_resettlement"] 
+  npcBoni=[           False,      False,   False,   False,    False,    False       ,False          ,True,   True,     True, True,True ,              False
+  ,         False,                False,                False,                False]
   # boniFactor= [         1,          1,      1,    -1,           -1,         0.2,        -1,             1,      1,      1,      1]
   boniUnit=dict()
   for bonus in possibleBoniNames:
     boniUnit[bonus]="%"
   boniUnit["stability"]="" #continued for groups below
+  boniUnit["max_resource"]="" #continued for groups below
   boniFactor=dict()
   for bonus in possibleBoniNames:
     boniFactor[bonus]=1
@@ -145,6 +144,7 @@ def main(args):
   boniFactor["upkeep"]=-0.25
   boniFactor["ship_cost"]=-0.25
   boniFactor["diplo_upkeep"]=-1
+  boniFactor["max_resource"]=100
 
   possibleBoniPictures=[
   "GFX_evt_mining_station",
@@ -159,13 +159,16 @@ def main(args):
   "GFX_evt_pirate_armada",
   "GFX_evt_fleet_neutral",
   "GFX_evt_debris",
-  #"GFX_evt_tradedeal",
+  "GFX_evt_metropolis",
+  "GFX_evt_tradedeal",
+  "GFX_evt_tradedeal",
+  "GFX_evt_tradedeal",
   "GFX_evt_tradedeal",
   "GFX_evt_tradedeal",
   ]
   possibleBoniModifier=[
   ["station_gatherers_produces_mult","station_researchers_produces_mult"],
-  "planet_jobs_produces_mult", 
+  "pop_bonus_workforce_mult", 
   "country_naval_cap_mult", 
   "ships_upkeep_mult", 
   "starbase_shipyard_build_cost_mult",
@@ -176,33 +179,30 @@ def main(args):
   "ship_armor_mult",
   "ship_shield_mult",
   "ship_fire_rate_mult",
-  #"pop_lifestyle_trade_value_mult",
+  "planet_jobs_produces_mult",
   "difficulty_modifier_mult",
   "first_contact_speed_mult",
-  # ["ship_upkeep_mult","planet_building_upkeep_mult","country_starbase_upkeep_mult","army_upkeep_mult","pop_robot_upkeep_mult"]#,
-  # ["pop_growth_speed","pop_robot_build_speed_mult"]
+  "country_resource_max_add",
+  ["planet_resettlement_unemployed_mult","planet_resettlement_unemployed_destination_mult"]
   ]
-  possibleBoniIcons=["£systems","£job", "£navy_size", "£ship_stats_maintenance","£ship_stats_build_cost", "£stability", "£empire","£military_power","£ship_stats_hitpoints","£ship_stats_armor","£ship_stats_shield","£military_power"
+  possibleBoniIcons=["£systems","£job", "£navy_size", "£ship_stats_maintenance","£ship_stats_build_cost", "£stability", "£empire","£military_power","£ship_stats_hitpoints","£ship_stats_armor","£ship_stats_shield","£military_power","£job"
   # ,"£trade_value"
   , "£empire", "£empire"
-  # ,"£ship_stats_maintenance","£pops"
+   ,"£empire","£pops"
   ]
   possibleBoniColor=["E","B","G","P","Y","H","M","R","G","H","B","R"
-  # ,"G"
+   ,"G"
   ,"P","Y"
-  # ,"T","G"
+   ,"T","G"
   ]
-  defaultEmpireBonusMultList=[25,25,15,-10,-10,5,-25,0,0,0,0,0
-  # ,25
-  ,25,0]
+  defaultEmpireBonusMultList=[25,25,15,-10,-10,5,-25,0,0,0,0,0,0
+  ,25,0,2500,25]
   defaultEmpireBonusMult=dict()
-  defaultEmpireBonusMultListCadet=[50,50,50,0,0,10,0,0,0,0,0,0
-  # ,50
-  ,0,0]
+  defaultEmpireBonusMultListCadet=[50,50,0,0,0,10,0,0,0,0,0,0,50
+  ,0,0,0,0]
   defaultEmpireBonusMultCadet=dict()
-  defaultEmpireBonusMultListCivilian=[100,100,100,0,0,20,0,0,0,0,0,0
-  # ,100
-  ,0,20]
+  defaultEmpireBonusMultListCivilian=[100,100,100,0,0,20,0,0,0,0,0,0,100
+  ,0,20,0,0]
   defaultEmpireBonusMultCivilian=dict()
   for i,bonus in enumerate(possibleBoniNames):
     defaultEmpireBonusMult[bonus]=defaultEmpireBonusMultList[i]
@@ -1780,7 +1780,8 @@ def globalAddLocs(locClass):
   locClass.addLoc("modNameFull", "Dynamic Difficulty - Ultimate Customization", "all")
   locClass.addLoc("station", "Station Output","all")
   locClass.append("mod_stations_produces_mult", "@station") #paradox seems to have forgotten this one!
-  locClass.addLoc("jobs", "$mod_planet_jobs_produces_mult$","all")
+  locClass.addLoc("jobs", "$MOD_POP_BONUS_WORKFORCE_MULT$","all")
+  locClass.addLoc("jobs_player", "$mod_planet_jobs_produces_mult$","all")
   locClass.addLoc("ship_cost", "$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$","all")
   locClass.addLoc("stability", "$PLANET_STABILITY_TITLE$","all")
   locClass.addLoc("diplo_upkeep", "$MOD_POP_RESETTLEMENT_COST_MULT$","all")
@@ -1793,6 +1794,8 @@ def globalAddLocs(locClass):
   locClass.addLoc("armor", "$ARMOR$","all")
   locClass.addLoc("shield", "$SHIELD$","all")
   locClass.addLoc("upkeep", "$mod_ships_upkeep_mult$","all")
+  locClass.addLoc("max_resource", "$MOD_COUNTRY_RESOURCE_MAX_ADD$","all")
+  locClass.addLoc("unemployed_resettlement", "$MOD_PLANET_RESETTLEMENT_UNEMPLOYED_MULT$","all")
   # locClass.addLoc("growth", "$POPULATION_GROWTH$","all") #Any Pop Growth Speed","all")
   locClass.addLoc("civilian", "$DIFFICULTY_CIVILIAN$","all")
   locClass.addLoc("cadet", "$DIFFICULTY_CADET$","all")

@@ -392,6 +392,38 @@ event = {
 			}
 			if = {
 				limit = {
+					check_variable = { which = custom_difficulty_ai_yearly_jobs_player_value value > 0 }
+				}
+				change_variable = { which = custom_difficulty_jobs_player_year_counter value = 1 }
+				if = {
+					limit = {
+						not = {
+							check_variable = { which = custom_difficulty_jobs_player_year_counter value < custom_difficulty_ai_yearly_jobs_player_value }
+						}
+					}
+					set_variable = { which = custom_difficulty_jobs_player_year_counter value = 0 }
+					change_variable = { which = custom_difficulty_ai_jobs_player_value value = 1 }
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { which = custom_difficulty_ai_yearly_jobs_player_value value < 0 }
+				}
+				change_variable = { which = custom_difficulty_jobs_player_year_counter value = 1 }
+				multiply_variable = { which = custom_difficulty_ai_yearly_jobs_player_value value = -1 }
+				if = {
+					limit = {
+						not = {
+							check_variable = { which = custom_difficulty_jobs_player_year_counter value < custom_difficulty_ai_yearly_jobs_player_value }
+						}
+					}
+					set_variable = { which = custom_difficulty_jobs_player_year_counter value = 0 }
+					change_variable = { which = custom_difficulty_ai_jobs_player_value value = -1 }
+				}
+				multiply_variable = { which = custom_difficulty_ai_yearly_jobs_player_value value = -1 }
+			}
+			if = {
+				limit = {
 					check_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value > 0 }
 				}
 				change_variable = { which = custom_difficulty_difficulty_modifier_year_counter value = 1 }
@@ -453,6 +485,70 @@ event = {
 					change_variable = { which = custom_difficulty_ai_first_contact_value value = -1 }
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_first_contact_value value = -1 }
+			}
+			if = {
+				limit = {
+					check_variable = { which = custom_difficulty_ai_yearly_max_resource_value value > 0 }
+				}
+				change_variable = { which = custom_difficulty_max_resource_year_counter value = 1 }
+				if = {
+					limit = {
+						not = {
+							check_variable = { which = custom_difficulty_max_resource_year_counter value < custom_difficulty_ai_yearly_max_resource_value }
+						}
+					}
+					set_variable = { which = custom_difficulty_max_resource_year_counter value = 0 }
+					change_variable = { which = custom_difficulty_ai_max_resource_value value = 100 }
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { which = custom_difficulty_ai_yearly_max_resource_value value < 0 }
+				}
+				change_variable = { which = custom_difficulty_max_resource_year_counter value = 1 }
+				multiply_variable = { which = custom_difficulty_ai_yearly_max_resource_value value = -1 }
+				if = {
+					limit = {
+						not = {
+							check_variable = { which = custom_difficulty_max_resource_year_counter value < custom_difficulty_ai_yearly_max_resource_value }
+						}
+					}
+					set_variable = { which = custom_difficulty_max_resource_year_counter value = 0 }
+					change_variable = { which = custom_difficulty_ai_max_resource_value value = -100 }
+				}
+				multiply_variable = { which = custom_difficulty_ai_yearly_max_resource_value value = -1 }
+			}
+			if = {
+				limit = {
+					check_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value > 0 }
+				}
+				change_variable = { which = custom_difficulty_unemployed_resettlement_year_counter value = 1 }
+				if = {
+					limit = {
+						not = {
+							check_variable = { which = custom_difficulty_unemployed_resettlement_year_counter value < custom_difficulty_ai_yearly_unemployed_resettlement_value }
+						}
+					}
+					set_variable = { which = custom_difficulty_unemployed_resettlement_year_counter value = 0 }
+					change_variable = { which = custom_difficulty_ai_unemployed_resettlement_value value = 1 }
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value < 0 }
+				}
+				change_variable = { which = custom_difficulty_unemployed_resettlement_year_counter value = 1 }
+				multiply_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value = -1 }
+				if = {
+					limit = {
+						not = {
+							check_variable = { which = custom_difficulty_unemployed_resettlement_year_counter value < custom_difficulty_ai_yearly_unemployed_resettlement_value }
+						}
+					}
+					set_variable = { which = custom_difficulty_unemployed_resettlement_year_counter value = 0 }
+					change_variable = { which = custom_difficulty_ai_unemployed_resettlement_value value = -1 }
+				}
+				multiply_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value = -1 }
 			}
 		}
 	}

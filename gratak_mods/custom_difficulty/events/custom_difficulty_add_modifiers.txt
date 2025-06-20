@@ -5899,6 +5899,497 @@ country_event = {
 			}
 		}
 		if = {
+			limit = { has_country_flag = custom_difficulty_jobs_player_changed }
+			remove_country_flag = custom_difficulty_jobs_player_changed
+			if = {
+				limit = { is_variable_set = custom_difficulty_jobs_player_value }
+				set_variable = {
+					which = custom_difficulty_tmp
+					value = custom_difficulty_jobs_player_value
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 199.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_20_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -200
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 189.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_19_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -190
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 179.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_18_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -180
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 169.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_17_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -170
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 159.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_16_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -160
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 149.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_15_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -150
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 139.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_14_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -140
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 129.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_13_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -130
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 119.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_12_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -120
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 109.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_11_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -110
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 99.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_10_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -100
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 89.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_09_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -90
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 79.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_08_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -80
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 69.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_07_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -70
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 59.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_06_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -60
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 49.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_05_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -50
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 39.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -40
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 29.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -30
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 19.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -20
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 9.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_jobs_player_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -10
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -99.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_10_jobs_player_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 100
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -89.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_09_jobs_player_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 90
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -79.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_08_jobs_player_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 80
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -69.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_07_jobs_player_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 70
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -59.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_06_jobs_player_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 60
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -49.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_05_jobs_player_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 50
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -39.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_jobs_player_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 40
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -29.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_jobs_player_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 30
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -19.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_jobs_player_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 20
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -9.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_jobs_player_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 10
+					}
+				}
+			}
+		}
+		if = {
 			limit = { has_country_flag = custom_difficulty_difficulty_modifier_changed }
 			remove_country_flag = custom_difficulty_difficulty_modifier_changed
 			if = {
@@ -6871,6 +7362,988 @@ country_event = {
 					}
 					add_modifier = {
 						modifier = custom_difficulty_01_first_contact_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 10
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = custom_difficulty_max_resource_changed }
+			remove_country_flag = custom_difficulty_max_resource_changed
+			if = {
+				limit = { is_variable_set = custom_difficulty_max_resource_value }
+				set_variable = {
+					which = custom_difficulty_tmp
+					value = custom_difficulty_max_resource_value
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 19999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_20_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -20000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 18999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_19_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -19000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 17999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_18_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -18000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 16999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_17_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -17000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 15999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_16_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -16000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 14999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_15_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -15000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 13999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_14_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -14000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 12999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_13_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -13000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 11999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_12_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -12000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 10999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_11_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -11000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 9999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_10_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -10000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 8999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_09_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -9000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 7999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_08_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -8000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 6999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_07_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -7000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 5999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_06_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -6000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 4999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_05_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -5000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 3999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -4000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 2999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -3000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 1999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -2000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_max_resource_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -1000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -9999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_10_max_resource_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 10000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -8999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_09_max_resource_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 9000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -7999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_08_max_resource_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 8000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -6999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_07_max_resource_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 7000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -5999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_06_max_resource_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 6000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -4999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_05_max_resource_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 5000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -3999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_max_resource_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 4000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -2999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_max_resource_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 3000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -1999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_max_resource_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 2000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_max_resource_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 1000
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = custom_difficulty_unemployed_resettlement_changed }
+			remove_country_flag = custom_difficulty_unemployed_resettlement_changed
+			if = {
+				limit = { is_variable_set = custom_difficulty_unemployed_resettlement_value }
+				set_variable = {
+					which = custom_difficulty_tmp
+					value = custom_difficulty_unemployed_resettlement_value
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 199.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_20_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -200
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 189.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_19_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -190
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 179.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_18_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -180
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 169.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_17_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -170
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 159.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_16_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -160
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 149.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_15_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -150
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 139.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_14_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -140
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 129.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_13_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -130
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 119.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_12_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -120
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 109.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_11_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -110
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 99.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_10_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -100
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 89.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_09_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -90
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 79.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_08_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -80
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 69.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_07_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -70
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 59.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_06_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -60
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 49.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_05_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -50
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 39.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -40
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 29.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -30
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 19.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -20
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 9.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_unemployed_resettlement_pos_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -10
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -99.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_10_unemployed_resettlement_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 100
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -89.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_09_unemployed_resettlement_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 90
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -79.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_08_unemployed_resettlement_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 80
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -69.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_07_unemployed_resettlement_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 70
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -59.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_06_unemployed_resettlement_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 60
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -49.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_05_unemployed_resettlement_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 50
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -39.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_unemployed_resettlement_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 40
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -29.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_unemployed_resettlement_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 30
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -19.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_unemployed_resettlement_neg_player_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 20
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -9.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_unemployed_resettlement_neg_player_value
 						days = -1
 					}
 					change_variable = {
@@ -10744,6 +12217,325 @@ country_event = {
 			}
 		}
 		if = {
+			limit = { has_country_flag = custom_difficulty_jobs_player_changed }
+			remove_country_flag = custom_difficulty_jobs_player_changed
+			if = {
+				limit = { is_variable_set = custom_difficulty_jobs_player_value }
+				set_variable = {
+					which = custom_difficulty_tmp
+					value = custom_difficulty_jobs_player_value
+				}
+				multiply_variable = {
+					which = custom_difficulty_tmp
+					value = custom_difficulty_randomness_factor
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 1023.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_10_jobs_player_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -1024
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 511.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_09_jobs_player_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -512
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 255.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_08_jobs_player_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -256
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 127.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_07_jobs_player_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -128
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 63.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_06_jobs_player_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -64
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 31.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_05_jobs_player_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -32
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 15.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_jobs_player_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -16
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 7.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_jobs_player_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -8
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 3.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_jobs_player_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -4
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 1.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_jobs_player_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -2
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 0.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_00_jobs_player_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -1
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -127.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_07_jobs_player_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 128
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -63.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_06_jobs_player_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 64
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -31.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_05_jobs_player_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 32
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -15.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_jobs_player_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 16
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -7.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_jobs_player_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 8
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -3.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_jobs_player_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 4
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -1.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_jobs_player_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 2
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -0.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_00_jobs_player_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 1
+					}
+				}
+			}
+		}
+		if = {
 			limit = { has_country_flag = custom_difficulty_difficulty_modifier_changed }
 			remove_country_flag = custom_difficulty_difficulty_modifier_changed
 			if = {
@@ -11372,6 +13164,644 @@ country_event = {
 					}
 					add_modifier = {
 						modifier = custom_difficulty_00_first_contact_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 1
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = custom_difficulty_max_resource_changed }
+			remove_country_flag = custom_difficulty_max_resource_changed
+			if = {
+				limit = { is_variable_set = custom_difficulty_max_resource_value }
+				set_variable = {
+					which = custom_difficulty_tmp
+					value = custom_difficulty_max_resource_value
+				}
+				multiply_variable = {
+					which = custom_difficulty_tmp
+					value = custom_difficulty_randomness_factor
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 102399.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_10_max_resource_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -102400
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 51199.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_09_max_resource_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -51200
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 25599.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_08_max_resource_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -25600
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 12799.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_07_max_resource_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -12800
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 6399.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_06_max_resource_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -6400
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 3199.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_05_max_resource_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -3200
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 1599.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_max_resource_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -1600
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 799.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_max_resource_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -800
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 399.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_max_resource_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -400
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 199.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_max_resource_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -200
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 99.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_00_max_resource_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -100
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -12799.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_07_max_resource_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 12800
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -6399.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_06_max_resource_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 6400
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -3199.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_05_max_resource_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 3200
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -1599.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_max_resource_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 1600
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -799.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_max_resource_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 800
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -399.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_max_resource_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 400
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -199.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_max_resource_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 200
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -99.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_00_max_resource_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 100
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = custom_difficulty_unemployed_resettlement_changed }
+			remove_country_flag = custom_difficulty_unemployed_resettlement_changed
+			if = {
+				limit = { is_variable_set = custom_difficulty_unemployed_resettlement_value }
+				set_variable = {
+					which = custom_difficulty_tmp
+					value = custom_difficulty_unemployed_resettlement_value
+				}
+				multiply_variable = {
+					which = custom_difficulty_tmp
+					value = custom_difficulty_randomness_factor
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 1023.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_10_unemployed_resettlement_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -1024
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 511.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_09_unemployed_resettlement_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -512
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 255.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_08_unemployed_resettlement_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -256
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 127.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_07_unemployed_resettlement_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -128
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 63.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_06_unemployed_resettlement_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -64
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 31.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_05_unemployed_resettlement_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -32
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 15.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_unemployed_resettlement_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -16
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 7.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_unemployed_resettlement_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -8
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 3.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_unemployed_resettlement_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -4
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 1.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_unemployed_resettlement_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -2
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 0.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_00_unemployed_resettlement_pos_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -1
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -127.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_07_unemployed_resettlement_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 128
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -63.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_06_unemployed_resettlement_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 64
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -31.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_05_unemployed_resettlement_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 32
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -15.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_unemployed_resettlement_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 16
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -7.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_unemployed_resettlement_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 8
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -3.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_unemployed_resettlement_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 4
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -1.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_unemployed_resettlement_neg_ai_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 2
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -0.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_00_unemployed_resettlement_neg_ai_value
 						days = -1
 					}
 					change_variable = {
@@ -16323,6 +18753,417 @@ country_event = {
 			}
 		}
 		if = {
+			limit = { has_country_flag = custom_difficulty_jobs_player_changed }
+			remove_country_flag = custom_difficulty_jobs_player_changed
+			if = {
+				limit = { is_variable_set = custom_difficulty_jobs_player_value }
+				set_variable = {
+					which = custom_difficulty_tmp
+					value = custom_difficulty_jobs_player_value
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 2621439.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_19_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -2621440
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 1310719.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_18_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -1310720
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 655359.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_17_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -655360
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 327679.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_16_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -327680
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 163839.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_15_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -163840
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 81919.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_14_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -81920
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 40959.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_13_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -40960
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 20479.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_12_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -20480
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 10239.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_11_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -10240
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 5119.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_10_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -5120
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 2559.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_09_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -2560
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 1279.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_08_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -1280
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 639.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_07_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -640
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 319.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_06_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -320
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 159.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_05_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -160
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 79.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -80
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 39.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -40
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 19.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -20
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 9.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -10
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 4.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_00_jobs_player_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -5
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -79.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_jobs_player_neg_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 80
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -39.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_jobs_player_neg_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 40
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -19.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_jobs_player_neg_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 20
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -9.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_jobs_player_neg_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 10
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -4.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_00_jobs_player_neg_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 5
+					}
+				}
+			}
+		}
+		if = {
 			limit = { has_country_flag = custom_difficulty_difficulty_modifier_changed }
 			remove_country_flag = custom_difficulty_difficulty_modifier_changed
 			if = {
@@ -17135,6 +19976,828 @@ country_event = {
 					}
 					add_modifier = {
 						modifier = custom_difficulty_00_first_contact_neg_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 5
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = custom_difficulty_max_resource_changed }
+			remove_country_flag = custom_difficulty_max_resource_changed
+			if = {
+				limit = { is_variable_set = custom_difficulty_max_resource_value }
+				set_variable = {
+					which = custom_difficulty_tmp
+					value = custom_difficulty_max_resource_value
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 262143999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_19_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -262144000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 131071999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_18_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -131072000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 65535999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_17_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -65536000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 32767999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_16_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -32768000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 16383999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_15_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -16384000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 8191999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_14_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -8192000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 4095999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_13_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -4096000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 2047999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_12_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -2048000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 1023999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_11_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -1024000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 511999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_10_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -512000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 255999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_09_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -256000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 127999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_08_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -128000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 63999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_07_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -64000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 31999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_06_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -32000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 15999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_05_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -16000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 7999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -8000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 3999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -4000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 1999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -2000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -1000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 499.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_00_max_resource_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -500
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -7999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_max_resource_neg_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 8000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -3999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_max_resource_neg_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 4000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -1999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_max_resource_neg_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 2000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -999.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_max_resource_neg_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 1000
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -499.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_00_max_resource_neg_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 500
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = custom_difficulty_unemployed_resettlement_changed }
+			remove_country_flag = custom_difficulty_unemployed_resettlement_changed
+			if = {
+				limit = { is_variable_set = custom_difficulty_unemployed_resettlement_value }
+				set_variable = {
+					which = custom_difficulty_tmp
+					value = custom_difficulty_unemployed_resettlement_value
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 2621439.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_19_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -2621440
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 1310719.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_18_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -1310720
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 655359.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_17_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -655360
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 327679.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_16_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -327680
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 163839.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_15_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -163840
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 81919.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_14_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -81920
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 40959.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_13_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -40960
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 20479.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_12_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -20480
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 10239.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_11_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -10240
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 5119.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_10_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -5120
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 2559.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_09_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -2560
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 1279.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_08_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -1280
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 639.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_07_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -640
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 319.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_06_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -320
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 159.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_05_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -160
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 79.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -80
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 39.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -40
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 19.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -20
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 9.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -10
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value > 4.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_00_unemployed_resettlement_pos_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = -5
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -79.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_04_unemployed_resettlement_neg_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 80
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -39.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_03_unemployed_resettlement_neg_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 40
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -19.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_02_unemployed_resettlement_neg_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 20
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -9.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_01_unemployed_resettlement_neg_crisis_value
+						days = -1
+					}
+					change_variable = {
+						which = custom_difficulty_tmp
+						value = 10
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = custom_difficulty_tmp
+							value < -4.990
+						}
+					}
+					add_modifier = {
+						modifier = custom_difficulty_00_unemployed_resettlement_neg_crisis_value
 						days = -1
 					}
 					change_variable = {

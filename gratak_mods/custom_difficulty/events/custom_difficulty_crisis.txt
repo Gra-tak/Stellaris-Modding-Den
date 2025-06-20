@@ -182,6 +182,18 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_crisis_jobs_player_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_jobs_player_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_crisis_difficulty_modifier_desc
 				event_target:global_event_country = {
 					not = {
@@ -198,6 +210,30 @@ country_event = {
 				event_target:global_event_country = {
 					not = {
 						check_variable = { which = custom_difficulty_crisis_first_contact_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_crisis_max_resource_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_max_resource_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_crisis_unemployed_resettlement_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_unemployed_resettlement_value value = 0 }
 					}
 				}
 				OR = {
@@ -444,6 +480,18 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_crisis_jobs_player_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_jobs_player_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_crisis_difficulty_modifier_desc
 				event_target:global_event_country = {
 					not = {
@@ -460,6 +508,30 @@ country_event = {
 				event_target:global_event_country = {
 					not = {
 						check_variable = { which = custom_difficulty_crisis_first_contact_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_crisis_max_resource_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_max_resource_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_crisis_unemployed_resettlement_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_unemployed_resettlement_value value = 0 }
 					}
 				}
 				OR = {
@@ -790,6 +862,18 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_crisis_jobs_player_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_jobs_player_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_crisis_difficulty_modifier_desc
 				event_target:global_event_country = {
 					not = {
@@ -806,6 +890,30 @@ country_event = {
 				event_target:global_event_country = {
 					not = {
 						check_variable = { which = custom_difficulty_crisis_first_contact_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_crisis_max_resource_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_max_resource_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_crisis_unemployed_resettlement_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_unemployed_resettlement_value value = 0 }
 					}
 				}
 				OR = {
@@ -1096,6 +1204,18 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_crisis_jobs_player_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_jobs_player_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_crisis_difficulty_modifier_desc
 				event_target:global_event_country = {
 					not = {
@@ -1112,6 +1232,30 @@ country_event = {
 				event_target:global_event_country = {
 					not = {
 						check_variable = { which = custom_difficulty_crisis_first_contact_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_crisis_max_resource_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_max_resource_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_crisis_unemployed_resettlement_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_unemployed_resettlement_value value = 0 }
 					}
 				}
 				OR = {
@@ -1402,6 +1546,18 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_crisis_jobs_player_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_jobs_player_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_crisis_difficulty_modifier_desc
 				event_target:global_event_country = {
 					not = {
@@ -1418,6 +1574,30 @@ country_event = {
 				event_target:global_event_country = {
 					not = {
 						check_variable = { which = custom_difficulty_crisis_first_contact_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_crisis_max_resource_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_max_resource_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_crisis_unemployed_resettlement_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_unemployed_resettlement_value value = 0 }
 					}
 				}
 				OR = {
@@ -1708,6 +1888,18 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_crisis_jobs_player_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_jobs_player_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_crisis_difficulty_modifier_desc
 				event_target:global_event_country = {
 					not = {
@@ -1724,6 +1916,30 @@ country_event = {
 				event_target:global_event_country = {
 					not = {
 						check_variable = { which = custom_difficulty_crisis_first_contact_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_crisis_max_resource_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_max_resource_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_crisis_unemployed_resettlement_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_unemployed_resettlement_value value = 0 }
 					}
 				}
 				OR = {
@@ -2014,6 +2230,18 @@ country_event = {
 				}
 			}
 			success_text = {
+				text = custom_difficulty_crisis_jobs_player_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_jobs_player_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
 				text = custom_difficulty_crisis_difficulty_modifier_desc
 				event_target:global_event_country = {
 					not = {
@@ -2030,6 +2258,30 @@ country_event = {
 				event_target:global_event_country = {
 					not = {
 						check_variable = { which = custom_difficulty_crisis_first_contact_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_crisis_max_resource_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_max_resource_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_crisis_unemployed_resettlement_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_crisis_unemployed_resettlement_value value = 0 }
 					}
 				}
 				OR = {

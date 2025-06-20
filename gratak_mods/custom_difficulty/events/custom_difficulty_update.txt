@@ -116,8 +116,11 @@ country_event = {
 				set_country_flag = custom_difficulty_armor_changed
 				set_country_flag = custom_difficulty_shield_changed
 				set_country_flag = custom_difficulty_fire_rate_changed
+				set_country_flag = custom_difficulty_jobs_player_changed
 				set_country_flag = custom_difficulty_difficulty_modifier_changed
 				set_country_flag = custom_difficulty_first_contact_changed
+				set_country_flag = custom_difficulty_max_resource_changed
+				set_country_flag = custom_difficulty_unemployed_resettlement_changed
 				set_variable = { which = custom_difficulty_random_handicap_perc value = event_target:global_event_country.custom_difficulty_random_handicap_perc }
 			}
 			event_target:global_event_country = {
@@ -133,8 +136,11 @@ country_event = {
 				set_variable = { which = custom_difficulty_armor_value value = custom_difficulty_ai_armor_value }
 				set_variable = { which = custom_difficulty_shield_value value = custom_difficulty_ai_shield_value }
 				set_variable = { which = custom_difficulty_fire_rate_value value = custom_difficulty_ai_fire_rate_value }
+				set_variable = { which = custom_difficulty_jobs_player_value value = custom_difficulty_ai_jobs_player_value }
 				set_variable = { which = custom_difficulty_difficulty_modifier_value value = custom_difficulty_ai_difficulty_modifier_value }
 				set_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_ai_first_contact_value }
+				set_variable = { which = custom_difficulty_max_resource_value value = custom_difficulty_ai_max_resource_value }
+				set_variable = { which = custom_difficulty_unemployed_resettlement_value value = custom_difficulty_ai_unemployed_resettlement_value }
 			}
 			if = {
 				limit = {
@@ -191,6 +197,18 @@ country_event = {
 						}
 						change_variable = { which = custom_difficulty_difficulty_modifier_value value = -25 }
 					}
+					if = {
+						limit = {
+							check_variable = { which = custom_difficulty_max_resource_value value > 2250 }
+						}
+						change_variable = { which = custom_difficulty_max_resource_value value = -2500 }
+					}
+					if = {
+						limit = {
+							check_variable = { which = custom_difficulty_unemployed_resettlement_value value > 22 }
+						}
+						change_variable = { which = custom_difficulty_unemployed_resettlement_value value = -25 }
+					}
 				}
 			}
 			if = {
@@ -304,6 +322,15 @@ country_event = {
 			if = {
 				limit = {
 					not = {
+						check_variable = { which = custom_difficulty_jobs_player_value value = event_target:global_event_country.custom_difficulty_jobs_player_value }
+					}
+				}
+				set_country_flag = custom_difficulty_jobs_player_changed
+				set_variable = { which = custom_difficulty_jobs_player_value value = event_target:global_event_country.custom_difficulty_jobs_player_value }
+			}
+			if = {
+				limit = {
+					not = {
 						check_variable = { which = custom_difficulty_difficulty_modifier_value value = event_target:global_event_country.custom_difficulty_difficulty_modifier_value }
 					}
 				}
@@ -318,6 +345,24 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_first_contact_changed
 				set_variable = { which = custom_difficulty_first_contact_value value = event_target:global_event_country.custom_difficulty_first_contact_value }
+			}
+			if = {
+				limit = {
+					not = {
+						check_variable = { which = custom_difficulty_max_resource_value value = event_target:global_event_country.custom_difficulty_max_resource_value }
+					}
+				}
+				set_country_flag = custom_difficulty_max_resource_changed
+				set_variable = { which = custom_difficulty_max_resource_value value = event_target:global_event_country.custom_difficulty_max_resource_value }
+			}
+			if = {
+				limit = {
+					not = {
+						check_variable = { which = custom_difficulty_unemployed_resettlement_value value = event_target:global_event_country.custom_difficulty_unemployed_resettlement_value }
+					}
+				}
+				set_country_flag = custom_difficulty_unemployed_resettlement_changed
+				set_variable = { which = custom_difficulty_unemployed_resettlement_value value = event_target:global_event_country.custom_difficulty_unemployed_resettlement_value }
 			}
 			 #removing ai bonuses if they exist
 			if = {
@@ -372,8 +417,11 @@ country_event = {
 				set_variable = { which = custom_difficulty_armor_value value = custom_difficulty_fe_armor_value }
 				set_variable = { which = custom_difficulty_shield_value value = custom_difficulty_fe_shield_value }
 				set_variable = { which = custom_difficulty_fire_rate_value value = custom_difficulty_fe_fire_rate_value }
+				set_variable = { which = custom_difficulty_jobs_player_value value = custom_difficulty_fe_jobs_player_value }
 				set_variable = { which = custom_difficulty_difficulty_modifier_value value = custom_difficulty_fe_difficulty_modifier_value }
 				set_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_fe_first_contact_value }
+				set_variable = { which = custom_difficulty_max_resource_value value = custom_difficulty_fe_max_resource_value }
+				set_variable = { which = custom_difficulty_unemployed_resettlement_value value = custom_difficulty_fe_unemployed_resettlement_value }
 			}
 			if = {
 				limit = {
@@ -498,6 +546,16 @@ country_event = {
 			if = {
 				limit = {
 					not = {
+						check_variable = { which = custom_difficulty_jobs_player_value value = event_target:global_event_country.custom_difficulty_jobs_player_value }
+					}
+				}
+				set_country_flag = custom_difficulty_jobs_player_changed
+				set_variable = { which = custom_difficulty_jobs_player_value value = event_target:global_event_country.custom_difficulty_jobs_player_value }
+				multiply_variable = { which = custom_difficulty_jobs_player_value value = custom_difficulty_scaled_difficulty_bonuses }
+			}
+			if = {
+				limit = {
+					not = {
 						check_variable = { which = custom_difficulty_difficulty_modifier_value value = event_target:global_event_country.custom_difficulty_difficulty_modifier_value }
 					}
 				}
@@ -514,6 +572,26 @@ country_event = {
 				set_country_flag = custom_difficulty_first_contact_changed
 				set_variable = { which = custom_difficulty_first_contact_value value = event_target:global_event_country.custom_difficulty_first_contact_value }
 				multiply_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_scaled_difficulty_bonuses }
+			}
+			if = {
+				limit = {
+					not = {
+						check_variable = { which = custom_difficulty_max_resource_value value = event_target:global_event_country.custom_difficulty_max_resource_value }
+					}
+				}
+				set_country_flag = custom_difficulty_max_resource_changed
+				set_variable = { which = custom_difficulty_max_resource_value value = event_target:global_event_country.custom_difficulty_max_resource_value }
+				multiply_variable = { which = custom_difficulty_max_resource_value value = custom_difficulty_scaled_difficulty_bonuses }
+			}
+			if = {
+				limit = {
+					not = {
+						check_variable = { which = custom_difficulty_unemployed_resettlement_value value = event_target:global_event_country.custom_difficulty_unemployed_resettlement_value }
+					}
+				}
+				set_country_flag = custom_difficulty_unemployed_resettlement_changed
+				set_variable = { which = custom_difficulty_unemployed_resettlement_value value = event_target:global_event_country.custom_difficulty_unemployed_resettlement_value }
+				multiply_variable = { which = custom_difficulty_unemployed_resettlement_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			 #removing ai bonuses if they exist
 			if = {
@@ -563,8 +641,11 @@ country_event = {
 				set_variable = { which = custom_difficulty_armor_value value = custom_difficulty_leviathan_armor_value }
 				set_variable = { which = custom_difficulty_shield_value value = custom_difficulty_leviathan_shield_value }
 				set_variable = { which = custom_difficulty_fire_rate_value value = custom_difficulty_leviathan_fire_rate_value }
+				set_variable = { which = custom_difficulty_jobs_player_value value = custom_difficulty_leviathan_jobs_player_value }
 				set_variable = { which = custom_difficulty_difficulty_modifier_value value = custom_difficulty_leviathan_difficulty_modifier_value }
 				set_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_leviathan_first_contact_value }
+				set_variable = { which = custom_difficulty_max_resource_value value = custom_difficulty_leviathan_max_resource_value }
+				set_variable = { which = custom_difficulty_unemployed_resettlement_value value = custom_difficulty_leviathan_unemployed_resettlement_value }
 			}
 			if = {
 				limit = {
@@ -689,6 +770,16 @@ country_event = {
 			if = {
 				limit = {
 					not = {
+						check_variable = { which = custom_difficulty_jobs_player_value value = event_target:global_event_country.custom_difficulty_jobs_player_value }
+					}
+				}
+				set_country_flag = custom_difficulty_jobs_player_changed
+				set_variable = { which = custom_difficulty_jobs_player_value value = event_target:global_event_country.custom_difficulty_jobs_player_value }
+				multiply_variable = { which = custom_difficulty_jobs_player_value value = custom_difficulty_scaled_difficulty_bonuses }
+			}
+			if = {
+				limit = {
+					not = {
 						check_variable = { which = custom_difficulty_difficulty_modifier_value value = event_target:global_event_country.custom_difficulty_difficulty_modifier_value }
 					}
 				}
@@ -705,6 +796,26 @@ country_event = {
 				set_country_flag = custom_difficulty_first_contact_changed
 				set_variable = { which = custom_difficulty_first_contact_value value = event_target:global_event_country.custom_difficulty_first_contact_value }
 				multiply_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_scaled_difficulty_bonuses }
+			}
+			if = {
+				limit = {
+					not = {
+						check_variable = { which = custom_difficulty_max_resource_value value = event_target:global_event_country.custom_difficulty_max_resource_value }
+					}
+				}
+				set_country_flag = custom_difficulty_max_resource_changed
+				set_variable = { which = custom_difficulty_max_resource_value value = event_target:global_event_country.custom_difficulty_max_resource_value }
+				multiply_variable = { which = custom_difficulty_max_resource_value value = custom_difficulty_scaled_difficulty_bonuses }
+			}
+			if = {
+				limit = {
+					not = {
+						check_variable = { which = custom_difficulty_unemployed_resettlement_value value = event_target:global_event_country.custom_difficulty_unemployed_resettlement_value }
+					}
+				}
+				set_country_flag = custom_difficulty_unemployed_resettlement_changed
+				set_variable = { which = custom_difficulty_unemployed_resettlement_value value = event_target:global_event_country.custom_difficulty_unemployed_resettlement_value }
+				multiply_variable = { which = custom_difficulty_unemployed_resettlement_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			 #removing ai bonuses if they exist
 			if = {
@@ -753,8 +864,11 @@ country_event = {
 				set_variable = { which = custom_difficulty_armor_value value = custom_difficulty_player_armor_value }
 				set_variable = { which = custom_difficulty_shield_value value = custom_difficulty_player_shield_value }
 				set_variable = { which = custom_difficulty_fire_rate_value value = custom_difficulty_player_fire_rate_value }
+				set_variable = { which = custom_difficulty_jobs_player_value value = custom_difficulty_player_jobs_player_value }
 				set_variable = { which = custom_difficulty_difficulty_modifier_value value = custom_difficulty_player_difficulty_modifier_value }
 				set_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_player_first_contact_value }
+				set_variable = { which = custom_difficulty_max_resource_value value = custom_difficulty_player_max_resource_value }
+				set_variable = { which = custom_difficulty_unemployed_resettlement_value value = custom_difficulty_player_unemployed_resettlement_value }
 			}
 			if = {
 				limit = {
@@ -867,6 +981,15 @@ country_event = {
 			if = {
 				limit = {
 					not = {
+						check_variable = { which = custom_difficulty_jobs_player_value value = event_target:global_event_country.custom_difficulty_jobs_player_value }
+					}
+				}
+				set_country_flag = custom_difficulty_jobs_player_changed
+				set_variable = { which = custom_difficulty_jobs_player_value value = event_target:global_event_country.custom_difficulty_jobs_player_value }
+			}
+			if = {
+				limit = {
+					not = {
 						check_variable = { which = custom_difficulty_difficulty_modifier_value value = event_target:global_event_country.custom_difficulty_difficulty_modifier_value }
 					}
 				}
@@ -881,6 +1004,24 @@ country_event = {
 				}
 				set_country_flag = custom_difficulty_first_contact_changed
 				set_variable = { which = custom_difficulty_first_contact_value value = event_target:global_event_country.custom_difficulty_first_contact_value }
+			}
+			if = {
+				limit = {
+					not = {
+						check_variable = { which = custom_difficulty_max_resource_value value = event_target:global_event_country.custom_difficulty_max_resource_value }
+					}
+				}
+				set_country_flag = custom_difficulty_max_resource_changed
+				set_variable = { which = custom_difficulty_max_resource_value value = event_target:global_event_country.custom_difficulty_max_resource_value }
+			}
+			if = {
+				limit = {
+					not = {
+						check_variable = { which = custom_difficulty_unemployed_resettlement_value value = event_target:global_event_country.custom_difficulty_unemployed_resettlement_value }
+					}
+				}
+				set_country_flag = custom_difficulty_unemployed_resettlement_changed
+				set_variable = { which = custom_difficulty_unemployed_resettlement_value value = event_target:global_event_country.custom_difficulty_unemployed_resettlement_value }
 			}
 			 #removing ai bonuses if they exist
 			if = {
@@ -944,8 +1085,11 @@ country_event = {
 				set_variable = { which = custom_difficulty_armor_value value = custom_difficulty_crisis_armor_value }
 				set_variable = { which = custom_difficulty_shield_value value = custom_difficulty_crisis_shield_value }
 				set_variable = { which = custom_difficulty_fire_rate_value value = custom_difficulty_crisis_fire_rate_value }
+				set_variable = { which = custom_difficulty_jobs_player_value value = custom_difficulty_crisis_jobs_player_value }
 				set_variable = { which = custom_difficulty_difficulty_modifier_value value = custom_difficulty_crisis_difficulty_modifier_value }
 				set_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_crisis_first_contact_value }
+				set_variable = { which = custom_difficulty_max_resource_value value = custom_difficulty_crisis_max_resource_value }
+				set_variable = { which = custom_difficulty_unemployed_resettlement_value value = custom_difficulty_crisis_unemployed_resettlement_value }
 			}
 			if = {
 				limit = {
@@ -1070,6 +1214,16 @@ country_event = {
 			if = {
 				limit = {
 					not = {
+						check_variable = { which = custom_difficulty_jobs_player_value value = event_target:global_event_country.custom_difficulty_jobs_player_value }
+					}
+				}
+				set_country_flag = custom_difficulty_jobs_player_changed
+				set_variable = { which = custom_difficulty_jobs_player_value value = event_target:global_event_country.custom_difficulty_jobs_player_value }
+				multiply_variable = { which = custom_difficulty_jobs_player_value value = custom_difficulty_scaled_difficulty_bonuses }
+			}
+			if = {
+				limit = {
+					not = {
 						check_variable = { which = custom_difficulty_difficulty_modifier_value value = event_target:global_event_country.custom_difficulty_difficulty_modifier_value }
 					}
 				}
@@ -1086,6 +1240,26 @@ country_event = {
 				set_country_flag = custom_difficulty_first_contact_changed
 				set_variable = { which = custom_difficulty_first_contact_value value = event_target:global_event_country.custom_difficulty_first_contact_value }
 				multiply_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_scaled_difficulty_bonuses }
+			}
+			if = {
+				limit = {
+					not = {
+						check_variable = { which = custom_difficulty_max_resource_value value = event_target:global_event_country.custom_difficulty_max_resource_value }
+					}
+				}
+				set_country_flag = custom_difficulty_max_resource_changed
+				set_variable = { which = custom_difficulty_max_resource_value value = event_target:global_event_country.custom_difficulty_max_resource_value }
+				multiply_variable = { which = custom_difficulty_max_resource_value value = custom_difficulty_scaled_difficulty_bonuses }
+			}
+			if = {
+				limit = {
+					not = {
+						check_variable = { which = custom_difficulty_unemployed_resettlement_value value = event_target:global_event_country.custom_difficulty_unemployed_resettlement_value }
+					}
+				}
+				set_country_flag = custom_difficulty_unemployed_resettlement_changed
+				set_variable = { which = custom_difficulty_unemployed_resettlement_value value = event_target:global_event_country.custom_difficulty_unemployed_resettlement_value }
+				multiply_variable = { which = custom_difficulty_unemployed_resettlement_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			 #removing ai bonuses if they exist
 			if = {
@@ -1143,8 +1317,11 @@ country_event = {
 				set_variable = { which = custom_difficulty_armor_value value = custom_difficulty_marauders_armor_value }
 				set_variable = { which = custom_difficulty_shield_value value = custom_difficulty_marauders_shield_value }
 				set_variable = { which = custom_difficulty_fire_rate_value value = custom_difficulty_marauders_fire_rate_value }
+				set_variable = { which = custom_difficulty_jobs_player_value value = custom_difficulty_marauders_jobs_player_value }
 				set_variable = { which = custom_difficulty_difficulty_modifier_value value = custom_difficulty_marauders_difficulty_modifier_value }
 				set_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_marauders_first_contact_value }
+				set_variable = { which = custom_difficulty_max_resource_value value = custom_difficulty_marauders_max_resource_value }
+				set_variable = { which = custom_difficulty_unemployed_resettlement_value value = custom_difficulty_marauders_unemployed_resettlement_value }
 			}
 			if = {
 				limit = {
@@ -1269,6 +1446,16 @@ country_event = {
 			if = {
 				limit = {
 					not = {
+						check_variable = { which = custom_difficulty_jobs_player_value value = event_target:global_event_country.custom_difficulty_jobs_player_value }
+					}
+				}
+				set_country_flag = custom_difficulty_jobs_player_changed
+				set_variable = { which = custom_difficulty_jobs_player_value value = event_target:global_event_country.custom_difficulty_jobs_player_value }
+				multiply_variable = { which = custom_difficulty_jobs_player_value value = custom_difficulty_scaled_difficulty_bonuses }
+			}
+			if = {
+				limit = {
+					not = {
 						check_variable = { which = custom_difficulty_difficulty_modifier_value value = event_target:global_event_country.custom_difficulty_difficulty_modifier_value }
 					}
 				}
@@ -1285,6 +1472,26 @@ country_event = {
 				set_country_flag = custom_difficulty_first_contact_changed
 				set_variable = { which = custom_difficulty_first_contact_value value = event_target:global_event_country.custom_difficulty_first_contact_value }
 				multiply_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_scaled_difficulty_bonuses }
+			}
+			if = {
+				limit = {
+					not = {
+						check_variable = { which = custom_difficulty_max_resource_value value = event_target:global_event_country.custom_difficulty_max_resource_value }
+					}
+				}
+				set_country_flag = custom_difficulty_max_resource_changed
+				set_variable = { which = custom_difficulty_max_resource_value value = event_target:global_event_country.custom_difficulty_max_resource_value }
+				multiply_variable = { which = custom_difficulty_max_resource_value value = custom_difficulty_scaled_difficulty_bonuses }
+			}
+			if = {
+				limit = {
+					not = {
+						check_variable = { which = custom_difficulty_unemployed_resettlement_value value = event_target:global_event_country.custom_difficulty_unemployed_resettlement_value }
+					}
+				}
+				set_country_flag = custom_difficulty_unemployed_resettlement_changed
+				set_variable = { which = custom_difficulty_unemployed_resettlement_value value = event_target:global_event_country.custom_difficulty_unemployed_resettlement_value }
+				multiply_variable = { which = custom_difficulty_unemployed_resettlement_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			 #removing ai bonuses if they exist
 			if = {
@@ -1362,8 +1569,11 @@ country_event = {
 				set_variable = { which = custom_difficulty_armor_value value = custom_difficulty_other_armor_value }
 				set_variable = { which = custom_difficulty_shield_value value = custom_difficulty_other_shield_value }
 				set_variable = { which = custom_difficulty_fire_rate_value value = custom_difficulty_other_fire_rate_value }
+				set_variable = { which = custom_difficulty_jobs_player_value value = custom_difficulty_other_jobs_player_value }
 				set_variable = { which = custom_difficulty_difficulty_modifier_value value = custom_difficulty_other_difficulty_modifier_value }
 				set_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_other_first_contact_value }
+				set_variable = { which = custom_difficulty_max_resource_value value = custom_difficulty_other_max_resource_value }
+				set_variable = { which = custom_difficulty_unemployed_resettlement_value value = custom_difficulty_other_unemployed_resettlement_value }
 			}
 			if = {
 				limit = {
@@ -1488,6 +1698,16 @@ country_event = {
 			if = {
 				limit = {
 					not = {
+						check_variable = { which = custom_difficulty_jobs_player_value value = event_target:global_event_country.custom_difficulty_jobs_player_value }
+					}
+				}
+				set_country_flag = custom_difficulty_jobs_player_changed
+				set_variable = { which = custom_difficulty_jobs_player_value value = event_target:global_event_country.custom_difficulty_jobs_player_value }
+				multiply_variable = { which = custom_difficulty_jobs_player_value value = custom_difficulty_scaled_difficulty_bonuses }
+			}
+			if = {
+				limit = {
+					not = {
 						check_variable = { which = custom_difficulty_difficulty_modifier_value value = event_target:global_event_country.custom_difficulty_difficulty_modifier_value }
 					}
 				}
@@ -1504,6 +1724,26 @@ country_event = {
 				set_country_flag = custom_difficulty_first_contact_changed
 				set_variable = { which = custom_difficulty_first_contact_value value = event_target:global_event_country.custom_difficulty_first_contact_value }
 				multiply_variable = { which = custom_difficulty_first_contact_value value = custom_difficulty_scaled_difficulty_bonuses }
+			}
+			if = {
+				limit = {
+					not = {
+						check_variable = { which = custom_difficulty_max_resource_value value = event_target:global_event_country.custom_difficulty_max_resource_value }
+					}
+				}
+				set_country_flag = custom_difficulty_max_resource_changed
+				set_variable = { which = custom_difficulty_max_resource_value value = event_target:global_event_country.custom_difficulty_max_resource_value }
+				multiply_variable = { which = custom_difficulty_max_resource_value value = custom_difficulty_scaled_difficulty_bonuses }
+			}
+			if = {
+				limit = {
+					not = {
+						check_variable = { which = custom_difficulty_unemployed_resettlement_value value = event_target:global_event_country.custom_difficulty_unemployed_resettlement_value }
+					}
+				}
+				set_country_flag = custom_difficulty_unemployed_resettlement_changed
+				set_variable = { which = custom_difficulty_unemployed_resettlement_value value = event_target:global_event_country.custom_difficulty_unemployed_resettlement_value }
+				multiply_variable = { which = custom_difficulty_unemployed_resettlement_value value = custom_difficulty_scaled_difficulty_bonuses }
 			}
 			 #removing ai bonuses if they exist
 			if = {

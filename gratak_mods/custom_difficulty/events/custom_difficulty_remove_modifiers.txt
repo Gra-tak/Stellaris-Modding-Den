@@ -403,6 +403,39 @@ country_event = {
 			remove_modifier = custom_difficulty_20_fire_rate_pos_player_value
 		}
 		if = {
+			limit = { has_country_flag = custom_difficulty_jobs_player_changed }
+			remove_modifier = custom_difficulty_10_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_09_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_08_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_07_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_06_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_05_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_04_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_03_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_02_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_01_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_01_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_02_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_03_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_04_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_05_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_06_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_07_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_08_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_09_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_10_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_11_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_12_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_13_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_14_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_15_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_16_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_17_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_18_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_19_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_20_jobs_player_pos_player_value
+		}
+		if = {
 			limit = { has_country_flag = custom_difficulty_difficulty_modifier_changed }
 			remove_modifier = custom_difficulty_10_difficulty_modifier_neg_player_value
 			remove_modifier = custom_difficulty_09_difficulty_modifier_neg_player_value
@@ -467,6 +500,72 @@ country_event = {
 			remove_modifier = custom_difficulty_18_first_contact_pos_player_value
 			remove_modifier = custom_difficulty_19_first_contact_pos_player_value
 			remove_modifier = custom_difficulty_20_first_contact_pos_player_value
+		}
+		if = {
+			limit = { has_country_flag = custom_difficulty_max_resource_changed }
+			remove_modifier = custom_difficulty_10_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_09_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_08_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_07_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_06_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_05_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_04_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_03_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_02_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_01_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_01_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_02_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_03_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_04_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_05_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_06_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_07_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_08_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_09_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_10_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_11_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_12_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_13_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_14_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_15_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_16_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_17_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_18_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_19_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_20_max_resource_pos_player_value
+		}
+		if = {
+			limit = { has_country_flag = custom_difficulty_unemployed_resettlement_changed }
+			remove_modifier = custom_difficulty_10_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_09_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_08_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_07_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_06_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_05_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_04_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_03_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_02_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_01_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_01_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_02_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_03_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_04_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_05_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_06_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_07_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_08_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_09_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_10_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_11_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_12_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_13_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_14_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_15_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_16_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_17_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_18_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_19_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_20_unemployed_resettlement_pos_player_value
 		}
 	}
 }
@@ -742,6 +841,28 @@ country_event = {
 			remove_modifier = custom_difficulty_10_fire_rate_pos_ai_value
 		}
 		if = {
+			limit = { has_country_flag = custom_difficulty_jobs_player_changed }
+			remove_modifier = custom_difficulty_07_jobs_player_neg_ai_value
+			remove_modifier = custom_difficulty_06_jobs_player_neg_ai_value
+			remove_modifier = custom_difficulty_05_jobs_player_neg_ai_value
+			remove_modifier = custom_difficulty_04_jobs_player_neg_ai_value
+			remove_modifier = custom_difficulty_03_jobs_player_neg_ai_value
+			remove_modifier = custom_difficulty_02_jobs_player_neg_ai_value
+			remove_modifier = custom_difficulty_01_jobs_player_neg_ai_value
+			remove_modifier = custom_difficulty_00_jobs_player_neg_ai_value
+			remove_modifier = custom_difficulty_00_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_01_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_02_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_03_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_04_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_05_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_06_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_07_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_08_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_09_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_10_jobs_player_pos_ai_value
+		}
+		if = {
 			limit = { has_country_flag = custom_difficulty_difficulty_modifier_changed }
 			remove_modifier = custom_difficulty_07_difficulty_modifier_neg_ai_value
 			remove_modifier = custom_difficulty_06_difficulty_modifier_neg_ai_value
@@ -784,6 +905,50 @@ country_event = {
 			remove_modifier = custom_difficulty_08_first_contact_pos_ai_value
 			remove_modifier = custom_difficulty_09_first_contact_pos_ai_value
 			remove_modifier = custom_difficulty_10_first_contact_pos_ai_value
+		}
+		if = {
+			limit = { has_country_flag = custom_difficulty_max_resource_changed }
+			remove_modifier = custom_difficulty_07_max_resource_neg_ai_value
+			remove_modifier = custom_difficulty_06_max_resource_neg_ai_value
+			remove_modifier = custom_difficulty_05_max_resource_neg_ai_value
+			remove_modifier = custom_difficulty_04_max_resource_neg_ai_value
+			remove_modifier = custom_difficulty_03_max_resource_neg_ai_value
+			remove_modifier = custom_difficulty_02_max_resource_neg_ai_value
+			remove_modifier = custom_difficulty_01_max_resource_neg_ai_value
+			remove_modifier = custom_difficulty_00_max_resource_neg_ai_value
+			remove_modifier = custom_difficulty_00_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_01_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_02_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_03_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_04_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_05_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_06_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_07_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_08_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_09_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_10_max_resource_pos_ai_value
+		}
+		if = {
+			limit = { has_country_flag = custom_difficulty_unemployed_resettlement_changed }
+			remove_modifier = custom_difficulty_07_unemployed_resettlement_neg_ai_value
+			remove_modifier = custom_difficulty_06_unemployed_resettlement_neg_ai_value
+			remove_modifier = custom_difficulty_05_unemployed_resettlement_neg_ai_value
+			remove_modifier = custom_difficulty_04_unemployed_resettlement_neg_ai_value
+			remove_modifier = custom_difficulty_03_unemployed_resettlement_neg_ai_value
+			remove_modifier = custom_difficulty_02_unemployed_resettlement_neg_ai_value
+			remove_modifier = custom_difficulty_01_unemployed_resettlement_neg_ai_value
+			remove_modifier = custom_difficulty_00_unemployed_resettlement_neg_ai_value
+			remove_modifier = custom_difficulty_00_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_01_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_02_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_03_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_04_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_05_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_06_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_07_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_08_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_09_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_10_unemployed_resettlement_pos_ai_value
 		}
 	}
 }
@@ -1131,6 +1296,34 @@ country_event = {
 			remove_modifier = custom_difficulty_19_fire_rate_pos_crisis_value
 		}
 		if = {
+			limit = { has_country_flag = custom_difficulty_jobs_player_changed }
+			remove_modifier = custom_difficulty_04_jobs_player_neg_crisis_value
+			remove_modifier = custom_difficulty_03_jobs_player_neg_crisis_value
+			remove_modifier = custom_difficulty_02_jobs_player_neg_crisis_value
+			remove_modifier = custom_difficulty_01_jobs_player_neg_crisis_value
+			remove_modifier = custom_difficulty_00_jobs_player_neg_crisis_value
+			remove_modifier = custom_difficulty_00_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_01_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_02_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_03_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_04_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_05_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_06_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_07_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_08_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_09_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_10_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_11_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_12_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_13_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_14_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_15_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_16_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_17_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_18_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_19_jobs_player_pos_crisis_value
+		}
+		if = {
 			limit = { has_country_flag = custom_difficulty_difficulty_modifier_changed }
 			remove_modifier = custom_difficulty_04_difficulty_modifier_neg_crisis_value
 			remove_modifier = custom_difficulty_03_difficulty_modifier_neg_crisis_value
@@ -1185,6 +1378,62 @@ country_event = {
 			remove_modifier = custom_difficulty_17_first_contact_pos_crisis_value
 			remove_modifier = custom_difficulty_18_first_contact_pos_crisis_value
 			remove_modifier = custom_difficulty_19_first_contact_pos_crisis_value
+		}
+		if = {
+			limit = { has_country_flag = custom_difficulty_max_resource_changed }
+			remove_modifier = custom_difficulty_04_max_resource_neg_crisis_value
+			remove_modifier = custom_difficulty_03_max_resource_neg_crisis_value
+			remove_modifier = custom_difficulty_02_max_resource_neg_crisis_value
+			remove_modifier = custom_difficulty_01_max_resource_neg_crisis_value
+			remove_modifier = custom_difficulty_00_max_resource_neg_crisis_value
+			remove_modifier = custom_difficulty_00_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_01_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_02_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_03_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_04_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_05_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_06_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_07_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_08_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_09_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_10_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_11_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_12_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_13_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_14_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_15_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_16_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_17_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_18_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_19_max_resource_pos_crisis_value
+		}
+		if = {
+			limit = { has_country_flag = custom_difficulty_unemployed_resettlement_changed }
+			remove_modifier = custom_difficulty_04_unemployed_resettlement_neg_crisis_value
+			remove_modifier = custom_difficulty_03_unemployed_resettlement_neg_crisis_value
+			remove_modifier = custom_difficulty_02_unemployed_resettlement_neg_crisis_value
+			remove_modifier = custom_difficulty_01_unemployed_resettlement_neg_crisis_value
+			remove_modifier = custom_difficulty_00_unemployed_resettlement_neg_crisis_value
+			remove_modifier = custom_difficulty_00_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_01_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_02_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_03_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_04_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_05_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_06_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_07_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_08_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_09_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_10_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_11_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_12_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_13_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_14_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_15_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_16_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_17_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_18_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_19_unemployed_resettlement_pos_crisis_value
 		}
 	}
 }
@@ -1699,6 +1948,25 @@ country_event = {
 			remove_modifier = custom_difficulty_08_fire_rate_pos_ai_value
 			remove_modifier = custom_difficulty_09_fire_rate_pos_ai_value
 			remove_modifier = custom_difficulty_10_fire_rate_pos_ai_value
+			remove_modifier = custom_difficulty_07_jobs_player_neg_ai_value
+			remove_modifier = custom_difficulty_06_jobs_player_neg_ai_value
+			remove_modifier = custom_difficulty_05_jobs_player_neg_ai_value
+			remove_modifier = custom_difficulty_04_jobs_player_neg_ai_value
+			remove_modifier = custom_difficulty_03_jobs_player_neg_ai_value
+			remove_modifier = custom_difficulty_02_jobs_player_neg_ai_value
+			remove_modifier = custom_difficulty_01_jobs_player_neg_ai_value
+			remove_modifier = custom_difficulty_00_jobs_player_neg_ai_value
+			remove_modifier = custom_difficulty_00_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_01_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_02_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_03_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_04_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_05_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_06_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_07_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_08_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_09_jobs_player_pos_ai_value
+			remove_modifier = custom_difficulty_10_jobs_player_pos_ai_value
 			remove_modifier = custom_difficulty_07_difficulty_modifier_neg_ai_value
 			remove_modifier = custom_difficulty_06_difficulty_modifier_neg_ai_value
 			remove_modifier = custom_difficulty_05_difficulty_modifier_neg_ai_value
@@ -1737,6 +2005,44 @@ country_event = {
 			remove_modifier = custom_difficulty_08_first_contact_pos_ai_value
 			remove_modifier = custom_difficulty_09_first_contact_pos_ai_value
 			remove_modifier = custom_difficulty_10_first_contact_pos_ai_value
+			remove_modifier = custom_difficulty_07_max_resource_neg_ai_value
+			remove_modifier = custom_difficulty_06_max_resource_neg_ai_value
+			remove_modifier = custom_difficulty_05_max_resource_neg_ai_value
+			remove_modifier = custom_difficulty_04_max_resource_neg_ai_value
+			remove_modifier = custom_difficulty_03_max_resource_neg_ai_value
+			remove_modifier = custom_difficulty_02_max_resource_neg_ai_value
+			remove_modifier = custom_difficulty_01_max_resource_neg_ai_value
+			remove_modifier = custom_difficulty_00_max_resource_neg_ai_value
+			remove_modifier = custom_difficulty_00_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_01_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_02_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_03_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_04_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_05_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_06_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_07_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_08_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_09_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_10_max_resource_pos_ai_value
+			remove_modifier = custom_difficulty_07_unemployed_resettlement_neg_ai_value
+			remove_modifier = custom_difficulty_06_unemployed_resettlement_neg_ai_value
+			remove_modifier = custom_difficulty_05_unemployed_resettlement_neg_ai_value
+			remove_modifier = custom_difficulty_04_unemployed_resettlement_neg_ai_value
+			remove_modifier = custom_difficulty_03_unemployed_resettlement_neg_ai_value
+			remove_modifier = custom_difficulty_02_unemployed_resettlement_neg_ai_value
+			remove_modifier = custom_difficulty_01_unemployed_resettlement_neg_ai_value
+			remove_modifier = custom_difficulty_00_unemployed_resettlement_neg_ai_value
+			remove_modifier = custom_difficulty_00_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_01_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_02_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_03_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_04_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_05_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_06_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_07_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_08_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_09_unemployed_resettlement_pos_ai_value
+			remove_modifier = custom_difficulty_10_unemployed_resettlement_pos_ai_value
 			remove_modifier = custom_difficulty_10_station_neg_player_value
 			remove_modifier = custom_difficulty_09_station_neg_player_value
 			remove_modifier = custom_difficulty_08_station_neg_player_value
@@ -2097,6 +2403,36 @@ country_event = {
 			remove_modifier = custom_difficulty_18_fire_rate_pos_player_value
 			remove_modifier = custom_difficulty_19_fire_rate_pos_player_value
 			remove_modifier = custom_difficulty_20_fire_rate_pos_player_value
+			remove_modifier = custom_difficulty_10_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_09_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_08_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_07_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_06_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_05_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_04_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_03_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_02_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_01_jobs_player_neg_player_value
+			remove_modifier = custom_difficulty_01_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_02_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_03_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_04_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_05_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_06_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_07_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_08_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_09_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_10_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_11_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_12_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_13_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_14_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_15_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_16_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_17_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_18_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_19_jobs_player_pos_player_value
+			remove_modifier = custom_difficulty_20_jobs_player_pos_player_value
 			remove_modifier = custom_difficulty_10_difficulty_modifier_neg_player_value
 			remove_modifier = custom_difficulty_09_difficulty_modifier_neg_player_value
 			remove_modifier = custom_difficulty_08_difficulty_modifier_neg_player_value
@@ -2157,6 +2493,66 @@ country_event = {
 			remove_modifier = custom_difficulty_18_first_contact_pos_player_value
 			remove_modifier = custom_difficulty_19_first_contact_pos_player_value
 			remove_modifier = custom_difficulty_20_first_contact_pos_player_value
+			remove_modifier = custom_difficulty_10_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_09_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_08_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_07_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_06_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_05_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_04_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_03_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_02_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_01_max_resource_neg_player_value
+			remove_modifier = custom_difficulty_01_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_02_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_03_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_04_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_05_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_06_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_07_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_08_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_09_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_10_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_11_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_12_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_13_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_14_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_15_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_16_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_17_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_18_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_19_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_20_max_resource_pos_player_value
+			remove_modifier = custom_difficulty_10_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_09_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_08_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_07_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_06_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_05_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_04_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_03_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_02_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_01_unemployed_resettlement_neg_player_value
+			remove_modifier = custom_difficulty_01_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_02_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_03_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_04_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_05_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_06_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_07_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_08_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_09_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_10_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_11_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_12_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_13_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_14_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_15_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_16_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_17_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_18_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_19_unemployed_resettlement_pos_player_value
+			remove_modifier = custom_difficulty_20_unemployed_resettlement_pos_player_value
 			remove_modifier = custom_difficulty_04_station_neg_crisis_value
 			remove_modifier = custom_difficulty_03_station_neg_crisis_value
 			remove_modifier = custom_difficulty_02_station_neg_crisis_value
@@ -2457,6 +2853,31 @@ country_event = {
 			remove_modifier = custom_difficulty_17_fire_rate_pos_crisis_value
 			remove_modifier = custom_difficulty_18_fire_rate_pos_crisis_value
 			remove_modifier = custom_difficulty_19_fire_rate_pos_crisis_value
+			remove_modifier = custom_difficulty_04_jobs_player_neg_crisis_value
+			remove_modifier = custom_difficulty_03_jobs_player_neg_crisis_value
+			remove_modifier = custom_difficulty_02_jobs_player_neg_crisis_value
+			remove_modifier = custom_difficulty_01_jobs_player_neg_crisis_value
+			remove_modifier = custom_difficulty_00_jobs_player_neg_crisis_value
+			remove_modifier = custom_difficulty_00_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_01_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_02_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_03_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_04_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_05_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_06_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_07_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_08_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_09_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_10_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_11_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_12_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_13_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_14_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_15_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_16_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_17_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_18_jobs_player_pos_crisis_value
+			remove_modifier = custom_difficulty_19_jobs_player_pos_crisis_value
 			remove_modifier = custom_difficulty_04_difficulty_modifier_neg_crisis_value
 			remove_modifier = custom_difficulty_03_difficulty_modifier_neg_crisis_value
 			remove_modifier = custom_difficulty_02_difficulty_modifier_neg_crisis_value
@@ -2507,6 +2928,56 @@ country_event = {
 			remove_modifier = custom_difficulty_17_first_contact_pos_crisis_value
 			remove_modifier = custom_difficulty_18_first_contact_pos_crisis_value
 			remove_modifier = custom_difficulty_19_first_contact_pos_crisis_value
+			remove_modifier = custom_difficulty_04_max_resource_neg_crisis_value
+			remove_modifier = custom_difficulty_03_max_resource_neg_crisis_value
+			remove_modifier = custom_difficulty_02_max_resource_neg_crisis_value
+			remove_modifier = custom_difficulty_01_max_resource_neg_crisis_value
+			remove_modifier = custom_difficulty_00_max_resource_neg_crisis_value
+			remove_modifier = custom_difficulty_00_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_01_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_02_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_03_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_04_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_05_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_06_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_07_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_08_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_09_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_10_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_11_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_12_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_13_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_14_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_15_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_16_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_17_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_18_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_19_max_resource_pos_crisis_value
+			remove_modifier = custom_difficulty_04_unemployed_resettlement_neg_crisis_value
+			remove_modifier = custom_difficulty_03_unemployed_resettlement_neg_crisis_value
+			remove_modifier = custom_difficulty_02_unemployed_resettlement_neg_crisis_value
+			remove_modifier = custom_difficulty_01_unemployed_resettlement_neg_crisis_value
+			remove_modifier = custom_difficulty_00_unemployed_resettlement_neg_crisis_value
+			remove_modifier = custom_difficulty_00_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_01_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_02_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_03_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_04_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_05_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_06_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_07_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_08_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_09_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_10_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_11_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_12_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_13_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_14_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_15_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_16_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_17_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_18_unemployed_resettlement_pos_crisis_value
+			remove_modifier = custom_difficulty_19_unemployed_resettlement_pos_crisis_value
 			remove_modifier = custom_difficulty_07_systems_neg_ai_value
 			remove_modifier = custom_difficulty_06_systems_neg_ai_value
 			remove_modifier = custom_difficulty_05_systems_neg_ai_value
@@ -2778,11 +3249,23 @@ country_event = {
 				value = 0
 			}
 			set_variable = {
+				which = custom_difficulty_jobs_player_value
+				value = 0
+			}
+			set_variable = {
 				which = custom_difficulty_difficulty_modifier_value
 				value = 0
 			}
 			set_variable = {
 				which = custom_difficulty_first_contact_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_max_resource_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_unemployed_resettlement_value
 				value = 0
 			}
 		}
@@ -2844,11 +3327,23 @@ country_event = {
 				value = 0
 			}
 			set_variable = {
+				which = custom_difficulty_ai_jobs_player_value
+				value = 0
+			}
+			set_variable = {
 				which = custom_difficulty_ai_difficulty_modifier_value
 				value = 0
 			}
 			set_variable = {
 				which = custom_difficulty_ai_first_contact_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_ai_max_resource_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_ai_unemployed_resettlement_value
 				value = 0
 			}
 			set_variable = {
@@ -2900,11 +3395,23 @@ country_event = {
 				value = 0
 			}
 			set_variable = {
+				which = custom_difficulty_ai_yearly_jobs_player_value
+				value = 0
+			}
+			set_variable = {
 				which = custom_difficulty_ai_yearly_difficulty_modifier_value
 				value = 0
 			}
 			set_variable = {
 				which = custom_difficulty_ai_yearly_first_contact_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_ai_yearly_max_resource_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_ai_yearly_unemployed_resettlement_value
 				value = 0
 			}
 			set_variable = {
@@ -2956,11 +3463,23 @@ country_event = {
 				value = 0
 			}
 			set_variable = {
+				which = custom_difficulty_fe_jobs_player_value
+				value = 0
+			}
+			set_variable = {
 				which = custom_difficulty_fe_difficulty_modifier_value
 				value = 0
 			}
 			set_variable = {
 				which = custom_difficulty_fe_first_contact_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_fe_max_resource_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_fe_unemployed_resettlement_value
 				value = 0
 			}
 			set_variable = {
@@ -3012,11 +3531,23 @@ country_event = {
 				value = 0
 			}
 			set_variable = {
+				which = custom_difficulty_leviathan_jobs_player_value
+				value = 0
+			}
+			set_variable = {
 				which = custom_difficulty_leviathan_difficulty_modifier_value
 				value = 0
 			}
 			set_variable = {
 				which = custom_difficulty_leviathan_first_contact_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_leviathan_max_resource_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_leviathan_unemployed_resettlement_value
 				value = 0
 			}
 			set_variable = {
@@ -3068,11 +3599,23 @@ country_event = {
 				value = 0
 			}
 			set_variable = {
+				which = custom_difficulty_player_jobs_player_value
+				value = 0
+			}
+			set_variable = {
 				which = custom_difficulty_player_difficulty_modifier_value
 				value = 0
 			}
 			set_variable = {
 				which = custom_difficulty_player_first_contact_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_player_max_resource_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_player_unemployed_resettlement_value
 				value = 0
 			}
 			set_variable = {
@@ -3124,11 +3667,23 @@ country_event = {
 				value = 0
 			}
 			set_variable = {
+				which = custom_difficulty_crisis_jobs_player_value
+				value = 0
+			}
+			set_variable = {
 				which = custom_difficulty_crisis_difficulty_modifier_value
 				value = 0
 			}
 			set_variable = {
 				which = custom_difficulty_crisis_first_contact_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_crisis_max_resource_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_crisis_unemployed_resettlement_value
 				value = 0
 			}
 			set_variable = {
@@ -3180,11 +3735,23 @@ country_event = {
 				value = 0
 			}
 			set_variable = {
+				which = custom_difficulty_marauders_jobs_player_value
+				value = 0
+			}
+			set_variable = {
 				which = custom_difficulty_marauders_difficulty_modifier_value
 				value = 0
 			}
 			set_variable = {
 				which = custom_difficulty_marauders_first_contact_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_marauders_max_resource_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_marauders_unemployed_resettlement_value
 				value = 0
 			}
 			set_variable = {
@@ -3236,11 +3803,23 @@ country_event = {
 				value = 0
 			}
 			set_variable = {
+				which = custom_difficulty_other_jobs_player_value
+				value = 0
+			}
+			set_variable = {
 				which = custom_difficulty_other_difficulty_modifier_value
 				value = 0
 			}
 			set_variable = {
 				which = custom_difficulty_other_first_contact_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_other_max_resource_value
+				value = 0
+			}
+			set_variable = {
+				which = custom_difficulty_other_unemployed_resettlement_value
 				value = 0
 			}
 		}
