@@ -3098,6 +3098,7 @@
  custom_difficulty_19_allShip_pos_crisis_value:0 "Difficulty"
  custom_difficulty_current_bonuses:0 "Current Bonuses:"
  custom_difficulty_current_yearly_desc:0 "Positive year count gives increase, negative year count decrease. Every year is fastest possible. Zero (not displayed) means no change. Currently:"
+ custom_difficulty_next:0 "Next"
  custom_difficulty_back:0 "Back"
  custom_difficulty_cancel:0 "Cancel and Back"
  custom_difficulty_close.name:0 "Close Dynamic Difficulty Menu"

@@ -536,12 +536,6 @@ country_event = {
 		}
 	}
 	option = {
-		name = custom_difficulty_ai_yearly_change_all_name
-		custom_tooltip = custom_difficulty_ai_yearly_change_all_desc
-		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty.2010 } }
-	}
-	option = {
 		name = custom_difficulty_ai_yearly_change_planets_name
 		custom_tooltip = custom_difficulty_ai_yearly_change_planets_desc
 		trigger = { custom_difficulty_allow_changes = yes }
@@ -607,6 +601,557 @@ country_event = {
 			NOR = { custom_difficulty_allow_changes = no has_global_flag = custom_difficulty_activate_simple_mode }
 		}
 		hidden_effect = { country_event = { id = custom_difficulty.2110 } }
+	}
+	option = {
+		name = custom_difficulty_next
+		trigger = {
+			NOR = { custom_difficulty_allow_changes = no has_global_flag = custom_difficulty_activate_simple_mode }
+		}
+		hidden_effect = { country_event = { id = custom_difficulty.2001 } }
+	}
+	option = {
+		name = custom_difficulty_back
+		hidden_effect = { country_event = { id = custom_difficulty.2 } }
+	}
+	option = {
+		name = custom_difficulty_close.name
+		hidden_effect = { country_event = { id = custom_difficulty.41 } }
+	}
+}
+country_event = {
+	id = custom_difficulty.2001
+	is_triggered_only = yes
+	title = custom_difficulty_ai_yearly.name
+	picture = "GFX_evt_organic_oppression"
+	desc = {
+		trigger = {
+			success_text = { text = custom_difficulty_locked.name custom_difficulty_allow_changes = no }
+			text = custom_difficulty_current_yearly_desc
+			success_text = {
+				text = custom_difficulty_ai_yearly_planets_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_jobs_value value > 0 }
+				}
+				has_global_flag = custom_difficulty_activate_simple_mode
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_planets_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_jobs_value value < 0 }
+				}
+				has_global_flag = custom_difficulty_activate_simple_mode
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_systems_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_station_value value > 0 }
+				}
+				has_global_flag = custom_difficulty_activate_simple_mode
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_systems_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_station_value value < 0 }
+				}
+				has_global_flag = custom_difficulty_activate_simple_mode
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_allShip_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_damage_value value > 0 }
+				}
+				has_global_flag = custom_difficulty_activate_simple_mode
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_allShip_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_damage_value value < 0 }
+				}
+				has_global_flag = custom_difficulty_activate_simple_mode
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_station_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_station_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_station_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_station_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_jobs_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_jobs_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_jobs_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_jobs_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_cap_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_cap_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_cap_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_cap_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_upkeep_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_upkeep_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_upkeep_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_upkeep_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_ship_cost_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_ship_cost_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_ship_cost_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_ship_cost_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_stability_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_stability_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_stability_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_stability_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_diplo_upkeep_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_diplo_upkeep_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_diplo_upkeep_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_diplo_upkeep_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_damage_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_damage_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_damage_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_damage_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_hull_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_hull_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_hull_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_hull_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_armor_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_armor_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_armor_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_armor_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_shield_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_shield_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_shield_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_shield_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_fire_rate_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_fire_rate_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_fire_rate_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_fire_rate_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_jobs_player_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_jobs_player_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_jobs_player_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_jobs_player_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_difficulty_modifier_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_difficulty_modifier_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_first_contact_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_first_contact_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_first_contact_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_first_contact_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_max_resource_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_max_resource_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_max_resource_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_max_resource_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_unemployed_resettlement_inc_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value > 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_ai_yearly_unemployed_resettlement_dec_desc
+				event_target:global_event_country = {
+					check_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value < 0 }
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+		}
+	}
+	immediate = {
+		set_variable = { which = custom_difficulty_ai_yearly_jobs_value value = event_target:global_event_country.custom_difficulty_ai_yearly_jobs_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_jobs_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_jobs_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_station_value value = event_target:global_event_country.custom_difficulty_ai_yearly_station_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_station_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_station_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_damage_value value = event_target:global_event_country.custom_difficulty_ai_yearly_damage_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_damage_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_damage_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_station_value value = event_target:global_event_country.custom_difficulty_ai_yearly_station_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_station_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_station_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_jobs_value value = event_target:global_event_country.custom_difficulty_ai_yearly_jobs_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_jobs_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_jobs_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_cap_value value = event_target:global_event_country.custom_difficulty_ai_yearly_cap_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_cap_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_cap_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_upkeep_value value = event_target:global_event_country.custom_difficulty_ai_yearly_upkeep_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_upkeep_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_upkeep_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_ship_cost_value value = event_target:global_event_country.custom_difficulty_ai_yearly_ship_cost_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_ship_cost_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_ship_cost_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_stability_value value = event_target:global_event_country.custom_difficulty_ai_yearly_stability_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_stability_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_stability_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_diplo_upkeep_value value = event_target:global_event_country.custom_difficulty_ai_yearly_diplo_upkeep_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_diplo_upkeep_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_diplo_upkeep_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_damage_value value = event_target:global_event_country.custom_difficulty_ai_yearly_damage_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_damage_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_damage_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_hull_value value = event_target:global_event_country.custom_difficulty_ai_yearly_hull_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_hull_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_hull_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_armor_value value = event_target:global_event_country.custom_difficulty_ai_yearly_armor_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_armor_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_armor_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_shield_value value = event_target:global_event_country.custom_difficulty_ai_yearly_shield_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_shield_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_shield_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_fire_rate_value value = event_target:global_event_country.custom_difficulty_ai_yearly_fire_rate_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_fire_rate_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_fire_rate_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_jobs_player_value value = event_target:global_event_country.custom_difficulty_ai_yearly_jobs_player_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_jobs_player_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_jobs_player_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value = event_target:global_event_country.custom_difficulty_ai_yearly_difficulty_modifier_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_first_contact_value value = event_target:global_event_country.custom_difficulty_ai_yearly_first_contact_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_first_contact_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_first_contact_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_max_resource_value value = event_target:global_event_country.custom_difficulty_ai_yearly_max_resource_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_max_resource_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_max_resource_value value = -1 }
+		}
+		set_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value = event_target:global_event_country.custom_difficulty_ai_yearly_unemployed_resettlement_value }
+		if = {
+			limit = {
+				check_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value < 0 }
+			}
+			multiply_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value = -1 }
+		}
 	}
 	option = {
 		name = custom_difficulty_ai_yearly_change_damage_button.name
@@ -677,6 +1222,19 @@ country_event = {
 			NOR = { custom_difficulty_allow_changes = no has_global_flag = custom_difficulty_activate_simple_mode }
 		}
 		hidden_effect = { country_event = { id = custom_difficulty.2210 } }
+	}
+	option = {
+		name = custom_difficulty_ai_yearly_change_all_name
+		custom_tooltip = custom_difficulty_ai_yearly_change_all_desc
+		trigger = { custom_difficulty_allow_changes = yes }
+		hidden_effect = { country_event = { id = custom_difficulty.2010 } }
+	}
+	option = {
+		name = custom_difficulty_next
+		trigger = {
+			NOR = { custom_difficulty_allow_changes = no has_global_flag = custom_difficulty_activate_simple_mode }
+		}
+		hidden_effect = { country_event = { id = custom_difficulty.2000 } }
 	}
 	option = {
 		name = custom_difficulty_back
@@ -8778,7 +9336,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.2000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.2001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -9432,7 +9990,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.2000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.2001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -10086,7 +10644,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.2000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.2001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -10740,7 +11298,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.2000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.2001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -11394,7 +11952,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.2000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.2001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -12048,7 +12606,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.2000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.2001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -12702,7 +13260,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.2000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.2001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -13356,7 +13914,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.2000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.2001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -14010,7 +14568,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.2000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.2001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -14664,7 +15222,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.2000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.2001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name

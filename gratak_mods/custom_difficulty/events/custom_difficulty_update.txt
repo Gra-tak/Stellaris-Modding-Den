@@ -33,6 +33,7 @@ country_event = {
 					is_country_type = neutral_faction
 					is_country_type = primal_mind
 					is_country_type = shroud_spirits
+					is_country_type = gate_builders
 					is_country_type = tiyanki
 					is_country_type = tiyanki_garrison
 					is_country_type = amoeba
@@ -48,6 +49,8 @@ country_event = {
 					is_country_type = vluur
 					is_country_type = no_contact_neutral_faction
 					is_country_type = behemoth_hatchling
+					is_country_type = formless_event_aberrant_country
+					is_country_type = grave_guardian
 					is_country_type = guardian_opus_sentinel
 					is_country_type = voidworms
 					is_country_type = voidworms_treasure_hunters
@@ -61,10 +64,8 @@ country_event = {
 			limit = {
 				or = {
 					is_country_type = awakened_marauders
-					is_country_type = gate_builders
 					is_country_type = gray_goo
 					is_country_type = formless
-					is_country_type = formless_event_aberrant_country
 				}
 			}
 			set_variable = { which = custom_difficulty_scaled_difficulty_bonuses value = 3.0 }
@@ -72,10 +73,6 @@ country_event = {
 		else_if = {
 			limit = { or = { is_country_type = voidspawn_boss } }
 			set_variable = { which = custom_difficulty_scaled_difficulty_bonuses value = 2.5 }
-		}
-		else_if = {
-			limit = { or = { is_country_type = grave_guardian } }
-			set_variable = { which = custom_difficulty_scaled_difficulty_bonuses value = 10.0 }
 		}
 		 #ai
 		if = {
@@ -1816,6 +1813,7 @@ country_event = {
 					is_country_type = neutral_faction
 					is_country_type = primal_mind
 					is_country_type = shroud_spirits
+					is_country_type = gate_builders
 					is_country_type = tiyanki
 					is_country_type = tiyanki_garrison
 					is_country_type = amoeba
@@ -1831,6 +1829,8 @@ country_event = {
 					is_country_type = vluur
 					is_country_type = no_contact_neutral_faction
 					is_country_type = behemoth_hatchling
+					is_country_type = formless_event_aberrant_country
+					is_country_type = grave_guardian
 					is_country_type = guardian_opus_sentinel
 					is_country_type = voidworms
 					is_country_type = voidworms_treasure_hunters
@@ -1844,10 +1844,8 @@ country_event = {
 			limit = {
 				or = {
 					is_country_type = awakened_marauders
-					is_country_type = gate_builders
 					is_country_type = gray_goo
 					is_country_type = formless
-					is_country_type = formless_event_aberrant_country
 				}
 			}
 			set_variable = { which = custom_difficulty_scaled_difficulty_bonuses value = 3.0 }
@@ -1855,10 +1853,6 @@ country_event = {
 		else_if = {
 			limit = { or = { is_country_type = voidspawn_boss } }
 			set_variable = { which = custom_difficulty_scaled_difficulty_bonuses value = 2.5 }
-		}
-		else_if = {
-			limit = { or = { is_country_type = grave_guardian } }
-			set_variable = { which = custom_difficulty_scaled_difficulty_bonuses value = 10.0 }
 		}
 		 #ai
 		if = {

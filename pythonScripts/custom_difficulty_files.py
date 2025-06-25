@@ -107,6 +107,8 @@ def main(args):
     if type(val)==TagList:
       if "scaled_difficulty_bonuses" in val.names:
         factionToMultiplier[name]=float(val.get("scaled_difficulty_bonuses"))
+        if factionToMultiplier[name]>1 and not ("is_space_critter" in val.names and val.get("is_space_critter")=="yes") and not ("end_game_crisis" in val.names and val.get("end_game_crisis")=="yes" or "anti_end_game_crisis" in val.names and val.get("anti_end_game_crisis")=="yes") and not ("mid_game_crisis" in val.names and val.get("mid_game_crisis")=="yes"):
+          factionToMultiplier[name]=0.5 #Not sure what is happening here but grave_guardian have a factor 10 in the vanilla files that they shouldn't have
       elif "is_space_critter" in val.names and val.get("is_space_critter")=="yes":
         factionToMultiplier[name]=0.5
       if "end_game_crisis" in val.names and val.get("end_game_crisis")=="yes" or "anti_end_game_crisis" in val.names and val.get("anti_end_game_crisis")=="yes":
@@ -411,8 +413,10 @@ def main(args):
           immediateIf=TagList().add("limit",TagList().add("check_variable",checkVar)) #<0
           immediateIf.add("multiply_variable", TagList().add("which", localVarName).add("value","-1"))
           immediate.add("if",immediateIf)
-      if not catToModifierType[cat]=="crisis" or bonusListNPC[optionIndex-1]:
-        choiceEvent.add("option",option)
+        if not catToModifierType[cat]=="crisis" or bonusListNPC[optionIndex-1]:
+          choiceEvent.add("option",option)
+      else:
+        allOption=option
 
     for bonusI, bonus in enumerate(possibleBoniNames):
       optionIndex+=1
@@ -445,6 +449,12 @@ def main(args):
       if not catToModifierType[cat]=="crisis" or npcBoni[bonusI]:
         choiceEvent.add("option",option) 
 
+    if not catToModifierType[cat]=="crisis":
+      option=TagList().add("name","custom_difficulty_next") #loc global
+      option.add("trigger", TagList().add("NOR", TagList().add("custom_difficulty_allow_changes", "no").add("has_global_flag", "custom_difficulty_activate_simple_mode")))
+      option.add("hidden_effect", TagList().add("country_event",TagList().add("id", eventNameSpace.format(mainIndex*id_ChangeEvents+1))))
+      choiceEvent.add("option",option)
+
     option=TagList().add("name","custom_difficulty_back") #loc global
     if cat=="crisis":
       option2=deepcopy(option)
@@ -457,6 +467,18 @@ def main(args):
     option=TagList().add("name","custom_difficulty_close.name") #loc global
     option.add("hidden_effect", TagList().add("country_event",TagList().add("id", name_countryRootUpdateEvent)))
     choiceEvent.add("option",option)
+
+    if not catToModifierType[cat]=="crisis":
+      choiceEvent2=deepcopy(choiceEvent)
+      choiceEvent2.set("id",eventNameSpace.format(mainIndex*id_ChangeEvents+1))
+      tagList.add("country_event", choiceEvent2)
+      optionNum=choiceEvent.count("option")-3 #ignore back and close
+      choiceEvent2.getN_th("option", optionNum).get("hidden_effect").get("country_event").set("id",eventNameSpace.format(mainIndex*id_ChangeEvents))
+      for i in range(optionNum-1, optionNum//2-1,-1):
+        choiceEvent.removeIndex(choiceEvent.n_thIndex("option", i))
+      for i in range(optionNum//2-1,-1,-1):
+        choiceEvent2.removeIndex(choiceEvent.n_thIndex("option", i))
+      choiceEvent2.insert(choiceEvent2.n_thIndex("option", choiceEvent2.count("option")-3), "option", allOption)
 
     
 
@@ -529,7 +551,10 @@ def main(args):
 
 
         option=TagList().add("name","custom_difficulty_back")
-        option.add("hidden_effect", TagList().add("country_event",TagList().add("id", eventNameSpace.format(mainIndex*id_ChangeEvents))))
+        if not catToModifierType[cat]=="crisis" and ( bonusIndex==0 or bonusIndex > optionNum//2+1):
+          option.add("hidden_effect", TagList().add("country_event",TagList().add("id", eventNameSpace.format(mainIndex*id_ChangeEvents+1))))
+        else:
+          option.add("hidden_effect", TagList().add("country_event",TagList().add("id", eventNameSpace.format(mainIndex*id_ChangeEvents))))
         changeEvent.add("option",option)
         option=TagList().add("name","custom_difficulty_close.name")
         option.add("hidden_effect", TagList().add("country_event",TagList().add("id", name_countryRootUpdateEvent)))
@@ -1131,6 +1156,7 @@ def createMenuFile(locClass, cats, catColors, difficulties, debugMode=False, mod
 
   locClass.addEntry("custom_difficulty_current_bonuses","@curBon:")
   locClass.addEntry("custom_difficulty_current_yearly_desc", "@yearlyDesc. @cur:")
+  locClass.addEntry("custom_difficulty_next", "Next")
   locClass.addEntry("custom_difficulty_back", "@back")
   locClass.addEntry("custom_difficulty_cancel", "@cancel")
   locClass.addEntry("custom_difficulty_close.name", "@close @modName @menu")

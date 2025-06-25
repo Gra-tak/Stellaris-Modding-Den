@@ -243,12 +243,6 @@ country_event = {
 		}
 	}
 	option = {
-		name = custom_difficulty_other_change_all_name
-		custom_tooltip = custom_difficulty_other_change_all_desc
-		trigger = { custom_difficulty_allow_changes = yes }
-		hidden_effect = { country_event = { id = custom_difficulty.8010 } }
-	}
-	option = {
 		name = custom_difficulty_other_change_planets_name
 		custom_tooltip = custom_difficulty_other_change_planets_desc
 		trigger = { custom_difficulty_allow_changes = yes }
@@ -314,6 +308,264 @@ country_event = {
 			NOR = { custom_difficulty_allow_changes = no has_global_flag = custom_difficulty_activate_simple_mode }
 		}
 		hidden_effect = { country_event = { id = custom_difficulty.8110 } }
+	}
+	option = {
+		name = custom_difficulty_next
+		trigger = {
+			NOR = { custom_difficulty_allow_changes = no has_global_flag = custom_difficulty_activate_simple_mode }
+		}
+		hidden_effect = { country_event = { id = custom_difficulty.8001 } }
+	}
+	option = {
+		name = custom_difficulty_back
+		hidden_effect = { country_event = { id = custom_difficulty.2 } }
+	}
+	option = {
+		name = custom_difficulty_close.name
+		hidden_effect = { country_event = { id = custom_difficulty.41 } }
+	}
+}
+country_event = {
+	id = custom_difficulty.8001
+	is_triggered_only = yes
+	title = custom_difficulty_other.name
+	picture = "GFX_evt_unknown_ships"
+	desc = {
+		trigger = {
+			success_text = { text = custom_difficulty_locked.name custom_difficulty_allow_changes = no }
+			text = custom_difficulty_current_bonuses
+			success_text = {
+				text = custom_difficulty_other_planets_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_jobs_value value = 0 }
+					}
+				}
+				has_global_flag = custom_difficulty_activate_simple_mode
+			}
+			success_text = {
+				text = custom_difficulty_other_systems_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_station_value value = 0 }
+					}
+				}
+				has_global_flag = custom_difficulty_activate_simple_mode
+			}
+			success_text = {
+				text = custom_difficulty_other_allShip_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_damage_value value = 0 }
+					}
+				}
+				has_global_flag = custom_difficulty_activate_simple_mode
+			}
+			success_text = {
+				text = custom_difficulty_other_station_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_station_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_other_jobs_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_jobs_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_other_cap_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_cap_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_other_upkeep_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_upkeep_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_other_ship_cost_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_ship_cost_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_other_stability_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_stability_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_other_diplo_upkeep_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_diplo_upkeep_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_other_damage_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_damage_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_other_hull_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_hull_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_other_armor_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_armor_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_other_shield_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_shield_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_other_fire_rate_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_fire_rate_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_other_jobs_player_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_jobs_player_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_other_difficulty_modifier_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_difficulty_modifier_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_other_first_contact_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_first_contact_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_other_max_resource_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_max_resource_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+			success_text = {
+				text = custom_difficulty_other_unemployed_resettlement_desc
+				event_target:global_event_country = {
+					not = {
+						check_variable = { which = custom_difficulty_other_unemployed_resettlement_value value = 0 }
+					}
+				}
+				OR = {
+					has_global_flag = custom_difficulty_activate_custom_mode
+					NOT = { has_global_flag = custom_difficulty_activate_simple_mode }
+				}
+			}
+		}
 	}
 	option = {
 		name = custom_difficulty_other_change_damage_button.name
@@ -384,6 +636,19 @@ country_event = {
 			NOR = { custom_difficulty_allow_changes = no has_global_flag = custom_difficulty_activate_simple_mode }
 		}
 		hidden_effect = { country_event = { id = custom_difficulty.8210 } }
+	}
+	option = {
+		name = custom_difficulty_other_change_all_name
+		custom_tooltip = custom_difficulty_other_change_all_desc
+		trigger = { custom_difficulty_allow_changes = yes }
+		hidden_effect = { country_event = { id = custom_difficulty.8010 } }
+	}
+	option = {
+		name = custom_difficulty_next
+		trigger = {
+			NOR = { custom_difficulty_allow_changes = no has_global_flag = custom_difficulty_activate_simple_mode }
+		}
+		hidden_effect = { country_event = { id = custom_difficulty.8000 } }
 	}
 	option = {
 		name = custom_difficulty_back
@@ -4969,7 +5234,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.8000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.8001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -5330,7 +5595,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.8000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.8001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -5691,7 +5956,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.8000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.8001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -6052,7 +6317,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.8000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.8001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -6413,7 +6678,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.8000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.8001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -6774,7 +7039,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.8000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.8001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -7135,7 +7400,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.8000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.8001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -7496,7 +7761,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.8000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.8001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -7857,7 +8122,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.8000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.8001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
@@ -8218,7 +8483,7 @@ country_event = {
 	}
 	option = {
 		name = custom_difficulty_back
-		hidden_effect = { country_event = { id = custom_difficulty.8000 } }
+		hidden_effect = { country_event = { id = custom_difficulty.8001 } }
 	}
 	option = {
 		name = custom_difficulty_close.name
