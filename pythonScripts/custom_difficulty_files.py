@@ -1136,10 +1136,10 @@ def main(args):
 
   createTriggerFile()
 
-  threePointNineEventBugfix = TagList("namespace", "custom_difficulty_mm")
-  for i in [1,2,3,4,23]:
-    threePointNineEventBugfix.addReturn("country_event").add("id",f"custom_difficulty_mm.{i}").add("is_triggered_only","yes").add("title","test").add("desc","test").add("picture","GFX_evt_synth_sabotage").addReturn("option").add("name","OK")
-  outputToFolderAndFile(threePointNineEventBugfix, "events", "z_custom_difficulty_mm_tmp_needed_comp.txt")
+  # threePointNineEventBugfix = TagList("namespace", "custom_difficulty_mm")
+  # for i in [1,2,3,4,23]:
+  #   threePointNineEventBugfix.addReturn("country_event").add("id",f"custom_difficulty_mm.{i}").add("is_triggered_only","yes").add("title","test").add("desc","test").add("picture","GFX_evt_synth_sabotage").addReturn("option").add("name","OK")
+  # outputToFolderAndFile(threePointNineEventBugfix, "events", "z_custom_difficulty_mm_tmp_needed_comp.txt")
 
   locClass.writeToMod("../gratak_mods/custom_difficulty","custom_difficulty")
   locClassReplace.addLoc("modName", "Dynamic Difficulty", "all")
