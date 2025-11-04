@@ -61,6 +61,10 @@ id_subChangeEvents=10
 dmmId=4
 dmmType="utilities"
 
+
+enabledScaledScalingVar="custom_difficulty_enabled_scaled_scaling"
+scaledScalingValueVar="custom_difficulty_scaled_scaling_value"
+
 # t_notLockedTrigger=TagList("not", TagList("has_global_flag", "custom_difficulty_locked"))
 t_notLockedTrigger=TagList("custom_difficulty_allow_changes", "yes")
 t_mainMenuEvent=TagList("id",name_mainMenuEvent)
@@ -265,7 +269,7 @@ def main(args):
   representGroup["station"]="systems"
   representGroup["damage"]="allShip"
   bonusListNPC=[    False,   False, False,  True]
-  bonusesListEntries=[[i for i in range(len(possibleBoniNames))], [1,5,6],[0,2,3,4], [7,8,9,10,11]]
+  bonusesListEntries=[[i for i in range(len(possibleBoniNames))], [1,5,6,13,15,16],[0,2,3,4], [7,8,9,10,11]]
   bonusesListPictures=["GFX_evt_alien_city", "GFX_evt_galactic_market", "GFX_evt_satellite_in_orbit","GFX_evt_federation_fleet"]
   # bonusesListNames=["all","default", "allShip"]
   # bonusListNPC=[    True,   False,    False]
@@ -1049,6 +1053,10 @@ def main(args):
   et=TagList()
   immediate.add(ET, et)
   cat="ai"
+  tmpVar="custom_difficulty_tmp"
+
+  ifModifier=TagList()
+  ifModifier.add("limit", TagList().add(ET,TagList().add("check_variable", TagList().add("which", enabledScaledScalingVar).add("value","0","","!="))))
   for bonus in possibleBoniNames:
     yearCountVar="custom_difficulty_{}_year_counter".format(bonus)
     yearLimitVar="custom_difficulty_{}_{}_value".format(cat+"_yearly",bonus)
@@ -1064,7 +1072,10 @@ def main(args):
     ifPos.add("if",ifTagList)
     ifTagList.add("limit", TagList().add("not",TagList().add("check_variable", TagList().add("which", yearCountVar).add("value",yearLimitVar,"","<"))))
     ifTagList.add("set_variable", TagList().add("which", yearCountVar).add("value", "0"))
-    ifTagList.add("change_variable", TagList().add("which", bonusVar).add("value", f"{abs(boniFactor[bonus])}"))
+    ifTagList.add("set_variable", TagList().add("which", tmpVar).add("value", f"{abs(boniFactor[bonus])}"))
+    ifTagList.add("if",deepcopy(ifModifier).add("multiply_variable", TagList().add("which", tmpVar).add("value", f"{ET}.{scaledScalingValueVar}")))
+    ifTagList.add("change_variable", TagList().add("which", bonusVar).add("value", tmpVar))
+    ifTagList.add("set_variable", TagList().add("which", tmpVar).add("value", "0"))
 
     ifTagList=TagList()
     ifNeg.add("multiply_variable", TagList().add("which", yearLimitVar).add("value","-1"))
@@ -1072,7 +1083,10 @@ def main(args):
     ifNeg.add("multiply_variable", TagList().add("which", yearLimitVar).add("value","-1"))
     ifTagList.add("limit", TagList().add("not",TagList().add("check_variable", TagList().add("which", yearCountVar).add("value",yearLimitVar,"","<"))))
     ifTagList.add("set_variable", TagList().add("which", yearCountVar).add("value", "0"))
-    ifTagList.add("change_variable", TagList().add("which", bonusVar).add("value", f"-{abs(boniFactor[bonus])}"))
+    ifTagList.add("set_variable", TagList().add("which", tmpVar).add("value", f"-{abs(boniFactor[bonus])}"))
+    ifTagList.add("if",deepcopy(ifModifier).add("multiply_variable", TagList().add("which", tmpVar).add("value", f"{ET}.{scaledScalingValueVar}")))
+    ifTagList.add("change_variable", TagList().add("which", bonusVar).add("value", tmpVar))
+    ifTagList.add("set_variable", TagList().add("which", tmpVar).add("value", "0"))
 
   with open(outFolder+"/"+"custom_difficulty_yealy_event.txt",'w') as file:
     yearlyFile.writeAll(file, argsClass())
@@ -1217,6 +1231,7 @@ def createMenuFile(locClass, cats, catColors, difficulties, debugMode=False, mod
     else:
       mainMenu.add("picture", "GFX_evt_custom_difficulty_pyra")
     immediate=mainMenu.addReturn("immediate")
+    immediate.add(ET,TagList("if",TagList("limit", TagList("check_variable", TagList().add("which", enabledScaledScalingVar).add("value","0","","="))).add("set_variable", TagList().add("which", scaledScalingValueVar).add("value", "1")).add("set_variable", TagList().add("which", enabledScaledScalingVar).add("value", "1"))))
     if not reducedMenu:
       immediate.addReturn("country_event").add("id", eventNameSpace.format(id_updateEventCountryEvents)) #call transfer event. Only happens if player opens menu the day the new version is first loaded
       immediate=immediate.createReturnIf(TagList("has_global_flag","custom_difficultyMM_active"))

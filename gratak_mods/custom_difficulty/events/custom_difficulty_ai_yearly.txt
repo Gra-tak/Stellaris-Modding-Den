@@ -2601,6 +2601,9 @@ country_event = {
 				change_variable = { which = custom_difficulty_ai_yearly_jobs_value value = 5 }
 				change_variable = { which = custom_difficulty_ai_yearly_stability_value value = 5 }
 				change_variable = { which = custom_difficulty_ai_yearly_diplo_upkeep_value value = -5 }
+				change_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value = 5 }
+				change_variable = { which = custom_difficulty_ai_yearly_max_resource_value value = 5 }
+				change_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value = 5 }
 			}
 			country_event = { id = custom_difficulty.2020 }
 			country_event = { id = custom_difficulty.24 }
@@ -2614,6 +2617,9 @@ country_event = {
 				change_variable = { which = custom_difficulty_ai_yearly_jobs_value value = 4 }
 				change_variable = { which = custom_difficulty_ai_yearly_stability_value value = 4 }
 				change_variable = { which = custom_difficulty_ai_yearly_diplo_upkeep_value value = -4 }
+				change_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value = 4 }
+				change_variable = { which = custom_difficulty_ai_yearly_max_resource_value value = 4 }
+				change_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value = 4 }
 			}
 			country_event = { id = custom_difficulty.2020 }
 			country_event = { id = custom_difficulty.24 }
@@ -2627,6 +2633,9 @@ country_event = {
 				change_variable = { which = custom_difficulty_ai_yearly_jobs_value value = 3 }
 				change_variable = { which = custom_difficulty_ai_yearly_stability_value value = 3 }
 				change_variable = { which = custom_difficulty_ai_yearly_diplo_upkeep_value value = -3 }
+				change_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value = 3 }
+				change_variable = { which = custom_difficulty_ai_yearly_max_resource_value value = 3 }
+				change_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value = 3 }
 			}
 			country_event = { id = custom_difficulty.2020 }
 			country_event = { id = custom_difficulty.24 }
@@ -2640,6 +2649,9 @@ country_event = {
 				change_variable = { which = custom_difficulty_ai_yearly_jobs_value value = 2 }
 				change_variable = { which = custom_difficulty_ai_yearly_stability_value value = 2 }
 				change_variable = { which = custom_difficulty_ai_yearly_diplo_upkeep_value value = -2 }
+				change_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value = 2 }
+				change_variable = { which = custom_difficulty_ai_yearly_max_resource_value value = 2 }
+				change_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value = 2 }
 			}
 			country_event = { id = custom_difficulty.2020 }
 			country_event = { id = custom_difficulty.24 }
@@ -2653,6 +2665,9 @@ country_event = {
 				change_variable = { which = custom_difficulty_ai_yearly_jobs_value value = 1 }
 				change_variable = { which = custom_difficulty_ai_yearly_stability_value value = 1 }
 				change_variable = { which = custom_difficulty_ai_yearly_diplo_upkeep_value value = -1 }
+				change_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value = 1 }
+				change_variable = { which = custom_difficulty_ai_yearly_max_resource_value value = 1 }
+				change_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value = 1 }
 			}
 			country_event = { id = custom_difficulty.2020 }
 			country_event = { id = custom_difficulty.24 }
@@ -2666,6 +2681,9 @@ country_event = {
 				change_variable = { which = custom_difficulty_ai_yearly_jobs_value value = -1 }
 				change_variable = { which = custom_difficulty_ai_yearly_stability_value value = -1 }
 				change_variable = { which = custom_difficulty_ai_yearly_diplo_upkeep_value value = 1 }
+				change_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value = -1 }
+				change_variable = { which = custom_difficulty_ai_yearly_max_resource_value value = -1 }
+				change_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value = -1 }
 			}
 			country_event = { id = custom_difficulty.2020 }
 			country_event = { id = custom_difficulty.24 }
@@ -2679,6 +2697,9 @@ country_event = {
 				change_variable = { which = custom_difficulty_ai_yearly_jobs_value value = -2 }
 				change_variable = { which = custom_difficulty_ai_yearly_stability_value value = -2 }
 				change_variable = { which = custom_difficulty_ai_yearly_diplo_upkeep_value value = 2 }
+				change_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value = -2 }
+				change_variable = { which = custom_difficulty_ai_yearly_max_resource_value value = -2 }
+				change_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value = -2 }
 			}
 			country_event = { id = custom_difficulty.2020 }
 			country_event = { id = custom_difficulty.24 }
@@ -2692,6 +2713,9 @@ country_event = {
 				change_variable = { which = custom_difficulty_ai_yearly_jobs_value value = -3 }
 				change_variable = { which = custom_difficulty_ai_yearly_stability_value value = -3 }
 				change_variable = { which = custom_difficulty_ai_yearly_diplo_upkeep_value value = 3 }
+				change_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value = -3 }
+				change_variable = { which = custom_difficulty_ai_yearly_max_resource_value value = -3 }
+				change_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value = -3 }
 			}
 			country_event = { id = custom_difficulty.2020 }
 			country_event = { id = custom_difficulty.24 }
@@ -2705,6 +2729,9 @@ country_event = {
 				change_variable = { which = custom_difficulty_ai_yearly_jobs_value value = -4 }
 				change_variable = { which = custom_difficulty_ai_yearly_stability_value value = -4 }
 				change_variable = { which = custom_difficulty_ai_yearly_diplo_upkeep_value value = 4 }
+				change_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value = -4 }
+				change_variable = { which = custom_difficulty_ai_yearly_max_resource_value value = -4 }
+				change_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value = -4 }
 			}
 			country_event = { id = custom_difficulty.2020 }
 			country_event = { id = custom_difficulty.24 }
@@ -2718,6 +2745,9 @@ country_event = {
 				change_variable = { which = custom_difficulty_ai_yearly_jobs_value value = -5 }
 				change_variable = { which = custom_difficulty_ai_yearly_stability_value value = -5 }
 				change_variable = { which = custom_difficulty_ai_yearly_diplo_upkeep_value value = 5 }
+				change_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value = -5 }
+				change_variable = { which = custom_difficulty_ai_yearly_max_resource_value value = -5 }
+				change_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value = -5 }
 			}
 			country_event = { id = custom_difficulty.2020 }
 			country_event = { id = custom_difficulty.24 }

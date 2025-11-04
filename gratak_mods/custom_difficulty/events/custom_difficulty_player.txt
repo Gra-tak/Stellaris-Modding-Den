@@ -1267,6 +1267,9 @@ country_event = {
 				change_variable = { which = custom_difficulty_player_jobs_value value = 50 }
 				change_variable = { which = custom_difficulty_player_stability_value value = 10.0 }
 				change_variable = { which = custom_difficulty_player_diplo_upkeep_value value = -50 }
+				change_variable = { which = custom_difficulty_player_difficulty_modifier_value value = 50 }
+				change_variable = { which = custom_difficulty_player_max_resource_value value = 5000 }
+				change_variable = { which = custom_difficulty_player_unemployed_resettlement_value value = 50 }
 			}
 			country_event = { id = custom_difficulty.5020 }
 			country_event = { id = custom_difficulty.25 }
@@ -1280,6 +1283,9 @@ country_event = {
 				change_variable = { which = custom_difficulty_player_jobs_value value = 10 }
 				change_variable = { which = custom_difficulty_player_stability_value value = 2.0 }
 				change_variable = { which = custom_difficulty_player_diplo_upkeep_value value = -10 }
+				change_variable = { which = custom_difficulty_player_difficulty_modifier_value value = 10 }
+				change_variable = { which = custom_difficulty_player_max_resource_value value = 1000 }
+				change_variable = { which = custom_difficulty_player_unemployed_resettlement_value value = 10 }
 			}
 			country_event = { id = custom_difficulty.5020 }
 			country_event = { id = custom_difficulty.25 }
@@ -1293,6 +1299,9 @@ country_event = {
 				change_variable = { which = custom_difficulty_player_jobs_value value = -10 }
 				change_variable = { which = custom_difficulty_player_stability_value value = -2.0 }
 				change_variable = { which = custom_difficulty_player_diplo_upkeep_value value = 10 }
+				change_variable = { which = custom_difficulty_player_difficulty_modifier_value value = -10 }
+				change_variable = { which = custom_difficulty_player_max_resource_value value = -1000 }
+				change_variable = { which = custom_difficulty_player_unemployed_resettlement_value value = -10 }
 			}
 			country_event = { id = custom_difficulty.5020 }
 			country_event = { id = custom_difficulty.25 }
@@ -1306,6 +1315,9 @@ country_event = {
 				change_variable = { which = custom_difficulty_player_jobs_value value = -50 }
 				change_variable = { which = custom_difficulty_player_stability_value value = -10.0 }
 				change_variable = { which = custom_difficulty_player_diplo_upkeep_value value = 50 }
+				change_variable = { which = custom_difficulty_player_difficulty_modifier_value value = -50 }
+				change_variable = { which = custom_difficulty_player_max_resource_value value = -5000 }
+				change_variable = { which = custom_difficulty_player_unemployed_resettlement_value value = -50 }
 			}
 			country_event = { id = custom_difficulty.5020 }
 			country_event = { id = custom_difficulty.25 }

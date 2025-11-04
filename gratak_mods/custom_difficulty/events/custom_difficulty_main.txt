@@ -9,6 +9,24 @@ country_event = {
 	title = edict_custom_difficulty
 	picture = GFX_evt_custom_difficulty_pyra
 	immediate = {
+		event_target:global_event_country = {
+			if = {
+				limit = {
+					check_variable = {
+						which = custom_difficulty_enabled_scaled_scaling
+						value = 0
+					}
+				}
+				set_variable = {
+					which = custom_difficulty_scaled_scaling_value
+					value = 1
+				}
+				set_variable = {
+					which = custom_difficulty_enabled_scaled_scaling
+					value = 1
+				}
+			}
+		}
 		country_event = { id = custom_difficulty.120 }
 		if = {
 			limit = { has_global_flag = custom_difficultyMM_active }
