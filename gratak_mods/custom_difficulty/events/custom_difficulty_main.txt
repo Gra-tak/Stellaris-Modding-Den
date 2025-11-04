@@ -410,6 +410,15 @@ country_event = {
 					}
 				}
 			}
+			success_text = {
+				text = automaticScalingOpt.desc
+				event_target:global_event_country = {
+					check_variable = {
+						which = custom_difficulty_scaled_scaling_value
+						value != 1
+					}
+				}
+			}
 		}
 	}
 	option = {
@@ -611,6 +620,12 @@ country_event = {
 					value = -10
 				}
 			}
+		}
+	}
+	option = {
+		name = automaticScalingOptCol
+		hidden_effect = {
+			country_event = { id = custom_difficulty.15 }  #scaledScalingEvent
 		}
 	}
 	option = {
@@ -1262,6 +1277,53 @@ country_event = {
 						value = 20
 					}
 				}
+			}
+		}
+	}
+}
+country_event = {
+	id = custom_difficulty.15
+	is_triggered_only = yes
+	title = automaticScalingOpt
+	desc = automaticScalingOpt.desc2
+	picture = GFX_evt_synth_sabotage
+	option = {
+		name = automaticScalingOpt_inc
+		hidden_effect = {
+			event_target:global_event_country = {
+				change_variable = {
+					which = custom_difficulty_scaled_scaling_value
+					value = 1
+				}
+			}
+			country_event = { id = custom_difficulty.15 }  #scaledScalingEvent
+		}
+	}
+	option = {
+		name = automaticScalingOpt_dec
+		hidden_effect = {
+			event_target:global_event_country = {
+				change_variable = {
+					which = custom_difficulty_scaled_scaling_value
+					value = -1
+				}
+			}
+			country_event = { id = custom_difficulty.15 }  #scaledScalingEvent
+		}
+	}
+	option = {
+		name = custom_difficulty_back
+		hidden_effect = {
+			country_event = { id = custom_difficulty.3 }  #optionsEvent
+		}
+	}
+	option = {
+		name = custom_difficulty_close.name
+		hidden_effect = {
+			country_event = { id = custom_difficulty.41 }
+			if = {
+				limit = { has_global_flag = custom_difficultyMM_active }
+				country_event = { id = custom_difficulty_mm.2 }
 			}
 		}
 	}

@@ -15,6 +15,8 @@ ETOld = "event_target:custom_difficulty_var_storage"
 ETNew = "event_target:global_event_country"
 ET = ETNew
 
+newLine="\n"
+
 yes="yes"
 
 
@@ -29,6 +31,7 @@ name_gameStartFireOnlyOnceWithDialog="custom_difficulty.12"
 name_randomDiffFireOnlyOnce="custom_difficulty.11"
 name_dmm_new_init="custom_difficulty.13"
 name_dmm_new_start="custom_difficulty.14"
+name_scaledScalingEvent="custom_difficulty.15"
 name_resetEvent="custom_difficulty.20" # same as above with triggered_only instead of fire_only_once
 name_resetConfirmationEvent="custom_difficulty.21" # same as above with triggered_only instead of fire_only_once
 name_resetFlagsEvent="custom_difficulty.22"
@@ -1537,6 +1540,7 @@ def createMenuFile(locClass, cats, catColors, difficulties, debugMode=False, mod
   hostOrNotMP=TagList("OR", TagList("is_multiplayer", "no").add("has_country_flag", "custom_difficulty_game_host"))
   increaseRandomOpt=optionsEvent.addReturn("option")
   decreaseRandomOpt=optionsEvent.addReturn("option")
+  automaticScalingOpt=optionsEvent.addReturn("option")
   if not reducedMenu:
     optionsEvent.add("option", TagList("name","custom_difficulty_remove.name").add("trigger", hostOrNotMP).add("custom_tooltip","custom_difficulty_remove.desc").add("hidden_effect", TagList("country_event", TagList("id",name_removeEvent))))
   resetMM=optionsEvent.addReturn("option")
@@ -1575,8 +1579,37 @@ def createMenuFile(locClass, cats, catColors, difficulties, debugMode=False, mod
   increaseRandomOpt.addReturn("trigger").add("custom_difficulty_allow_changes","yes")
   increaseRandomOpt.add("name", "custom_difficulty_random_handicap_inc.desc")
   increaseRandomOpt.addReturn("hidden_effect").add_event("name_optionsEvent").addReturn(ET).variableOp("change","custom_difficulty_random_handicap_perc",10)
+
+
   # increaseRandomOpt.addReturn("hidden_effect").add_event("name_optionsEvent").addTagList(enableUpdateEffect).addReturn(ET).variableOp("change","custom_difficulty_random_handicap_perc",5)
   locClass.append("custom_difficulty_random_handicap_inc.desc","§P@increase @randomHandicap @by 10%§!")
+
+  successText=descTrigger.addReturn("success_text")
+  successText.add("text", "automaticScalingOpt.desc")
+  successText.addReturn(ET).variableOp("check",scaledScalingValueVar,1,"!=") #.addReturn("trigger")
+  locClass.append("automaticScalingOpt.desc",f"§rCurrent Steps per Scaling [{ET}.{scaledScalingValueVar}]§!")
+  locClass.append("automaticScalingOpt.desc2",f"Allows configuration of how many steps are done whenever scaling is activated (every x years as configured in AI Yearly Change){newLine}§rCurrent Steps per Scaling [{ET}.{scaledScalingValueVar}]§!")
+  locClass.append("automaticScalingOpt_inc","§R@increase current Steps per Scaling§!")
+  locClass.append("automaticScalingOpt_dec","§G@decrease current Steps per Scaling§!")
+  locClass.append("automaticScalingOptCol","§r@hemothep§!")
+  locClass.append("automaticScalingOpt","@hemothep")
+  tmp=automaticScalingOpt.add("name","automaticScalingOptCol").addReturn("hidden_effect")
+  add_event(tmp, "name_scaledScalingEvent")
+
+  scaledScalingEvent=mainFileContent.addReturn("country_event")
+  scaledScalingEvent.add("id", name_scaledScalingEvent)
+  scaledScalingEvent.add("is_triggered_only", "yes")
+  scaledScalingEvent.add("title","automaticScalingOpt" )
+  scaledScalingEvent.add("desc", "automaticScalingOpt.desc2")
+  scaledScalingEvent.add("picture","GFX_evt_synth_sabotage" )
+  for c,v in zip(["inc","dec"],[1,-1]):
+    option=scaledScalingEvent.addReturn("option")
+    option.add("name",f"automaticScalingOpt_{c}")
+    option=option.addReturn("hidden_effect")
+    option.addReturn(ET).variableOpNew("change",scaledScalingValueVar,v)
+    add_event(option, "name_scaledScalingEvent")
+  add_event(scaledScalingEvent.addReturn("option").add("name","custom_difficulty_back").addReturn("hidden_effect"),"name_optionsEvent")
+  scaledScalingEvent.add("option", t_closeOption)
 
   if not reducedMenu:
     optionEventUnlock=deepcopy(optionsEvent)
@@ -1978,6 +2011,8 @@ def globalAddLocs(locClass):
   locClass.addLoc("apply_mm_to_all_countries"+"Desc", "More Modifier submod applied to all countries including space critters. Only has an effect if more modifiers submod is actually installed.")
   locClass.addLoc("apply_mm_to_specific_countries", "Apply more modifier submod to specific countries")
   locClass.addLoc("apply_mm_to_specific_countries"+"Desc", "More Modifier submod applied only to playable and fallen and awakened empires, as well as countries that have custom difficulty flags set as those. Only has an effect if more modifiers submod is actually installed. When this is applied, all other countries will KEEP all modifiers set the last time the event was closed with apply to all countries selected.")
+  locClass.addLoc("hemothep", "Scaling Configuration")
+  # locClass.addLoc("hemothep", "Automatic Scaling (Hemothep)")
 
 
 

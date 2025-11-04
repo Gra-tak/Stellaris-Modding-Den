@@ -75,6 +75,15 @@ country_event = {
 					}
 				}
 			}
+			success_text = {
+				text = automaticScalingOpt.desc
+				event_target:global_event_country = {
+					check_variable = {
+						which = custom_difficulty_scaled_scaling_value
+						value != 1
+					}
+				}
+			}
 		}
 	}
 	option = {
@@ -276,6 +285,12 @@ country_event = {
 					value = -10
 				}
 			}
+		}
+	}
+	option = {
+		name = automaticScalingOptCol
+		hidden_effect = {
+			country_event = { id = custom_difficulty.15 }  #scaledScalingEvent
 		}
 	}
 	option = {
