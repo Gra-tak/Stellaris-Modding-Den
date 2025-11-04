@@ -535,7 +535,10 @@ def main(args):
             for bonusListIndex in bonusesListEntries[bonusIndex-1]:
               if not catToModifierType[cat]=="crisis" or npcBoni[bonusListIndex]:
                 bonusListValue=possibleBoniNames[bonusListIndex]
-                et.add("change_variable", TagList().add("which", "custom_difficulty_{}_{}_value".format(cat,bonusListValue)).add("value",str(changeStep*boniFactor[possibleBoniNames[bonusListIndex]])))
+                valueToBeChanged=changeStep*boniFactor[bonusListValue]
+                if cat=="ai_yearly":
+                  valueToBeChanged=changeStep*(1 if boniFactor[bonusListValue] > 0 else -1)
+                et.add("change_variable", TagList().add("which", "custom_difficulty_{}_{}_value".format(cat,bonusListValue)).add("value",str(valueToBeChanged)))
           hidden_effect.add("country_event", TagList().add("id",eventNameSpace.format(mainIndex*id_ChangeEvents+bonusIndex*id_subChangeEvents)))
           if cat=="player":
             hidden_effect.add("country_event", TagList().add("id",name_resetPlayerFlagsEvent)) #remove flags
