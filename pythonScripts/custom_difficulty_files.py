@@ -197,7 +197,7 @@ def main(args):
   ,"P","Y"
    ,"T","G"
   ]
-  defaultEmpireBonusMultList=[25,25,15,-10,-10,5,-25,0,0,0,0,0,0
+  defaultEmpireBonusMultList=[25,25,25,-10,-10,5,-25,0,0,0,0,0,0
   ,25,0,2500,25]
   defaultEmpireBonusMult=dict()
   defaultEmpireBonusMultListCadet=[50,50,0,0,0,10,0,0,0,0,0,0,50
@@ -582,14 +582,14 @@ def main(args):
 
 
   condVal = lambda x,y: x if y else 0
-  condValSign = lambda x,y: x//y if y else 0
+  condValSign = lambda x,y: x*y//abs(y) if y else 0
   # condValPrec = lambda x1,x2,y: x1 if y==1 else (x2 if y==2  else 0)
   difficultiesPresetProperties=dict()
   for difficulty in difficulties:
     difficultiesPresetProperties[difficulty]=dict()
   # difficultiesPresetProperties["easy"]["player"]=[20 for b in possibleBoniNames]
   # difficultiesPresetProperties["no_player_bonus"]["player"]=[0 for b in possibleBoniNames]
-  difficultiesPresetProperties["scaling"]["ai_yearly"]=[condValSign(100,defaultEmpireBonusMult[bonus]) for bonus in possibleBoniNames]
+  difficultiesPresetProperties["scaling"]["ai_yearly"]=[condValSign(4,defaultEmpireBonusMult[bonus]) for bonus in possibleBoniNames]
   difficultiesPresetProperties["no_scaling"]["ai_yearly"]=[0 for b in possibleBoniNames]
 
   for i, diff in enumerate(difficulties[ difficulties.index("ensign") : difficulties.index("grand_admiral")+1 ]):

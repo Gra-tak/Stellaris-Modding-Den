@@ -153,7 +153,7 @@ class TagList: #Basically everything is stored recursively in objects of this cl
     except ValueError:
       pass
     return self
-  def removeIndex(self, i): #remove via name
+  def removeIndex(self, i): #remove via index
     del self.names[i]
     del self.vals[i]
     del self.comments[i]

@@ -160,9 +160,9 @@ country_event = {
 					}
 					if = {
 						limit = {
-							check_variable = { which = custom_difficulty_cap_value value > 13 }
+							check_variable = { which = custom_difficulty_cap_value value > 22 }
 						}
-						change_variable = { which = custom_difficulty_cap_value value = -15 }
+						change_variable = { which = custom_difficulty_cap_value value = -25 }
 					}
 					if = {
 						limit = {
