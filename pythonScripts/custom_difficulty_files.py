@@ -32,6 +32,7 @@ name_randomDiffFireOnlyOnce="custom_difficulty.11"
 name_dmm_new_init="custom_difficulty.13"
 name_dmm_new_start="custom_difficulty.14"
 name_scaledScalingEvent="custom_difficulty.15"
+name_scaledScalingLimitsEvent="custom_difficulty.16"
 name_resetEvent="custom_difficulty.20" # same as above with triggered_only instead of fire_only_once
 name_resetConfirmationEvent="custom_difficulty.21" # same as above with triggered_only instead of fire_only_once
 name_resetFlagsEvent="custom_difficulty.22"
@@ -67,6 +68,8 @@ dmmType="utilities"
 
 enabledScaledScalingVar="custom_difficulty_enabled_scaled_scaling"
 scaledScalingValueVar="custom_difficulty_scaled_scaling_value"
+scaledScalingValueMaximumVar="custom_difficulty_scaled_scaling_maximum_value"
+scaledScalingValueMinimumVar="custom_difficulty_scaled_scaling_minimum_value"
 
 # t_notLockedTrigger=TagList("not", TagList("has_global_flag", "custom_difficulty_locked"))
 t_notLockedTrigger=TagList("custom_difficulty_allow_changes", "yes")
@@ -1059,7 +1062,8 @@ def main(args):
   tmpVar="custom_difficulty_tmp"
 
   ifModifier=TagList()
-  ifModifier.add("limit", TagList().add(ET,TagList().add("check_variable", TagList().add("which", enabledScaledScalingVar).add("value","0","","!="))))
+  ifModifier.addReturn("limit").add("has_global_flag",enabledScaledScalingVar)
+  # ifModifier.add("limit", TagList().add(ET,TagList().add("check_variable", TagList().add("which", enabledScaledScalingVar).add("value","0","","!="))))
   for bonus in possibleBoniNames:
     yearCountVar="custom_difficulty_{}_year_counter".format(bonus)
     yearLimitVar="custom_difficulty_{}_{}_value".format(cat+"_yearly",bonus)
@@ -1234,7 +1238,8 @@ def createMenuFile(locClass, cats, catColors, difficulties, debugMode=False, mod
     else:
       mainMenu.add("picture", "GFX_evt_custom_difficulty_pyra")
     immediate=mainMenu.addReturn("immediate")
-    immediate.add(ET,TagList("if",TagList("limit", TagList("check_variable", TagList().add("which", enabledScaledScalingVar).add("value","0","","="))).add("set_variable", TagList().add("which", scaledScalingValueVar).add("value", "1")).add("set_variable", TagList().add("which", enabledScaledScalingVar).add("value", "1"))))
+    immediate.createReturnIf(TagList("NOT", TagList("has_global_flag", "enabledScaledScalingVar"))).add("set_global_flag","enabledScaledScalingVar").addReturn(ET).variableOpNew("set",scaledScalingValueVar,1).variableOpNew("set",scaledScalingValueMaximumVar,5).variableOpNew("set",scaledScalingValueMinimumVar,-5).variableOpNew("set","custom_difficulty_scaled_scaling_years",2)
+    # immediate.add(ET,TagList("if",TagList("limit", TagList("check_variable", TagList().add("which", enabledScaledScalingVar).add("value","0","","="))).add("set_variable", TagList().add("which", scaledScalingValueVar).add("value", "1")).add("set_variable", TagList().add("which", enabledScaledScalingVar).add("value", "1"))))
     if not reducedMenu:
       immediate.addReturn("country_event").add("id", eventNameSpace.format(id_updateEventCountryEvents)) #call transfer event. Only happens if player opens menu the day the new version is first loaded
       immediate=immediate.createReturnIf(TagList("has_global_flag","custom_difficultyMM_active"))
@@ -1588,26 +1593,129 @@ def createMenuFile(locClass, cats, catColors, difficulties, debugMode=False, mod
   successText.add("text", "automaticScalingOpt.desc")
   successText.addReturn(ET).variableOp("check",scaledScalingValueVar,1,"!=") #.addReturn("trigger")
   locClass.append("automaticScalingOpt.desc",f"§rCurrent Steps per Scaling [{ET}.{scaledScalingValueVar}]§!")
-  locClass.append("automaticScalingOpt.desc2",f"Allows configuration of how many steps are done whenever scaling is activated (every x years as configured in AI Yearly Change){newLine}§rCurrent Steps per Scaling [{ET}.{scaledScalingValueVar}]§!")
-  locClass.append("automaticScalingOpt_inc","§R@increase current Steps per Scaling§!")
-  locClass.append("automaticScalingOpt_dec","§G@decrease current Steps per Scaling§!")
+  locClass.append("automaticScalingOpt.desc2",f"Allows configuration of how many steps are done whenever scaling is activated (every x years as configured in AI Yearly Change) as well as automation of this number{newLine}§BCurrent Steps per Scaling [{ET}.{scaledScalingValueVar}]§!")
   locClass.append("automaticScalingOptCol","§r@hemothep§!")
   locClass.append("automaticScalingOpt","@hemothep")
   tmp=automaticScalingOpt.add("name","automaticScalingOptCol").addReturn("hidden_effect")
   add_event(tmp, "name_scaledScalingEvent")
 
+
+#   scaledScalingValueMaximumVar="custom_difficulty_scaled_scaling_maximum_value"
+# scaledScalingValueMinimumVar="custom_difficulty_scaled_scaling_minimum_value"
+
+  automaticScalingActiveFlag="custom_difficulty_automatic_scaling_active"
+
+  mainFileContent.add("","","#Scaled scaling")
   scaledScalingEvent=mainFileContent.addReturn("country_event")
   scaledScalingEvent.add("id", name_scaledScalingEvent)
   scaledScalingEvent.add("is_triggered_only", "yes")
   scaledScalingEvent.add("title","automaticScalingOpt" )
-  scaledScalingEvent.add("desc", "automaticScalingOpt.desc2")
+  scaledScalingEventDesc=scaledScalingEvent.addReturn("desc").addReturn("trigger")
+  scaledScalingEventDesc.add("text","automaticScalingOpt.desc2")
+
+  locClass.append("automaticScalingOptLimits.desc", f"§rCurrent range for automatic scaling: [{ET}.{scaledScalingValueMinimumVar}] to [{ET}.{scaledScalingValueMaximumVar}]§!")
+  scaledScalingEventDesc.addReturn("success_text").add("text","automaticScalingOptLimits.desc").add("has_global_flag", automaticScalingActiveFlag)
+
+  locClass.append("automaticScalingYears.desc", f"§IIn this many yearly checks the AI must be too strong/to weak for a decrease/increase in steps per scaling: [{ET}.custom_difficulty_scaled_scaling_years]§!")
+  scaledScalingEventDesc.addReturn("success_text").add("text","automaticScalingYears.desc").add("has_global_flag", automaticScalingActiveFlag)
+
+  for i, (d,c) in enumerate(zip(["Easy", "Normal", "Hard"],["G","T","R"])):
+    locClass.append(f"automaticScalingDifficulty_{d}.desc", "§{}Automatic Scaling Difficulty: {}§!".format(c,d))
+    scaledScalingEventDesc.addReturn("success_text").add("text",f"automaticScalingDifficulty_{d}.desc").add("has_global_flag", automaticScalingActiveFlag).addReturn(ET).variableOpNew("check","custom_difficulty_scaled_scaling_difficulty", i-1)
+
   scaledScalingEvent.add("picture","GFX_evt_synth_sabotage" )
+
+  mainFileContent.add("","","#Scaled scaling limits")
+  scaledScalingLimitsEvent=mainFileContent.addReturn("country_event")
+  scaledScalingLimitsEvent.add("id", name_scaledScalingLimitsEvent)
+  scaledScalingLimitsEvent.add("is_triggered_only", "yes")
+  scaledScalingLimitsEvent.add("title","automaticScalingLimits" )
+  scaledScalingLimitsEvent.add("desc", "automaticScalingOptLimits.desc")
+  scaledScalingLimitsEvent.add("picture","GFX_evt_synth_sabotage" )
+
+
+
+  for m in ["minimum","maximum"]:
+    for v in range(-3,4):
+      if v==0:
+        continue
+      if v<0:
+        c="decrease"
+        col="G"
+      else:
+        c="increase"
+        col="R"
+      varName=f"custom_difficulty_scaled_scaling_{m}_value"
+      option=scaledScalingLimitsEvent.addReturn("option")
+      if (v<0) ^ (m=="minimum"):
+        varNameOther=f"custom_difficulty_scaled_scaling_{"maximum" if m=="minimum" else "minimum"}_value"
+        trigger=option.addReturn("trigger")
+        trigger.addReturn(ET).variableOpNew("check",varName,varNameOther ,"<" if m=="minimum" else ">")
+      locName=f"automaticScaling_{m}_{c}_{abs(v)}";
+      option.add("name",locName)
+      locClass.append(locName,"§{}@{} {} scaling by {}§!".format(col,c,m,abs(v)))
+      option=option.addReturn("hidden_effect")
+      optET=option.addReturn(ET)
+      optET.variableOpNew("change",varName,v)
+      if (v<0) ^ (m=="minimum"):
+        optET.createReturnIf(variableOpNew("check",varName,varNameOther ,">" if m=="minimum" else "<")).variableOpNew("set",varNameOther,varName ,"=")
+      add_event(option, "name_scaledScalingLimitsEvent")
+
+
+  add_event(scaledScalingLimitsEvent.addReturn("option").add("name","custom_difficulty_back").addReturn("hidden_effect"),"name_scaledScalingEvent")
+  scaledScalingLimitsEvent.add("option", t_closeOption)
+  
+
+
+
+  locClass.append("automaticScalingOpt_inc","§R@increase current Steps per Scaling§!")
+  locClass.append("automaticScalingOpt_dec","§G@decrease current Steps per Scaling§!")
   for c,v in zip(["inc","dec"],[1,-1]):
     option=scaledScalingEvent.addReturn("option")
     option.add("name",f"automaticScalingOpt_{c}")
     option=option.addReturn("hidden_effect")
     option.addReturn(ET).variableOpNew("change",scaledScalingValueVar,v)
     add_event(option, "name_scaledScalingEvent")
+
+
+  locClass.append("custom_difficulty_activate_autom_scaling", "§rActivate automatic scaling§!")
+  locClass.append("custom_difficulty_deactivate_autom_scaling", "§rDeactivate automatic scaling§!")
+  option=scaledScalingEvent.addReturn("option")
+  option.add("name", "custom_difficulty_activate_autom_scaling").add("trigger", TagList("NOT", TagList("has_global_flag", automaticScalingActiveFlag))).add("set_global_flag", automaticScalingActiveFlag)
+  add_event(option, "name_scaledScalingEvent")
+  option=scaledScalingEvent.addReturn("option")
+  option.add("name", "custom_difficulty_deactivate_autom_scaling").add("trigger", TagList("has_global_flag", automaticScalingActiveFlag)).add("remove_global_flag", automaticScalingActiveFlag)
+  add_event(option, "name_scaledScalingEvent")
+
+  add_event(scaledScalingEvent.addReturn("option").add("name","name_scaledScalingLimitsEvent.name").add("trigger", TagList("has_global_flag", automaticScalingActiveFlag)).addReturn("hidden_effect"),"name_scaledScalingLimitsEvent")
+  locClass.append("name_scaledScalingLimitsEvent.name","§rChange automatic scaling range§!")
+
+  locClass.append("automaticScalingYear_inc","§Y@increase number of years before automatic scaling update§!")
+  locClass.append("automaticScalingYear_dec","§Y@decrease number of years before automatic scaling update§!")
+  for c,v in zip(["inc","dec"],[1,-1]):
+    option=scaledScalingEvent.addReturn("option")
+    option.add("name",f"automaticScalingYear_{c}")
+    option.addReturn("trigger").add("has_global_flag",automaticScalingActiveFlag)
+    option=option.addReturn("hidden_effect")
+    option.addReturn(ET).variableOpNew("change","custom_difficulty_scaled_scaling_years",v)
+    add_event(option, "name_scaledScalingEvent")
+
+  locClass.append("automaticScalingDifficulty_inc","§R@increase difficulty of the automatic scaling§!")
+  locClass.append("automaticScalingDifficulty_dec","§G@decrease difficulty of the automatic scaling§!")
+  for c,v in zip(["inc","dec"],[1,-1]):
+    option=scaledScalingEvent.addReturn("option")
+    varName="custom_difficulty_scaled_scaling_difficulty"
+    option.add("name",f"automaticScalingDifficulty_{c}")
+    trigger=option.addReturn("trigger")
+    trigger.add("has_global_flag",automaticScalingActiveFlag)
+    if (v<0):
+      trigger.variableOpNew("check", varName, "-1", ">")
+    if (v>0):
+      trigger.variableOpNew("check", varName, "1", "<")
+    option=option.addReturn("hidden_effect")
+    option.addReturn(ET).variableOpNew("change",varName,v)
+    add_event(option, "name_scaledScalingEvent")
+
   add_event(scaledScalingEvent.addReturn("option").add("name","custom_difficulty_back").addReturn("hidden_effect"),"name_optionsEvent")
   scaledScalingEvent.add("option", t_closeOption)
 
@@ -2011,8 +2119,8 @@ def globalAddLocs(locClass):
   locClass.addLoc("apply_mm_to_all_countries"+"Desc", "More Modifier submod applied to all countries including space critters. Only has an effect if more modifiers submod is actually installed.")
   locClass.addLoc("apply_mm_to_specific_countries", "Apply more modifier submod to specific countries")
   locClass.addLoc("apply_mm_to_specific_countries"+"Desc", "More Modifier submod applied only to playable and fallen and awakened empires, as well as countries that have custom difficulty flags set as those. Only has an effect if more modifiers submod is actually installed. When this is applied, all other countries will KEEP all modifiers set the last time the event was closed with apply to all countries selected.")
-  locClass.addLoc("hemothep", "Scaling Configuration")
-  # locClass.addLoc("hemothep", "Automatic Scaling (Hemothep)")
+  # locClass.addLoc("hemothep", "Scaling Configuration")
+  locClass.addLoc("hemothep", "Automatic Scaling (Hemothep)")
 
 
 
