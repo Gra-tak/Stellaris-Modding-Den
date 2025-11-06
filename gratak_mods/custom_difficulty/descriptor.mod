@@ -6,5 +6,5 @@ dependencies={
 	"Dynamic Difficulty : More Modifiers"
 }
 picture="pyraSquare.jpg"
-supported_version="v4.0.*"
+supported_version="v4.1.*"
 remote_file_id="1590362799"
