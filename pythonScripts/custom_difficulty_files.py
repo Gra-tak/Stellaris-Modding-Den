@@ -1061,6 +1061,98 @@ def main(args):
   cat="ai"
   tmpVar="custom_difficulty_tmp"
 
+  supInf=2
+  ovPath=5
+  modifierValues={"pathetic":-5, "inferior":-2, "superior":2, "overwhelming":5}
+  modifierTypes={"all":4,"economy":1,"technology":8,"fleet":2 }
+  # extraAll=4
+  # extraEconomy=1
+  # extraTech=8
+  # extraFleet=2
+
+  worthyDist=16
+  worthyDefault=4
+  worthyDiff=8
+
+
+  automaticScaling=et.createReturnIf(TagList("has_global_flag", "custom_difficulty_automatic_scaling_active"))
+  automaticScaling.addComment("iterate through all players, compare them to each other")
+  automaticScaling.variableOpNew("set","custom_difficulty_strongest_player",-100)
+  ec=automaticScaling.createReturnIf(TagList("count_country", TagList("count", 1,"",">").add("limit", TagList("is_ai","no"))))
+  ec=ec.addReturn("every_country")
+  ec.addReturn("limit").add("is_ai","no")
+  ec.variableOpNew("set","custom_difficulty_player_strength",0)
+  ec2=ec.addReturn("every_country")
+  ec2.addReturn("limit").add("is_ai","no").add("not",TagList("is_same_empire", "PREV"))
+  for modifierType in modifierTypes:
+    condType="if"
+    for modifierValue in modifierValues:
+      comp=ec2.createReturnIf( TagList("relative_power", TagList("who","PREV").add("category", modifierType).add("value", modifierValue)), condType=condType)
+      condType="else_if"
+      comp.addReturn("PREV").variableOpNew("change", "custom_difficulty_player_strength",-modifierValues[modifierValue] *modifierTypes[modifierType] )
+  automaticScaling.addReturn("else").addReturn("random_country").add("limit", TagList("is_ai","no")).add("save_event_target_as", "strongest_player")
+  ec.createReturnIf(variableOpNew("check","custom_difficulty_player_strength",f"{ET}.custom_difficulty_strongest_player",">")).add("save_event_target_as", "strongest_player").addReturn(ET).variableOpNew("set", "custom_difficulty_strongest_player", "PREV.custom_difficulty_player_strength")
+
+
+  automaticScaling.addComment("Start finding the best challenger")
+  automaticScaling.variableOpNew("set","custom_difficulty_automatic_scaling_best_challenger_score",-100)
+  strongestPlayer=automaticScaling.addReturn("event_target:strongest_player")
+  aiComparisson=strongestPlayer.addReturn("every_country")
+  limit=TagList()
+  catI=0
+  aiComparisson.add("limit",limit)
+  # topLimit=limit
+  limit=limit.addReturn("or")
+  limit.add("has_country_flag", specificFlags[catI])
+  limit=limit.addReturn("and")
+  for f in allFlags:
+    if f!=specificFlags[catI]:
+      limit.add("not", TagList("has_country_flag", f))
+  limit.add("is_ai","yes").add("is_country_type","default")
+  aiComparisson.variableOpNew("set","custom_difficulty_competitor_strength",0)
+  for modifierType in modifierTypes:
+    condType="if"
+    for modifierValue in modifierValues:
+      comp=aiComparisson.createReturnIf( TagList("relative_power", TagList("who","PREV").add("category", modifierType).add("value", modifierValue)), condType=condType)
+      condType="else_if"
+      comp.variableOpNew("change", "custom_difficulty_competitor_strength",modifierValues[modifierValue] *modifierTypes[modifierType] )
+  aiComparisson.createReturnIf(variableOpNew("check","custom_difficulty_competitor_strength",f"{ET}.custom_difficulty_automatic_scaling_best_challenger_score",">")).add("save_event_target_as", "strongest_AI").addReturn(ET).variableOpNew("set", "custom_difficulty_automatic_scaling_best_challenger_score", "PREV.custom_difficulty_competitor_strength")
+
+  automaticScaling.variableOpNew("change", "custom_difficulty_automatic_scaling_best_challenger_score_summed", "custom_difficulty_automatic_scaling_best_challenger_score")
+
+
+# custom_difficulty_automatic_scaling_best_challenger_score_summed
+# custom_difficulty_scaled_scaling_change_year_passed
+# custom_difficulty_scaled_scaling_years
+  automaticScaling.variableOpNew("change","custom_difficulty_scaled_scaling_change_year_passed",1)
+  updateScalingNow=automaticScaling.createReturnIf(variableOpNew("check","custom_difficulty_scaled_scaling_change_year_passed","custom_difficulty_scaled_scaling_years",">="))
+
+  updateScalingNow.variableOpNew("divide", "custom_difficulty_automatic_scaling_best_challenger_score_summed", "custom_difficulty_scaled_scaling_change_year_passed")
+  updateScalingNow.variableOpNew("set", "custom_difficulty_automatic_scaling_best_challenger_score_difficulty_mod", -worthyDiff)
+  updateScalingNow.variableOpNew("multiply", "custom_difficulty_automatic_scaling_best_challenger_score_difficulty_mod", "custom_difficulty_scaled_scaling_difficulty")
+  updateScalingNow.variableOpNew("change", "custom_difficulty_automatic_scaling_best_challenger_score_summed", "custom_difficulty_automatic_scaling_best_challenger_score_difficulty_mod")
+  
+  condType="if"
+  for i in reversed(range(1,4)):
+    change=updateScalingNow.createReturnIf(variableOpNew("check", "custom_difficulty_automatic_scaling_best_challenger_score_summed", worthyDefault+i*worthyDist, ">"), condType=condType)
+    change.variableOpNew("change","custom_difficulty_scaled_scaling_value",-i)
+    change.createReturnIf(variableOpNew("check","custom_difficulty_scaled_scaling_value","custom_difficulty_scaled_scaling_minimum_value","<")).variableOpNew("set","custom_difficulty_scaled_scaling_value","custom_difficulty_scaled_scaling_minimum_value")
+    condType="else_if"
+  for i in reversed(range(1,4)):
+    change=updateScalingNow.createReturnIf(variableOpNew("check", "custom_difficulty_automatic_scaling_best_challenger_score_summed", worthyDefault-(i-1)*worthyDist, "<"), condType=condType)
+    change.variableOpNew("change","custom_difficulty_scaled_scaling_value",i)
+    change.createReturnIf(variableOpNew("check","custom_difficulty_scaled_scaling_value","custom_difficulty_scaled_scaling_maximum_value",">")).variableOpNew("set","custom_difficulty_scaled_scaling_value","custom_difficulty_scaled_scaling_maximum_value")
+
+  # updateScalingNow.add("log",f'"custom_difficulty_automatic_scaling_best_challenger_score[{ET}.custom_difficulty_automatic_scaling_best_challenger_score]"')
+  # updateScalingNow.add("log",f'"custom_difficulty_scaled_scaling_value[{ET}.custom_difficulty_scaled_scaling_value]"')
+  updateScalingNow.variableOpNew("set","custom_difficulty_automatic_scaling_best_challenger_score_summed",0)
+  updateScalingNow.variableOpNew("set","custom_difficulty_scaled_scaling_change_year_passed",0)
+
+
+  # aiComparisson.addReturn("limit", TagList("is_ai","yes").add("is_country_type","default"))
+
+
+
   ifModifier=TagList()
   ifModifier.addReturn("limit").add("has_global_flag",enabledScaledScalingVar)
   # ifModifier.add("limit", TagList().add(ET,TagList().add("check_variable", TagList().add("which", enabledScaledScalingVar).add("value","0","","!="))))
@@ -1082,7 +1174,7 @@ def main(args):
     ifTagList.add("set_variable", TagList().add("which", tmpVar).add("value", f"{abs(boniFactor[bonus])}"))
     ifTagList.add("if",deepcopy(ifModifier).add("multiply_variable", TagList().add("which", tmpVar).add("value", f"{ET}.{scaledScalingValueVar}")))
     ifTagList.add("change_variable", TagList().add("which", bonusVar).add("value", tmpVar))
-    ifTagList.add("set_variable", TagList().add("which", tmpVar).add("value", "0"))
+    ifTagList.add("clear_variable",tmpVar)
 
     ifTagList=TagList()
     ifNeg.add("multiply_variable", TagList().add("which", yearLimitVar).add("value","-1"))
@@ -1093,7 +1185,7 @@ def main(args):
     ifTagList.add("set_variable", TagList().add("which", tmpVar).add("value", f"-{abs(boniFactor[bonus])}"))
     ifTagList.add("if",deepcopy(ifModifier).add("multiply_variable", TagList().add("which", tmpVar).add("value", f"{ET}.{scaledScalingValueVar}")))
     ifTagList.add("change_variable", TagList().add("which", bonusVar).add("value", tmpVar))
-    ifTagList.add("set_variable", TagList().add("which", tmpVar).add("value", "0"))
+    ifTagList.add("clear_variable",tmpVar)
 
   with open(outFolder+"/"+"custom_difficulty_yealy_event.txt",'w') as file:
     yearlyFile.writeAll(file, argsClass())
@@ -1104,6 +1196,7 @@ def main(args):
   createEdictFile()
 
   onActions=TagList()
+  onActions.addComment("No scope. Only called once")
   onActions.add("on_yearly_pulse", TagList("events",TagList().add(name_rootYearlyEvent,""," #rootYearly").add(name_rootUpdateEvent,""," #rootUpdate")))
   onActions.add("on_game_start_country", TagList("events",TagList().add(name_gameStartFireOnlyOnce),"#set flag,set event target, start default events, start updates for all countries"))
   # onActions.add("on_single_player_save_game_load", TagList("events",TagList().add(eventNameSpace.format(id_updateEventCountryEvents))))
@@ -1238,7 +1331,7 @@ def createMenuFile(locClass, cats, catColors, difficulties, debugMode=False, mod
     else:
       mainMenu.add("picture", "GFX_evt_custom_difficulty_pyra")
     immediate=mainMenu.addReturn("immediate")
-    immediate.createReturnIf(TagList("NOT", TagList("has_global_flag", "enabledScaledScalingVar"))).add("set_global_flag","enabledScaledScalingVar").addReturn(ET).variableOpNew("set",scaledScalingValueVar,1).variableOpNew("set",scaledScalingValueMaximumVar,5).variableOpNew("set",scaledScalingValueMinimumVar,-5).variableOpNew("set","custom_difficulty_scaled_scaling_years",2)
+    immediate.createReturnIf(TagList("NOT", TagList("has_global_flag", enabledScaledScalingVar))).add("set_global_flag",enabledScaledScalingVar).addReturn(ET).variableOpNew("set",scaledScalingValueVar,1).variableOpNew("set",scaledScalingValueMaximumVar,5).variableOpNew("set",scaledScalingValueMinimumVar,-5).variableOpNew("set","custom_difficulty_scaled_scaling_years",2).variableOpNew("set","custom_difficulty_scaled_scaling_difficulty",0).variableOpNew("set","custom_difficulty_scaled_scaling_change_year_passed",0).variableOpNew("set","custom_difficulty_automatic_scaling_best_challenger_score_summed",0)
     # immediate.add(ET,TagList("if",TagList("limit", TagList("check_variable", TagList().add("which", enabledScaledScalingVar).add("value","0","","="))).add("set_variable", TagList().add("which", scaledScalingValueVar).add("value", "1")).add("set_variable", TagList().add("which", enabledScaledScalingVar).add("value", "1"))))
     if not reducedMenu:
       immediate.addReturn("country_event").add("id", eventNameSpace.format(id_updateEventCountryEvents)) #call transfer event. Only happens if player opens menu the day the new version is first loaded
@@ -1593,7 +1686,7 @@ def createMenuFile(locClass, cats, catColors, difficulties, debugMode=False, mod
   successText.add("text", "automaticScalingOpt.desc")
   successText.addReturn(ET).variableOp("check",scaledScalingValueVar,1,"!=") #.addReturn("trigger")
   locClass.append("automaticScalingOpt.desc",f"§rCurrent Steps per Scaling [{ET}.{scaledScalingValueVar}]§!")
-  locClass.append("automaticScalingOpt.desc2",f"Allows configuration of how many steps are done whenever scaling is activated (every x years as configured in AI Yearly Change) as well as automation of this number{newLine}§BCurrent Steps per Scaling [{ET}.{scaledScalingValueVar}]§!")
+  locClass.append("automaticScalingOpt.desc2",f"Allows configuration of how many steps are done whenever scaling is activated (every x years as configured in AI Yearly Change) as well as automation of this number.{newLine}This automation is loosely based on Hemothep's Dynamic Difficulty mod, which is no longer supported.{newLine}{newLine}Important: The automation feature is currently in beta. When using it, please check the scaling values regularly and I would love to hear your feedback.{newLine}§BCurrent Steps per Scaling [{ET}.{scaledScalingValueVar}]§!")
   locClass.append("automaticScalingOptCol","§r@hemothep§!")
   locClass.append("automaticScalingOpt","@hemothep")
   tmp=automaticScalingOpt.add("name","automaticScalingOptCol").addReturn("hidden_effect")
@@ -1695,7 +1788,10 @@ def createMenuFile(locClass, cats, catColors, difficulties, debugMode=False, mod
   for c,v in zip(["inc","dec"],[1,-1]):
     option=scaledScalingEvent.addReturn("option")
     option.add("name",f"automaticScalingYear_{c}")
-    option.addReturn("trigger").add("has_global_flag",automaticScalingActiveFlag)
+    trigger=option.addReturn("trigger")
+    trigger.add("has_global_flag",automaticScalingActiveFlag)
+    if v<0:
+      trigger.addReturn(ET).variableOpNew("check","custom_difficulty_scaled_scaling_years",1,">")
     option=option.addReturn("hidden_effect")
     option.addReturn(ET).variableOpNew("change","custom_difficulty_scaled_scaling_years",v)
     add_event(option, "name_scaledScalingEvent")
@@ -1889,12 +1985,16 @@ def triggeredHidden(self=None):
 TagList.triggeredHidden=triggeredHidden
 
 def variableOpNew(opName, varName, val, sep="=",comment=""):
+  if not opName in ["change","check", "set", "multiply"]:
+    print("check opName"+opName)
   self=TagList()
-  if type(val)==str and val.startswith("event_target"):
+  if type(val)==str and val.startswith("event_target") and not "." in val:
     val=f"{val}.{varName}"
   self.add(opName+"_variable", TagList("which", varName).add("value", val, comment,sep))
   return self
 def variableOpNew2(self, opName, varName, val, sep="=",comment="", skipCheck=False):
+  if not opName in ["change","check", "set", "multiply","divide"]:
+    print("check opName"+opName)
   if self==None:
     self=TagList()
   t=self
@@ -1904,6 +2004,8 @@ def variableOpNew2(self, opName, varName, val, sep="=",comment="", skipCheck=Fal
       # t=self.addReturn("else")
       # is_variable_set = clone_pops_missing
       t=self.createReturnIf(TagList(val,TagList("is_variable_set", varName)))
+    if "." in val:
+      print(f'possibly incorrectly adding varName to val = "{val}"')
     val=f"{val}.{varName}"
   t.add(opName+"_variable", TagList("which", varName).add("value", val, comment,sep))
   return self

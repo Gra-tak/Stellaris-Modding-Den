@@ -20,40 +20,40 @@
 		},
 		{
 			"path": "gratak_mods"
-		},
-		{
-			"path": "C:\\SteamLibrary\\SteamApps\\common\\Stellaris\\common",
-			"name": "Vanilla Common"
-		},
-		{
-			"path": "C:\\SteamLibrary\\SteamApps\\common\\Stellaris\\events",
-			"name": "Vanilla Events"
-		},
-		{
-			"path": "C:\\SteamLibrary\\SteamApps\\common\\Stellaris\\gfx",
-			"name": "Vanilla GFX"
-		},
-		{
-			"path": "C:\\SteamLibrary\\SteamApps\\common\\Stellaris\\gfx\\interface",
-			"name": "Vanilla Interface"
-		},
-		{
-			"name": "source_reworked-buildings-and-ai",
-			"path": "exoverhaul-reworked-buildings-and-ai"
-		},
-		{
-			"path": "gratak_mods/build_upgraded"
-		},
-		{
-			"file_exclude_patterns":
-			[
-				"*.mod",
-				"*.ico",
-				"README",
-				"GUI.spec",
-				".gitattributes"
-			],
-			"path": "."
-		}
+		}//,
+		// {
+		// 	"path": "C:\\SteamLibrary\\SteamApps\\common\\Stellaris\\common",
+		// 	"name": "Vanilla Common"
+		// },
+		// {
+		// 	"path": "C:\\SteamLibrary\\SteamApps\\common\\Stellaris\\events",
+		// 	"name": "Vanilla Events"
+		// },
+		// {
+		// 	"path": "C:\\SteamLibrary\\SteamApps\\common\\Stellaris\\gfx",
+		// 	"name": "Vanilla GFX"
+		// },
+		// {
+		// 	"path": "C:\\SteamLibrary\\SteamApps\\common\\Stellaris\\gfx\\interface",
+		// 	"name": "Vanilla Interface"
+		// },
+		// {
+		// 	"name": "source_reworked-buildings-and-ai",
+		// 	"path": "exoverhaul-reworked-buildings-and-ai"
+		// },
+		// {
+		// 	"path": "gratak_mods/build_upgraded"
+		// },
+		// {
+		// 	"file_exclude_patterns":
+		// 	[
+		// 		"*.mod",
+		// 		"*.ico",
+		// 		"README",
+		// 		"GUI.spec",
+		// 		".gitattributes"
+		// 	],
+		// 	"path": "."
+		// }
 	]
 }

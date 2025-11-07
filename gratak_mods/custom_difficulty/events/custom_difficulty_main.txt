@@ -10,8 +10,8 @@ country_event = {
 	picture = GFX_evt_custom_difficulty_pyra
 	immediate = {
 		if = {
-			limit = { NOT = { has_global_flag = enabledScaledScalingVar } }
-			set_global_flag = enabledScaledScalingVar
+			limit = { NOT = { has_global_flag = custom_difficulty_enabled_scaled_scaling } }
+			set_global_flag = custom_difficulty_enabled_scaled_scaling
 			event_target:global_event_country = {
 				set_variable = {
 					which = custom_difficulty_scaled_scaling_value
@@ -28,6 +28,18 @@ country_event = {
 				set_variable = {
 					which = custom_difficulty_scaled_scaling_years
 					value = 2
+				}
+				set_variable = {
+					which = custom_difficulty_scaled_scaling_difficulty
+					value = 0
+				}
+				set_variable = {
+					which = custom_difficulty_scaled_scaling_change_year_passed
+					value = 0
+				}
+				set_variable = {
+					which = custom_difficulty_automatic_scaling_best_challenger_score_summed
+					value = 0
 				}
 			}
 		}
@@ -1392,7 +1404,15 @@ country_event = {
 	}
 	option = {
 		name = automaticScalingYear_dec
-		trigger = { has_global_flag = custom_difficulty_automatic_scaling_active }
+		trigger = {
+			has_global_flag = custom_difficulty_automatic_scaling_active
+			event_target:global_event_country = {
+				check_variable = {
+					which = custom_difficulty_scaled_scaling_years
+					value > 1
+				}
+			}
+		}
 		hidden_effect = {
 			event_target:global_event_country = {
 				change_variable = {

@@ -7,6 +7,512 @@ event = {
 	immediate = {
 		event_target:global_event_country = {
 			if = {
+				limit = { has_global_flag = custom_difficulty_automatic_scaling_active }
+				 #iterate through all players, compare them to each other
+				set_variable = { which = custom_difficulty_strongest_player value = -100 }
+				if = {
+					limit = {
+						count_country = {
+							count > 1
+							limit = { is_ai = no }
+						}
+					}
+					every_country = {
+						limit = { is_ai = no }
+						set_variable = { which = custom_difficulty_player_strength value = 0 }
+						every_country = {
+							limit = {
+								is_ai = no
+								not = { is_same_empire = PREV }
+							}
+							if = {
+								limit = {
+									relative_power = {
+										who = PREV
+										category = all
+										value = pathetic
+									}
+								}
+								PREV = {
+									change_variable = { which = custom_difficulty_player_strength value = 20 }
+								}
+							}
+							else_if = {
+								limit = {
+									relative_power = {
+										who = PREV
+										category = all
+										value = inferior
+									}
+								}
+								PREV = {
+									change_variable = { which = custom_difficulty_player_strength value = 8 }
+								}
+							}
+							else_if = {
+								limit = {
+									relative_power = {
+										who = PREV
+										category = all
+										value = superior
+									}
+								}
+								PREV = {
+									change_variable = { which = custom_difficulty_player_strength value = -8 }
+								}
+							}
+							else_if = {
+								limit = {
+									relative_power = {
+										who = PREV
+										category = all
+										value = overwhelming
+									}
+								}
+								PREV = {
+									change_variable = { which = custom_difficulty_player_strength value = -20 }
+								}
+							}
+							if = {
+								limit = {
+									relative_power = {
+										who = PREV
+										category = economy
+										value = pathetic
+									}
+								}
+								PREV = {
+									change_variable = { which = custom_difficulty_player_strength value = 5 }
+								}
+							}
+							else_if = {
+								limit = {
+									relative_power = {
+										who = PREV
+										category = economy
+										value = inferior
+									}
+								}
+								PREV = {
+									change_variable = { which = custom_difficulty_player_strength value = 2 }
+								}
+							}
+							else_if = {
+								limit = {
+									relative_power = {
+										who = PREV
+										category = economy
+										value = superior
+									}
+								}
+								PREV = {
+									change_variable = { which = custom_difficulty_player_strength value = -2 }
+								}
+							}
+							else_if = {
+								limit = {
+									relative_power = {
+										who = PREV
+										category = economy
+										value = overwhelming
+									}
+								}
+								PREV = {
+									change_variable = { which = custom_difficulty_player_strength value = -5 }
+								}
+							}
+							if = {
+								limit = {
+									relative_power = {
+										who = PREV
+										category = technology
+										value = pathetic
+									}
+								}
+								PREV = {
+									change_variable = { which = custom_difficulty_player_strength value = 40 }
+								}
+							}
+							else_if = {
+								limit = {
+									relative_power = {
+										who = PREV
+										category = technology
+										value = inferior
+									}
+								}
+								PREV = {
+									change_variable = { which = custom_difficulty_player_strength value = 16 }
+								}
+							}
+							else_if = {
+								limit = {
+									relative_power = {
+										who = PREV
+										category = technology
+										value = superior
+									}
+								}
+								PREV = {
+									change_variable = { which = custom_difficulty_player_strength value = -16 }
+								}
+							}
+							else_if = {
+								limit = {
+									relative_power = {
+										who = PREV
+										category = technology
+										value = overwhelming
+									}
+								}
+								PREV = {
+									change_variable = { which = custom_difficulty_player_strength value = -40 }
+								}
+							}
+							if = {
+								limit = {
+									relative_power = {
+										who = PREV
+										category = fleet
+										value = pathetic
+									}
+								}
+								PREV = {
+									change_variable = { which = custom_difficulty_player_strength value = 10 }
+								}
+							}
+							else_if = {
+								limit = {
+									relative_power = {
+										who = PREV
+										category = fleet
+										value = inferior
+									}
+								}
+								PREV = {
+									change_variable = { which = custom_difficulty_player_strength value = 4 }
+								}
+							}
+							else_if = {
+								limit = {
+									relative_power = {
+										who = PREV
+										category = fleet
+										value = superior
+									}
+								}
+								PREV = {
+									change_variable = { which = custom_difficulty_player_strength value = -4 }
+								}
+							}
+							else_if = {
+								limit = {
+									relative_power = {
+										who = PREV
+										category = fleet
+										value = overwhelming
+									}
+								}
+								PREV = {
+									change_variable = { which = custom_difficulty_player_strength value = -10 }
+								}
+							}
+						}
+						if = {
+							limit = {
+								check_variable = { which = custom_difficulty_player_strength value > event_target:global_event_country.custom_difficulty_strongest_player }
+							}
+							save_event_target_as = strongest_player
+							event_target:global_event_country = {
+								set_variable = { which = custom_difficulty_strongest_player value = PREV.custom_difficulty_player_strength }
+							}
+						}
+					}
+				}
+				else = {
+					random_country = {
+						limit = { is_ai = no }
+						save_event_target_as = strongest_player
+					}
+				}
+				 #Start finding the best challenger
+				set_variable = { which = custom_difficulty_automatic_scaling_best_challenger_score value = -100 }
+				event_target:strongest_player = {
+					every_country = {
+						limit = {
+							or = {
+								has_country_flag = custom_difficulty_ai_flag
+								and = {
+									not = { has_country_flag = custom_difficulty_fe_ae_flag }
+									not = { has_country_flag = custom_difficulty_leviathan_flag }
+									not = { has_country_flag = custom_difficulty_player_flag }
+									not = { has_country_flag = custom_difficulty_crisis_flag }
+									not = { has_country_flag = custom_difficulty_marauder_flag }
+									not = { has_country_flag = custom_difficulty_no_bonuses_flag }
+									is_ai = yes
+									is_country_type = default
+								}
+							}
+						}
+						set_variable = { which = custom_difficulty_competitor_strength value = 0 }
+						if = {
+							limit = {
+								relative_power = {
+									who = PREV
+									category = all
+									value = pathetic
+								}
+							}
+							change_variable = { which = custom_difficulty_competitor_strength value = -20 }
+						}
+						else_if = {
+							limit = {
+								relative_power = {
+									who = PREV
+									category = all
+									value = inferior
+								}
+							}
+							change_variable = { which = custom_difficulty_competitor_strength value = -8 }
+						}
+						else_if = {
+							limit = {
+								relative_power = {
+									who = PREV
+									category = all
+									value = superior
+								}
+							}
+							change_variable = { which = custom_difficulty_competitor_strength value = 8 }
+						}
+						else_if = {
+							limit = {
+								relative_power = {
+									who = PREV
+									category = all
+									value = overwhelming
+								}
+							}
+							change_variable = { which = custom_difficulty_competitor_strength value = 20 }
+						}
+						if = {
+							limit = {
+								relative_power = {
+									who = PREV
+									category = economy
+									value = pathetic
+								}
+							}
+							change_variable = { which = custom_difficulty_competitor_strength value = -5 }
+						}
+						else_if = {
+							limit = {
+								relative_power = {
+									who = PREV
+									category = economy
+									value = inferior
+								}
+							}
+							change_variable = { which = custom_difficulty_competitor_strength value = -2 }
+						}
+						else_if = {
+							limit = {
+								relative_power = {
+									who = PREV
+									category = economy
+									value = superior
+								}
+							}
+							change_variable = { which = custom_difficulty_competitor_strength value = 2 }
+						}
+						else_if = {
+							limit = {
+								relative_power = {
+									who = PREV
+									category = economy
+									value = overwhelming
+								}
+							}
+							change_variable = { which = custom_difficulty_competitor_strength value = 5 }
+						}
+						if = {
+							limit = {
+								relative_power = {
+									who = PREV
+									category = technology
+									value = pathetic
+								}
+							}
+							change_variable = { which = custom_difficulty_competitor_strength value = -40 }
+						}
+						else_if = {
+							limit = {
+								relative_power = {
+									who = PREV
+									category = technology
+									value = inferior
+								}
+							}
+							change_variable = { which = custom_difficulty_competitor_strength value = -16 }
+						}
+						else_if = {
+							limit = {
+								relative_power = {
+									who = PREV
+									category = technology
+									value = superior
+								}
+							}
+							change_variable = { which = custom_difficulty_competitor_strength value = 16 }
+						}
+						else_if = {
+							limit = {
+								relative_power = {
+									who = PREV
+									category = technology
+									value = overwhelming
+								}
+							}
+							change_variable = { which = custom_difficulty_competitor_strength value = 40 }
+						}
+						if = {
+							limit = {
+								relative_power = {
+									who = PREV
+									category = fleet
+									value = pathetic
+								}
+							}
+							change_variable = { which = custom_difficulty_competitor_strength value = -10 }
+						}
+						else_if = {
+							limit = {
+								relative_power = {
+									who = PREV
+									category = fleet
+									value = inferior
+								}
+							}
+							change_variable = { which = custom_difficulty_competitor_strength value = -4 }
+						}
+						else_if = {
+							limit = {
+								relative_power = {
+									who = PREV
+									category = fleet
+									value = superior
+								}
+							}
+							change_variable = { which = custom_difficulty_competitor_strength value = 4 }
+						}
+						else_if = {
+							limit = {
+								relative_power = {
+									who = PREV
+									category = fleet
+									value = overwhelming
+								}
+							}
+							change_variable = { which = custom_difficulty_competitor_strength value = 10 }
+						}
+						if = {
+							limit = {
+								check_variable = { which = custom_difficulty_competitor_strength value > event_target:global_event_country.custom_difficulty_automatic_scaling_best_challenger_score }
+							}
+							save_event_target_as = strongest_AI
+							event_target:global_event_country = {
+								set_variable = { which = custom_difficulty_automatic_scaling_best_challenger_score value = PREV.custom_difficulty_competitor_strength }
+							}
+						}
+					}
+				}
+				change_variable = { which = custom_difficulty_automatic_scaling_best_challenger_score_summed value = custom_difficulty_automatic_scaling_best_challenger_score }
+				change_variable = { which = custom_difficulty_scaled_scaling_change_year_passed value = 1 }
+				if = {
+					limit = {
+						check_variable = { which = custom_difficulty_scaled_scaling_change_year_passed value >= custom_difficulty_scaled_scaling_years }
+					}
+					divide_variable = { which = custom_difficulty_automatic_scaling_best_challenger_score_summed value = custom_difficulty_scaled_scaling_change_year_passed }
+					set_variable = { which = custom_difficulty_automatic_scaling_best_challenger_score_difficulty_mod value = -8 }
+					multiply_variable = { which = custom_difficulty_automatic_scaling_best_challenger_score_difficulty_mod value = custom_difficulty_scaled_scaling_difficulty }
+					change_variable = { which = custom_difficulty_automatic_scaling_best_challenger_score_summed value = custom_difficulty_automatic_scaling_best_challenger_score_difficulty_mod }
+					if = {
+						limit = {
+							check_variable = { which = custom_difficulty_automatic_scaling_best_challenger_score_summed value > 52 }
+						}
+						change_variable = { which = custom_difficulty_scaled_scaling_value value = -3 }
+						if = {
+							limit = {
+								check_variable = { which = custom_difficulty_scaled_scaling_value value < custom_difficulty_scaled_scaling_minimum_value }
+							}
+							set_variable = { which = custom_difficulty_scaled_scaling_value value = custom_difficulty_scaled_scaling_minimum_value }
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = { which = custom_difficulty_automatic_scaling_best_challenger_score_summed value > 36 }
+						}
+						change_variable = { which = custom_difficulty_scaled_scaling_value value = -2 }
+						if = {
+							limit = {
+								check_variable = { which = custom_difficulty_scaled_scaling_value value < custom_difficulty_scaled_scaling_minimum_value }
+							}
+							set_variable = { which = custom_difficulty_scaled_scaling_value value = custom_difficulty_scaled_scaling_minimum_value }
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = { which = custom_difficulty_automatic_scaling_best_challenger_score_summed value > 20 }
+						}
+						change_variable = { which = custom_difficulty_scaled_scaling_value value = -1 }
+						if = {
+							limit = {
+								check_variable = { which = custom_difficulty_scaled_scaling_value value < custom_difficulty_scaled_scaling_minimum_value }
+							}
+							set_variable = { which = custom_difficulty_scaled_scaling_value value = custom_difficulty_scaled_scaling_minimum_value }
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = { which = custom_difficulty_automatic_scaling_best_challenger_score_summed value < -28 }
+						}
+						change_variable = { which = custom_difficulty_scaled_scaling_value value = 3 }
+						if = {
+							limit = {
+								check_variable = { which = custom_difficulty_scaled_scaling_value value > custom_difficulty_scaled_scaling_maximum_value }
+							}
+							set_variable = { which = custom_difficulty_scaled_scaling_value value = custom_difficulty_scaled_scaling_maximum_value }
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = { which = custom_difficulty_automatic_scaling_best_challenger_score_summed value < -12 }
+						}
+						change_variable = { which = custom_difficulty_scaled_scaling_value value = 2 }
+						if = {
+							limit = {
+								check_variable = { which = custom_difficulty_scaled_scaling_value value > custom_difficulty_scaled_scaling_maximum_value }
+							}
+							set_variable = { which = custom_difficulty_scaled_scaling_value value = custom_difficulty_scaled_scaling_maximum_value }
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = { which = custom_difficulty_automatic_scaling_best_challenger_score_summed value < 4 }
+						}
+						change_variable = { which = custom_difficulty_scaled_scaling_value value = 1 }
+						if = {
+							limit = {
+								check_variable = { which = custom_difficulty_scaled_scaling_value value > custom_difficulty_scaled_scaling_maximum_value }
+							}
+							set_variable = { which = custom_difficulty_scaled_scaling_value value = custom_difficulty_scaled_scaling_maximum_value }
+						}
+					}
+					set_variable = { which = custom_difficulty_automatic_scaling_best_challenger_score_summed value = 0 }
+					set_variable = { which = custom_difficulty_scaled_scaling_change_year_passed value = 0 }
+				}
+			}
+			if = {
 				limit = {
 					check_variable = { which = custom_difficulty_ai_yearly_station_value value > 0 }
 				}
@@ -24,7 +530,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_station_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -46,7 +552,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_station_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_station_value value = -1 }
 			}
@@ -68,7 +574,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_jobs_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -90,7 +596,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_jobs_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_jobs_value value = -1 }
 			}
@@ -112,7 +618,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_cap_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -134,7 +640,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_cap_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_cap_value value = -1 }
 			}
@@ -156,7 +662,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_upkeep_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -178,7 +684,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_upkeep_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_upkeep_value value = -1 }
 			}
@@ -200,7 +706,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_ship_cost_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -222,7 +728,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_ship_cost_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_ship_cost_value value = -1 }
 			}
@@ -244,7 +750,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_stability_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -266,7 +772,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_stability_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_stability_value value = -1 }
 			}
@@ -288,7 +794,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_diplo_upkeep_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -310,7 +816,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_diplo_upkeep_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_diplo_upkeep_value value = -1 }
 			}
@@ -332,7 +838,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_damage_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -354,7 +860,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_damage_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_damage_value value = -1 }
 			}
@@ -376,7 +882,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_hull_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -398,7 +904,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_hull_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_hull_value value = -1 }
 			}
@@ -420,7 +926,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_armor_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -442,7 +948,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_armor_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_armor_value value = -1 }
 			}
@@ -464,7 +970,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_shield_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -486,7 +992,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_shield_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_shield_value value = -1 }
 			}
@@ -508,7 +1014,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_fire_rate_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -530,7 +1036,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_fire_rate_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_fire_rate_value value = -1 }
 			}
@@ -552,7 +1058,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_jobs_player_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -574,7 +1080,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_jobs_player_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_jobs_player_value value = -1 }
 			}
@@ -596,7 +1102,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_difficulty_modifier_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -618,7 +1124,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_difficulty_modifier_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_difficulty_modifier_value value = -1 }
 			}
@@ -640,7 +1146,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_first_contact_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -662,7 +1168,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_first_contact_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_first_contact_value value = -1 }
 			}
@@ -684,7 +1190,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_max_resource_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -706,7 +1212,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_max_resource_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_max_resource_value value = -1 }
 			}
@@ -728,7 +1234,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_unemployed_resettlement_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 			}
 			if = {
@@ -750,7 +1256,7 @@ event = {
 						multiply_variable = { which = custom_difficulty_tmp value = event_target:global_event_country.custom_difficulty_scaled_scaling_value }
 					}
 					change_variable = { which = custom_difficulty_ai_unemployed_resettlement_value value = custom_difficulty_tmp }
-					set_variable = { which = custom_difficulty_tmp value = 0 }
+					clear_variable = custom_difficulty_tmp
 				}
 				multiply_variable = { which = custom_difficulty_ai_yearly_unemployed_resettlement_value value = -1 }
 			}
