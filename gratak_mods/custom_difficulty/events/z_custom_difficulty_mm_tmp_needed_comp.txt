@@ -1,0 +1,44 @@
+ # This file was created by script!
+ # Instead of editing it, you should change the python script.
+ # Changes to the file will be overwritten the next time the script is run.
+namespace = custom_difficulty_mm
+country_event = {
+	id = custom_difficulty_mm.1
+	is_triggered_only = yes
+	title = test
+	desc = test
+	picture = GFX_evt_synth_sabotage
+	option = { name = OK }
+}
+country_event = {
+	id = custom_difficulty_mm.2
+	is_triggered_only = yes
+	title = test
+	desc = test
+	picture = GFX_evt_synth_sabotage
+	option = { name = OK }
+}
+country_event = {
+	id = custom_difficulty_mm.3
+	is_triggered_only = yes
+	title = test
+	desc = test
+	picture = GFX_evt_synth_sabotage
+	option = { name = OK }
+}
+country_event = {
+	id = custom_difficulty_mm.4
+	is_triggered_only = yes
+	title = test
+	desc = test
+	picture = GFX_evt_synth_sabotage
+	option = { name = OK }
+}
+country_event = {
+	id = custom_difficulty_mm.23
+	is_triggered_only = yes
+	title = test
+	desc = test
+	picture = GFX_evt_synth_sabotage
+	option = { name = OK }
+}

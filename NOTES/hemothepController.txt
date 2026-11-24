@@ -1,0 +1,188 @@
+# this event checks if the difficulty needs to be increased/decreased and if every empire has the correct modifiers
+
+namespace = hemo_DyDiff_controller
+
+event = {
+  id = hemo_DyDiff_controller.1
+  hide_window = yes
+
+  is_triggered_only = yes
+
+  immediate = {
+
+    if = { 
+      limit = { 
+        OR = {
+          NOT = { has_global_flag = hemo_DyDiff_keep_this_level }
+          has_global_flag = hemo_DyDiff_no_cooldown 
+        }
+      }
+      every_country = {
+        limit = {
+          is_ai = no  # tell me if you start analysing the game
+          has_global_flag = hemo_DyDiff_debug 
+        }
+        country_event = { id = hemo_DyDiff_debug.4 }
+      } 
+      every_country = {
+        limit = {   # iterate through all players, compare them to each other
+          is_ai = no  # we need to find the strongest one
+        }
+        every_country = {
+          limit = {
+            is_ai = no
+          }
+          if = {
+            limit = {
+              relative_power = { who = PREV category = all value < equivalent }
+            }
+            set_timed_country_flag = { flag = hemo_DyDiff_weaker_player days = 6 }
+            if = { 
+              limit = { # tell me who is the weakling
+                has_global_flag = hemo_DyDiff_debug
+              }
+              country_event = { id = hemo_DyDiff_debug.5 }
+            } 
+          }
+          
+        }
+      }
+      random_country = {
+        limit = {     # this player is either the strongest or within margin of him
+          is_ai = no
+          NOT = { has_country_flag = hemo_DyDiff_weaker_player }
+        }
+        every_country = {
+          limit = {
+            is_ai = yes
+            is_country_type = default
+          }
+          if = {
+            limit = { # check if you find a worthy opponent
+                # at least equal in overall and tech
+              relative_power = { who = PREV category = all value > inferior }
+              relative_power = { who = PREV category = technology value > inferior }
+            }
+            set_timed_global_flag = { flag = hemo_DyDiff_worthy_opponent days = 6 }
+            if = { 
+              limit = { # tell me who is the challenger
+                has_global_flag = hemo_DyDiff_debug
+              }
+              country_event = { id = hemo_DyDiff_debug.7 }
+            } 
+          }
+          if = {
+            limit = { # check if you find a worthy opponent
+                # at least equal in overall and overwhelming in fleet
+              relative_power = { who = PREV category = all value > inferior }
+              relative_power = { who = PREV category = fleet value = overwhelming }
+            }
+            set_timed_global_flag = { flag = hemo_DyDiff_worthy_opponent days = 6 }
+            if = { 
+              limit = { # tell me who is the challenger
+                has_global_flag = hemo_DyDiff_debug
+              }
+              country_event = { id = hemo_DyDiff_debug.15 }
+            } 
+          }
+          if = {
+            limit = { # check if you find a worthy opponent
+                # at least superior in fleetpower and equivalent in tech
+              relative_power = { who = PREV category = fleet value > equivalent }
+              relative_power = { who = PREV category = technology value > inferior }
+            }
+            set_timed_global_flag = { flag = hemo_DyDiff_worthy_opponent days = 6 }
+            if = { 
+              limit = { # tell me who is the challenger
+                has_global_flag = hemo_DyDiff_debug
+              }
+              country_event = { id = hemo_DyDiff_debug.9 }
+            } 
+          }
+          if = {
+            limit = { # check if you find a worthy opponent
+                # just overall superior or better
+              relative_power = { who = PREV category = all value > equivalent }
+            }
+            set_timed_global_flag = { flag = hemo_DyDiff_worthy_opponent days = 6 }
+            if = { 
+              limit = { # tell me who is the challenger
+                has_global_flag = hemo_DyDiff_debug
+              }
+              country_event = { id = hemo_DyDiff_debug.11 }
+            } 
+          }
+          if = {
+            limit = { # check if it's too much
+              relative_power = { who = PREV category = all value > superior }
+              relative_power = { who = PREV category = technology value > pathetic }
+            }
+            set_timed_global_flag = { flag = hemo_DyDiff_too_much days = 6 }
+            if = { 
+              limit = { # tell me who is the golliath
+                has_global_flag = hemo_DyDiff_debug
+              }
+              country_event = { id = hemo_DyDiff_debug.13 }
+            } 
+          }
+        }
+            
+      }
+      if = {    # if it's too much decrease difficulty
+        limit = {
+          has_global_flag = hemo_DyDiff_too_much
+        }
+        random_country = {
+          limit = { is_country_type = global_event }
+          country_event = { id = hemo_DyDiff_decrease.1 days = 10 } 
+        }
+      }
+      else_if = { # if it's not too much and there isn't a worthy opponent increase difficulty
+        limit = {
+          NOT = { has_global_flag = hemo_DyDiff_worthy_opponent }
+        }
+        random_country = {
+          limit = { is_country_type = global_event }
+          country_event = { id = hemo_DyDiff_increase.1 days = 10 }   
+        }
+      }
+
+    }
+    # Trigger an event that updates all modifiers with a delay of a couple of days
+    every_country = {
+      if = {
+        limit = {
+          is_ai = no
+        }
+
+        country_event = { id = hemo_DyDiff_update.1 days = 20 }   # player-controlled empires       
+
+      }
+      else = {
+        if = {
+          limit = {
+            is_country_type = default
+          }     
+
+          country_event = { id = hemo_DyDiff_update.2 days = 20 } # AI-controlled default-empires
+
+        }
+        else_if = {
+          limit = {
+            NOT = {
+              is_country_type = global_event    # adding modifiers to these special
+              is_country_type = shroud    # countries would just be a waste
+              is_country_type = enclave   # of performence
+              is_country_type = primitive
+              is_country_type = adversary   
+            }
+          }
+
+          country_event = { id = hemo_DyDiff_update.3 days = 20 } # AI-controlled non-default-empires
+        
+        }
+      }
+    }
+  }
+}
+

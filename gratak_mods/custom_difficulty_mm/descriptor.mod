@@ -3,5 +3,5 @@ tags={
 	"Balance"
 }
 picture="pyraSquare.png"
-supported_version="v4.1.*"
+supported_version="v4.6.*"
 remote_file_id="1613880809"
